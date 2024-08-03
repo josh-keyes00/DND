@@ -1,0 +1,192 @@
+body {
+    background-color: white;
+    color: black;
+}
+.background-info {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid rgb(56, 53, 53);
+    padding: 10px;
+    color: ghostwhite;
+    background-color: rgb(0, 0, 0);
+    
+}
+.background-info .info-section{
+    padding-right: 20px;
+    border-top: 2px solid #000; /* Top border */
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+    
+}
+#name {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+
+}
+.name-bg-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#ability-scores {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+    
+}
+#saving-throws {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+.scores-throws{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid rgb(56, 53, 53);
+    padding: 10px;
+    color: ghostwhite;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.skill-prof{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid rgb(56, 53, 53);
+    padding: 10px;
+    color: ghostwhite;
+    background-color: rgb(0, 0, 0);
+}
+#skills {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+#prof {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+.attacks-spells{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid rgb(56, 53, 53);
+    padding: 10px;
+    color: ghostwhite;
+    background-color: rgb(0, 0, 0);
+}
+#attacks {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+#spells {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+.hp-abil{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid rgb(56, 53, 53);
+    padding: 10px;
+    color: ghostwhite;
+    background-color: rgb(0, 0, 0);
+}
+#hp-info {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+#abilitiesList {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+.equip-binfo{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid rgb(56, 53, 53);
+    padding: 10px;
+    color: ghostwhite;
+    background-color: rgb(0, 0, 0);
+}
+#inventory {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+#stuff {
+    border: 3px solid black;
+    padding: 10px;
+    border-color: rgb(205, 7, 7);
+    background-color: rgb(49, 46, 46);
+    color:ghostwhite;
+}
+
+
+
+
+
+
+ /* Basic styling for modals */
+ .step-button {
+    margin-top: 20px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
