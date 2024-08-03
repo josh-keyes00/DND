@@ -36,22 +36,131 @@
         <div>
         <h2>Skills</h2>
         <div id="skills" class="info-section"></div>
-        <input type="text" id="skillInput" placeholder="Skill">
-                    <button onclick="addSkill()">Add Skill</button>
-                    <button onclick="removeSkill()">Remove Skill</button>
+        <div class="dropdown">
+            <input type="text" id="skillInput" placeholder="Type to search spells..." onkeyup="filterSkillFunction()">
+            <button onclick="addSkill()">Add Skill</button>
+            <button onclick="removeSkill()">Remove Skill</button>
+            <div id="skillDropdown" class="dropdown-content">
+                <!-- List of all D&D skills -->
+                <div onclick="selectSkill('Insight')">Insight</div>
+                <div onclick="selectSkill('Acrobatics')">Acrobatics</div>
+                <div onclick="selectSkill('Animal Handling')">Animal Handling</div>
+                <div onclick="selectSkill('Arcana')">Arcana</div>
+                <div onclick="selectSkill('Athletics')">Athletics</div>
+                <div onclick="selectSkill('Deception')">Deception</div>
+                <div onclick="selectSkill('History')">History</div>
+                <div onclick="selectSkill('Insight')">Insight</div>
+                <div onclick="selectSkill('Intimidation')">Intimidation</div>
+                <div onclick="selectSkill('Investigation')">Investigation</div>
+                <div onclick="selectSkill('Medicine')">Medicine</div>
+                <div onclick="selectSkill('Nature')">Nature</div>
+                <div onclick="selectSkill('Perception')">Perception</div>
+                <div onclick="selectSkill('Performance')">Performance</div>
+                <div onclick="selectSkill('Persuasion')">Persuasion</div>
+                <div onclick="selectSkill('Religion')">Religion</div>
+                <div onclick="selectSkill('Sleight of Hand')">Sleight of Hand</div>
+                <div onclick="selectSkill('Stealth')">Stealth</div>
+                <div onclick="selectSkill('Survival')">Survival</div>
+                    
+        </div>
         </div>
         <div>
             <h2>Proficiencies</h2>
             <div id="prof">
             <div id="weapon-proficiencies" class="info-section"></div>
-            <input type="text" id="profInput" placeholder="weapon-proficiency">
-                    <button onclick="addProf()">Add Skill</button>
+            <div class="dropdown">
+            <input type="text" id="weaponProfInput" placeholder="Type to search spells..." onkeyup="filterWeaponProfFunction()">
+                    <button onclick="addProf()">Add Proficiency</button>
                     <button onclick="removeProf()">Remove Skill</button>
+                    <div id="weaponProfDropdown" class="dropdown-content">
+<!-- Weapon Proficiencies -->
+<div onclick="selectWeaponProf('Simple Weapons')">Simple Weapons</div>
+<div onclick="selectWeaponProf('Martial Weapons')">Martial Weapons</div>
+<div onclick="selectWeaponProf('Club')">Club</div>
+<div onclick="selectWeaponProf('Dagger')">Dagger</div>
+<div onclick="selectWeaponProf('Greatclub')">Greatclub</div>
+<div onclick="selectWeaponProf('Handaxe')">Handaxe</div>
+<div onclick="selectWeaponProf('Javelin')">Javelin</div>
+<div onclick="selectWeaponProf('Light Hammer')">Light Hammer</div>
+<div onclick="selectWeaponProf('Mace')">Mace</div>
+<div onclick="selectWeaponProf('Quarterstaff')">Quarterstaff</div>
+<div onclick="selectWeaponProf('Sickle')">Sickle</div>
+<div onclick="selectWeaponProf('Spear')">Spear</div>
+<div onclick="selectWeaponProf('Light Crossbow')">Light Crossbow</div>
+<div onclick="selectWeaponProf('Dart')">Dart</div>
+<div onclick="selectWeaponProf('Shortbow')">Shortbow</div>
+<div onclick="selectWeaponProf('Sling')">Sling</div>
+<div onclick="selectWeaponProf('Battleaxe')">Battleaxe</div>
+<div onclick="selectWeaponProf('Flail')">Flail</div>
+<div onclick="selectWeaponProf('Glaive')">Glaive</div>
+<div onclick="selectWeaponProf('Greataxe')">Greataxe</div>
+<div onclick="selectWeaponProf('Greatsword')">Greatsword</div>
+<div onclick="selectWeaponProf('Halberd')">Halberd</div>
+<div onclick="selectWeaponProf('Lance')">Lance</div>
+<div onclick="selectWeaponProf('Longsword')">Longsword</div>
+<div onclick="selectWeaponProf('Maul')">Maul</div>
+<div onclick="selectWeaponProf('Morningstar')">Morningstar</div>
+<div onclick="selectWeaponProf('Pike')">Pike</div>
+<div onclick="selectWeaponProf('Rapier')">Rapier</div>
+<div onclick="selectWeaponProf('Scimitar')">Scimitar</div>
+<div onclick="selectWeaponProf('Shortsword')">Shortsword</div>
+<div onclick="selectWeaponProf('Trident')">Trident</div>
+<div onclick="selectWeaponProf('War Pick')">War Pick</div>
+<div onclick="selectWeaponProf('Warhammer')">Warhammer</div>
+<div onclick="selectWeaponProf('Whip')">Whip</div>
+<div onclick="selectWeaponProf('Blowgun')">Blowgun</div>
+<div onclick="selectWeaponProf('Hand Crossbow')">Hand Crossbow</div>
+<div onclick="selectWeaponProf('Heavy Crossbow')">Heavy Crossbow</div>
+<div onclick="selectWeaponProf('Longbow')">Longbow</div>
+<div onclick="selectWeaponProf('Net')">Net</div>
+
+<!-- Armor Proficiencies -->
+<div onclick="selectWeaponProf('Light Armor')">Light Armor</div>
+<div onclick="selectWeaponProf('Medium Armor')">Medium Armor</div>
+<div onclick="selectWeaponProf('Heavy Armor')">Heavy Armor</div>
+<div onclick="selectWeaponProf('Shields')">Shields</div>
+<div onclick="selectWeaponProf('Padded Armor')">Padded Armor</div>
+<div onclick="selectWeaponProf('Leather Armor')">Leather Armor</div>
+<div onclick="selectWeaponProf('Studded Leather Armor')">Studded Leather Armor</div>
+<div onclick="selectWeaponProf('Hide Armor')">Hide Armor</div>
+<div onclick="selectWeaponProf('Chain Shirt')">Chain Shirt</div>
+<div onclick="selectWeaponProf('Scale Mail')">Scale Mail</div>
+<div onclick="selectWeaponProf('Breastplate')">Breastplate</div>
+<div onclick="selectWeaponProf('Half Plate')">Half Plate</div>
+<div onclick="selectWeaponProf('Ring Mail')">Ring Mail</div>
+<div onclick="selectWeaponProf('Chain Mail')">Chain Mail</div>
+<div onclick="selectWeaponProf('Splint Armor')">Splint Armor</div>
+<div onclick="selectWeaponProf('Plate Armor')">Plate Armor</div>
+<div onclick="selectWeaponProf('Shield')">Shield</div>
+</div>
+</div>
             <div id="language-proficiencies" class="info-section"></div>
-            <input type="text" id="langInput" placeholder="Language">
+            <div class="dropdown">
+            <input type="text" id="langInput" placeholder="Type to search spells..." onkeyup="filterLangProfFunction()">
                     <button onclick="addLang()">Add Skill</button>
                     <button onclick="removeLang()">Remove Skill</button>
+                    <div id="LangProfDropdown" class="dropdown-content">
+                        <div onclick="selectLangProf('Common')">Common</div>
+                        <div onclick="selectLangProf('Dwarvish')">Dwarvish</div>
+                        <div onclick="selectLangProf('Elvish')">Elvish</div>
+                        <div onclick="selectLangProf('Giant')">Giant</div>
+                        <div onclick="selectLangProf('Gnomish')">Gnomish</div>
+                        <div onclick="selectLangProf('Goblin')">Goblin</div>
+                        <div onclick="selectLangProf('Halfling')">Halfling</div>
+                        <div onclick="selectLangProf('Orc')">Orc</div>
+                        <div onclick="selectLangProf('Abyssal')">Abyssal</div>
+                        <div onclick="selectLangProf('Celestial')">Celestial</div>
+                        <div onclick="selectLangProf('Draconic')">Draconic</div>
+                        <div onclick="selectLangProf('Deep Speech')">Deep Speech</div>
+                        <div onclick="selectLangProf('Infernal')">Infernal</div>
+                        <div onclick="selectLangProf('Primordial')">Primordial</div>
+                        <div onclick="selectLangProf('Sylvan')">Sylvan</div>
+                        <div onclick="selectLangProf('Undercommon')">Undercommon</div>
+
+                    </div></div>
         </div>    
+        </div>
+        </div>
         </div>
         </div>
         <div class="attacks-spells">
@@ -67,6 +176,8 @@
                 <div id="spells" class="info-section"></div>
                 <div class="dropdown">
                     <input type="text" id="spellInput" placeholder="Type to search spells..." onkeyup="filterFunction()">
+                    <button onclick="addSpell()">Add Spell</button>
+                    <button onclick="removeSpell()">Remove Spell</button>
                     <div id="spellDropdown" class="dropdown-content">
                         <!-- List of all D&D spells -->
                         <div onclick="selectSpell('Acid Arrow')">Acid Arrow</div>
@@ -531,8 +642,7 @@
                     </div>
                 </div>
             </div>
-                    <button onclick="addSpell()">Add Spell</button>
-                    <button onclick="removeSpell()">Remove Spell</button>
+                    
             </div>
         </div>
 
@@ -556,8 +666,723 @@
                 <div id="abilities" class="info-section">
                     <h2>Abilities:</h2>
                     <div id="abilitiesList"></div>
-                    <input type="text" id="abilityNameInput" placeholder="Ability name">
+                    <div class="dropdown">
+                    <input type="text" id="abilityNameInput" placeholder="Ability name" onkeyup="filterAbilityFunction()">
                     <button onclick="addAbility()">Add Ability</button>
+                    <div id="abilityDropdown" class="dropdown-content">
+                        <div onclick="selectAbility('Aberrant Dragonmark')">Aberrant Dragonmark</div>
+                        <div onclick="selectAbility('Actor')">Actor</div>
+                        <div onclick="selectAbility('Adept of the Black Robes')">Adept of the Black Robes</div>
+                        <div onclick="selectAbility('Adept of the Red Robes')">Adept of the Red Robes</div>
+                        <div onclick="selectAbility('Adept of the White Robes')">Adept of the White Robes</div>
+                        <div onclick="selectAbility('Alert')">Alert</div>
+                        <div onclick="selectAbility('Artificer Initiate')">Artificer Initiate</div>
+                        <div onclick="selectAbility('Athlete')">Athlete</div>
+                        <div onclick="selectAbility('Charger')">Charger</div>
+                        <div onclick="selectAbility('Chef')">Chef</div>
+                        <div onclick="selectAbility('Crossbow Expert')">Crossbow Expert</div>
+                        <div onclick="selectAbility('Crusher')">Crusher</div>
+                        <div onclick="selectAbility('Defensive Duelist')">Defensive Duelist</div>
+                        <div onclick="selectAbility('Divinely Favored')">Divinely Favored</div>
+                        <div onclick="selectAbility('Dual Wielder')">Dual Wielder</div>
+                        <div onclick="selectAbility('Dungeon Delver')">Dungeon Delver</div>
+                        <div onclick="selectAbility('Durable')">Durable</div>
+                        <div onclick="selectAbility('Eldritch Adept')">Eldritch Adept</div>
+                        <div onclick="selectAbility('Elemental Adept')">Elemental Adept</div>
+                        <div onclick="selectAbility('Fey Touched')">Fey Touched</div>
+                        <div onclick="selectAbility('Fey Teleportation')">Fey Teleportation</div>
+                        <div onclick="selectAbility('Fighting Initiate')">Fighting Initiate</div>
+                        <div onclick="selectAbility('Gift of the Chromatic Dragon')">Gift of the Chromatic Dragon</div>
+                        <div onclick="selectAbility('Gift of the Gem Dragon')">Gift of the Gem Dragon</div>
+                        <div onclick="selectAbility('Gift of the Metallic Dragon')">Gift of the Metallic Dragon</div>
+                        <div onclick="selectAbility('Grappler')">Grappler</div>
+                        <div onclick="selectAbility('Great Weapon Master')">Great Weapon Master</div>
+                        <div onclick="selectAbility('Gunner')">Gunner</div>
+                        <div onclick="selectAbility('Healer')">Healer</div>
+                        <div onclick="selectAbility('Heavily Armored')">Heavily Armored</div>
+                        <div onclick="selectAbility('Heavy Armor Master')">Heavy Armor Master</div>
+                        <div onclick="selectAbility('Infernal Constitution')">Infernal Constitution</div>
+                        <div onclick="selectAbility('Initiate of High Sorcery')">Initiate of High Sorcery</div>
+                        <div onclick="selectAbility('Inspiring Leader')">Inspiring Leader</div>
+                        <div onclick="selectAbility('Keen Mind')">Keen Mind</div>
+                        <div onclick="selectAbility('Knight of the Crown')">Knight of the Crown</div>
+                        <div onclick="selectAbility('Knight of the Sword')">Knight of the Sword</div>
+                        <div onclick="selectAbility('Knight of the Rose')">Knight of the Rose</div>
+                        <div onclick="selectAbility('Lightly Armored')">Lightly Armored</div>
+                        <div onclick="selectAbility('Linguist')">Linguist</div>
+                        <div onclick="selectAbility('Lucky')">Lucky</div>
+                        <div onclick="selectAbility('Mage Slayer')">Mage Slayer</div>
+                        <div onclick="selectAbility('Magic Initiate')">Magic Initiate</div>
+                        <div onclick="selectAbility('Martial Adept')">Martial Adept</div>
+                        <div onclick="selectAbility('Medium Armor Master')">Medium Armor Master</div>
+                        <div onclick="selectAbility('Metamagic Adept')">Metamagic Adept</div>
+                        <div onclick="selectAbility('Mobile')">Mobile</div>
+                        <div onclick="selectAbility('Moderately Armored')">Moderately Armored</div>
+                        <div onclick="selectAbility('Mounted Combatant')">Mounted Combatant</div>
+                        <div onclick="selectAbility('Observant')">Observant</div>
+                        <div onclick="selectAbility('Piercer')">Piercer</div>
+                        <div onclick="selectAbility('Poisoner')">Poisoner</div>
+                        <div onclick="selectAbility('Polearm Master')">Polearm Master</div>
+                        <div onclick="selectAbility('Prodigy')">Prodigy</div>
+                        <div onclick="selectAbility('Resilient')">Resilient</div>
+                        <div onclick="selectAbility('Ritual Caster')">Ritual Caster</div>
+                        <div onclick="selectAbility('Savage Attacker')">Savage Attacker</div>
+                        <div onclick="selectAbility('Second Chance')">Second Chance</div>
+                        <div onclick="selectAbility('Sentinel')">Sentinel</div>
+                        <div onclick="selectAbility('Shadow Touched')">Shadow Touched</div>
+                        <div onclick="selectAbility('Sharpshooter')">Sharpshooter</div>
+                        <div onclick="selectAbility('Shield Master')">Shield Master</div>
+                        <div onclick="selectAbility('Skill Expert')">Skill Expert</div>
+                        <div onclick="selectAbility('Skilled')">Skilled</div>
+                        <div onclick="selectAbility('Skulker')">Skulker</div>
+                        <div onclick="selectAbility('Slasher')">Slasher</div>
+                        <div onclick="selectAbility('Spell Sniper')">Spell Sniper</div>
+                        <div onclick="selectAbility('Squat Nimbleness')">Squat Nimbleness</div>
+                        <div onclick="selectAbility('Squire of Solamnia')">Squire of Solamnia</div>
+                        <div onclick="selectAbility('Strixhaven Initiate')">Strixhaven Initiate</div>
+                        <div onclick="selectAbility('Strixhaven Mascot')">Strixhaven Mascot</div>
+                        <div onclick="selectAbility('Tavern Brawler')">Tavern Brawler</div>
+                        <div onclick="selectAbility('Telekinetic')">Telekinetic</div>
+                        <div onclick="selectAbility('Telepathic')">Telepathic</div>
+                        <div onclick="selectAbility('Tough')">Tough</div>
+                        <div onclick="selectAbility('War Caster')">War Caster</div>
+                        <div onclick="selectAbility('Weapon Master')">Weapon Master</div>
+                        <div onclick="selectAbility('Wood Elf Magic')">Wood Elf Magic</div>
+<!-- Path of the Berserker -->
+<div onclick="selectAbility('Path of the Berserker')">Path of the Berserker</div>
+<div onclick="selectAbility('Frenzy')">Frenzy</div>
+<div onclick="selectAbility('Mindless Rage')">Mindless Rage</div>
+<div onclick="selectAbility('Intimidating Presence')">Intimidating Presence</div>
+<div onclick="selectAbility('Retaliation')">Retaliation</div>
+
+<!-- Path of the Totem Warrior -->
+<div onclick="selectAbility('Path of the Totem Warrior')">Path of the Totem Warrior</div>
+<div onclick="selectAbility('Totem Spirit')">Totem Spirit</div>
+<div onclick="selectAbility('Aspect of the Beast')">Aspect of the Beast</div>
+<div onclick="selectAbility('Spirit Shield')">Spirit Shield</div>
+<div onclick="selectAbility('Totemic Attunement')">Totemic Attunement</div>
+
+<!-- Path of the Ancestral Guardian -->
+<div onclick="selectAbility('Path of the Ancestral Guardian')">Path of the Ancestral Guardian</div>
+<div onclick="selectAbility('Warrior of the Gods')">Warrior of the Gods</div>
+<div onclick="selectAbility('Ancestral Protectors')">Ancestral Protectors</div>
+<div onclick="selectAbility('Consult the Gods')">Consult the Gods</div>
+<div onclick="selectAbility('Divine Protection')">Divine Protection</div>
+
+<!-- Path of the Storm Herald -->
+<div onclick="selectAbility('Path of the Storm Herald')">Path of the Storm Herald</div>
+<div onclick="selectAbility('Storm Aura')">Storm Aura</div>
+<div onclick="selectAbility('Storms Fury')">Storm's Fury</div>
+<div onclick="selectAbility('Eye of the Storm')">Eye of the Storm</div>
+<div onclick="selectAbility('Tempestuous Fury')">Tempestuous Fury</div>
+
+<!-- Path of the Zealot -->
+<div onclick="selectAbility('Path of the Zealot')">Path of the Zealot</div>
+<div onclick="selectAbility('Divine Fury')">Divine Fury</div>
+<div onclick="selectAbility('Zealous Presence')">Zealous Presence</div>
+<div onclick="selectAbility('Rage Beyond Death')">Rage Beyond Death</div>
+<div onclick="selectAbility('Anger of the Gods')">Anger of the Gods</div>
+
+<!-- General Barbarian Abilities -->
+<div onclick="selectAbility('Rage')">Rage</div>
+<div onclick="selectAbility('Unarmored Defense')">Unarmored Defense</div>
+<div onclick="selectAbility('Reckless Attack')">Reckless Attack</div>
+<div onclick="selectAbility('Danger Sense')">Danger Sense</div>
+<div onclick="selectAbility('Brutal Critical')">Brutal Critical</div>
+<div onclick="selectAbility('Relentless Rage')">Relentless Rage</div>
+<div onclick="selectAbility('Persistent Rage')">Persistent Rage</div>
+<div onclick="selectAbility('Indomitable Might')">Indomitable Might</div>
+<div onclick="selectAbility('Primal Champion')">Primal Champion</div>
+<div onclick="selectAbility('Extra Attack')">Extra Attack</div>
+<div onclick="selectAbility('Fast Movement')">Fast Movement</div>
+<div onclick="selectAbility('Storm of Fury')">Storm of Fury</div>
+<!-- College of Lore -->
+<div onclick="selectAbility('College of Lore')">College of Lore</div>
+<div onclick="selectAbility('Bardic Inspiration')">Bardic Inspiration</div>
+<div onclick="selectAbility('Cutting Words')">Cutting Words</div>
+<div onclick="selectAbility('Additional Magical Secrets')">Additional Magical Secrets</div>
+<div onclick="selectAbility('Peerless Skill')">Peerless Skill</div>
+
+<!-- College of Valor -->
+<div onclick="selectAbility('College of Valor')">College of Valor</div>
+<div onclick="selectAbility('Combat Inspiration')">Combat Inspiration</div>
+<div onclick="selectAbility('Extra Attack')">Extra Attack</div>
+<div onclick="selectAbility('Battle Magic')">Battle Magic</div>
+
+<!-- College of Glamour -->
+<div onclick="selectAbility('College of Glamour')">College of Glamour</div>
+<div onclick="selectAbility('Mantle of Inspiration')">Mantle of Inspiration</div>
+<div onclick="selectAbility('Enthralling Performance')">Enthralling Performance</div>
+<div onclick="selectAbility('Mantle of Majesty')">Mantle of Majesty</div>
+<div onclick="selectAbility('Unbreakable Majesty')">Unbreakable Majesty</div>
+
+<!-- College of Swords -->
+<div onclick="selectAbility('College of Swords')">College of Swords</div>
+<div onclick="selectAbility('Fighting Style')">Fighting Style</div>
+<div onclick="selectAbility('Blade Flourish')">Blade Flourish</div>
+<div onclick="selectAbility('Extra Attack')">Extra Attack</div>
+<div onclick="selectAbility('Master Duelist')">Master Duelist</div>
+
+<!-- College of Whispers -->
+<div onclick="selectAbility('College of Whispers')">College of Whispers</div>
+<div onclick="selectAbility('Psychic Blades')">Psychic Blades</div>
+<div onclick="selectAbility('Words of Terror')">Words of Terror</div>
+<div onclick="selectAbility('Unsettling Words')">Unsettling Words</div>
+<div onclick="selectAbility('Shadow Lore')">Shadow Lore</div>
+
+<!-- College of Creation -->
+<div onclick="selectAbility('College of Creation')">College of Creation</div>
+<div onclick="selectAbility('Mote of Potential')">Mote of Potential</div>
+<div onclick="selectAbility('Performance of Creation')">Performance of Creation</div>
+<div onclick="selectAbility('Creative Crescendo')">Creative Crescendo</div>
+
+<!-- General Bard Abilities -->
+<div onclick="selectAbility('Bardic Inspiration')">Bardic Inspiration</div>
+<div onclick="selectAbility('Spellcasting')">Spellcasting</div>
+<div onclick="selectAbility('Jack of All Trades')">Jack of All Trades</div>
+<div onclick="selectAbility('Song of Rest')">Song of Rest</div>
+<div onclick="selectAbility('Countercharm')">Countercharm</div>
+<div onclick="selectAbility('Magical Secrets')">Magical Secrets</div>
+<div onclick="selectAbility('Superior Inspiration')">Superior Inspiration</div>
+<!-- Knowledge Domain -->
+<div onclick="selectAbility('Knowledge Domain')">Knowledge Domain</div>
+<div onclick="selectAbility('Blessings of Knowledge')">Blessings of Knowledge</div>
+<div onclick="selectAbility('Channel Divinity: Knowledge of the Ages')">Channel Divinity: Knowledge of the Ages</div>
+<div onclick="selectAbility('Channel Divinity: Read Thoughts')">Channel Divinity: Read Thoughts</div>
+<div onclick="selectAbility('Divine Strike')">Divine Strike</div>
+<div onclick="selectAbility('Supreme Knowledge')">Supreme Knowledge</div>
+
+<!-- Life Domain -->
+<div onclick="selectAbility('Life Domain')">Life Domain</div>
+<div onclick="selectAbility('Bonus Proficiency')">Bonus Proficiency</div>
+<div onclick="selectAbility('Disciple of Life')">Disciple of Life</div>
+<div onclick="selectAbility('Channel Divinity: Preserve Life')">Channel Divinity: Preserve Life</div>
+<div onclick="selectAbility('Divine Strike')">Divine Strike</div>
+<div onclick="selectAbility('Supreme Healing')">Supreme Healing</div>
+
+<!-- Light Domain -->
+<div onclick="selectAbility('Light Domain')">Light Domain</div>
+<div onclick="selectAbility('Warding Flare')">Warding Flare</div>
+<div onclick="selectAbility('Channel Divinity: Radiance of the Dawn')">Channel Divinity: Radiance of the Dawn</div>
+<div onclick="selectAbility('Divine Strike')">Divine Strike</div>
+<div onclick="selectAbility('Corona of Light')">Corona of Light</div>
+
+<!-- Nature Domain -->
+<div onclick="selectAbility('Nature Domain')">Nature Domain</div>
+<div onclick="selectAbility('Acolyte of Nature')">Acolyte of Nature</div>
+<div onclick="selectAbility('Channel Divinity: Charm Animals and Plants')">Channel Divinity: Charm Animals and Plants</div>
+<div onclick="selectAbility('Divine Strike')">Divine Strike</div>
+<div onclick="selectAbility('Archdruid')">Archdruid</div>
+
+<!-- Tempest Domain -->
+<div onclick="selectAbility('Tempest Domain')">Tempest Domain</div>
+<div onclick="selectAbility('Wrath of the Storm')">Wrath of the Storm</div>
+<div onclick="selectAbility('Channel Divinity: Destructive Wrath')">Channel Divinity: Destructive Wrath</div>
+<div onclick="selectAbility('Divine Strike')">Divine Strike</div>
+<div onclick="selectAbility('Stormborn')">Stormborn</div>
+
+<!-- Trickery Domain -->
+<div onclick="selectAbility('Trickery Domain')">Trickery Domain</div>
+<div onclick="selectAbility('Blessing of the Trickster')">Blessing of the Trickster</div>
+<div onclick="selectAbility('Channel Divinity: Invoke Duplicity')">Channel Divinity: Invoke Duplicity</div>
+<div onclick="selectAbility('Channel Divinity: Cloak of Shadows')">Channel Divinity: Cloak of Shadows</div>
+<div onclick="selectAbility('Divine Strike')">Divine Strike</div>
+<div onclick="selectAbility('Improved Duplicity')">Improved Duplicity</div>
+
+<!-- War Domain -->
+<div onclick="selectAbility('War Domain')">War Domain</div>
+<div onclick="selectAbility('Bonus Proficiency')">Bonus Proficiency</div>
+<div onclick="selectAbility('Channel Divinity: Guided Strike')">Channel Divinity: Guided Strike</div>
+<div onclick="selectAbility('Channel Divinity: War Gods Blessing')">Channel Divinity: War God's Blessing</div>
+<div onclick="selectAbility('Divine Strike')">Divine Strike</div>
+<div onclick="selectAbility('Avatar of Battle')">Avatar of Battle</div>
+
+<!-- General Cleric Abilities -->
+<div onclick="selectAbility('Spellcasting')">Spellcasting</div>
+<div onclick="selectAbility('Channel Divinity')">Channel Divinity</div>
+<div onclick="selectAbility('Divine Intervention')">Divine Intervention</div>
+<div onclick="selectAbility('Turn Undead')">Turn Undead</div>
+<!-- Circle of the Land -->
+<div onclick="selectAbility('Circle of the Land')">Circle of the Land</div>
+<div onclick="selectAbility('Bonus Proficiency')">Bonus Proficiency</div>
+<div onclick="selectAbility('Natural Recovery')">Natural Recovery</div>
+<div onclick="selectAbility('Land’s Stride')">Land’s Stride</div>
+<div onclick="selectAbility('Nature’s Ward')">Nature’s Ward</div>
+<div onclick="selectAbility('Nature’s Sanctuary')">Nature’s Sanctuary</div>
+
+<!-- Circle of the Moon -->
+<div onclick="selectAbility('Circle of the Moon')">Circle of the Moon</div>
+<div onclick="selectAbility('Combat Wild Shape')">Combat Wild Shape</div>
+<div onclick="selectAbility('Circle Forms')">Circle Forms</div>
+<div onclick="selectAbility('Elemental Form')">Elemental Form</div>
+<div onclick="selectAbility('Archdruid')">Archdruid</div>
+
+<!-- Circle of the Shepherd -->
+<div onclick="selectAbility('Circle of the Shepherd')">Circle of the Shepherd</div>
+<div onclick="selectAbility('Speech of the Woods')">Speech of the Woods</div>
+<div onclick="selectAbility('Spirit Totem')">Spirit Totem</div>
+<div onclick="selectAbility('Mighty Summoner')">Mighty Summoner</div>
+<div onclick="selectAbility('Guardian Spirit')">Guardian Spirit</div>
+
+<!-- Circle of the Stars -->
+<div onclick="selectAbility('Circle of the Stars')">Circle of the Stars</div>
+<div onclick="selectAbility('Starry Form')">Starry Form</div>
+<div onclick="selectAbility('Guiding Light')">Guiding Light</div>
+<div onclick="selectAbility('Cosmic Omen')">Cosmic Omen</div>
+<div onclick="selectAbility('Starry Stride')">Starry Stride</div>
+<div onclick="selectAbility('Full of Stars')">Full of Stars</div>
+
+<!-- Circle of Wildfire -->
+<div onclick="selectAbility('Circle of Wildfire')">Circle of Wildfire</div>
+<div onclick="selectAbility('Wildfire Spirit')">Wildfire Spirit</div>
+<div onclick="selectAbility('Enhanced Bond')">Enhanced Bond</div>
+<div onclick="selectAbility('Blazing Revival')">Blazing Revival</div>
+<div onclick="selectAbility('Fire Form')">Fire Form</div>
+
+<!-- General Druid Abilities -->
+<div onclick="selectAbility('Spellcasting')">Spellcasting</div>
+<div onclick="selectAbility('Wild Shape')">Wild Shape</div>
+<div onclick="selectAbility('Archdruid')">Archdruid</div>
+ <!-- Fighter General Abilities -->
+<div onclick="selectAbility('Fighting Style')">Fighting Style</div>
+<div onclick="selectAbility('Second Wind')">Second Wind</div>
+<div onclick="selectAbility('Action Surge')">Action Surge</div>
+<div onclick="selectAbility('Extra Attack')">Extra Attack</div>
+<div onclick="selectAbility('Indomitable')">Indomitable</div>
+<div onclick="selectAbility('Remarkable Athlete')">Remarkable Athlete</div>
+<div onclick="selectAbility('Additional Fighting Style')">Additional Fighting Style</div>
+<div onclick="selectAbility('Superior Defense')">Superior Defense</div>
+<div onclick="selectAbility('Survivor')">Survivor</div>
+
+<!-- Martial Archetypes -->
+<div onclick="selectAbility('Champion')">Champion</div>
+<div onclick="selectAbility('Battle Master')">Battle Master</div>
+<div onclick="selectAbility('Eldritch Knight')">Eldritch Knight</div>
+<div onclick="selectAbility('Arcane Archer')">Arcane Archer</div>
+<div onclick="selectAbility('Psi Warrior')">Psi Warrior</div>
+<div onclick="selectAbility('Rune Knight')">Rune Knight</div>
+<div onclick="selectAbility('Samurai')">Samurai</div>
+
+<!-- Champion Abilities -->
+<div onclick="selectAbility('Improved Critical')">Improved Critical</div>
+<div onclick="selectAbility('Remarkable Athlete')">Remarkable Athlete</div>
+<div onclick="selectAbility('Additional Fighting Style')">Additional Fighting Style</div>
+<div onclick="selectAbility('Superior Critical')">Superior Critical</div>
+<div onclick="selectAbility('Survivor')">Survivor</div>
+
+<!-- Battle Master Abilities -->
+<div onclick="selectAbility('Combat Superiority')">Combat Superiority</div>
+<div onclick="selectAbility('Student of War')">Student of War</div>
+<div onclick="selectAbility('Know Your Enemy')">Know Your Enemy</div>
+<div onclick="selectAbility('Improved Combat Superiority')">Improved Combat Superiority</div>
+<div onclick="selectAbility('Relentless')">Relentless</div>
+
+<!-- Eldritch Knight Abilities -->
+<div onclick="selectAbility('Spellcasting')">Spellcasting</div>
+<div onclick="selectAbility('Weapon Bond')">Weapon Bond</div>
+<div onclick="selectAbility('War Magic')">War Magic</div>
+<div onclick="selectAbility('Improved War Magic')">Improved War Magic</div>
+
+<!-- Arcane Archer Abilities -->
+<div onclick="selectAbility('Arcane Archer Lore')">Arcane Archer Lore</div>
+<div onclick="selectAbility('Arcane Shot')">Arcane Shot</div>
+<div onclick="selectAbility('Magic Arrow')">Magic Arrow</div>
+<div onclick="selectAbility('Ever Ready')">Ever Ready</div>
+
+<!-- Psi Warrior Abilities -->
+<div onclick="selectAbility('Psionic Power')">Psionic Power</div>
+<div onclick="selectAbility('Telekinetic Movement')">Telekinetic Movement</div>
+<div onclick="selectAbility('Guarded Mind')">Guarded Mind</div>
+<div onclick="selectAbility('Psi Shield')">Psi Shield</div>
+<div onclick="selectAbility('Telekinetic Mastery')">Telekinetic Mastery</div>
+
+<!-- Rune Knight Abilities -->
+<div onclick="selectAbility('Rune Carver')">Rune Carver</div>
+<div onclick="selectAbility('Rune Magic')">Rune Magic</div>
+<div onclick="selectAbility('Runic Shield')">Runic Shield</div>
+<div onclick="selectAbility('Runic Power')">Runic Power</div>
+
+<!-- Samurai Abilities -->
+<div onclick="selectAbility('Fighting Spirit')">Fighting Spirit</div>
+<div onclick="selectAbility('Elegant Courtier')">Elegant Courtier</div>
+<div onclick="selectAbility('Rapid Strike')">Rapid Strike</div>
+<div onclick="selectAbility('Strength Before Death')">Strength Before Death</div>
+ <!-- Monk General Abilities -->
+<div onclick="selectAbility('Martial Arts')">Martial Arts</div>
+<div onclick="selectAbility('Ki')">Ki</div>
+<div onclick="selectAbility('Unarmored Movement')">Unarmored Movement</div>
+<div onclick="selectAbility('Deflect Missiles')">Deflect Missiles</div>
+<div onclick="selectAbility('Slow Fall')">Slow Fall</div>
+<div onclick="selectAbility('Extra Attack')">Extra Attack</div>
+<div onclick="selectAbility('Stunning Strike')">Stunning Strike</div>
+<div onclick="selectAbility('Ki-Empowered Strikes')">Ki-Empowered Strikes</div>
+<div onclick="selectAbility('Evasion')">Evasion</div>
+<div onclick="selectAbility('Stillness of Mind')">Stillness of Mind</div>
+<div onclick="selectAbility('Purity of Body')">Purity of Body</div>
+<div onclick="selectAbility('Tongue of the Sun and Moon')">Tongue of the Sun and Moon</div>
+<div onclick="selectAbility('Diamond Soul')">Diamond Soul</div>
+<div onclick="selectAbility('Timeless Body')">Timeless Body</div>
+<div onclick="selectAbility('Empty Body')">Empty Body</div>
+<div onclick="selectAbility('Perfect Self')">Perfect Self</div>
+
+<!-- Monastic Traditions -->
+<div onclick="selectAbility('Way of the Open Hand')">Way of the Open Hand</div>
+<div onclick="selectAbility('Way of Shadow')">Way of Shadow</div>
+<div onclick="selectAbility('Way of the Four Elements')">Way of the Four Elements</div>
+<div onclick="selectAbility('Way of the Drunken Master')">Way of the Drunken Master</div>
+<div onclick="selectAbility('Way of the Kensei')">Way of the Kensei</div>
+<div onclick="selectAbility('Way of the Sun Soul')">Way of the Sun Soul</div>
+<div onclick="selectAbility('Way of Mercy')">Way of Mercy</div>
+<div onclick="selectAbility('Way of the Astral Self')">Way of the Astral Self</div>
+<div onclick="selectAbility('Way of the Long Death')">Way of the Long Death</div>
+
+<!-- Way of the Open Hand Abilities -->
+<div onclick="selectAbility('Open Hand Technique')">Open Hand Technique</div>
+<div onclick="selectAbility('Wholeness of Body')">Wholeness of Body</div>
+<div onclick="selectAbility('Tranquility')">Tranquility</div>
+<div onclick="selectAbility('Quivering Palm')">Quivering Palm</div>
+
+<!-- Way of Shadow Abilities -->
+<div onclick="selectAbility('Shadow Arts')">Shadow Arts</div>
+<div onclick="selectAbility('Shadow Step')">Shadow Step</div>
+<div onclick="selectAbility('Cloak of Shadows')">Cloak of Shadows</div>
+<div onclick="selectAbility('Opportunist')">Opportunist</div>
+
+<!-- Way of the Four Elements Abilities -->
+<div onclick="selectAbility('Disciple of the Elements')">Disciple of the Elements</div>
+<div onclick="selectAbility('Elemental Disciplines')">Elemental Disciplines</div>
+<div onclick="selectAbility('Shape of the Wave')">Shape of the Wave</div>
+<div onclick="selectAbility('Elemental Attunement')">Elemental Attunement</div>
+
+<!-- Way of the Drunken Master Abilities -->
+<div onclick="selectAbility('Drunken Technique')">Drunken Technique</div>
+<div onclick="selectAbility('Tipsy Sway')">Tipsy Sway</div>
+<div onclick="selectAbility('Drunkards Luck')">Drunkard's Luck</div>
+<div onclick="selectAbility('Intoxicated Fury')">Intoxicated Fury</div>
+
+<!-- Way of the Kensei Abilities -->
+<div onclick="selectAbility('Kensei Weapons')">Kensei Weapons</div>
+<div onclick="selectAbility('One with the Blade')">One with the Blade</div>
+<div onclick="selectAbility('Unerring Accuracy')">Unerring Accuracy</div>
+<div onclick="selectAbility('Deft Strike')">Deft Strike</div>
+
+<!-- Way of the Sun Soul Abilities -->
+<div onclick="selectAbility('Radiant Sun Bolt')">Radiant Sun Bolt</div>
+<div onclick="selectAbility('Searing Sunburst')">Searing Sunburst</div>
+<div onclick="selectAbility('Sun Shield')">Sun Shield</div>
+<div onclick="selectAbility('Unending Radiance')">Unending Radiance</div>
+
+<!-- Way of Mercy Abilities -->
+<div onclick="selectAbility(' implements')"> implements</div>
+<div onclick="selectAbility('Hand of Healing')">Hand of Healing</div>
+<div onclick="selectAbility('Hand of Harm')">Hand of Harm</div>
+<div onclick="selectAbility('Physicians Touch')">Physician's Touch</div>
+<div onclick="selectAbility('Flurry of Healing')">Flurry of Healing</div>
+
+<!-- Way of the Astral Self Abilities -->
+<div onclick="selectAbility('Arms of the Astral Self')">Arms of the Astral Self</div>
+<div onclick="selectAbility('Visage of the Astral Self')">Visage of the Astral Self</div>
+<div onclick="selectAbility('Body of the Astral Self')">Body of the Astral Self</div>
+<div onclick="selectAbility('Awakened Astral Self')">Awakened Astral Self</div>
+
+<!-- Way of the Long Death Abilities -->
+<div onclick="selectAbility('Touch of Death')">Touch of Death</div>
+<div onclick="selectAbility('Mastery of Death')">Mastery of Death</div>
+<div onclick="selectAbility('Cloak of Death')">Cloak of Death</div>
+<div onclick="selectAbility('Perfect Self')">Perfect Self</div>
+<!-- Way of the Dragon Abilities -->
+<div onclick="selectAbility('Draconic Discipline')">Draconic Discipline</div>
+<div onclick="selectAbility('Draconic Strike')">Draconic Strike</div>
+<div onclick="selectAbility('Wings Unfurled')">Wings Unfurled</div>
+<div onclick="selectAbility('Draconic Ascension')">Draconic Ascension</div>
+<div onclick="selectAbility('Dragons Roar')">Dragon's Roar</div>
+<div onclick="selectAbility('Breath of the Dragon')">Breath of the Dragon</div>
+<!-- Paladin Abilities -->
+<div onclick="selectAbility('Divine Sense')">Divine Sense</div>
+<div onclick="selectAbility('Lay on Hands')">Lay on Hands</div>
+<div onclick="selectAbility('Divine Smite')">Divine Smite</div>
+<div onclick="selectAbility('Divine Health')">Divine Health</div>
+<div onclick="selectAbility('Sacred Oath')">Sacred Oath</div>
+<div onclick="selectAbility('Channel Divinity')">Channel Divinity</div>
+<div onclick="selectAbility('Aura of Protection')">Aura of Protection</div>
+<div onclick="selectAbility('Aura of Courage')">Aura of Courage</div>
+<div onclick="selectAbility('Improved Divine Smite')">Improved Divine Smite</div>
+<div onclick="selectAbility('Cleansing Touch')">Cleansing Touch</div>
+<div onclick="selectAbility('Aura of Warding')">Aura of Warding</div>
+<div onclick="selectAbility('Holy Nimbus')">Holy Nimbus</div>
+<div onclick="selectAbility('Powerful Smite')">Powerful Smite</div>
+
+<!-- Oaths and Their Abilities -->
+<div onclick="selectAbility('Sacred Oath: Oath of Devotion')">Sacred Oath: Oath of Devotion</div>
+<div onclick="selectAbility('Channel Divinity: Sacred Weapon')">Channel Divinity: Sacred Weapon</div>
+<div onclick="selectAbility('Channel Divinity: Turn the Unholy')">Channel Divinity: Turn the Unholy</div>
+<div onclick="selectAbility('Aura of Devotion')">Aura of Devotion</div>
+<div onclick="selectAbility('Purity of Spirit')">Purity of Spirit</div>
+<div onclick="selectAbility('Holy Nimbus')">Holy Nimbus</div>
+<div onclick="selectAbility('Righteousness')">Righteousness</div>
+
+<div onclick="selectAbility('Sacred Oath: Oath of the Ancients')">Sacred Oath: Oath of the Ancients</div>
+<div onclick="selectAbility('Channel Divinity: Nature\'s Wrath')">Channel Divinity: Nature's Wrath</div>
+<div onclick="selectAbility('Channel Divinity: Turn the Faithless')">Channel Divinity: Turn the Faithless</div>
+<div onclick="selectAbility('Aura of Warding')">Aura of Warding</div>
+<div onclick="selectAbility('Evasion')">Evasion</div>
+<div onclick="selectAbility('Undying Sentinel')">Undying Sentinel</div>
+
+<div onclick="selectAbility('Sacred Oath: Oath of Vengeance')">Sacred Oath: Oath of Vengeance</div>
+<div onclick="selectAbility('Channel Divinity: Abjure Enemy')">Channel Divinity: Abjure Enemy</div>
+<div onclick="selectAbility('Channel Divinity: Vow of Enmity')">Channel Divinity: Vow of Enmity</div>
+<div onclick="selectAbility('Relentless Avenger')">Relentless Avenger</div>
+<div onclick="selectAbility('Soul of Vengeance')">Soul of Vengeance</div>
+<div onclick="selectAbility('Avenging Angel')">Avenging Angel</div>
+<!-- Ranger Abilities -->
+<div onclick="selectAbility('Favored Enemy')">Favored Enemy</div>
+<div onclick="selectAbility('Natural Explorer')">Natural Explorer</div>
+<div onclick="selectAbility('Spellcasting')">Spellcasting</div>
+<div onclick="selectAbility('Ranger Archetype')">Ranger Archetype</div>
+<div onclick="selectAbility('Extra Attack')">Extra Attack</div>
+<div onclick="selectAbility('Land’s Stride')">Land’s Stride</div>
+<div onclick="selectAbility('Hide in Plain Sight')">Hide in Plain Sight</div>
+<div onclick="selectAbility('Vanishing Step')">Vanishing Step</div>
+<div onclick="selectAbility('Feral Senses')">Feral Senses</div>
+<div onclick="selectAbility('Foe Slayer')">Foe Slayer</div>
+<div onclick="selectAbility('Primeval Awareness')">Primeval Awareness</div>
+<div onclick="selectAbility('Ranger’s Companion')">Ranger’s Companion</div>
+<div onclick="selectAbility('Extra Attack (2nd)')">Extra Attack (2nd)</div>
+<div onclick="selectAbility('Beast Mastery')">Beast Mastery</div>
+<div onclick="selectAbility('Primeval Awareness')">Primeval Awareness</div>
+
+<!-- Ranger Archetypes -->
+<div onclick="selectAbility('Ranger Archetype: Hunter')">Ranger Archetype: Hunter</div>
+<div onclick="selectAbility('Hunter’s Prey')">Hunter’s Prey</div>
+<div onclick="selectAbility('Defensive Tactics')">Defensive Tactics</div>
+<div onclick="selectAbility('Superior Hunter’s Defense')">Superior Hunter’s Defense</div>
+<div onclick="selectAbility('Foe Slayer')">Foe Slayer</div>
+
+<div onclick="selectAbility('Ranger Archetype: Beast Master')">Ranger Archetype: Beast Master</div>
+<div onclick="selectAbility('Ranger’s Companion')">Ranger’s Companion</div>
+<div onclick="selectAbility('Extra Attack (2nd)')">Extra Attack (2nd)</div>
+<div onclick="selectAbility('Beast Mastery')">Beast Mastery</div>
+<div onclick="selectAbility('Primeval Awareness')">Primeval Awareness</div>
+
+<div onclick="selectAbility('Ranger Archetype: Gloom Stalker')">Ranger Archetype: Gloom Stalker</div>
+<div onclick="selectAbility('Gloom Stalker Magic')">Gloom Stalker Magic</div>
+<div onclick="selectAbility('Dread Ambusher')">Dread Ambusher</div>
+<div onclick="selectAbility('Umbral Sight')">Umbral Sight</div>
+<div onclick="selectAbility('Shadowy Dodge')">Shadowy Dodge</div>
+
+<div onclick="selectAbility('Ranger Archetype: Horizon Walker')">Ranger Archetype: Horizon Walker</div>
+<div onclick="selectAbility('Horizon Walker Magic')">Horizon Walker Magic</div>
+<div onclick="selectAbility('Detect Portal')">Detect Portal</div>
+<div onclick="selectAbility('Planar Warrior')">Planar Warrior</div>
+<div onclick="selectAbility('Ethereal Step')">Ethereal Step</div>
+<div onclick="selectAbility('Spectral Defense')">Spectral Defense</div>
+
+<div onclick="selectAbility('Ranger Archetype: Swarmkeeper')">Ranger Archetype: Swarmkeeper</div>
+<div onclick="selectAbility('Swarmkeeper Magic')">Swarmkeeper Magic</div>
+<div onclick="selectAbility('Gathered Swarm')">Gathered Swarm</div>
+<div onclick="selectAbility('Writhing Tide')">Writhing Tide</div>
+<div onclick="selectAbility('Swarmkeeper’s Companion')">Swarmkeeper’s Companion</div>
+
+<div onclick="selectAbility('Ranger Archetype: Drakewarden')">Ranger Archetype: Drakewarden</div>
+<div onclick="selectAbility('Drakewarden Magic')">Drakewarden Magic</div>
+<div onclick="selectAbility('Drake Companion')">Drake Companion</div>
+<div onclick="selectAbility('Elemental Bond')">Elemental Bond</div>
+<div onclick="selectAbility('Drake’s Breath')">Drake’s Breath</div>
+<div onclick="selectAbility('Drake’s Rage')">Drake’s Rage</div>
+<!-- Rogue Abilities -->
+<div onclick="selectAbility('Sneak Attack')">Sneak Attack</div>
+<div onclick="selectAbility('Thieves’ Cant')">Thieves’ Cant</div>
+<div onclick="selectAbility('Cunning Action')">Cunning Action</div>
+<div onclick="selectAbility('Roguish Archetype')">Roguish Archetype</div>
+<div onclick="selectAbility('Uncanny Dodge')">Uncanny Dodge</div>
+<div onclick="selectAbility('Evasion')">Evasion</div>
+<div onclick="selectAbility('Reliable Talent')">Reliable Talent</div>
+<div onclick="selectAbility('Blindsense')">Blindsense</div>
+<div onclick="selectAbility('Slippery Mind')">Slippery Mind</div>
+<div onclick="selectAbility('Elusive')">Elusive</div>
+<div onclick="selectAbility('Stroke of Luck')">Stroke of Luck</div>
+
+<!-- Roguish Archetypes -->
+<div onclick="selectAbility('Roguish Archetype: Thief')">Roguish Archetype: Thief</div>
+<div onclick="selectAbility('Fast Hands')">Fast Hands</div>
+<div onclick="selectAbility('Second-Story Work')">Second-Story Work</div>
+<div onclick="selectAbility('Supreme Sneak')">Supreme Sneak</div>
+<div onclick="selectAbility('Use Magic Device')">Use Magic Device</div>
+
+<div onclick="selectAbility('Roguish Archetype: Assassin')">Roguish Archetype: Assassin</div>
+<div onclick="selectAbility('Assassinate')">Assassinate</div>
+<div onclick="selectAbility('Infiltration Expertise')">Infiltration Expertise</div>
+<div onclick="selectAbility('Impostor')">Impostor</div>
+<div onclick="selectAbility('Death Strike')">Death Strike</div>
+
+<div onclick="selectAbility('Roguish Archetype: Arcane Trickster')">Roguish Archetype: Arcane Trickster</div>
+<div onclick="selectAbility('Spellcasting')">Spellcasting</div>
+<div onclick="selectAbility('Mage Hand Legerdemain')">Mage Hand Legerdemain</div>
+<div onclick="selectAbility('Arcane Trickster’s Spellcasting')">Arcane Trickster’s Spellcasting</div>
+<div onclick="selectAbility('Versatile Trickster')">Versatile Trickster</div>
+<div onclick="selectAbility('Spell Thief')">Spell Thief</div>
+
+<div onclick="selectAbility('Roguish Archetype: Swashbuckler')">Roguish Archetype: Swashbuckler</div>
+<div onclick="selectAbility('Fancy Footwork')">Fancy Footwork</div>
+<div onclick="selectAbility('Rakish Audacity')">Rakish Audacity</div>
+<div onclick="selectAbility('Panache')">Panache</div>
+<div onclick="selectAbility('Master Duelist')">Master Duelist</div>
+
+<div onclick="selectAbility('Roguish Archetype: Soulknife')">Roguish Archetype: Soulknife</div>
+<div onclick="selectAbility('Psionic Power')">Psionic Power</div>
+<div onclick="selectAbility('Knife Throwing')">Knife Throwing</div>
+<div onclick="selectAbility('Soulblade')">Soulblade</div>
+<div onclick="selectAbility('Psychic Blades')">Psychic Blades</div>
+
+<div onclick="selectAbility('Roguish Archetype: Phantom')">Roguish Archetype: Phantom</div>
+<div onclick="selectAbility('Wails from the Grave')">Wails from the Grave</div>
+<div onclick="selectAbility('Ghost Walk')">Ghost Walk</div>
+<div onclick="selectAbility('Death Knell')">Death Knell</div>
+<div onclick="selectAbility('Spirit Boon')">Spirit Boon</div>
+<!-- Sorcerer Abilities -->
+<div onclick="selectAbility('Sorcerer Spellcasting')">Sorcerer Spellcasting</div>
+<div onclick="selectAbility('Sorcery Points')">Sorcery Points</div>
+<div onclick="selectAbility('Font of Magic')">Font of Magic</div>
+<div onclick="selectAbility('Metamagic')">Metamagic</div>
+<div onclick="selectAbility('Sorcerous Origin')">Sorcerous Origin</div>
+<div onclick="selectAbility('Magic Resilience')">Magic Resilience</div>
+<div onclick="selectAbility('Sorcerous Restoration')">Sorcerous Restoration</div>
+<div onclick="selectAbility('Archmage')">Archmage</div>
+<div onclick="selectAbility('Draconic Bloodline')">Draconic Bloodline</div>
+<div onclick="selectAbility('Wild Magic')">Wild Magic</div>
+<div onclick="selectAbility('Psionic Sorcery')">Psionic Sorcery</div>
+<div onclick="selectAbility('Feywild Magic')">Feywild Magic</div>
+
+<!-- Sorcerous Origins -->
+<div onclick="selectAbility('Sorcerous Origin: Draconic Bloodline')">Sorcerous Origin: Draconic Bloodline</div>
+<div onclick="selectAbility('Draconic Resilience')">Draconic Resilience</div>
+<div onclick="selectAbility('Draconic Ancestry')">Draconic Ancestry</div>
+<div onclick="selectAbility('Elemental Affinity')">Elemental Affinity</div>
+<div onclick="selectAbility('Dragon Wings')">Dragon Wings</div>
+<div onclick="selectAbility('Draconic Presence')">Draconic Presence</div>
+
+<div onclick="selectAbility('Sorcerous Origin: Wild Magic')">Sorcerous Origin: Wild Magic</div>
+<div onclick="selectAbility('Wild Magic Surge')">Wild Magic Surge</div>
+<div onclick="selectAbility('Tides of Chaos')">Tides of Chaos</div>
+<div onclick="selectAbility('Bend Luck')">Bend Luck</div>
+<div onclick="selectAbility('Controlled Chaos')">Controlled Chaos</div>
+<div onclick="selectAbility('Spell Bombardment')">Spell Bombardment</div>
+
+<div onclick="selectAbility('Sorcerous Origin: Storm Sorcery')">Sorcerous Origin: Storm Sorcery</div>
+<div onclick="selectAbility('Stormborn')">Stormborn</div>
+<div onclick="selectAbility('Tempestuous Magic')">Tempestuous Magic</div>
+<div onclick="selectAbility('Heart of the Storm')">Heart of the Storm</div>
+<div onclick="selectAbility('Storm’s Fury')">Storm’s Fury</div>
+<div onclick="selectAbility('Wind Soul')">Wind Soul</div>
+
+<div onclick="selectAbility('Sorcerous Origin: Shadow Magic')">Sorcerous Origin: Shadow Magic</div>
+<div onclick="selectAbility('Darkvision')">Darkvision</div>
+<div onclick="selectAbility('Hound of Ill Omen')">Hound of Ill Omen</div>
+<div onclick="selectAbility('Shadow Walk')">Shadow Walk</div>
+<div onclick="selectAbility('Umbral Form')">Umbral Form</div>
+<div onclick="selectAbility('Master of Shadows')">Master of Shadows</div>
+
+<div onclick="selectAbility('Sorcerous Origin: Divine Soul')">Sorcerous Origin: Divine Soul</div>
+<div onclick="selectAbility('Divine Magic')">Divine Magic</div>
+<div onclick="selectAbility('Favored by the Gods')">Favored by the Gods</div>
+<div onclick="selectAbility('Angelic Form')">Angelic Form</div>
+<div onclick="selectAbility('Unearthly Recovery')">Unearthly Recovery</div>
+<div onclick="selectAbility('Celestial Radiance')">Celestial Radiance</div>
+
+<!-- Metamagic -->
+<div onclick="selectAbility('Metamagic: Careful Spell')">Metamagic: Careful Spell</div>
+<div onclick="selectAbility('Metamagic: Distant Spell')">Metamagic: Distant Spell</div>
+<div onclick="selectAbility('Metamagic: Empowered Spell')">Metamagic: Empowered Spell</div>
+<div onclick="selectAbility('Metamagic: Extended Spell')">Metamagic: Extended Spell</div>
+<div onclick="selectAbility('Metamagic: Heightened Spell')">Metamagic: Heightened Spell</div>
+<div onclick="selectAbility('Metamagic: Quickened Spell')">Metamagic: Quickened Spell</div>
+<div onclick="selectAbility('Metamagic: Subtle Spell')">Metamagic: Subtle Spell</div>
+<div onclick="selectAbility('Metamagic: Twinned Spell')">Metamagic: Twinned Spell</div>
+<div onclick="selectAbility('Celestial Radiance')">Celestial Radiance</div>
+<div onclick="selectAbility('Agonizing Blast')">Agonizing Blast</div>
+<div onclick="selectAbility('Armor of Shadows')">Armor of Shadows</div>
+<div onclick="selectAbility('Ascendant Step')">Ascendant Step</div>
+<div onclick="selectAbility('Beast Speech')">Beast Speech</div>
+<div onclick="selectAbility('Beguiling Influence')">Beguiling Influence</div>
+<div onclick="selectAbility('Book of Ancient Secrets')">Book of Ancient Secrets</div>
+<div onclick="selectAbility('Chains of Carceri')">Chains of Carceri</div>
+<div onclick="selectAbility('Cloak of Flies')">Cloak of Flies</div>
+<div onclick="selectAbility('Devil’s Sight')">Devil’s Sight</div>
+<div onclick="selectAbility('Dreadful Word')">Dreadful Word</div>
+<div onclick="selectAbility('Eldritch Spear')">Eldritch Spear</div>
+<div onclick="selectAbility('Eyes of the Rune Keeper')">Eyes of the Rune Keeper</div>
+<div onclick="selectAbility('Fiendish Vigor')">Fiendish Vigor</div>
+<div onclick="selectAbility('Gaze of the Unnerver')">Gaze of the Unnerver</div>
+<div onclick="selectAbility('Grasp of Hadar')">Grasp of Hadar</div>
+<div onclick="selectAbility('Improved Pact Weapon')">Improved Pact Weapon</div>
+<div onclick="selectAbility('Lifedrinker')">Lifedrinker</div>
+<div onclick="selectAbility('Mire the Mind')">Mire the Mind</div>
+<div onclick="selectAbility('One with Shadows')">One with Shadows</div>
+<div onclick="selectAbility('Otherworldly Leap')">Otherworldly Leap</div>
+<div onclick="selectAbility('Repelling Blast')">Repelling Blast</div>
+<div onclick="selectAbility('Thirsting Blade')">Thirsting Blade</div>
+<div onclick="selectAbility('Tomb of Levistus')">Tomb of Levistus</div>
+<div onclick="selectAbility('Voice of the Chain Master')">Voice of the Chain Master</div>
+<div onclick="selectAbility('Witch Sight')">Witch Sight</div>
+<div onclick="selectAbility('Archfey Patron')">Archfey Patron</div>
+<div onclick="selectAbility('Celestial Patron')">Celestial Patron</div>
+<div onclick="selectAbility('Fiend Patron')">Fiend Patron</div>
+<div onclick="selectAbility('Great Old One Patron')">Great Old One Patron</div>
+<div onclick="selectAbility('Hexblade Patron')">Hexblade Patron</div>
+<div onclick="selectAbility('Undying Patron')">Undying Patron</div>
+<div onclick="selectAbility('Chain Pact')">Chain Pact</div>
+<div onclick="selectAbility('Blade Pact')">Blade Pact</div>
+<div onclick="selectAbility('Tome Pact')">Tome Pact</div>
+<div onclick="selectAbility('Celestial Radiance')">Celestial Radiance</div>
+<div onclick="selectAbility('Arcane Recovery')">Arcane Recovery</div>
+<div onclick="selectAbility('Arcane Tradition: School of Abjuration')">Arcane Tradition: School of Abjuration</div>
+<div onclick="selectAbility('Arcane Tradition: School of Conjuration')">Arcane Tradition: School of Conjuration</div>
+<div onclick="selectAbility('Arcane Tradition: School of Divination')">Arcane Tradition: School of Divination</div>
+<div onclick="selectAbility('Arcane Tradition: School of Enchantment')">Arcane Tradition: School of Enchantment</div>
+<div onclick="selectAbility('Arcane Tradition: School of Evocation')">Arcane Tradition: School of Evocation</div>
+<div onclick="selectAbility('Arcane Tradition: School of Illusion')">Arcane Tradition: School of Illusion</div>
+<div onclick="selectAbility('Arcane Tradition: School of Necromancy')">Arcane Tradition: School of Necromancy</div>
+<div onclick="selectAbility('Arcane Tradition: School of Transmutation')">Arcane Tradition: School of Transmutation</div>
+<div onclick="selectAbility('Cantrip Versatility')">Cantrip Versatility</div>
+<div onclick="selectAbility('Spell Mastery')">Spell Mastery</div>
+<div onclick="selectAbility('Signature Spells')">Signature Spells</div>
+<div onclick="selectAbility('Spellbook')">Spellbook</div>
+<div onclick="selectAbility('Scribe Scroll')">Scribe Scroll</div>
+<div onclick="selectAbility('Arcane Ward')">Arcane Ward</div>
+<div onclick="selectAbility('Minor Conjuration')">Minor Conjuration</div>
+<div onclick="selectAbility('Prescience')">Prescience</div>
+<div onclick="selectAbility('Potent Cantrip')">Potent Cantrip</div>
+<div onclick="selectAbility('Potent Spellcasting')">Potent Spellcasting</div>
+<div onclick="selectAbility('The Master of Illusions')">The Master of Illusions</div>
+<div onclick="selectAbility('School of Abjuration: Abjuration Savant')">School of Abjuration: Abjuration Savant</div>
+<div onclick="selectAbility('School of Abjuration: Arcane Ward')">School of Abjuration: Arcane Ward</div>
+<div onclick="selectAbility('School of Abjuration: Projected Ward')">School of Abjuration: Projected Ward</div>
+<div onclick="selectAbility('School of Conjuration: Conjuration Savant')">School of Conjuration: Conjuration Savant</div>
+<div onclick="selectAbility('School of Conjuration: Minor Conjuration')">School of Conjuration: Minor Conjuration</div>
+<div onclick="selectAbility('School of Conjuration: Benign Transposition')">School of Conjuration: Benign Transposition</div>
+<div onclick="selectAbility('School of Divination: Divination Savant')">School of Divination: Divination Savant</div>
+<div onclick="selectAbility('School of Divination: Portent')">School of Divination: Portent</div>
+<div onclick="selectAbility('School of Divination: Greater Portent')">School of Divination: Greater Portent</div>
+<div onclick="selectAbility('School of Enchantment: Enchantment Savant')">School of Enchantment: Enchantment Savant</div>
+<div onclick="selectAbility('School of Enchantment: Hypnotic Gaze')">School of Enchantment: Hypnotic Gaze</div>
+<div onclick="selectAbility('School of Enchantment: Instinctive Charm')">School of Enchantment: Instinctive Charm</div>
+<div onclick="selectAbility('School of Evocation: Evocation Savant')">School of Evocation: Evocation Savant</div>
+<div onclick="selectAbility('School of Evocation: Sculpt Spells')">School of Evocation: Sculpt Spells</div>
+<div onclick="selectAbility('School of Evocation: Potent Cantrip')">School of Evocation: Potent Cantrip</div>
+<div onclick="selectAbility('School of Illusion: Illusion Savant')">School of Illusion: Illusion Savant</div>
+<div onclick="selectAbility('School of Illusion: Improved Minor Illusion')">School of Illusion: Improved Minor Illusion</div>
+<div onclick="selectAbility('School of Illusion: Malleable Illusions')">School of Illusion: Malleable Illusions</div>
+<div onclick="selectAbility('School of Necromancy: Necromancy Savant')">School of Necromancy: Necromancy Savant</div>
+<div onclick="selectAbility('School of Necromancy: Grim Harvest')">School of Necromancy: Grim Harvest</div>
+<div onclick="selectAbility('School of Necromancy: Undead Thralls')">School of Necromancy: Undead Thralls</div>
+<div onclick="selectAbility('School of Transmutation: Transmutation Savant')">School of Transmutation: Transmutation Savant</div>
+<div onclick="selectAbility('School of Transmutation: Minor Alchemy')">School of Transmutation: Minor Alchemy</div>
+<div onclick="selectAbility('School of Transmutation: Major Transformation')">School of Transmutation: Major Transformation</div>
+<div onclick="selectAbility('School of Transmutation: Shapechanger')">School of Transmutation: Shapechanger</div>
+         
+
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -891,6 +1716,56 @@
 <div onclick="selectItem('Vorpal Sword')">Vorpal Sword</div>
 <div onclick="selectItem('Well of Many Worlds')">Well of Many Worlds</div>
 <div onclick="selectItem('Orb of Dragonkind')">Orb of Dragonkind</div>
+<div onclick="selectItem('Padded Armor')">Padded Armor</div>
+<div onclick="selectItem('Leather Armor')">Leather Armor</div>
+<div onclick="selectItem('Studded Leather Armor')">Studded Leather Armor</div>
+<div onclick="selectItem('Hide Armor')">Hide Armor</div>
+<div onclick="selectItem('Chain Shirt')">Chain Shirt</div>
+<div onclick="selectItem('Scale Mail')">Scale Mail</div>
+<div onclick="selectItem('Breastplate')">Breastplate</div>
+<div onclick="selectItem('Half Plate')">Half Plate</div>
+<div onclick="selectItem('Ring Mail')">Ring Mail</div>
+<div onclick="selectItem('Chain Mail')">Chain Mail</div>
+<div onclick="selectItem('Splint Armor')">Splint Armor</div>
+<div onclick="selectItem('Plate Armor')">Plate Armor</div>
+<div onclick="selectItem('Shield')">Shield</div>
+<div onclick="selectItem('Club')">Club</div>
+<div onclick="selectItem('Dagger')">Dagger</div>
+<div onclick="selectItem('Greatclub')">Greatclub</div>
+<div onclick="selectItem('Handaxe')">Handaxe</div>
+<div onclick="selectItem('Javelin')">Javelin</div>
+<div onclick="selectItem('Light Hammer')">Light Hammer</div>
+<div onclick="selectItem('Mace')">Mace</div>
+<div onclick="selectItem('Quarterstaff')">Quarterstaff</div>
+<div onclick="selectItem('Sickle')">Sickle</div>
+<div onclick="selectItem('Spear')">Spear</div>
+<div onclick="selectItem('Light Crossbow')">Light Crossbow</div>
+<div onclick="selectItem('Dart')">Dart</div>
+<div onclick="selectItem('Shortbow')">Shortbow</div>
+<div onclick="selectItem('Sling')">Sling</div>
+<div onclick="selectItem('Battleaxe')">Battleaxe</div>
+<div onclick="selectItem('Flail')">Flail</div>
+<div onclick="selectItem('Glaive')">Glaive</div>
+<div onclick="selectItem('Greataxe')">Greataxe</div>
+<div onclick="selectItem('Greatsword')">Greatsword</div>
+<div onclick="selectItem('Halberd')">Halberd</div>
+<div onclick="selectItem('Lance')">Lance</div>
+<div onclick="selectItem('Longsword')">Longsword</div>
+<div onclick="selectItem('Maul')">Maul</div>
+<div onclick="selectItem('Morningstar')">Morningstar</div>
+<div onclick="selectItem('Pike')">Pike</div>
+<div onclick="selectItem('Rapier')">Rapier</div>
+<div onclick="selectItem('Scimitar')">Scimitar</div>
+<div onclick="selectItem('Shortsword')">Shortsword</div>
+<div onclick="selectItem('Trident')">Trident</div>
+<div onclick="selectItem('War Pick')">War Pick</div>
+<div onclick="selectItem('Warhammer')">Warhammer</div>
+<div onclick="selectItem('Whip')">Whip</div>
+<div onclick="selectItem('Blowgun')">Blowgun</div>
+<div onclick="selectItem('Hand Crossbow')">Hand Crossbow</div>
+<div onclick="selectItem('Heavy Crossbow')">Heavy Crossbow</div>
+<div onclick="selectItem('Longbow')">Longbow</div>
+<div onclick="selectItem('Net')">Net</div>
 
 </div>
                     </div>
@@ -1000,23 +1875,25 @@
 
             <!-- Step 6: Abilities -->
             <div id="step6" style="display:none;">
-                <h3>Step 6: Abilities</h3>
-                <input type="text" id="abilityInput" placeholder="Ability Name">
-                <button onclick="addAbility()">Add Ability</button>
-                <div id="abilitiesDiv"></div>
+                <h3>Step 6: SKIP THIS BUGGED Abilities</h3>
+                <input type="text" id="abilityNameInput" placeholder="Ability Name">
+                <button onclick="addAbility()">Skip this add abilities after save and load</button>
+                <div id="abilitiesList"></div>
                 <button onclick="nextStep(7)">Next</button>
             </div>
 
             <!-- Step 7: Ideals, Personality, Flaws, Bonds -->
             <div id="step7" style="display:none;">
                 <h3>Step 7: Ideals, Personality Traits, Flaws, Bonds</h3>
-                <label for="idealsInput">Ideals (comma-separated):</label>
+                <label for="backgroundInput">Background</label>
+                <input type="text" id="backgroundInput"><br><br>
+                <label for="idealsInput">Ideals:</label>
                 <input type="text" id="idealsInput"><br><br>
-                <label for="personalityInput">Personality Traits (comma-separated):</label>
+                <label for="personalityInput">Personality Traits:</label>
                 <input type="text" id="personalityInput"><br><br>
-                <label for="flawsInput">Flaws (comma-separated):</label>
+                <label for="flawsInput">Flaws:</label>
                 <input type="text" id="flawsInput"><br><br>
-                <label for="bondsInput">Bonds (comma-separated):</label>
+                <label for="bondsInput">Bonds:</label>
                 <input type="text" id="bondsInput"><br><br>
                 <button onclick="nextStep(8)">Next</button>
             </div>
@@ -1078,8 +1955,8 @@
             personality: ["Brave", "Loyal"],
             flaws: ["Impulsive"],
             bonds: ["Protect my comrades"],
-            inventory: ["Health Potion", "Rations"],
-            abilities: ["Darkvisoin: See in the dark"]
+            inventory: [],
+            abilities: []
                 
             
         };
@@ -1305,16 +2182,13 @@
         }
 
         function addAbility() {
-            const nameInput = document.getElementById('abilityNameInput');
-            const name = nameInput.value.trim();
-            if (name) {
-                character.abilities.push(name)
+            const itemInput = document.getElementById('abilityNameInput');
+            const item = itemInput.value.trim();
+            if (item) {
+                character.abilities.push(item);
                 updateAbilities();
-                nameInput.value = "";
+                itemInput.value = ""; // Clear input field
             }
-            
-            
-            
         }
 
         function removeAbility() {
@@ -1331,10 +2205,10 @@
             const container = document.getElementById('abilitiesList');
             if (container) {
                 container.innerHTML = ""; // Clear previous content
-                for (const [name, value] of Object.entries(character.abilities)) {
-                    const div = document.createElement('div');
-                    div.innerHTML = `${name}: ${value}`;
-                    container.appendChild(div);
+                for (const item of character.abilities) {
+                    const p = document.createElement("p");
+                    p.innerText = item;
+                    container.appendChild(p);
                 }
             }
         }
@@ -1540,7 +2414,7 @@
         }
 
         function addProf() {
-            const itemInput = document.getElementById('profInput');
+            const itemInput = document.getElementById('weaponProfInput');
             const item = itemInput.value.trim();
             if (item) {
                 character.weapon_proficiencies.push(item);
@@ -1550,7 +2424,7 @@
         }
 
         function removeProf() {
-            const itemInput = document.getElementById('profInput');
+            const itemInput = document.getElementById('weaponProfInput');
             const item = itemInput.value.trim();
             if (item) {
                 const index = character.weapon_proficiencies.indexOf(item);
@@ -1622,19 +2496,7 @@
             currentStep = step;
         }
 
-        function addAbility() {
-            const ability = document.getElementById('abilityInput').value.trim();
-            if (ability) {
-                if (!character.abilities) {
-                    character.abilities = [];
-                }
-                character.abilities.push(ability);
-                const p = document.createElement('p');
-                p.innerText = ability;
-                document.getElementById('abilitiesDiv').appendChild(p);
-                document.getElementById('abilityInput').value = '';
-            }
-        }
+
 
         function createAndSaveCharacter() {
             // Collect data from the modal inputs
@@ -1652,12 +2514,13 @@
             };
             character.skills = document.getElementById('skillsInput').value.split(',').map(item => item.trim());
             character.weapon_proficiencies = document.getElementById('proficienciesInput').value.split(',').map(item => item.trim());
-            character.languages = document.getElementById('languagesInput').value.split(',').map(item => item.trim());
+            character.language_proficiencies = document.getElementById('languagesInput').value.split(',').map(item => item.trim());
             character.hp = parseInt(document.getElementById('hpInput').value, 10);
             character.movement_speed = parseInt(document.getElementById('speedInput').value, 10);
             character.abilities = character.abilities || [];
+            character.background = document.getElementById('backgroundInput').value.split(',').map(item => item.trim());
             character.ideals = document.getElementById('idealsInput').value.split(',').map(item => item.trim());
-            character.personality_traits = document.getElementById('personalityInput').value.split(',').map(item => item.trim());
+            character.personality = document.getElementById('personalityInput').value.split(',').map(item => item.trim());
             character.flaws = document.getElementById('flawsInput').value.split(',').map(item => item.trim());
             character.bonds = document.getElementById('bondsInput').value.split(',').map(item => item.trim());
             character.inventory = document.getElementById('inventoryInput').value.split(',').map(item => item.trim());
@@ -1667,6 +2530,7 @@
             character = character
             // Save the character
             saveCharacter();
+            currentStep = 1;
         }
 
  
@@ -2506,6 +3370,56 @@ const items = {
     "Sphere of Annihilation": "A powerful artifact that can destroy anything it touches, including creatures and objects.",
     "Tome of the Stilled Tongue": "Grants the reader the ability to cast spells silently, without verbal components.",
     "Vorpal Sword": "Deals additional damage and has a chance to decapitate enemies on a critical hit.",
+    "Padded Armor": "Light armor that provides basic protection. AC: 11 + Dexterity modifier. Disadvantage on Stealth checks.",
+    "Leather Armor": "Light armor made from tough but flexible leather. AC: 11 + Dexterity modifier.",
+    "Studded Leather Armor": "Light armor reinforced with small metal studs. AC: 12 + Dexterity modifier.",
+    "Hide Armor": "Medium armor made from the tanned hide of beasts. AC: 12 + Dexterity modifier (max 2).",
+    "Chain Shirt": "Medium armor that covers the torso and allows for better movement. AC: 13 + Dexterity modifier (max 2).",
+    "Scale Mail": "Medium armor made from overlapping metal scales. AC: 14 + Dexterity modifier (max 2). Disadvantage on Stealth checks.",
+    "Breastplate": "Medium armor that covers the chest and back. AC: 14 + Dexterity modifier (max 2).",
+    "Half Plate": "Medium armor offering good protection with some flexibility. AC: 15 + Dexterity modifier (max 2). Disadvantage on Stealth checks.",
+    "Ring Mail": "Heavy armor made from interlocking metal rings. AC: 14. Disadvantage on Stealth checks.",
+    "Chain Mail": "Heavy armor made from interlocking metal rings. AC: 16. Requires Strength 13. Disadvantage on Stealth checks.",
+    "Splint Armor": "Heavy armor consisting of metal strips. AC: 17. Requires Strength 15. Disadvantage on Stealth checks.",
+    "Plate Armor": "Heavy armor made from shaped metal plates. AC: 18. Requires Strength 15. Disadvantage on Stealth checks.",
+    "Shield": "Provides additional protection when held. +2 to AC.",
+    "Club": "Simple melee weapon. Deals 1d4 bludgeoning damage.",
+    "Dagger": "Simple melee weapon. Deals 1d4 piercing damage. Can be thrown (range 20/60).",
+    "Greatclub": "Simple melee weapon. Deals 1d8 bludgeoning damage.",
+    "Handaxe": "Simple melee weapon. Deals 1d6 slashing damage. Can be thrown (range 20/60).",
+    "Javelin": "Simple melee weapon. Deals 1d6 piercing damage. Can be thrown (range 30/120).",
+    "Light Hammer": "Simple melee weapon. Deals 1d4 bludgeoning damage. Can be thrown (range 20/60).",
+    "Mace": "Simple melee weapon. Deals 1d6 bludgeoning damage.",
+    "Quarterstaff": "Simple melee weapon. Deals 1d6 bludgeoning damage (1d8 if used with two hands).",
+    "Sickle": "Simple melee weapon. Deals 1d4 slashing damage.",
+    "Spear": "Simple melee weapon. Deals 1d6 piercing damage (1d8 if used with two hands). Can be thrown (range 20/60).",
+    "Light Crossbow": "Simple ranged weapon. Deals 1d8 piercing damage. Range: 80/320. Loading property.",
+    "Dart": "Simple ranged weapon. Deals 1d4 piercing damage. Range: 20/60.",
+    "Shortbow": "Simple ranged weapon. Deals 1d6 piercing damage. Range: 80/320.",
+    "Sling": "Simple ranged weapon. Deals 1d4 bludgeoning damage. Range: 30/120.",
+    "Battleaxe": "Martial melee weapon. Deals 1d8 slashing damage (1d10 if used with two hands).",
+    "Flail": "Martial melee weapon. Deals 1d8 bludgeoning damage.",
+    "Glaive": "Martial melee weapon. Deals 1d10 slashing damage. Reach property.",
+    "Greataxe": "Martial melee weapon. Deals 1d12 slashing damage.",
+    "Greatsword": "Martial melee weapon. Deals 2d6 slashing damage.",
+    "Halberd": "Martial melee weapon. Deals 1d10 slashing damage. Reach property.",
+    "Lance": "Martial melee weapon. Deals 1d12 piercing damage. Reach property. Disadvantage when attacking targets within 5 feet.",
+    "Longsword": "Martial melee weapon. Deals 1d8 slashing damage (1d10 if used with two hands).",
+    "Maul": "Martial melee weapon. Deals 2d6 bludgeoning damage.",
+    "Morningstar": "Martial melee weapon. Deals 1d8 piercing damage.",
+    "Pike": "Martial melee weapon. Deals 1d10 piercing damage. Reach property.",
+    "Rapier": "Martial melee weapon. Deals 1d8 piercing damage. Finesse property.",
+    "Scimitar": "Martial melee weapon. Deals 1d6 slashing damage. Finesse property.",
+    "Shortsword": "Martial melee weapon. Deals 1d6 piercing damage. Finesse property.",
+    "Trident": "Martial melee weapon. Deals 1d6 piercing damage (1d8 if used with two hands). Can be thrown (range 20/60).",
+    "War Pick": "Martial melee weapon. Deals 1d8 piercing damage.",
+    "Warhammer": "Martial melee weapon. Deals 1d8 bludgeoning damage (1d10 if used with two hands).",
+    "Whip": "Martial melee weapon. Deals 1d4 slashing damage. Reach and finesse properties.",
+    "Blowgun": "Martial ranged weapon. Deals 1 piercing damage. Range: 25/100. Loading property.",
+    "Hand Crossbow": "Martial ranged weapon. Deals 1d6 piercing damage. Range: 30/120. Loading property.",
+    "Heavy Crossbow": "Martial ranged weapon. Deals 1d10 piercing damage. Range: 100/400. Loading property.",
+    "Longbow": "Martial ranged weapon. Deals 1d8 piercing damage. Range: 150/600.",
+    "Net": "Martial ranged weapon. No damage. Range: 5/15. Can restrain a target."
 };
         function selectSpell(spellName) {
             const spellInput = document.getElementById('spellInput');
@@ -2599,6 +3513,1049 @@ const items = {
                 }
             }
         }
+
+
+
+
+
+        function selectSkill(itemName) {
+            const spellInput = document.getElementById('skillInput');
+            if (items[itemName]) {
+                spellInput.value = `${itemName}: ${items[itemName]}`;
+            } else {
+                spellInput.value = itemName;
+            }
+        }
+        function filterSkillFunction() {
+            var input, filter, div, dropdown, i;
+            input = document.getElementById("skillInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("skillDropdown");
+            div = dropdown.getElementsByTagName("div");
+
+            // Close the dropdown if the input is empty
+            if (input.value === "") {
+                dropdown.classList.remove("show");
+                return;
+            }
+
+            dropdown.classList.add("show");
+
+            // Loop through all div elements, and hide those who don't match the search query
+            for (i = 0; i < div.length; i++) {
+                txtValue = div[i].textContent || div[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#skillInput')) {
+                var dropdown = document.getElementById("skillDropdown");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+
+
+
+
+        function selectWeaponProf(itemName) {
+            const spellInput = document.getElementById('weaponProfInput');
+            if (items[itemName]) {
+                spellInput.value = `${itemName}: ${items[itemName]}`;
+            } else {
+                spellInput.value = itemName;
+            }
+        }
+        function filterWeaponProfFunction() {
+            var input, filter, div, dropdown, i;
+            input = document.getElementById("weaponProfInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("weaponProfDropdown");
+            div = dropdown.getElementsByTagName("div");
+
+            // Close the dropdown if the input is empty
+            if (input.value === "") {
+                dropdown.classList.remove("show");
+                return;
+            }
+
+            dropdown.classList.add("show");
+
+            // Loop through all div elements, and hide those who don't match the search query
+            for (i = 0; i < div.length; i++) {
+                txtValue = div[i].textContent || div[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#weaponProfInput')) {
+                var dropdown = document.getElementById("weaponProfDropdown");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+
+
+
+
+
+
+        function selectLangProf(itemName) {
+            const spellInput = document.getElementById('langInput');
+            if (items[itemName]) {
+                spellInput.value = `${itemName}: ${items[itemName]}`;
+            } else {
+                spellInput.value = itemName;
+            }
+        }
+        function filterLangProfFunction() {
+            var input, filter, div, dropdown, i;
+            input = document.getElementById("langInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("LangProfDropdown");
+            div = dropdown.getElementsByTagName("div");
+
+            // Close the dropdown if the input is empty
+            if (input.value === "") {
+                dropdown.classList.remove("show");
+                return;
+            }
+
+            dropdown.classList.add("show");
+
+            // Loop through all div elements, and hide those who don't match the search query
+            for (i = 0; i < div.length; i++) {
+                txtValue = div[i].textContent || div[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#langInput')) {
+                var dropdown = document.getElementById("LangProfDropdown");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        function selectAbility(itemName) {
+            const spellInput = document.getElementById('abilityNameInput');
+            if (feats[itemName]) {
+                spellInput.value = `${itemName}: ${feats[itemName]}`;
+            } else {
+                spellInput.value = itemName;
+            }
+        }
+        function filterAbilityFunction() {
+            var input, filter, div, dropdown, i;
+            input = document.getElementById("abilityNameInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("abilityDropdown");
+            div = dropdown.getElementsByTagName("div");
+
+            // Close the dropdown if the input is empty
+            if (input.value === "") {
+                dropdown.classList.remove("show");
+                return;
+            }
+
+            dropdown.classList.add("show");
+
+            // Loop through all div elements, and hide those who don't match the search query
+            for (i = 0; i < div.length; i++) {
+                txtValue = div[i].textContent || div[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#abilityNameInput')) {
+                var dropdown = document.getElementById("abilityDropdown");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+        feats = {
+    "Aberrant Dragonmark": "You gain a dragonmark that grants you a spell-like ability. Choose a spell from the Aberrant Dragonmark list and you can cast it once without expending a spell slot. You regain the ability to cast it this way when you finish a long rest. Your spellcasting ability for this spell is Charisma. You also gain a special dragonmark ability based on the mark you choose.",
+    
+    "Actor": "You gain advantage on Deception and Performance checks when trying to pass yourself off as a different person. You can mimic speech and sounds you have heard, provided you have heard the target speak for at least 1 minute. The DC for others to discern your mimicry is equal to 10 + your proficiency bonus + your Charisma modifier.",
+    
+    "Adept of the Black Robes": "Prerequisite: Member of the Black Robes. You learn two additional spells of your choice from the wizard spell list. You can cast one of these spells once without expending a spell slot, and it recharges after a long rest. Intelligence is your spellcasting ability for these spells.",
+    
+    "Adept of the Red Robes": "Prerequisite: Member of the Red Robes. You learn two additional spells of your choice from the wizard spell list. You can cast one of these spells once without expending a spell slot, and it recharges after a long rest. Intelligence is your spellcasting ability for these spells.",
+    
+    "Adept of the White Robes": "Prerequisite: Member of the White Robes. You learn two additional spells of your choice from the wizard spell list. You can cast one of these spells once without expending a spell slot, and it recharges after a long rest. Intelligence is your spellcasting ability for these spells.",
+    
+    "Alert": "You gain a +5 bonus to initiative. You cannot be surprised while you are conscious. Other creatures do not gain advantage on attack rolls against you as a result of being hidden from you.",
+    
+    "Artificer Initiate": "Choose an artificer spell list. You learn two cantrips of your choice from that list. You also learn one 1st-level spell from that list, which you can cast once without expending a spell slot. You regain the ability to cast this spell with this feat when you finish a long rest. Your spellcasting ability for these spells is determined by the spell list you chose.",
+    
+    "Athlete": "You gain proficiency in Acrobatics. Your climb speed is equal to your walking speed. You can use your action to make a Dexterity (Acrobatics) check to reduce falling damage by an amount equal to five times your proficiency bonus.",
+    
+    "Charger": "When you use the Dash action, you can use a bonus action to make a melee weapon attack or shove a creature. If you make an attack, you gain a +5 bonus to the attack's damage roll if the attack hits. If you shove the creature, you can push it up to 10 feet away from you.",
+    
+    "Chef": "You gain proficiency with cook’s utensils. You can cook special meals to provide beneficial effects. When you use your cook’s utensils to prepare a meal during a long rest, you and up to 5 other creatures who eat the meal gain temporary hit points equal to your proficiency bonus, and can benefit from the effects of a short rest as if you had spent hit dice.",
+    
+    "Crossbow Expert": "You ignore the loading property of crossbows with which you are proficient. Being within 5 feet of a hostile creature doesn’t impose disadvantage on your ranged attack rolls. When you use the Attack action and attack with a one-handed weapon, you can use a bonus action to attack with a hand crossbow you are holding.",
+    
+    "Crusher": "When you hit a creature with a bludgeoning weapon, you can choose to have the target’s speed reduced by 10 feet until the start of your next turn. If you score a critical hit with a bludgeoning weapon, you can make the target have disadvantage on its next saving throw before the end of your next turn.",
+    
+    "Defensive Duelist": "When you are wielding a finesse weapon and a creature you can see attacks you with a melee attack, you can use your reaction to add your proficiency bonus to your AC for that attack, potentially causing the attack to miss.",
+    
+    "Divinely Favored": "You gain proficiency with Wisdom saving throws. When you use a class feature or spell that allows you to use Wisdom as your spellcasting ability, you add your proficiency bonus to the saving throw DCs of spells you cast using this ability.",
+    
+    "Dual Wielder": "You gain a +1 bonus to AC while you are wielding a separate melee weapon in each hand. You can use two-weapon fighting even when the one-handed weapons you are wielding aren’t light. You can draw or stow two one-handed weapons when you would normally be able to draw or stow only one.",
+    
+    "Dungeon Delver": "You have advantage on Wisdom (Perception) and Intelligence (Investigation) checks made to find secret doors. You have advantage on saving throws against traps, and you have resistance to damage dealt by traps.",
+    
+    "Durable": "When you roll a Hit Die to regain hit points, the minimum number of hit points you regain from the roll equals twice your Constitution modifier (minimum of 2). You can use this benefit only once per Hit Die roll.",
+    
+    "Eldritch Adept": "You gain one Eldritch Invocation of your choice from the warlock class. Additionally, you learn one cantrip of your choice from the warlock spell list. Charisma is your spellcasting ability for this cantrip.",
+    
+    "Elemental Adept": "Choose one type of damage: acid, cold, fire, lightning, or thunder. Spells you cast ignore resistance to that damage type. When you roll damage for a spell that deals the chosen damage type, you can reroll any 1s on the damage dice. You must use the new rolls.",
+    
+    "Fey Touched": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You learn the Misty Step spell and one 1st-level spell of your choice from the enchantment or illusion schools. You can cast each of these spells once without expending a spell slot. Once you cast either of these spells this way, you can’t cast that spell this way again until you finish a long rest.",
+    
+    "Fey Teleportation": "You learn the Misty Step spell and one other spell of your choice from the enchantment or illusion schools of magic. You can cast each of these spells once without expending a spell slot. Once you cast either of these spells this way, you can’t cast that spell this way again until you finish a long rest. Your spellcasting ability for these spells is the ability increased by this feat.",
+    
+    "Fighting Initiate": "You gain proficiency with one fighting style of your choice from the Fighter class. You can choose a fighting style that you do not already have.",
+    
+    "Gift of the Chromatic Dragon": "You learn the Chromatic Orb spell and can cast it once without expending a spell slot. You regain the ability to cast it this way when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also gain an additional feature based on the dragon type you choose.",
+    
+    "Gift of the Gem Dragon": "You learn the Enlarge/Reduce spell and can cast it once without expending a spell slot. You regain the ability to cast it this way when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also manifest a protective aura or other features based on the gem dragon you choose.",
+    
+    "Gift of the Metallic Dragon": "You learn the Cure Wounds spell and can cast it once without expending a spell slot. You regain the ability to cast it this way when you finish a long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell. You can also manifest protective wings to shield others from attacks.",
+    
+    "Grappler": "Prerequisite: Strength 13 or higher. You have advantage on attack rolls against a creature you are grappling. You can use your action to try to pin a creature grappled by you. If you succeed, both you and the creature are restrained until the grapple ends.",
+    
+    "Great Weapon Master": "Before you make a melee attack with a heavy weapon, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack's damage. When you score a critical hit with a melee weapon or reduce a creature to 0 hit points, you can make one melee weapon attack as a bonus action.",
+    
+    "Gunner": "Increase your Dexterity score by 1, to a maximum of 20. You gain proficiency with firearms. You ignore the loading property of firearms and being within 5 feet of a hostile creature doesn’t impose disadvantage on your ranged attack rolls.",
+    
+    "Healer": "When you use a healer’s kit to stabilize a dying creature, that creature also regains 1 hit point. You can use an action to spend one use of a healer’s kit to restore 1d6 + 4 hit points to a creature, plus additional hit points equal to the creature’s maximum number of Hit Dice. The creature can’t regain hit points from this feat again until it finishes a short or long rest.",
+    
+    "Heavily Armored": "Prerequisite: Proficiency with medium armor. You gain proficiency with heavy armor. Your Strength or Dexterity score increases by 1, to a maximum of 20.",
+    
+    "Heavy Armor Master": "Prerequisite: Proficiency with heavy armor. Your Strength score increases by 1, to a maximum of 20. While you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from nonmagical weapons is reduced by 3.",
+    
+    "Infernal Constitution": "Your Constitution score increases by 1, to a maximum of 20. You gain resistance to fire damage and have advantage on saving throws against being frightened.",
+    
+    "Initiate of High Sorcery": "Prerequisite: Initiate of High Sorcery affiliation. You learn two additional spells from the wizard spell list. You can cast one of these spells once without expending a spell slot, and it recharges after a long rest. Intelligence is your spellcasting ability for these spells.",
+    
+    "Inspiring Leader": "You can spend 10 minutes inspiring your companions, shoring up their resolve to fight. Up to six friendly creatures (including yourself) within 30 feet of you gain temporary hit points equal to your level + your Charisma modifier. A creature can’t gain temporary hit points from this feat again until it finishes a short or long rest.",
+    
+    "Keen Mind": "Your Intelligence score increases by 1, to a maximum of 20. You have advantage on Intelligence checks to recall information. You can accurately recall anything you have seen or heard within the past month. You can always recall the number of hours left before the next sunrise or sunset.",
+    
+    "Knight of the Crown": "Prerequisite: Knight of the Crown affiliation. You gain proficiency in Charisma saving throws. You can use your action to rally your allies, allowing each creature within 10 feet of you to roll a d4 and add the number rolled to their next attack roll or saving throw.",
+    
+    "Knight of the Sword": "Prerequisite: Knight of the Sword affiliation. You gain proficiency with heavy armor and shields. When you use your action to take the Dodge action, you can also use a bonus action to make a weapon attack against a creature within your reach.",
+    
+    "Knight of the Rose": "Prerequisite: Knight of the Rose affiliation. You gain proficiency with one weapon of your choice from the Fighter’s list. You can use a bonus action to make a melee attack against a creature within your reach that has taken damage from an ally.",
+    
+    "Lightly Armored": "You gain proficiency with light armor. Your Dexterity score increases by 1, to a maximum of 20.",
+    
+    "Linguist": "You gain proficiency with three languages of your choice. You can create written ciphers and codes. Others can decipher your writing only with a successful DC 15 Intelligence (Investigation) check.",
+    
+    "Lucky": "You have 3 luck points. Whenever you make an attack roll, an ability check, or a saving throw, you can spend one luck point to roll an additional d20. You choose which of the d20s to use. You can also spend a luck point to impose disadvantage on an attack roll made against you. You regain your expended luck points when you finish a long rest.",
+    
+    "Mage Slayer": "You gain advantage on saving throws against spells cast by creatures within 5 feet of you. When you use your action to make a melee attack against a creature that is concentrating on a spell, you can deal damage to that creature, potentially breaking its concentration.",
+    
+    "Magic Initiate": "You learn two cantrips of your choice from the spell list of a class you have spellcasting or Pact Magic for. You also learn one 1st-level spell from that list, which you can cast once without expending a spell slot. You regain the ability to cast this spell with this feat when you finish a long rest. Your spellcasting ability for these spells is the ability you used to choose the spell list.",
+    
+    "Martial Adept": "You learn two maneuvers of your choice from the Battle Master archetype. You gain one superiority die, which is a d6. This die is used to fuel your maneuvers, and it is restored when you finish a short or long rest.",
+    
+    "Medium Armor Master": "Prerequisite: Proficiency with medium armor. Your Dexterity score increases by 1, to a maximum of 20. While you are wearing medium armor, you can add up to 2 (instead of 1) from your Dexterity modifier to your Armor Class.",
+    
+    "Metamagic Adept": "You learn two Metamagic options of your choice from the sorcerer class. You can use a Metamagic option a number of times equal to your Charisma modifier (minimum of once) per long rest. You regain all expended uses when you finish a long rest.",
+    
+    "Mobile": "Your speed increases by 10 feet. When you use the Dash action, difficult terrain doesn’t cost you extra movement. When you make a melee attack against a creature, you don’t provoke opportunity attacks from that creature for the rest of the turn.",
+    
+    "Moderately Armored": "You gain proficiency with medium armor and shields. Your Strength or Dexterity score increases by 1, to a maximum of 20.",
+    
+    "Mounted Combatant": "You are a skilled rider. While mounted and not incapacitated, you can force an attack targeted at your mount to target you instead. You have advantage on melee attack rolls against creatures smaller than your mount. If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.",
+    
+    "Observant": "Increase your Intelligence or Wisdom score by 1, to a maximum of 20. If you can see a creature’s mouth while it is speaking a language you understand, you can interpret what it is saying by reading its lips. You have a +5 bonus to your passive Wisdom (Perception) and passive Intelligence (Investigation) scores.",
+    
+    "Piercer": "Increase your Strength or Dexterity by 1, to a maximum of 20. Once per turn, when you hit a creature with a weapon that deals piercing damage, you can reroll one of the weapon’s damage dice. You must use the new roll. In addition, when you score a critical hit with a weapon that deals piercing damage, you can add an extra damage die to the damage roll.",
+    
+    "Poisoner": "You gain proficiency with the poisoner's kit. You can apply poison to a weapon or piece of ammunition as a bonus action. A creature that is poisoned by a poison you apply takes 1d4 poison damage at the start of its turn for a number of turns equal to the poison's duration. You can create and apply a number of poisons equal to your proficiency bonus per day. You have advantage on saving throws against being poisoned.",
+    
+    "Polearm Master": "You can keep your enemies at bay with reach weapons. When you take the Attack action and attack with a glaive, halberd, or quarterstaff, you can use a bonus action to make a melee attack with the opposite end of the weapon. This attack deals bludgeoning damage equal to 1d4 + your Strength modifier. While you are wielding a glaive, halberd, or quarterstaff, other creatures provoke an opportunity attack from you when they enter your reach.",
+    
+    "Prodigy": "You gain proficiency in one skill of your choice, one tool of your choice, and one language of your choice. You can choose any skill or tool you want, and the language must be one that you don't already know. You can double your proficiency bonus for any ability check you make with the chosen skill. You can also use your proficiency bonus with the chosen tool if you use it to make a check.",
+    
+    "Resilient": "Increase one ability score of your choice by 1, to a maximum of 20. You gain proficiency in saving throws using the chosen ability score. When you gain this feat, choose one of the following saving throws to gain proficiency in: Strength, Dexterity, Constitution, Intelligence, Wisdom, or Charisma.",
+    
+    "Ritual Caster": "You gain proficiency with the ritual caster's spellbook and learn two rituals of your choice. You can cast the ritual spells you know as rituals, without expending a spell slot. When you gain this feat, choose a spellcasting class: bard, cleric, druid, sorcerer, warlock, or wizard. You gain the spellcasting feature of that class, but only for rituals. You can cast spells you know as rituals, but only if they have the ritual tag.",
+    
+    "Savage Attacker": "Once per turn when you roll damage for a melee weapon attack, you can reroll the weapon's damage dice and use either total. You must use the new roll.",
+    
+    "Second Chance": "Prerequisite: Charisma 13 or higher. When a creature you can see attacks you with an attack roll, you can use your reaction to roll 1d4 and subtract the number rolled from the attack roll. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
+    
+    "Sentinel": "You have mastered techniques to take advantage of other creatures' moments of vulnerability. Creatures within 5 feet of you provoke an opportunity attack from you even if they take the Disengage action. When you hit a creature with an opportunity attack, its speed becomes 0 for the rest of the turn. When a creature makes an attack against a target other than you that is within 5 feet of you, you can use your reaction to make a melee weapon attack against the attacking creature.",
+    
+    "Shadow Touched": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You learn the Invisibility spell and one 1st-level spell of your choice from the illusion or necromancy schools. You can cast each of these spells once without expending a spell slot. Once you cast either of these spells this way, you can’t cast that spell this way again until you finish a long rest.",
+    
+    "Sharpshooter": "You have mastered ranged weapons and can make shots that others find impossible. Attacking at long range doesn’t impose disadvantage on your ranged weapon attack rolls. Your ranged weapon attacks ignore half cover and three-quarters cover. Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack’s damage.",
+    
+    "Shield Master": "You can use your shield to protect yourself and others. If you take the Attack action and attack with a shield, you can use your bonus action to try to shove a creature within 5 feet of you with your shield. When you take the Dodge action, you can use your reaction to gain advantage on Dexterity saving throws against effects that target only you. Additionally, you can add your shield’s AC bonus to your Dexterity saving throws against effects that you can see.",
+    
+    "Skill Expert": "Increase one ability score of your choice by 1, to a maximum of 20. You gain proficiency in one skill of your choice. You can choose a skill that you are already proficient in to gain expertise in it. Expertise means you double your proficiency bonus for any ability check you make with that skill.",
+    
+    "Skilled": "You gain proficiency in any combination of three skills or tools of your choice.",
+    
+    "Skulker": "You can attempt to hide when you are lightly obscured from the creature from which you are hiding. When you are hidden from a creature and miss it with a ranged weapon attack, making the attack doesn’t reveal your position. You can attempt to hide when you are lightly obscured by natural phenomena, such as fog or foliage.",
+    
+    "Slasher": "You gain a +1 bonus to attack and damage rolls with slashing weapons. When you score a critical hit with a slashing weapon, you can reduce the target’s speed by 10 feet until the start of your next turn. Additionally, when you deal slashing damage to a creature, it has disadvantage on attack rolls against targets other than you until the end of its next turn.",
+    
+    "Spell Sniper": "You have practiced casting spells with great precision. You learn one cantrip that requires an attack roll from the spell list of a class you have spellcasting or Pact Magic for. The range of your spells that require attack rolls is doubled. You can ignore half cover and three-quarters cover when making spell attacks.",
+    
+    "Squat Nimbleness": "Your Strength score increases by 1, to a maximum of 20. You have advantage on Dexterity (Acrobatics) checks made to escape from grapples. You can squeeze through spaces large enough for a creature one size smaller than you, even if you would normally be unable to fit through the space.",
+    
+    "Squire of Solamnia": "Prerequisite: Squire of Solamnia affiliation. You gain proficiency with heavy armor and shields. When you are wearing heavy armor or wielding a shield, you gain a +1 bonus to your AC.",
+    
+    "Strixhaven Initiate": "You gain proficiency with one spellcasting focus of your choice, and you learn one cantrip from the spell list of that focus. You also learn one 1st-level spell from that list, which you can cast once without expending a spell slot. You regain the ability to cast this spell with this feat when you finish a long rest.",
+    
+    "Strixhaven Mascot": "You gain proficiency with one tool of your choice and one skill of your choice. You also gain proficiency with one language of your choice. You can use your proficiency bonus with these skills and tools.",
+    
+    "Tavern Brawler": "You gain proficiency with improvised weapons and unarmed strikes. When you hit a creature with an unarmed strike or an improvised weapon, you can use a bonus action to grapple the target. You can also use your bonus action to make an unarmed strike when you hit a creature with an improvised weapon.",
+    
+    "Telekinetic": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You learn the Telekinesis spell and can cast it once without expending a spell slot. You regain the ability to cast it this way when you finish a long rest. Charisma is your spellcasting ability for this spell.",
+    
+    "Telepathic": "Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20. You can use your action to cast the Detect Thoughts spell without expending a spell slot. You can cast it this way once per long rest.",
+    
+    "Tough": "Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points.",
+    
+    "War Caster": "You have advantage on Constitution saving throws made to maintain concentration on a spell. You can perform the somatic components of spells even when you have weapons or a shield in one or both hands. When a hostile creature’s movement provokes an opportunity attack from you, you can use your reaction to cast a spell at the creature rather than making a melee attack.",
+    
+    "Weapon Master": "You gain proficiency with four weapons of your choice. You can choose any weapons you do not already have proficiency with.",
+    
+    "Wood Elf Magic": "You learn the Druidcraft cantrip. Additionally, you can cast the spells Pass without Trace and Enhance Ability once each without expending a spell slot. You regain the ability to cast these spells this way when you finish a long rest. Wisdom is your spellcasting ability for these spells.",
+    "Path of the Berserker": "This path focuses on the fury and frenzy of battle. You gain abilities related to rage, making you a formidable and reckless warrior.",
+    "Frenzy": "When you enter a rage, you can choose to go into a frenzy. If you do, you can make a melee weapon attack as a bonus action on each of your turns while raging. However, you gain one level of exhaustion when your rage ends.",
+    "Mindless Rage": "Starting at 6th level, you cannot be charmed or frightened while raging.",
+    "Intimidating Presence": "Beginning at 10th level, you can use your action to frighten a creature you can see within 30 feet of you. The target must succeed on a Wisdom saving throw against your spell save DC or be frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, with disadvantage if you are within line of sight, ending the effect on itself on a success.",
+    "Retaliation": "At 14th level, when you are hit by a melee attack, you can use your reaction to deal damage to the attacker equal to your rage damage bonus.",
+    "Path of the Totem Warrior": "This path emphasizes the connection with animal spirits. You gain abilities related to a chosen totem spirit, offering various benefits.",
+    "Totem Spirit": "At 3rd level, you choose a totem spirit. For example, the Bear spirit grants you additional hit points and resistance to certain damage types.",
+    "Aspect of the Beast": "At 6th level, you gain benefits based on your totem spirit. For example, the Wolf aspect grants advantage on attack rolls against creatures within 5 feet of an ally.",
+    "Spirit Shield": "At 10th level, you can use your reaction to reduce damage dealt to an ally within 30 feet of you by a certain amount, which increases with your level.",
+    "Totemic Attunement": "At 14th level, you gain benefits based on your totem spirit. For example, the Eagle aspect allows you to move more swiftly and fly a short distance.",
+    "Path of the Ancestral Guardian": "This path emphasizes the connection with ancestral spirits, providing protection and guidance.",
+    "Warrior of the Gods": "At 3rd level, you gain the ability to use your reaction to shield allies and call upon divine protection.",
+    "Ancestral Protectors": "Starting at 3rd level, you can summon ancestral spirits to protect you and your allies, imposing disadvantage on attack rolls against them.",
+    "Consult the Gods": "At 6th level, you gain the ability to consult your ancestors for guidance, providing you with insights into future events.",
+    "Divine Protection": "At 10th level, you can grant temporary divine protection to allies, providing them with additional resistance to damage.",
+    "Path of the Storm Herald": "This path focuses on the power of storms, with abilities related to controlling the weather and unleashing elemental fury.",
+    "Storm Aura": "At 3rd level, you gain the ability to create an aura of elemental energy that damages enemies within a certain radius.",
+    "Storm's Fury": "At 6th level, you can unleash a powerful burst of storm energy, dealing additional damage to enemies and providing benefits to allies.",
+    "Eye of the Storm": "At 10th level, you gain the ability to calm the storm around you, reducing the effects of elemental damage.",
+    "Tempestuous Fury": "At 14th level, you can summon a storm of fury to strike your enemies, dealing massive damage and causing chaos.",
+    "Path of the Zealot": "This path focuses on divine zeal and fury, providing abilities that enhance your combat prowess and resilience.",
+    "Divine Fury": "At 3rd level, you can channel divine energy into your attacks, dealing additional radiant or necrotic damage.",
+    "Zealous Presence": "At 6th level, you can use your action to inspire your allies, granting them temporary hit points and advantage on saving throws.",
+    "Rage Beyond Death": "At 10th level, when you are reduced to 0 hit points while raging, you can make a Constitution saving throw to stay at 1 hit point instead.",
+    "Anger of the Gods": "At 14th level, you gain the ability to unleash the full wrath of the gods, dealing additional damage to enemies and enhancing your own abilities.",
+    "Rage": "As a bonus action, you can enter a rage which lasts for 1 minute. While raging, you gain advantage on Strength checks and saving throws, a bonus to damage rolls with melee weapon attacks using Strength, and resistance to bludgeoning, piercing, and slashing damage. The damage bonus increases as you level up (starting at +2, then +3 at 10th level). You can rage a number of times equal to your proficiency bonus per long rest.",
+    "Unarmored Defense": "While not wearing armor or using a shield, your AC equals 10 + your Dexterity modifier + your Constitution modifier. This is always active when you are not wearing armor or using a shield.",
+    "Reckless Attack": "When you make your first attack on your turn, you can choose to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
+    "Danger Sense": "You have advantage on Dexterity saving throws against effects you can see, such as traps and spells, provided you aren't blinded, deafened, or incapacitated.",
+    "Brutal Critical": "Starting at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+    "Relentless Rage": "Starting at 11th level, when you are reduced to 0 hit points while raging and don't die outright, you can make a DC 10 Constitution saving throw to drop to 1 hit point instead. The DC increases by 5 for each time you use this feature after the first, and it resets to 10 when you finish a long rest.",
+    "Persistent Rage": "Beginning at 15th level, your rage is so fierce that it is difficult to end. You can maintain your rage for longer periods, and it only ends if you choose to end it, if you fall unconscious, or if you choose to end it on your own.",
+    "Indomitable Might": "Starting at 18th level, if your Strength score is less than the value required to succeed on a Strength check, you can use your Strength score in place of the actual score when making the check.",
+    "Primal Champion": "At 20th level, your Strength and Constitution scores increase by 4, and your maximum for those scores is now 24. In addition, you gain a significant increase to your physical prowess, making you an incredibly powerful force.",
+    "Extra Attack": "Starting at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+    "Fast Movement": "Starting at 5th level, your speed increases by 10 feet while you aren’t wearing heavy armor.",
+    "Storm of Fury": "Unique to certain Barbarian subclasses, this feature allows you to unleash a storm of rage, dealing additional damage to nearby enemies in a specified area.",
+    "College of Lore": "This college focuses on knowledge and versatility, providing a range of supportive and magical abilities.",
+    "Bardic Inspiration": "You can use a bonus action to grant an ally within 60 feet an inspiration die (a d6). The ally can roll the die and add the number rolled to an ability check, attack roll, or saving throw. The die increases as you level up (d8 at 5th level, d10 at 10th level, d12 at 15th level).",
+    "Cutting Words": "Starting at 6th level, when a creature you can see within 60 feet makes an attack roll, ability check, or damage roll, you can use your reaction and expend a Bardic Inspiration die to subtract the number rolled from the creature’s roll.",
+    "Additional Magical Secrets": "At 10th level, you can learn two additional spells from any class’s spell list, which don’t count against the number of spells you can prepare.",
+    "Peerless Skill": "At 14th level, when you make an ability check, you can expend a use of Bardic Inspiration to gain advantage on the check and add the Bardic Inspiration die to the result.",
+    "College of Valor": "This college emphasizes heroism and bravery in battle, giving bards the ability to inspire their allies in combat.",
+    "Combat Inspiration": "Starting at 3rd level, when you use Bardic Inspiration to help an ally, the ally can use the die to add to a damage roll or improve their AC against an attack.",
+    "Extra Attack": "At 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+    "Battle Magic": "At 14th level, you can use your action to cast a bard spell and make a weapon attack as a bonus action.",
+    "College of Glamour": "This college focuses on enchantment and performance, providing abilities that charm and influence others.",
+    "Mantle of Inspiration": "At 3rd level, you can use your Bardic Inspiration to grant temporary hit points and allow affected creatures to move without provoking opportunity attacks.",
+    "Enthralling Performance": "At 6th level, you can use your action to captivate an audience, causing them to become charmed by you for 1 hour. They can repeat the saving throw if they are harmed by you or your allies.",
+    "Mantle of Majesty": "At 10th level, you can use a bonus action to cast the Command spell without expending a spell slot. You can use this ability a number of times equal to your Charisma modifier per long rest.",
+    "Unbreakable Majesty": "At 14th level, you can use your action to become an unearthly presence, causing creatures to be charmed by you and imposing disadvantage on attack rolls against you.",
+    "College of Swords": "This college emphasizes martial prowess and swordplay, providing a bard with fighting abilities and styles.",
+    "Fighting Style": "At 3rd level, you can choose a fighting style, such as Defense, Dueling, or Two-Weapon Fighting, which grants you additional combat abilities.",
+    "Blade Flourish": "At 3rd level, when you take the Attack action with a melee weapon, you can use one of three Flourishes: Defensive Flourish, Slashing Flourish, or Mobile Flourish. Each Flourish provides different bonuses and effects.",
+    "Extra Attack": "At 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+    "Master Duelist": "At 14th level, you can use a bonus action to perform a special combat maneuver with advantage, dealing extra damage on a hit.",
+    "College of Whispers": "This college focuses on fear and deception, using psychic and sinister abilities to manipulate and intimidate.",
+    "Psychic Blades": "At 3rd level, you can use your Bardic Inspiration to deal psychic damage with your weapon attacks. You can expend a Bardic Inspiration die to add psychic damage to your weapon attack.",
+    "Words of Terror": "At 6th level, you can use your action to terrify a creature you can see, causing them to become frightened of you for 1 hour. They can repeat the saving throw if they are harmed by you or your allies.",
+    "Unsettling Words": "At 10th level, you can use your reaction to expend a Bardic Inspiration die to unsettle a creature, reducing their saving throw against fear effects.",
+    "Shadow Lore": "At 14th level, you can use your action to cast the Power Word Kill spell, targeting a creature within 30 feet of you, without expending a spell slot.",
+    "College of Creation": "This college emphasizes the creation of magic through artistic performance, manipulating reality itself.",
+    "Mote of Potential": "At 3rd level, you can create a mote of potential that grants allies bonuses to ability checks and saving throws.",
+    "Performance of Creation": "At 6th level, you can use your performance to create magical objects and effects, such as creating food, water, or other beneficial items.",
+    "Creative Crescendo": "At 14th level, you can use your action to unleash a burst of creative energy, providing powerful effects based on your performance.",
+    "Bardic Inspiration": "As mentioned above, you can use a bonus action to grant an ally within 60 feet an inspiration die (a d6) to add to ability checks, attack rolls, or saving throws. This die increases in size as you gain levels.",
+    "Spellcasting": "Bards have access to a wide array of spells. You can cast spells using Charisma as your spellcasting ability. You have a limited number of spell slots, which increase as you level up.",
+    "Jack of All Trades": "Starting at 2nd level, you add half your proficiency bonus (rounded down) to any ability check you make that doesn’t already include your proficiency bonus.",
+    "Song of Rest": "Starting at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. Any creature who hears your performance regains an extra 1d6",
+"Countercharm": "At 6th level, you can use your action to grant you and your allies within 30 feet advantage on saving throws against being frightened or charmed for the duration of your performance.",
+    "Magical Secrets": "At 10th level, you can learn two spells from any class’s spell list. These spells don’t count against the number of spells you can prepare.",
+    "Superior Inspiration": "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use of Bardic Inspiration.",
+    "Knowledge Domain": "A domain focused on acquiring and sharing knowledge, enhancing wisdom and insight.",
+    "Blessings of Knowledge": "At 1st level, you gain proficiency in two skills of your choice from among History, Nature, Religion, and Arcana. You can add double your proficiency bonus to ability checks using these skills.",
+    "Channel Divinity: Knowledge of the Ages": "You can use Channel Divinity to gain proficiency with any skill or tool for 10 minutes.",
+    "Channel Divinity: Read Thoughts": "You can use Channel Divinity to read the thoughts of a creature within 60 feet for 1 minute. The creature can make a Wisdom saving throw to resist this effect.",
+    "Divine Strike": "At 8th level, you can infuse your weapon strikes with divine energy, adding extra radiant damage to your weapon attacks. The damage increases as you level up.",
+    "Supreme Knowledge": "At 17th level, you can use your Channel Divinity to gain advantage on any Intelligence-based check or saving throw for 1 hour.",
+    "Life Domain": "A domain focused on healing and preserving life, emphasizing support and protection.",
+    "Bonus Proficiency": "At 1st level, you gain proficiency with heavy armor.",
+    "Disciple of Life": "At 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points, the target regains additional hit points equal to 2 + the spell's level.",
+    "Channel Divinity: Preserve Life": "You can use Channel Divinity to restore hit points to any creatures within 30 feet, distributing a total number of hit points equal to five times your cleric level.",
+    "Supreme Healing": "At 17th level, your healing spells are even more effective. When you restore hit points, the amount healed is maximized.",
+    "Light Domain": "A domain focused on radiance and light, providing abilities that blind and dazzle foes.",
+    "Warding Flare": "At 1st level, you can use your reaction to impose disadvantage on an attack roll made against you by a creature within 30 feet.",
+    "Channel Divinity: Radiance of the Dawn": "You can use Channel Divinity to dispel magical darkness and deal radiant damage to creatures within 30 feet.",
+    "Corona of Light": "At 17th level, you can use your action to create a 30-foot radius aura of sunlight, which dispels darkness and deals radiant damage to enemies.",
+    "Nature Domain": "A domain focused on nature and the natural world, enhancing abilities related to animals and plants.",
+    "Acolyte of Nature": "At 1st level, you gain proficiency in the Animal Handling and Nature skills.",
+    "Channel Divinity: Charm Animals and Plants": "You can use Channel Divinity to charm animals and plants, making them friendly toward you and your companions.",
+    "Archdruid": "At 17th level, you gain the ability to use your wild shape to assume the form of an elemental creature.",
+    "Tempest Domain": "A domain focused on storms and destruction, providing abilities that enhance your control over lightning and thunder.",
+    "Wrath of the Storm": "At 1st level, you can use your reaction to deal lightning or thunder damage to a creature that hits you with a melee attack.",
+    "Channel Divinity: Destructive Wrath": "You can use Channel Divinity to deal maximum damage with lightning or thunder spells.",
+    "Stormborn": "At 17th level, you gain resistance to lightning and thunder damage, and you can use your action to summon a storm cloud.",
+    "Trickery Domain": "A domain focused on deception and trickery, providing abilities that enhance stealth and illusion.",
+    "Blessing of the Trickster": "At 1st level, you can use your action to give an ally advantage on Dexterity (Stealth) checks for 1 hour.",
+    "Channel Divinity: Invoke Duplicity": "You can use Channel Divinity to create an illusory duplicate of yourself, which can distract enemies and create opportunities for attack.",
+    "Channel Divinity: Cloak of Shadows": "You can use Channel Divinity to become invisible and create darkness around you, providing concealment.",
+    "Improved Duplicity": "At 17th level, your illusory duplicate becomes more effective, and you can use it to cast spells and affect creatures more effectively.",
+    "War Domain": "A domain focused on martial prowess and battlefield control, enhancing combat abilities and tactics.",
+    "Bonus Proficiency": "At 1st level, you gain proficiency with martial weapons and heavy armor.",
+    "Channel Divinity: Guided Strike": "You can use Channel Divinity to gain a +10 bonus to an attack roll you make, forcing a hit.",
+    "Channel Divinity: War God's Blessing": "You can use Channel Divinity to grant an ally a +10 bonus to an attack roll, making it more likely to hit.",
+    "Avatar of Battle": "At 17th level, you can use your action to become an avatar of battle, gaining temporary hit points and dealing extra damage.",
+    "Spellcasting": "As a cleric, you have access to divine spells, which you can prepare and cast using your Wisdom as the spellcasting ability.",
+    "Channel Divinity": "You can use Channel Divinity to perform divine feats depending on your domain, such as turning undead or invoking divine power.",
+    "Divine Intervention": "At 10th level, you can call on your deity to intervene on your behalf, potentially causing a miraculous effect if successful.",
+    "Turn Undead": "At 1st level, you can use Channel Divinity to turn undead creatures, causing them to flee from you and potentially be destroyed.",
+    "Circle of the Land": "A circle that emphasizes connection to a specific terrain, enhancing spellcasting and recovery abilities related to that land.",
+    "Bonus Proficiency": "At 1st level, you gain proficiency in one additional skill from among Arcana, Nature, or Survival.",
+    "Natural Recovery": "At 2nd level, during a short rest, you can recover expended spell slots of a combined level equal to or less than half your druid level (rounded up).",
+    "Land’s Stride": "At 6th level, you can move through nonmagical difficult terrain without penalty, and you have advantage on saving throws against plants and magical effects that cause you to be restrained or paralyzed.",
+    "Nature’s Ward": "At 10th level, you become immune to being charmed or frightened by fey or elementals. Additionally, you have advantage on saving throws against being grappled or restrained.",
+    "Nature’s Sanctuary": "At 14th level, creatures of the natural world can’t attack you unless they succeed on a Wisdom saving throw.",
+    "Circle of the Moon": "A circle that focuses on transforming into powerful beasts, enhancing combat effectiveness through Wild Shape.",
+    "Combat Wild Shape": "At 2nd level, you can use your Wild Shape as a bonus action and expend a spell slot to regain hit points while in Wild Shape.",
+    "Circle Forms": "At 6th level, you can assume the form of more dangerous creatures when you use Wild Shape, such as those with a CR up to your druid level divided by 3 (rounded down).",
+    "Elemental Form": "At 10th level, you can use Wild Shape to transform into an elemental. You retain the elemental's abilities and gain damage resistance based on the elemental type.",
+    "Archdruid": "At 20th level, you can use Wild Shape as a bonus action, and you can expend a spell slot to regain hit points or use your Wild Shape to transform into a more powerful form.",
+    "Circle of the Shepherd": "A circle that focuses on summoning and supporting spirits, enhancing the ability to summon and command creatures.",
+    "Speech of the Woods": "At 2nd level, you gain the ability to speak with beasts and plants.",
+    "Spirit Totem": "At 3rd level, you can use your bonus action to summon a spirit totem that provides various benefits to your allies based on the spirit’s type.",
+    "Mighty Summoner": "At 6th level, your summoned creatures gain additional hit points and can take the Attack action as a bonus action.",
+    "Guardian Spirit": "At 10th level, your spirit totem provides additional protection to your allies, including resistance to damage or immunity to specific conditions.",
+    "Circle of the Stars": "A circle that draws power from the stars, providing abilities related to starlight and cosmic energy.",
+    "Starry Form": "At 2nd level, you can use a bonus action to assume a Starry Form, gaining benefits based on the constellation you choose, such as enhancing healing or dealing radiant damage.",
+    "Guiding Light": "At 6th level, you can use your Starry Form to grant advantage on attack rolls against a creature, and your stars can provide additional effects based on your chosen constellation.",
+    "Cosmic Omen": "At 10th level, you can use your reaction to impose disadvantage on an attack roll or saving throw against your allies, providing a cosmic omen of protection.",
+    "Starry Stride": "At 14th level, your Starry Form enhances your movement, granting you the ability to move through difficult terrain more easily and providing additional benefits.",
+    "Full of Stars": "At 20th level, you become a being of pure starlight, gaining flight and the ability to deal radiant damage to nearby enemies.",
+    "Circle of Wildfire": "A circle focused on fire and rebirth, summoning and controlling wildfire spirits.",
+    "Wildfire Spirit": "At 2nd level, you can summon a wildfire spirit that aids you in combat, providing fire-based abilities and effects.",
+    "Enhanced Bond": "At 6th level, your bond with your wildfire spirit improves, enhancing its abilities and increasing the damage it deals.",
+    "Blazing Revival": "At 10th level, when you or your wildfire spirit are reduced to 0 hit points, you can use your reaction to cause a burst of flames that deals damage to nearby creatures.",
+    "Fire Form": "At 14th level, you can transform into a fire elemental or gain the ability to deal fire damage with your attacks, reflecting your connection to wildfire.",
+    "Spellcasting": "As a druid, you have access to spellcasting, using Wisdom as your spellcasting ability. You can prepare and cast spells based on your level and circle.",
+    "Wild Shape": "As a druid, you can use Wild Shape to transform into various animals, gaining their physical abilities and traits. The forms you can assume depend on your level and circle.",
+    "Archdruid": "At 20th level, you can use Wild Shape as a bonus action and expend spell slots to regain hit points or transform into more powerful forms.",
+    "Fighting Style": "You adopt a particular style of fighting as your specialty. Choose one of the following options: Archery, Defense, Dueling, Great Weapon Fighting, Protection, Two-Weapon Fighting. Your choice grants you a bonus to attack rolls or other effects.",
+    "Second Wind": "As a bonus action, you can regain hit points equal to 1d10 + your fighter level. You can use this feature once per short or long rest.",
+    "Action Surge": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action. You can use this feature once per short or long rest.",
+    "Extra Attack": "You can attack twice, instead of once, whenever you take the Attack action on your turn. This improves at 11th level to three attacks and at 20th level to four attacks.",
+    "Indomitable": "You can reroll a saving throw that you fail. You must use the new roll. You can use this feature once per long rest.",
+    "Remarkable Athlete": "You gain proficiency in Athletics or Acrobatics. You can add half your proficiency bonus to any Strength, Dexterity, or Constitution check you make that doesn’t already include your proficiency bonus.",
+    "Additional Fighting Style": "At 10th level, you can choose a second Fighting Style option. This grants you additional benefits to improve your combat abilities.",
+    "Superior Defense": "At 18th level, you gain proficiency in all saving throws. Additionally, you can use your action to take the Dodge action.",
+    "Survivor": "At 20th level, you gain proficiency in Wisdom saving throws and can add your proficiency bonus to any saving throw you make against effects that deal damage. You regain hit points equal to 5 + your Constitution modifier at the start of each of your turns while you have fewer than half your hit points.",
+    
+    // Champion
+    "Improved Critical": "Your weapon attacks score a critical hit on a roll of 19 or 20 on the d20.",
+    "Superior Critical": "Your weapon attacks score a critical hit on a roll of 18-20 on the d20.",
+    
+    // Battle Master
+    "Combat Superiority": "You learn maneuvers that you can use with your superiority dice. You start with four maneuvers and can use a superiority die to fuel them. Your superiority dice are d8s.",
+    "Student of War": "You gain proficiency with one gaming set or one musical instrument of your choice.",
+    "Know Your Enemy": "You can use a bonus action to study a creature you can see within 30 feet of you. You learn information about its capabilities, weaknesses, or resistances.",
+    "Improved Combat Superiority": "Your superiority dice become d10s, and you can use the maneuver 'Disarming Attack' as a bonus action once per short or long rest.",
+    "Relentless": "When you roll initiative and have no superiority dice remaining, you regain one superiority die.",
+    
+    // Eldritch Knight
+    "Spellcasting": "You gain the ability to cast spells from the Wizard spell list. You can cast spells using Intelligence as your spellcasting ability.",
+    "Weapon Bond": "You can magically bond with up to two weapons, allowing you to summon them to your hand as a bonus action.",
+    "War Magic": "When you use your action to cast a cantrip, you can make one weapon attack as a bonus action.",
+    "Improved War Magic": "When you use your action to cast a spell, you can make one weapon attack as a bonus action.",
+    
+    // Arcane Archer
+    "Arcane Archer Lore": "You gain proficiency with longbows and shortbows and learn two spells of your choice from the Wizard spell list.",
+    "Arcane Shot": "You learn to imbue your arrows with magical effects. You can use Arcane Shot options a number of times per short or long rest.",
+    "Magic Arrow": "Your Arcane Shot attacks ignore cover and can bypass resistance or immunity to damage.",
+    "Ever Ready": "You regain one use of your Arcane Shot feature if you roll initiative and have no uses remaining.",
+    
+    // Psi Warrior
+    "Psionic Power": "You gain access to psionic powers and can use your bonus action to activate one of them.",
+    "Telekinetic Movement": "You can move an object or creature within 30 feet using your telekinetic power as an action.",
+    "Guarded Mind": "You have advantage on saving throws against being charmed or frightened.",
+    "Psi Shield": "You can use your reaction to gain temporary hit points or provide resistance to damage for a creature within 30 feet.",
+    "Telekinetic Mastery": "You can use your telekinetic powers to move objects or creatures within 60 feet more effectively and with greater precision.",
+    
+    // Rune Knight
+    "Rune Carver": "You learn to carve magical runes onto your weapons and armor, granting you various benefits and effects.",
+    "Rune Magic": "You can use your runic magic to create powerful effects, including defensive and offensive spells.",
+    "Runic Shield": "You can create a magical shield that provides additional protection and resistance.",
+    "Runic Power": "Your runes gain additional effects and power, enhancing your combat abilities and magical prowess.",
+    
+    // Samurai
+    "Fighting Spirit": "You can use a bonus action to gain advantage on attack rolls and gain temporary hit points.",
+    "Elegant Courtier": "You gain proficiency in Insight and Persuasion, and you can add your proficiency bonus to any Charisma checks related to courtly behavior and etiquette.",
+    "Rapid Strike": "You can use a bonus action to make one additional attack when you take the Attack action.",
+    "Strength Before Death": "When you are reduced to 0 hit points but not killed outright, you can use your reaction to spend one hit die and regain hit points equal to the roll plus your Constitution modifier.",
+    "Martial Arts": "You can use Dexterity instead of Strength for attack and damage rolls with unarmed strikes and monk weapons. You also gain a bonus to unarmed strike damage. You can make an unarmed strike as a bonus action after using the Attack action.",
+    "Ki": "You have a pool of Ki points that you can use to fuel various abilities. The number of Ki points you have equals your monk level. You can use Ki points to perform various actions like Flurry of Blows, Patient Defense, and Step of the Wind.",
+    "Unarmored Movement": "Your speed increases by 10 feet when you are not wearing armor or wielding a shield. This bonus increases as you gain levels in the monk class.",
+    "Deflect Missiles": "When you are hit by a ranged weapon attack, you can use your reaction to deflect or catch the missile. If you catch it, you can spend a Ki point to make a ranged attack with it.",
+    "Slow Fall": "You can use your reaction when falling to reduce damage taken from the fall by an amount equal to five times your monk level.",
+    "Extra Attack": "At 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+    "Stunning Strike": "You can use a Ki point to attempt to stun a creature you hit with a melee weapon attack. The target must make a Constitution saving throw or be stunned until the end of your next turn.",
+    "Ki-Empowered Strikes": "Your unarmed strikes count as magical for overcoming resistance and immunity to nonmagical attacks and damage.",
+    "Evasion": "When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.",
+    "Stillness of Mind": "You can use an action to end one effect on yourself that is causing you to be charmed or frightened.",
+    "Purity of Body": "At 10th level, you gain proficiency with Constitution saving throws and are immune to disease and poison.",
+    "Tongue of the Sun and Moon": "At 13th level, you can understand and speak any language.",
+    "Diamond Soul": "At 14th level, you gain proficiency in all saving throws. You can spend a Ki point to reroll a failed saving throw.",
+    "Timeless Body": "At 15th level, you don't suffer the frailty of old age, and you can't be aged magically. You also no longer need food or water.",
+    "Empty Body": "At 18th level, you can use your action to become invisible for 1 minute and gain resistance to all damage except psychic damage.",
+    "Perfect Self": "At 20th level, you can use your reaction to regain 4 Ki points when you roll initiative and have no Ki points remaining.",
+    
+    // Way of the Open Hand
+    "Open Hand Technique": "When you use Flurry of Blows, you can impose one of the following effects on a target you hit: knock it prone, push it 15 feet away, or stun it until the end of your next turn.",
+    "Wholeness of Body": "You can use your action to regain hit points equal to three times your monk level. You can use this feature once per long rest.",
+    "Tranquility": "At 14th level, you can use your action to grant yourself and all friendly creatures within 30 feet of you advantage on saving throws against being frightened or charmed for 1 minute.",
+    "Quivering Palm": "At 17th level, you can use your action to attempt to kill a creature you touch with a special technique. The creature must make a Constitution saving throw. On a failure, it dies instantly if it has fewer than 100 hit points. If it succeeds, it takes 10d10 necrotic damage instead.",
+    
+    // Way of Shadow
+    "Shadow Arts": "At 3rd level, you can use your action and spend 2 Ki points to cast the Darkness, Darkvision, Pass without Trace, or Silence spell without requiring material components.",
+    "Shadow Step": "At 6th level, you can use your action to teleport up to 60 feet to an unoccupied space you can see that is in dim light or darkness. You have advantage on the first melee attack you make before the end of your turn.",
+    "Cloak of Shadows": "At 10th level, you can use your action to become invisible for 1 minute or until you make an attack or cast a spell. You can use this feature once per short or long rest.",
+    "Opportunist": "At 17th level, you can use your reaction to make a melee attack against a creature that has attacked someone else and is within 5 feet of you.",
+    
+    // Way of the Four Elements
+    "Disciple of the Elements": "At 3rd level, you can learn Elemental Disciplines, which are specific powers linked to the elements. You can use your Ki points to fuel these powers.",
+    "Elemental Disciplines": "You can choose from a list of elemental disciplines like Fist of Unbroken Air, Flamming Sphere, and more. Each discipline requires a certain number of Ki points to use and offers unique effects.",
+    "Shape of the Wave": "You can use your action and spend 2 Ki points to transform into a wave of elemental energy, gaining various benefits based on your chosen element.",
+    "Elemental Attunement": "You can use your action and spend 1 Ki point to influence the elements around you, such as creating a small burst of elemental energy or altering the environment.",
+    
+    // Way of the Drunken Master
+    "Drunken Technique": "At 3rd level, when you use Flurry of Blows, you can make a Dexterity saving throw to gain advantage on your next attack roll and cause a target to make a Wisdom saving throw or be charmed.",
+    "Tipsy Sway": "At 6th level, you can use your bonus action to take the Disengage action, and you can move up to half your speed without provoking opportunity attacks.",
+    "Drunkard's Luck": "At 10th level, when you make an attack roll or saving throw, you can use your reaction to reroll the die. You must use the new roll.",
+    "Intoxicated Fury": "At 17th level, when you take damage, you can use your reaction to deal damage equal to your Martial Arts die to a creature within 5 feet of you.",
+    
+    // Way of the Kensei
+    "Kensei Weapons": "At 3rd level, you can choose weapons to be your Kensei weapons, which gain various benefits like additional damage or better attack rolls. You can use your bonus action to make an additional attack with these weapons.",
+    "One with the Blade": "At 6th level, when you make an attack with your Kensei weapon, you can use a bonus action to increase the attack's damage or enhance your defense.",
+    "Unerring Accuracy": "At 11th level, when you make an attack roll with a Kensei weapon and miss, you can reroll the attack once.",
+    "Deft Strike": "At 17th level, when you hit a target with a Kensei weapon, you can use a bonus action to make the target take additional damage.",
+    
+    // Way of the Sun Soul
+    "Radiant Sun Bolt": "At 3rd level, you can use your action to make a ranged spell attack with Radiant Sun Bolt, dealing radiant damage to a target.",
+    "Searing Sunburst": "At 6th level, you can use your action to create a burst of radiant energy, dealing damage and possibly blinding creatures in an area.",
+    "Sun Shield": "At 11th level, you can use your action to create a shield of radiant energy around yourself, providing you with temporary hit points and causing radiant damage to nearby enemies.",
+    "Unending Radiance": "At 17th level, your radiant energy attacks have increased potency and range, and you can use your action to unleash a powerful wave of radiant energy.",
+    
+    // Way of Mercy
+    "Hand of Healing": "At 3rd level, you can use your action and spend a Ki point to heal a creature within 30 feet of you for an amount equal to your Martial Arts die plus your Wisdom modifier.",
+    "Hand of Harm": "At 6th level, when you hit a creature with a melee attack, you can use your bonus action and spend a Ki point to deal additional necrotic damage.",
+    "Physician's Touch": "At 10th level, you can use your action to remove a disease or neutralize a poison affecting a creature within 30 feet of you.",
+    "Flurry of Healing": "At 17th level, when you use Flurry of Blows, you can choose to heal instead of dealing damage, restoring hit points to a creature within 30 feet of you.",
+    
+    // Way of the Astral Self
+    "Arms of the Astral Self": "At 3rd level, you can use your action to summon spectral arms that grant you additional reach and extra damage with your unarmed strikes.",
+    "Visage of the Astral Self": "At 6th level, you can use your action to manifest a spectral visage that provides you with additional senses and advantage on Charisma checks.",
+    "Body of the Astral Self": "At 11th level, you can use your action to manifest a spectral body that grants you temporary hit points and additional damage resistance.",
+    "Awakened Astral Self": "At 17th level, your Astral Self abilities gain enhanced effects, including increased damage and additional resistances.",
+    
+    // Way of the Long Death
+    "Touch of Death": "At 3rd level, you can use your action to channel your ki into a touch attack, dealing necrotic damage and possibly killing the target if it has fewer hit points than your monk level times 5.",
+    "Mastery of Death": "At 6th level, you gain resistance to necrotic damage and can spend a Ki point to regain hit points equal to half of the necrotic damage dealt.",
+    "Cloak of Death": "At 11th level, you can use your action to surround yourself with a cloak of necrotic energy, causing necrotic damage to any creature that hits you with a melee attack.",
+    "Perfect Self": "At 17th level, you gain immunity to necrotic damage and can use your reaction to reduce necrotic damage dealt to you by half.",
+    "Draconic Discipline": "At 3rd level, you choose a draconic discipline that grants you new ways to use your ki. Options include abilities such as Draconic Strike, Breath of the Dragon, and others.",
+    
+    "Draconic Strike": "At 3rd level, you can use your ki to channel draconic energy into your unarmed strikes. When you hit a target with an unarmed strike, you can expend 1 ki point to deal additional damage based on the type of dragon you chose for your Draconic Discipline.",
+    
+    "Wings Unfurled": "At 6th level, you can use your action to sprout dragon-like wings for a short time. This grants you a flying speed equal to your walking speed for 10 minutes. You can use this feature once per short or long rest.",
+    
+    "Draconic Ascension": "At 11th level, your connection to draconic power deepens. When you use your Draconic Strike ability, you can use your bonus action to gain temporary hit points equal to your monk level + your Wisdom modifier.",
+    
+    "Dragon's Roar": "At 17th level, you can unleash a fearsome roar as an action. Each creature of your choice within 30 feet of you must succeed on a Wisdom saving throw or become frightened for 1 minute. While frightened in this way, the creature takes psychic damage equal to your Martial Arts die at the start of each of its turns. You can use this feature once per long rest.",
+    
+    "Breath of the Dragon": "At 17th level, you can use your action to exhale a breath weapon. Choose a type of dragon (e.g., red, blue, green) and deal damage of that type in a 30-foot cone. Each creature in the area must make a Dexterity saving throw, taking damage equal to your monk level + your Wisdom modifier on a failed save, or half as much on a successful one. You can use this feature once per long rest.",
+    "Divine Sense": "At 1st level, you can use your action to detect good and evil. Until the end of your next turn, you can sense the presence of celestial, fiend, or undead creatures within 60 feet of you that are not behind total cover. You can use this feature a number of times equal to 1 + your Charisma modifier (minimum of once). All expended uses are regained when you finish a long rest.",
+    
+    "Lay on Hands": "At 1st level, you have a pool of healing power that can restore hit points equal to your paladin level × 5. As an action, you can touch a creature and draw power from the pool to restore hit points, or you can expend 5 hit points from the pool to cure a disease or neutralize a poison affecting the creature.",
+    
+    "Divine Smite": "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases to 3d8 against undead or fiends.",
+    
+    "Divine Health": "At 3rd level, you gain immunity to disease.",
+    
+    "Sacred Oath": "At 3rd level, you choose an oath that grants you features at 3rd, 7th, 15th, and 20th levels. Your choice of Oath of Devotion, Oath of the Ancients, or Oath of Vengeance grants specific benefits and spells.",
+    
+    "Channel Divinity": "At 3rd level, you gain the ability to use Channel Divinity. You can use this feature twice per short or long rest. Each Sacred Oath grants you unique options for Channel Divinity.",
+    
+    "Aura of Protection": "At 6th level, you and friendly creatures within 10 feet of you gain a bonus to saving throws equal to your Charisma modifier (minimum of +1). This aura extends to 30 feet at 18th level.",
+    
+    "Aura of Courage": "At 10th level, you and friendly creatures within 10 feet of you cannot be frightened while you are conscious. This aura extends to 30 feet at 18th level.",
+    
+    "Improved Divine Smite": "At 11th level, your Divine Smite improves. You now deal an additional 1d8 radiant damage with each successful attack.",
+    
+    "Cleansing Touch": "At 14th level, you can use your action to end one spell affecting you or a willing creature you touch. You can use this feature a number of times equal to your Charisma modifier (minimum of once), regaining all expended uses when you finish a long rest.",
+    
+    "Aura of Warding": "At 7th level, you and friendly creatures within 10 feet of you have resistance to damage from spells. This aura extends to 30 feet at 18th level.",
+    
+    "Holy Nimbus": "At 20th level, you can use your action to surround yourself with a radiance that extends 30 feet from you. For 1 minute, you emit a 30-foot radius of bright light, and hostile creatures within this aura have disadvantage on attack rolls against you. You can use this feature once per long rest.",
+    
+    "Powerful Smite": "At 20th level, when you use Divine Smite, you can expend a higher-level spell slot to deal an additional 2d8 radiant damage per spell slot level above 1st. This effect applies to all creatures damaged by Divine Smite.",
+    
+    // Oath of Devotion
+    "Sacred Oath: Oath of Devotion": "The Oath of Devotion grants you features that focus on defending the righteous and punishing the wicked. It includes abilities at 3rd, 7th, 15th, and 20th levels.",
+    
+    "Channel Divinity: Sacred Weapon": "You can use your Channel Divinity to imbue your weapon with sacred energy. For 1 minute, your weapon emits a bright light, and you add your Charisma modifier to attack rolls made with it. You can use this feature once per short or long rest.",
+    
+    "Channel Divinity: Turn the Unholy": "As an action, you can use your Channel Divinity to channel divine power and force fiends and undead to flee. Each creature within 30 feet of you must make a Wisdom saving throw against your spell save DC. On a failed save, a creature is turned for 1 minute or until it takes damage. You can use this feature once per short or long rest.",
+    
+    "Aura of Devotion": "Starting at 7th level, you and friendly creatures within 10 feet of you are immune to being charmed. This aura extends to 30 feet at 18th level.",
+    
+    "Purity of Spirit": "At 15th level, you are always under the effects of a protection from evil and good spell.",
+    
+    "Righteousness": "At 20th level, you can use your action to become a paragon of virtue and radiance, giving you advantage on saving throws and resistance to all damage for 1 minute. You can use this feature once per long rest.",
+    
+    // Oath of the Ancients
+    "Sacred Oath: Oath of the Ancients": "The Oath of the Ancients grants you features focused on preserving the natural world and the light of the good. It includes abilities at 3rd, 7th, 15th, and 20th levels.",
+    
+    "Channel Divinity: Nature's Wrath": "You can use your Channel Divinity to ensnare foes with nature's grasp. As an action, you can cause spectral vines to sprout and wrap around a creature within 10 feet of you. The creature must make a Strength saving throw against your spell save DC. On a failed save, it is restrained for 1 minute. You can use this feature once per short or long rest.",
+    
+    "Channel Divinity: Turn the Faithless": "As an action, you can use your Channel Divinity to drive away fiends and fey. Each creature of those types within 30 feet of you must make a Wisdom saving throw against your spell save DC. On a failed save, the creature is turned for 1 minute or until it takes damage. You can use this feature once per short or long rest.",
+    
+    "Aura of Warding": "Starting at 7th level, you and friendly creatures within 10 feet of you have resistance to damage from spells. This aura extends to 30 feet at 18th level.",
+    
+    "Evasion": "At 15th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or an ice storm spell. When you make a Dexterity saving throw to avoid damage from an effect that allows you to take half damage on a successful save, you instead take no damage on a successful save and only half damage on a failed save.",
+    
+    "Undying Sentinel": "At 20th level, you can use your action to become an undying sentinel of the natural world. For 1 minute, you gain temporary hit points equal to twice your paladin level, and you have advantage on saving throws against being frightened or charmed. You can use this feature once per long rest.",
+    
+    // Oath of Vengeance
+    "Sacred Oath: Oath of Vengeance": "The Oath of Vengeance grants you features focused on punishing wrongdoers and avenging those who have been wronged. It includes abilities at 3rd, 7th, 15th, and 20th levels.",
+    
+    "Channel Divinity: Abjure Enemy": "As an action, you can use your Channel Divinity to utter a vow of enmity against a foe. Each creature within 10 feet of you must make a Wisdom saving throw against your spell save DC. On a failed save, the creature is frightened for 1 minute or until it takes damage. You can use this feature once per short or long rest.",
+    
+    "Channel Divinity: Vow of Enmity": "As a bonus action, you can use your Channel Divinity to focus your wrath on a creature you can see within 10 feet of you. For 1 minute, you have advantage on attack rolls against that creature. You can use this feature once per short or long rest.",
+    
+    "Relentless Avenger": "Starting at 7th level, when you hit a creature with an opportunity attack, you can move up to half your speed as part of the same reaction.",
+    
+    "Soul of Vengeance": "At 15th level, when you deal damage to a creature with your Divine Smite, you can use your reaction to cause that creature to take additional radiant damage equal to your Charisma modifier (minimum of 1).",
+    
+    "Avenging Angel": "At 20th level, you can use your action to transform into an angelic being for 1 minute. You gain a flying speed of 60 feet, and your weapon attacks deal an extra 1d8 radiant damage. You can use this feature once per long rest.",
+    "Favored Enemy": "Starting at 1st level, you gain advantage on Wisdom (Survival) checks to track creatures, as well as Intelligence checks to recall information about them. The types of creatures you can choose are specified by the GM, such as beasts, humanoids, or undead.",
+    
+    "Natural Explorer": "At 1st level, you are particularly familiar with one type of natural environment. You gain benefits like improved travel speed, tracking, and survival in that environment. You also have an improved ability to navigate and forage in this environment.",
+    
+    "Spellcasting": "Starting at 2nd level, you can cast spells using Wisdom as your spellcasting ability. You prepare a list of ranger spells that you have access to and can cast using spell slots. Your spellcasting abilities are described in detail in the Ranger spellcasting section.",
+    
+    "Ranger Archetype": "At 3rd level, you choose an archetype that grants you additional features at 3rd, 7th, 11th, and 15th levels. Each archetype provides unique abilities and options for customization.",
+    
+    "Extra Attack": "Starting at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+    
+    "Land’s Stride": "At 8th level, you can move through nonmagical difficult terrain at normal speed, and you have advantage on saving throws against being charmed or frightened while in the wilderness.",
+    
+    "Hide in Plain Sight": "At 10th level, you can use your action to attempt to hide even when you are only lightly obscured by natural phenomena. You gain a +10 bonus to Dexterity (Stealth) checks made to hide while you are heavily obscured.",
+    
+    "Vanishing Step": "At 14th level, you can use a bonus action to turn invisible and teleport up to 60 feet to an unoccupied space you can see. This invisibility lasts until the end of your next turn, or until you make an attack, cast a spell, or make a damage-dealing spell or feature.",
+    
+    "Feral Senses": "At 18th level, you gain the ability to sense your surroundings more acutely. You have advantage on Wisdom (Perception) checks to detect hidden or invisible creatures within 30 feet of you.",
+    
+    "Foe Slayer": "At 20th level, you become a master of defeating your foes. When you hit a creature with a weapon attack, you can add your Wisdom modifier to the attack’s damage. You can use this feature once per turn.",
+    
+    "Primeval Awareness": "At 3rd level, you can use your action to expend a spell slot to sense the presence of aberrations, celestials, dragons, elementals, fey, fiends, and undead within 1 mile (or up to 6 miles in forests, deserts, or similar terrain). You can only sense these creatures if they are within the radius and if they are not behind total cover.",
+    
+    "Ranger’s Companion": "The Beast Master archetype grants you a beast companion that accompanies you and can take actions in combat. The companion's hit points, attack bonuses, and other traits are detailed in the Beast Master features.",
+    
+    "Beast Mastery": "At 7th level, you can use your action to bond with your beast companion, allowing it to gain hit points and improve its abilities. The specific benefits depend on the beast you chose as your companion.",
+    
+    "Extra Attack (2nd)": "At 11th level, you can attack three times, instead of twice, whenever you take the Attack action on your turn.",
+    
+    // Ranger Archetypes
+    "Ranger Archetype: Hunter": "The Hunter archetype provides options to specialize in a variety of combat techniques. It includes features gained at 3rd, 7th, 11th, and 15th levels.",
+    
+    "Hunter’s Prey": "At 3rd level, you choose a type of prey (such as Colossus Slayer or Giant Killer) that grants you additional benefits against that type of enemy.",
+    
+    "Defensive Tactics": "At 7th level, you gain a defensive ability, such as Evasion or Shield Master, which provides additional protection in combat.",
+    
+    "Superior Hunter’s Defense": "At 11th level, you gain an advanced defensive tactic, such as the ability to avoid damage from certain effects or increase your defense against attacks.",
+    
+    "Foe Slayer": "At 15th level, you gain the ability to apply additional damage to creatures you are engaged with, reflecting your mastery over your enemies.",
+    
+    "Ranger Archetype: Beast Master": "The Beast Master archetype focuses on creating a bond with a beast companion. Features are gained at 3rd, 7th, 11th, and 15th levels.",
+    
+    "Ranger’s Companion": "At 3rd level, you gain a beast companion that acts independently in combat and can benefit from your abilities and spells.",
+    
+    "Extra Attack (2nd)": "At 11th level, you can attack three times, instead of twice, whenever you take the Attack action on your turn.",
+    
+    "Beast Mastery": "At 15th level, you can improve your bond with your beast companion, enhancing its abilities and increasing its effectiveness in combat.",
+    
+    "Primeval Awareness": "At 20th level, you can use your action to sense the presence of specific types of creatures within a large radius. This ability is enhanced compared to the 3rd level feature.",
+    
+    "Ranger Archetype: Gloom Stalker": "The Gloom Stalker archetype focuses on stealth and ambushing enemies. Features are gained at 3rd, 7th, 11th, and 15th levels.",
+    
+    "Gloom Stalker Magic": "At 3rd level, you gain access to additional spells that enhance your abilities to move unseen and strike from the shadows.",
+    
+    "Dread Ambusher": "At 3rd level, you gain a bonus to your initiative rolls and can make an additional attack on your first turn of combat. You also gain extra damage on that attack.",
+    
+    "Umbral Sight": "At 7th level, you gain darkvision and become invisible to creatures that rely on darkvision to see you. This makes it harder for them to detect you.",
+    
+    "Shadowy Dodge": "At 10th level, you can use your bonus action to gain temporary invisibility and evade attacks.",
+    
+    "Ranger Archetype: Horizon Walker": "The Horizon Walker archetype focuses on traveling between planes and fighting extraplanar creatures. Features are gained at 3rd, 7th, 11th, and 15th levels.",
+    
+    "Horizon Walker Magic": "At 3rd level, you gain access to spells that enhance your ability to traverse different planes and fight creatures from other dimensions.",
+    
+    "Detect Portal": "At 3rd level, you can use your action to sense the presence of portals and planar rifts within a certain radius.",
+    
+    "Planar Warrior": "At 7th level, you can deal extra damage with your attacks and use your bonus action to enhance your attacks with planar energy.",
+    
+    "Ethereal Step": "At 11th level, you can use your action to become ethereal and move through objects and creatures as if they were difficult terrain.",
+    
+    "Spectral Defense": "At 15th level, you gain a defensive ability that makes you harder to hit by spectral or ethereal creatures.",
+    
+    "Ranger Archetype: Swarmkeeper": "The Swarmkeeper archetype focuses on harnessing the power of swarms of creatures. Features are gained at 3rd, 7th, 11th, and 15th levels.",
+    
+    "Swarmkeeper Magic": "At 3rd level, you gain access to spells that enhance your control over swarms and allow you to command them more effectively.",
+    
+    "Gathered Swarm": "At 3rd level, you gain a swarm of tiny creatures that can assist you in combat, providing bonuses to your attacks and movement.",
+    
+    "Writhing Tide": "At 7th level, you can use your swarm to manipulate the battlefield, causing swarms to disrupt and hinder enemies.",
+    
+    "Swarmkeeper’s Companion": "At 11th level, your swarm becomes a more potent force, granting you additional abilities and bonuses.",
+    
+    "Ranger Archetype: Drakewarden": "The Drakewarden archetype focuses on bonding with a drake companion. Features are gained at 3rd, 7th, 11th, and 15th levels.",
+    
+    "Drakewarden Magic": "At 3rd level, you gain access to spells that enhance your bond with your drake and grant additional abilities.",
+    
+    "Drake Companion": "At 3rd level, you gain a drake companion that aids you in combat. Its abilities and hit points are detailed in the Drakewarden features.",
+    
+    "Elemental Bond": "At 7th level, you form a bond with your drake that enhances its elemental abilities, providing additional effects and damage.",
+    
+    "Drake’s Breath": "At 11th level, you can use your drake’s breath weapon to deal damage to enemies in an area. This breath weapon has specific damage and area effects.",
+    
+    "Drake’s Rage": "At 15th level, your drake gains increased power and becomes more formidable in battle, providing additional bonuses to its attacks and abilities.",
+    "Sneak Attack": "Starting at 1st level, you can deal extra damage once per turn when you have advantage on an attack or when an ally is within 5 feet of the target. The extra damage increases as you level up: 1d6 at 1st level, up to 10d6 at 19th level.",
+    
+    "Thieves’ Cant": "At 1st level, you learn Thieves’ Cant, a secret language used by rogues to convey hidden messages. This language allows you to communicate covertly with other rogues and those familiar with it.",
+    
+    "Cunning Action": "Starting at 2nd level, you can use your bonus action each turn to take the Dash, Disengage, or Hide action.",
+    
+    "Roguish Archetype": "At 3rd level, you choose a roguish archetype, gaining additional features at 3rd, 9th, 13th, and 17th levels. Each archetype offers unique abilities and customization options.",
+    
+    "Uncanny Dodge": "At 5th level, you can use your reaction to halve the damage from an attack you can see, but only if you’re not incapacitated.",
+    
+    "Evasion": "At 7th level, you can dodge out of the way of certain area effects, such as a red dragon’s fiery breath or an ice storm spell. You take no damage on a successful Dexterity saving throw, and half damage on a failed save.",
+    
+    "Reliable Talent": "At 11th level, whenever you make an ability check that lets you add your proficiency bonus, you can treat a roll of 9 or lower on the d20 as a 10.",
+    
+    "Blindsense": "At 14th level, you can sense the presence of creatures within 10 feet of you that are hidden or invisible. You also have advantage on Wisdom (Perception) checks to detect them.",
+    
+    "Slippery Mind": "At 15th level, you gain proficiency in Wisdom saving throws, and if you already have it, you gain proficiency in another saving throw of your choice.",
+    
+    "Elusive": "At 18th level, you can’t be flanked by enemies. You are also immune to being surprised while you’re conscious.",
+    
+    "Stroke of Luck": "At 20th level, you can use your reaction to turn a failed attack roll into a hit or a failed ability check into a success. You can use this feature once per short or long rest.",
+    
+    // Roguish Archetypes
+    "Roguish Archetype: Thief": "The Thief archetype specializes in agility and thievery, gaining additional features at 3rd, 9th, 13th, and 17th levels.",
+    
+    "Fast Hands": "At 3rd level, you can use your bonus action to make a Dexterity (Sleight of Hand) check, take the Use an Object action, or disarm a trap or open a lock.",
+    
+    "Second-Story Work": "At 9th level, you gain climbing speed and can move along vertical surfaces and across ceilings while you are not incapacitated.",
+    
+    "Supreme Sneak": "At 13th level, you can use your action to make Dexterity (Stealth) checks with advantage if you move no more than half your speed on your turn.",
+    
+    "Use Magic Device": "At 17th level, you can attune to magic items regardless of class requirements, and can use any magic item as if you were proficient with it.",
+    
+    "Roguish Archetype: Assassin": "The Assassin archetype focuses on infiltration and assassination, gaining additional features at 3rd, 9th, 13th, and 17th levels.",
+    
+    "Assassinate": "At 3rd level, you have advantage on attack rolls against any creature that hasn't taken a turn in combat yet. If you hit a surprised creature, you score a critical hit.",
+    
+    "Infiltration Expertise": "At 9th level, you can create false identities and forge documents to aid in infiltration.",
+    
+    "Impostor": "At 13th level, you can mimic speech and writing, and can assume the appearance of another person to blend in.",
+    
+    "Death Strike": "At 17th level, you can deal extra damage with your attacks if you catch a creature by surprise. The extra damage is increased if the creature is already surprised.",
+    
+    "Roguish Archetype: Arcane Trickster": "The Arcane Trickster archetype blends magic and thievery, gaining additional features at 3rd, 7th, 10th, and 15th levels.",
+    
+    "Spellcasting": "At 3rd level, you gain the ability to cast spells from the Wizard spell list. Your spellcasting ability is Intelligence, and you can prepare spells from the illusion and enchantment schools.",
+    
+    "Mage Hand Legerdemain": "At 3rd level, you can use your Mage Hand spell to perform additional tasks, such as picking locks or disarming traps.",
+    
+    "Arcane Trickster’s Spellcasting": "At 7th level, you can cast spells with increased effectiveness, including the ability to cast spells as rituals.",
+    
+    "Versatile Trickster": "At 10th level, you can use your Mage Hand to distract enemies, granting you advantage on attack rolls against them.",
+    
+    "Spell Thief": "At 15th level, you can steal a spell that a creature casts and use it yourself. You can also cast the spell using a spell slot of the same level.",
+    
+    "Roguish Archetype: Swashbuckler": "The Swashbuckler archetype focuses on mobility and charisma, gaining additional features at 3rd, 7th, 10th, and 15th levels.",
+    
+    "Fancy Footwork": "At 3rd level, when you make a melee attack against a creature, it can’t make opportunity attacks against you for the rest of the turn.",
+    
+    "Rakish Audacity": "At 3rd level, you can add your Charisma modifier to your initiative rolls and don’t need advantage on attack rolls to use Sneak Attack against creatures if no other creatures are within 5 feet of you.",
+    
+    "Panache": "At 9th level, you can use your bonus action to charm or disarm a creature. This ability has different effects based on your Charisma and the creature’s response.",
+    
+    "Master Duelist": "At 13th level, you can use your action to engage in a duel, gaining advantage on attack rolls and increasing your damage output.",
+    
+    "Roguish Archetype: Soulknife": "The Soulknife archetype focuses on psionic abilities, gaining additional features at 3rd, 9th, 13th, and 17th levels.",
+    
+    "Psionic Power": "At 3rd level, you gain psionic abilities, allowing you to create and use psychic blades and perform telepathic feats.",
+    
+    "Knife Throwing": "At 3rd level, you can throw your psychic blades as ranged weapons, dealing psychic damage.",
+    
+    "Soulblade": "At 9th level, you can manifest your psychic blades as a bonus action, and your attacks with them deal extra damage.",
+    
+    "Psychic Blades": "At 13th level, your psychic blades can bypass resistance and immunity to psychic damage.",
+    
+    "Roguish Archetype: Phantom": "The Phantom archetype harnesses the power of death and spirits, gaining additional features at 3rd, 9th, 13th, and 17th levels.",
+    
+    "Wails from the Grave": "At 3rd level, when you deal sneak attack damage, you can cause a wail from the grave that affects a creature within 30 feet of your target.",
+    
+    "Ghost Walk": "At 9th level, you can walk through objects and creatures as if they were difficult terrain, gaining resistance to damage from them.",
+    
+    "Death Knell": "At 13th level, you can cast a necromancy spell that affects the souls of the recently deceased, enhancing your own abilities.",
+    
+    "Spirit Boon": "At 17th level, you can summon a spirit to assist you, granting you advantages and additional effects based on the spirit’s nature.",
+    "Sorcerer Spellcasting": "Sorcerers use Charisma as their spellcasting ability. They have a limited number of spells known and can cast spells using their spell slots. Sorcerers know a number of spells that increases with level and can use their spells in various ways depending on their Sorcerous Origin and Metamagic choices.",
+    
+    "Sorcery Points": "Sorcerers start with Sorcery Points at 2nd level. These points can be used to create spell slots, enhance spells, or modify spells using Metamagic. The number of Sorcery Points increases with level, and you can convert Sorcery Points into spell slots and vice versa.",
+    
+    "Font of Magic": "Starting at 2nd level, Sorcerers gain access to Font of Magic, which allows them to convert Sorcery Points into spell slots and vice versa. This ability provides flexibility in spellcasting and resource management.",
+    
+    "Metamagic": "At 3rd level, Sorcerers can choose Metamagic options, which allow them to modify their spells in various ways, such as extending their range, increasing their damage, or making them more subtle.",
+    
+    "Sorcerous Origin": "At 1st level, Sorcerers choose a Sorcerous Origin, which grants them unique abilities and features at 1st, 6th, 14th, and 18th levels. Each Sorcerous Origin offers different thematic and mechanical benefits.",
+    
+    "Magic Resilience": "At 6th level, Sorcerers gain resistance to a damage type associated with their Sorcerous Origin, or they can choose to gain advantage on saving throws against spells.",
+    
+    "Sorcerous Restoration": "At 20th level, Sorcerers regain 4 expended Sorcery Points when they finish a short rest.",
+    
+    "Archmage": "At 20th level, Sorcerers gain access to Archmage abilities, allowing them to use their high-level spells and Sorcery Points to cast powerful spells or use special abilities.",
+    
+    // Sorcerous Origins
+    "Sorcerous Origin: Draconic Bloodline": "The Draconic Bloodline Sorcerous Origin grants abilities tied to draconic heritage.",
+    
+    "Draconic Resilience": "At 1st level, your hit point maximum increases by 1 per Sorcerer level, and you gain proficiency with the Draconic Ancestor's damage type.",
+    
+    "Draconic Ancestry": "At 1st level, you choose a dragon type and gain resistance to its associated damage type and a bonus to your Charisma-based checks related to dragons.",
+    
+    "Elemental Affinity": "At 6th level, you can add your Charisma modifier to damage rolls of spells that deal damage of the type associated with your Draconic Ancestry.",
+    
+    "Dragon Wings": "At 14th level, you can sprout wings from your back, granting you a flying speed equal to your movement speed.",
+    
+    "Draconic Presence": "At 18th level, you can use your action to exert Draconic Presence. You exude an aura of awe or fear, forcing creatures within 30 feet to make a Wisdom saving throw or be frightened or charmed.",
+    
+    "Sorcerous Origin: Wild Magic": "The Wild Magic Sorcerous Origin introduces unpredictable magical effects.",
+    
+    "Wild Magic Surge": "At 1st level, you can roll on the Wild Magic Surge table when you cast a spell of 1st level or higher. This roll can produce various random magical effects.",
+    
+    "Tides of Chaos": "At 1st level, you can gain advantage on one attack roll, ability check, or saving throw. You can regain this ability once you experience a Wild Magic Surge.",
+    
+    "Bend Luck": "At 6th level, you can use your reaction to bend luck in your favor or against your enemies, adding or subtracting 1d4 to a roll made by you or another creature.",
+    
+    "Controlled Chaos": "At 14th level, you can use your action to roll on the Wild Magic Surge table and control the outcome, choosing the result from a list of effects.",
+    
+    "Spell Bombardment": "At 18th level, when you deal damage with a spell, you can deal additional damage of the same type equal to your Charisma modifier.",
+    
+    "Sorcerous Origin: Storm Sorcery": "The Storm Sorcery Sorcerous Origin gives abilities related to storms and weather.",
+    
+    "Stormborn": "At 1st level, you gain a flying speed during storms, and you can use your action to create a stormy aura around you.",
+    
+    "Tempestuous Magic": "At 6th level, you can use a bonus action to create a gust of wind that moves you or others within 10 feet of you.",
+    
+    "Heart of the Storm": "At 10th level, you can create a stormy aura that deals lightning or thunder damage to creatures within 10 feet of you when you cast a spell of 1st level or higher.",
+    
+    "Storm’s Fury": "At 14th level, when you deal lightning or thunder damage, you can create a storm that deals additional damage to creatures within a certain radius.",
+    
+    "Wind Soul": "At 18th level, you can summon a storm spirit to assist you, granting you additional abilities and powers related to storms and winds.",
+    
+    "Sorcerous Origin: Shadow Magic": "The Shadow Magic Sorcerous Origin grants powers related to darkness and shadows.",
+    
+    "Darkvision": "At 1st level, you gain darkvision with a range of 60 feet, allowing you to see in dim light and darkness.",
+    
+    "Hound of Ill Omen": "At 6th level, you can summon a hound that hunts down enemies, causing them to suffer from disadvantage on attack rolls against you.",
+    
+    "Shadow Walk": "At 10th level, you can use your action to teleport between shadows, becoming incorporeal and resistant to damage while in shadows.",
+    
+    "Umbral Form": "At 14th level, you can transform into a shadowy form, gaining additional benefits and resistances while in darkness.",
+    
+    "Master of Shadows": "At 18th level, you can use your action to envelop yourself in shadows, gaining invisibility and other benefits.",
+    
+    "Sorcerous Origin: Divine Soul": "The Divine Soul Sorcerous Origin gives abilities related to divine magic and celestial powers.",
+    
+    "Divine Magic": "At 1st level, you gain access to cleric spells, and you can use your spell slots to cast these spells.",
+    
+    "Favored by the Gods": "At 6th level, you can add 2d4 to an attack roll or saving throw, representing divine favor.",
+    
+    "Angelic Form": "At 14th level, you can transform into an angelic form, gaining flight and other celestial benefits.",
+    
+    "Unearthly Recovery": "At 18th level, you can use your action to regain hit points equal to your sorcerer level plus your Charisma modifier.",
+    
+    "Celestial Radiance": "At 20th level, you can use your action to radiate divine light, dealing radiant damage and blinding creatures around you.",
+    
+    // Metamagic Options
+    "Metamagic: Careful Spell": "When you cast a spell that affects other creatures, you can choose some of them to be unaffected by the spell.",
+    
+    "Metamagic: Distant Spell": "When you cast a spell with a range of 5 feet or greater, you can double its range.",
+    
+    "Metamagic: Empowered Spell": "When you roll damage for a spell, you can spend sorcery points to reroll a number of damage dice up to your Charisma modifier.",
+    
+    "Metamagic: Extended Spell": "When you cast a spell with a duration of 1 minute or longer, you can double its duration.",
+    
+    "Metamagic: Heightened Spell": "When you cast a spell that requires a saving throw, you can impose disadvantage on the target's saving throw.",
+    
+    "Metamagic: Quickened Spell": "When you cast a spell with a casting time of 1 action, you can use a bonus action to cast it instead.",
+    
+    "Metamagic: Subtle Spell": "When you cast a spell, you can make it so that it doesn't require verbal or somatic components.",
+    
+    "Metamagic: Twinned Spell": "When you cast a spell that targets a creature, you can target a second creature within range, provided the spell's level is not higher than half your Sorcerer level.",
+    "Agonizing Blast": "When you hit a creature with your Eldritch Blast cantrip, you can add your Charisma modifier to the damage.",
+  "Armor of Shadows": "You can cast the Mage Armor spell at will, without expending a spell slot or material components.",
+  "Ascendant Step": "You can cast the Levitate spell on yourself at will, without expending a spell slot or material components.",
+  "Beast Speech": "You can cast the Speak with Animals spell at will, without expending a spell slot.",
+  "Beguiling Influence": "You gain proficiency in the Deception and Persuasion skills.",
+  "Book of Ancient Secrets": "You can inscribe magical rituals in your Book of Shadows, allowing you to cast these rituals as spells.",
+  "Chains of Carceri": "You can use your action to summon chains that can restrain a creature, as per the spell Hold Monster, once per long rest.",
+  "Cloak of Flies": "You can use your action to surround yourself with a cloud of flies, giving you advantage on Intimidation checks and causing creatures to take necrotic damage if they end their turn within 10 feet of you.",
+  "Devil’s Sight": "You can see in magical and non-magical darkness as if it were dim light, up to 120 feet.",
+  "Dreadful Word": "You can use your action to utter a word of power that causes creatures to become frightened, as per the spell Fear, once per long rest.",
+  "Eldritch Spear": "You can extend the range of your Eldritch Blast cantrip to 300 feet.",
+  "Eyes of the Rune Keeper": "You can read all writing, regardless of language, and you can understand it as if you were fluent in it.",
+  "Fiendish Vigor": "You can cast False Life on yourself at will, without expending a spell slot.",
+  "Gaze of the Unnerver": "You can use your action to force creatures to make Wisdom saving throws or become frightened, as per the spell Phantasmal Killer, once per long rest.",
+  "Grasp of Hadar": "When you hit a creature with your Eldritch Blast cantrip, you can pull the creature 10 feet closer to you.",
+  "Improved Pact Weapon": "Your pact weapon gains a +1 bonus to attack and damage rolls, and you can use it as a spellcasting focus.",
+  "Lifedrinker": "When you hit a creature with your pact weapon, you can deal extra necrotic damage equal to your Charisma modifier and regain hit points equal to half the necrotic damage dealt.",
+  "Mire the Mind": "You can use your action to cloud the mind of a creature, causing it to become incapacitated and prone, as per the spell Slow, once per long rest.",
+  "One with Shadows": "You can use your action to become invisible while in dim light or darkness, and you remain invisible until you make an attack or cast a spell.",
+  "Otherworldly Leap": "You can use your action to gain a flying speed of 30 feet for 1 minute, once per long rest.",
+  "Repelling Blast": "When you hit a creature with your Eldritch Blast cantrip, you can push the creature up to 10 feet away from you.",
+  "Thirsting Blade": "You can attack with your pact weapon twice, instead of once, whenever you take the Attack action.",
+  "Tomb of Levistus": "You can use your reaction to encase yourself in ice, gaining temporary hit points and reducing damage taken from a single attack.",
+  "Voice of the Chain Master": "You can communicate telepathically with your familiar, and you can see through its eyes and hear what it hears, as per the spell Arcane Eye.",
+  "Witch Sight": "You can see through any illusion, whether magical or non-magical, and can perceive the true form of creatures and objects.",
+  "Archfey Patron": "Your patron is an archfey, giving you abilities such as Fey Presence, Misty Escape, and more.",
+  "Celestial Patron": "Your patron is a celestial being, granting you abilities such as Healing Light, Radiant Soul, and more.",
+  "Fiend Patron": "Your patron is a fiend, providing abilities like Dark One’s Blessing, Dark One’s Own Luck, and more.",
+  "Great Old One Patron": "Your patron is an entity from the Far Realm, giving you abilities such as Awakened Mind, Entropic Ward, and more.",
+  "Hexblade Patron": "Your patron is a mysterious force from the Shadowfell, granting abilities like Hexblade’s Curse, Accursed Specter, and more.",
+  "Undying Patron": "Your patron is an undying creature, providing abilities such as Defy Death, Undying Nature, and more.",
+  "Chain Pact": "You form a pact with a chain, allowing you to summon a familiar and gaining unique abilities.",
+  "Blade Pact": "You form a pact with a blade, allowing you to use a weapon as your pact weapon and gaining unique abilities.",
+  "Tome Pact": "You form a pact with a tome, gaining a Book of Shadows and additional spells.",
+  "Arcane Recovery": "Once per day when you finish a short rest, you can recover expended spell slots with a combined level equal to or less than half your wizard level (rounded up).",
+  "Arcane Tradition: School of Abjuration": "Choose the School of Abjuration as your arcane tradition. Abilities include Abjuration Savant, Arcane Ward, and Projected Ward.",
+  "Arcane Tradition: School of Conjuration": "Choose the School of Conjuration as your arcane tradition. Abilities include Conjuration Savant, Minor Conjuration, and Benign Transposition.",
+  "Arcane Tradition: School of Divination": "Choose the School of Divination as your arcane tradition. Abilities include Divination Savant, Portent, and Greater Portent.",
+  "Arcane Tradition: School of Enchantment": "Choose the School of Enchantment as your arcane tradition. Abilities include Enchantment Savant, Hypnotic Gaze, and Instinctive Charm.",
+  "Arcane Tradition: School of Evocation": "Choose the School of Evocation as your arcane tradition. Abilities include Evocation Savant, Sculpt Spells, and Potent Cantrip.",
+  "Arcane Tradition: School of Illusion": "Choose the School of Illusion as your arcane tradition. Abilities include Illusion Savant, Improved Minor Illusion, and Malleable Illusions.",
+  "Arcane Tradition: School of Necromancy": "Choose the School of Necromancy as your arcane tradition. Abilities include Necromancy Savant, Grim Harvest, and Undead Thralls.",
+  "Arcane Tradition: School of Transmutation": "Choose the School of Transmutation as your arcane tradition. Abilities include Transmutation Savant, Minor Alchemy, Major Transformation, and Shapechanger.",
+  "Cantrip Versatility": "When you gain a level in this class, you can replace one of the cantrips you learned from this class with another cantrip from the wizard spell list.",
+  "Spell Mastery": "At 18th level, you can choose a 1st-level and a 2nd-level spell that are in your spellbook and cast them at their lowest level without expending a spell slot.",
+  "Signature Spells": "At 20th level, you can choose two spells in your spellbook as your signature spells. You can cast each of them at their lowest level without expending a spell slot.",
+  "Spellbook": "You have a spellbook that contains six 1st-level wizard spells of your choice. You can add new spells to it as you gain levels in this class.",
+  "Scribe Scroll": "You can create a spell scroll for any spell you know or have prepared, costing 50 gp and requiring one workweek.",
+  "Arcane Ward": "When you cast an abjuration spell, you create a magical ward that absorbs damage, which can be restored when you cast abjuration spells.",
+  "Minor Conjuration": "At 2nd level, you can use your action to conjure a small object into existence, which lasts until you dismiss it or use this feature again.",
+  "Prescience": "At 14th level, you can use your action to grant yourself and up to 3 allies within 30 feet advantage on attack rolls, ability checks, and saving throws.",
+  "Potent Cantrip": "At 10th level, your cantrips become more potent, causing them to deal extra damage and bypass resistance to cantrip damage.",
+  "Potent Spellcasting": "At 6th level, you can add your Intelligence modifier to the damage rolls of your cantrips.",
+  "The Master of Illusions": "At 14th level, you can cast illusion spells with greater potency and can maintain concentration on more than one illusion spell.",
+  "School of Abjuration: Abjuration Savant": "You can copy abjuration spells into your spellbook for half the cost and time.",
+  "School of Abjuration: Arcane Ward": "You create an Arcane Ward when you cast an abjuration spell, which absorbs damage and can be restored.",
+  "School of Abjuration: Projected Ward": "At 10th level, you can use your reaction to extend your Arcane Ward’s protection to an ally within 30 feet.",
+  "School of Conjuration: Conjuration Savant": "You can copy conjuration spells into your spellbook for half the cost and time.",
+  "School of Conjuration: Minor Conjuration": "At 2nd level, you can conjure a small, non-magical object into existence for up to 1 hour.",
+  "School of Conjuration: Benign Transposition": "At 6th level, you can use your action to teleport up to 30 feet and switch places with a willing creature.",
+  "School of Divination: Divination Savant": "You can copy divination spells into your spellbook for half the cost and time.",
+  "School of Divination: Portent": "At 2nd level, you gain the ability to roll two d20s and use them to replace any attack roll, saving throw, or ability check.",
+  "School of Divination: Greater Portent": "At 14th level, you can use your Portent feature to roll two d20s and choose the higher result.",
+  "School of Enchantment: Enchantment Savant": "You can copy enchantment spells into your spellbook for half the cost and time.",
+  "School of Enchantment: Hypnotic Gaze": "At 2nd level, you can use your action to captivate a creature’s attention, making it incapacitated for 1 minute.",
+  "School of Enchantment: Instinctive Charm": "At 6th level, when a creature targets you with an attack, you can use your reaction to divert the attack to another creature within 5 feet of you.",
+  "School of Evocation: Evocation Savant": "You can copy evocation spells into your spellbook for half the cost and time.",
+  "School of Evocation: Sculpt Spells": "At 2nd level, you can create pockets of safety within your evocation spells, allowing you to avoid damaging allies.",
+  "School of Evocation: Potent Cantrip": "At 10th level, your cantrips become more potent, dealing extra damage and bypassing resistance to cantrip damage.",
+  "School of Illusion: Illusion Savant": "You can copy illusion spells into your spellbook for half the cost and time.",
+  "School of Illusion: Improved Minor Illusion": "At 2nd level, when you cast Minor Illusion, you can create both a sound and an image with a single casting.",
+  "School of Illusion: Malleable Illusions": "At 10th level, you can use your action to change the nature of illusions you have created.",
+  "School of Necromancy: Necromancy Savant": "You can copy necromancy spells into your spellbook for half the cost and time.",
+  "School of Necromancy: Grim Harvest": "At 2nd level, when you kill a creature with a necromancy spell, you can regain hit points equal to twice the spell's level.",
+  "School of Necromancy: Undead Thralls": "At 6th level, you can animate additional undead and grant them bonus hit points and damage equal to your spellcasting ability modifier.",
+  "School of Transmutation: Transmutation Savant": "You can copy transmutation spells into your spellbook for half the cost and time.",
+  "School of Transmutation: Minor Alchemy": "At 2nd level, you can temporarily change the physical properties of non-magical materials.",
+  "School of Transmutation: Major Transformation": "At 10th level, you can cast the Transmute Rock spell as an action, changing rock into a different material.",
+  "School of Transmutation: Shapechanger": "At 14th level, you can use your action to transform into a creature you have seen before, mimicking its appearance and abilities."
+
+}
     </script>
 </body>
 </html>

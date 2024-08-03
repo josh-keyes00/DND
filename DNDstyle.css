@@ -233,3 +233,23 @@ body {
             padding: 8px;
             box-sizing: border-box;
         }
+        #skillInput {
+            width: 200px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        #weaponProfInput {
+            width: 200px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        #LangInput {
+            width: 200px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        #abilityNameInput {
+            width: 200px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
