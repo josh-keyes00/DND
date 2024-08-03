@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Spells Dropdown</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 200px;
+            max-height: 300px;
+            overflow-y: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content div {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+
+        .dropdown-content div:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>D&D Spells Dropdown</h2>
+
+    <div class="dropdown">
+        <input type="text" id="spellInput" placeholder="Type to search spells..." onkeyup="filterFunction()">
+        <div id="spellDropdown" class="dropdown-content">
+            <!-- List of all D&D spells -->
+            <div onclick="selectSpell('Acid Arrow')">Acid Arrow</div>
+            <div onclick="selectSpell('Acid Splash')">Acid Splash</div>
+            <div onclick="selectSpell('Aid')">Aid</div>
+            <div onclick="selectSpell('Alarm')">Alarm</div>
+            <div onclick="selectSpell('Alter Self')">Alter Self</div>
+            <div onclick="selectSpell('Animal Friendship')">Animal Friendship</div>
+            <div onclick="selectSpell('Animal Messenger')">Animal Messenger</div>
+            <div onclick="selectSpell('Animal Shapes')">Animal Shapes</div>
+            <div onclick="selectSpell('Animate Dead')">Animate Dead</div>
+            <div onclick="selectSpell('Animate Objects')">Animate Objects</div>
+            <div onclick="selectSpell('Antilife Shell')">Antilife Shell</div>
+            <div onclick="selectSpell('Antimagic Field')">Antimagic Field</div>
+            <div onclick="selectSpell('Antipathy/Sympathy')">Antipathy/Sympathy</div>
+            <div onclick="selectSpell('Arcane Eye')">Arcane Eye</div>
+            <div onclick="selectSpell('Arcane Lock')">Arcane Lock</div>
+            <div onclick="selectSpell('Arcane Sword')">Arcane Sword</div>
+            <div onclick="selectSpell('Arcanist\'s Magic Aura')">Arcanist's Magic Aura</div>
+            <div onclick="selectSpell('Astral Projection')">Astral Projection</div>
+            <div onclick="selectSpell('Augury')">Augury</div>
+            <div onclick="selectSpell('Awaken')">Awaken</div>
+            <div onclick="selectSpell('Bane')">Bane</div>
+            <div onclick="selectSpell('Banishing Smite')">Banishing Smite</div>
+            <div onclick="selectSpell('Banishment')">Banishment</div>
+            <div onclick="selectSpell('Barkskin')">Barkskin</div>
+            <div onclick="selectSpell('Beacon of Hope')">Beacon of Hope</div>
+            <div onclick="selectSpell('Beast Bond')">Beast Bond</div>
+            <div onclick="selectSpell('Beast Sense')">Beast Sense</div>
+            <div onclick="selectSpell('Bestow Curse')">Bestow Curse</div>
+            <div onclick="selectSpell('Bigby\'s Hand')">Bigby's Hand</div>
+            <div onclick="selectSpell('Blade Barrier')">Blade Barrier</div>
+            <div onclick="selectSpell('Bless')">Bless</div>
+            <div onclick="selectSpell('Blight')">Blight</div>
+            <div onclick="selectSpell('Blindness/Deafness')">Blindness/Deafness</div>
+            <div onclick="selectSpell('Blink')">Blink</div>
+            <div onclick="selectSpell('Blur')">Blur</div>
+            <div onclick="selectSpell('Branding Smite')">Branding Smite</div>
+            <div onclick="selectSpell('Burning Hands')">Burning Hands</div>
+            <div onclick="selectSpell('Call Lightning')">Call Lightning</div>
+            <div onclick="selectSpell('Calm Emotions')">Calm Emotions</div>
+            <div onclick="selectSpell('Chain Lightning')">Chain Lightning</div>
+            <div onclick="selectSpell('Charm Person')">Charm Person</div>
+            <div onclick="selectSpell('Chromatic Orb')">Chromatic Orb</div>
+            <div onclick="selectSpell('Circle of Death')">Circle of Death</div>
+            <div onclick="selectSpell('Circle of Power')">Circle of Power</div>
+            <div onclick="selectSpell('Clairvoyance')">Clairvoyance</div>
+            <div onclick="selectSpell('Clone')">Clone</div>
+            <div onclick="selectSpell('Cloudkill')">Cloudkill</div>
+            <div onclick="selectSpell('Color Spray')">Color Spray</div>
+            <div onclick="selectSpell('Command')">Command</div>
+            <div onclick="selectSpell('Commune')">Commune</div>
+            <div onclick="selectSpell('Commune with Nature')">Commune with Nature</div>
+            <div onclick="selectSpell('Comprehend Languages')">Comprehend Languages</div>
+            <div onclick="selectSpell('Compulsion')">Compulsion</div>
+            <div onclick="selectSpell('Cone of Cold')">Cone of Cold</div>
+            <div onclick="selectSpell('Confusion')">Confusion</div>
+            <div onclick="selectSpell('Conjure Animals')">Conjure Animals</div>
+            <div onclick="selectSpell('Conjure Barrage')">Conjure Barrage</div>
+            <div onclick="selectSpell('Conjure Celestial')">Conjure Celestial</div>
+            <div onclick="selectSpell('Conjure Elemental')">Conjure Elemental</div>
+            <div onclick="selectSpell('Conjure Fey')">Conjure Fey</div>
+            <div onclick="selectSpell('Conjure Minor Elementals')">Conjure Minor Elementals</div>
+            <div onclick="selectSpell('Conjure Volley')">Conjure Volley</div>
+            <div onclick="selectSpell('Conjure Woodland Beings')">Conjure Woodland Beings</div>
+            <div onclick="selectSpell('Contact Other Plane')">Contact Other Plane</div>
+            <div onclick="selectSpell('Contagion')">Contagion</div>
+            <div onclick="selectSpell('Contingency')">Contingency</div>
+            <div onclick="selectSpell('Continual Flame')">Continual Flame</div>
+            <div onclick="selectSpell('Control Flames')">Control Flames</div>
+            <div onclick="selectSpell('Control Water')">Control Water</div>
+            <div onclick="selectSpell('Control Weather')">Control Weather</div>
+            <div onclick="selectSpell('Counterspell')">Counterspell</div>
+            <div onclick="selectSpell('Create Food and Water')">Create Food and Water</div>
+            <div onclick="selectSpell('Create or Destroy Water')">Create or Destroy Water</div>
+            <div onclick="selectSpell('Create Undead')">Create Undead</div>
+            <div onclick="selectSpell('Creation')">Creation</div>
+            <div onclick="selectSpell('Crown of Madness')">Crown of Madness</div>
+            <div onclick="selectSpell('Crusader\'s Mantle')">Crusader's Mantle</div>
+            <div onclick="selectSpell('Cure Wounds')">Cure Wounds</div>
+
+
+
+
+            <div onclick="selectSpell('Dancing Lights')">Dancing Lights</div>
+            <div onclick="selectSpell('Darkness')">Darkness</div>
+            <div onclick="selectSpell('Darkvision')">Darkvision</div>
+            <div onclick="selectSpell('Daylight')">Daylight</div>
+            <div onclick="selectSpell('Death Ward')">Death Ward</div>
+            <div onclick="selectSpell('Delayed Blast Fireball')">Delayed Blast Fireball</div>
+            <div onclick="selectSpell('Demiplane')">Demiplane</div>
+            <div onclick="selectSpell('Detect Evil and Good')">Detect Evil and Good</div>
+            <div onclick="selectSpell('Detect Magic')">Detect Magic</div>
+            <div onclick="selectSpell('Detect Poison and Disease')">Detect Poison and Disease</div>
+            <div onclick="selectSpell('Detect Thoughts')">Detect Thoughts</div>
+            <div onclick="selectSpell('Dimension Door')">Dimension Door</div>
+            <div onclick="selectSpell('Disguise Self')">Disguise Self</div>
+            <div onclick="selectSpell('Disintegrate')">Disintegrate</div>
+            <div onclick="selectSpell('Dispel Evil and Good')">Dispel Evil and Good</div>
+            <div onclick="selectSpell('Dispel Magic')">Dispel Magic</div>
+            <div onclick="selectSpell('Divination')">Divination</div>
+            <div onclick="selectSpell('Divine Favor')">Divine Favor</div>
+            <div onclick="selectSpell('Divine Word')">Divine Word</div>
+            <div onclick="selectSpell('Dominate Beast')">Dominate Beast</div>
+            <div onclick="selectSpell('Dominate Monster')">Dominate Monster</div>
+            <div onclick="selectSpell('Dominate Person')">Dominate Person</div>
+            <div onclick="selectSpell('Dream')">Dream</div>
+            <div onclick="selectSpell('Druidcraft')">Druidcraft</div>
+            <div onclick="selectSpell('Earthquake')">Earthquake</div>
+            <div onclick="selectSpell('Eldritch Blast')">Eldritch Blast</div>
+            <div onclick="selectSpell('Elemental Weapon')">Elemental Weapon</div>
+            <div onclick="selectSpell('Enhance Ability')">Enhance Ability</div>
+            <div onclick="selectSpell('Enlarge/Reduce')">Enlarge/Reduce</div>
+            <div onclick="selectSpell('Ensnaring Strike')">Ensnaring Strike</div>
+            <div onclick="selectSpell('Enthrall')">Enthrall</div>
+            <div onclick="selectSpell('Etherealness')">Etherealness</div>
+            <div onclick="selectSpell('Expeditious Retreat')">Expeditious Retreat</div>
+            <div onclick="selectSpell('Eyebite')">Eyebite</div>
+            <div onclick="selectSpell('Fabricate')">Fabricate</div>
+            <div onclick="selectSpell('Faerie Fire')">Faerie Fire</div>
+            <div onclick="selectSpell('False Life')">False Life</div>
+            <div onclick="selectSpell('Fear')">Fear</div>
+            <div onclick="selectSpell('Feather Fall')">Feather Fall</div>
+            <div onclick="selectSpell('Feeblemind')">Feeblemind</div>
+            <div onclick="selectSpell('Find Familiar')">Find Familiar</div>
+            <div onclick="selectSpell('Find Steed')">Find Steed</div>
+            <div onclick="selectSpell('Find the Path')">Find the Path</div>
+            <div onclick="selectSpell('Find Traps')">Find Traps</div>
+            <div onclick="selectSpell('Finger of Death')">Finger of Death</div>
+            <div onclick="selectSpell('Fire Bolt')">Fire Bolt</div>
+            <div onclick="selectSpell('Fire Shield')">Fire Shield</div>
+            <div onclick="selectSpell('Fire Storm')">Fire Storm</div>
+            <div onclick="selectSpell('Fireball')">Fireball</div>
+            <div onclick="selectSpell('Flame Blade')">Flame Blade</div>
+            <div onclick="selectSpell('Flame Strike')">Flame Strike</div>
+            <div onclick="selectSpell('Flaming Sphere')">Flaming Sphere</div>
+            <div onclick="selectSpell('Flesh to Stone')">Flesh to Stone</div>
+            <div onclick="selectSpell('Fly')">Fly</div>
+            <div onclick="selectSpell('Fog Cloud')">Fog Cloud</div>
+            <div onclick="selectSpell('Forbiddance')">Forbiddance</div>
+            <div onclick="selectSpell('Forcecage')">Forcecage</div>
+            <div onclick="selectSpell('Foresight')">Foresight</div>
+            <div onclick="selectSpell('Freedom of Movement')">Freedom of Movement</div>
+            <div onclick="selectSpell('Freezing Sphere')">Freezing Sphere</div>
+            <div onclick="selectSpell('Gaseous Form')">Gaseous Form</div>
+            <div onclick="selectSpell('Gate')">Gate</div>
+            <div onclick="selectSpell('Geas')">Geas</div>
+            <div onclick="selectSpell('Gentle Repose')">Gentle Repose</div>
+            <div onclick="selectSpell('Giant Insect')">Giant Insect</div>
+            <div onclick="selectSpell('Glibness')">Glibness</div>
+            <div onclick="selectSpell('Globe of Invulnerability')">Globe of Invulnerability</div>
+            <div onclick="selectSpell('Glyph of Warding')">Glyph of Warding</div>
+            <div onclick="selectSpell('Goodberry')">Goodberry</div>
+            <div onclick="selectSpell('Grasping Vine')">Grasping Vine</div>
+            <div onclick="selectSpell('Grease')">Grease</div>
+            <div onclick="selectSpell('Greater Invisibility')">Greater Invisibility</div>
+            <div onclick="selectSpell('Greater Restoration')">Greater Restoration</div>
+            <div onclick="selectSpell('Guardian of Faith')">Guardian of Faith</div>
+            <div onclick="selectSpell('Guards and Wards')">Guards and Wards</div>
+            <div onclick="selectSpell('Guidance')">Guidance</div>
+            <div onclick="selectSpell('Guiding Bolt')">Guiding Bolt</div>
+            <div onclick="selectSpell('Gust')">Gust</div>
+            <div onclick="selectSpell('Gust of Wind')">Gust of Wind</div>
+            <div onclick="selectSpell('Hail of Thorns')">Hail of Thorns</div>
+            <div onclick="selectSpell('Hallow')">Hallow</div>
+            <div onclick="selectSpell('Hallucinatory Terrain')">Hallucinatory Terrain</div>
+            <div onclick="selectSpell('Harm')">Harm</div>
+            <div onclick="selectSpell('Haste')">Haste</div>
+            <div onclick="selectSpell('Heal')">Heal</div>
+            <div onclick="selectSpell('Healing Word')">Healing Word</div>
+            <div onclick="selectSpell('Heat Metal')">Heat Metal</div>
+            <div onclick="selectSpell('Hellish Rebuke')">Hellish Rebuke</div>
+            <div onclick="selectSpell('Heroes\' Feast')">Heroes' Feast</div>
+            <div onclick="selectSpell('Heroism')">Heroism</div>
+            <div onclick="selectSpell('Hex')">Hex</div>
+            <div onclick="selectSpell('Hold Monster')">Hold Monster</div>
+            <div onclick="selectSpell('Hold Person')">Hold Person</div>
+            <div onclick="selectSpell('Holy Aura')">Holy Aura</div>
+            <div onclick="selectSpell('Hunter\'s Mark')">Hunter's Mark</div>
+            <div onclick="selectSpell('Hypnotic Pattern')">Hypnotic Pattern</div>
+            <div onclick="selectSpell('Ice Knife')">Ice Knife</div>
+            <div onclick="selectSpell('Ice Storm')">Ice Storm</div>
+            <div onclick="selectSpell('Identify')">Identify</div>
+            <div onclick="selectSpell('Illusory Script')">Illusory Script</div>
+            <div onclick="selectSpell('Imprisonment')">Imprisonment</div>
+            <div onclick="selectSpell('Incendiary Cloud')">Incendiary Cloud</div>
+            <div onclick="selectSpell('Inflict Wounds')">Inflict Wounds</div>
+            <div onclick="selectSpell('Insect Plague')">Insect Plague</div>
+            <div onclick="selectSpell('Instant Summons')">Instant Summons</div>
+            <div onclick="selectSpell('Intellect Fortress')">Intellect Fortress</div>
+            <div onclick="selectSpell('Invisibility')">Invisibility</div>
+            <div onclick="selectSpell('Invulnerability')">Invulnerability</div>
+            <div onclick="selectSpell('Irresistible Dance')">Irresistible Dance</div>
+            <div onclick="selectSpell('Jump')">Jump</div>
+            <div onclick="selectSpell('Knock')">Knock</div>
+            <div onclick="selectSpell('Legend Lore')">Legend Lore</div>
+            <div onclick="selectSpell('Leomund\'s Secret Chest')">Leomund's Secret Chest</div>
+            <div onclick="selectSpell('Leomund\'s Tiny Hut')">Leomund's Tiny Hut</div>
+            <div onclick="selectSpell('Lesser Restoration')">Lesser Restoration</div>
+            <div onclick="selectSpell('Levitate')">Levitate</div>
+            <div onclick="selectSpell('Life Transference')">Life Transference</div>
+            <div onclick="selectSpell('Light')">Light</div>
+            <div onclick="selectSpell('Lightning Bolt')">Lightning Bolt</div>
+            <div onclick="selectSpell('Locate Animals or Plants')">Locate Animals or Plants</div>
+            <div onclick="selectSpell('Locate Creature')">Locate Creature</div>
+            <div onclick="selectSpell('Locate Object')">Locate Object</div>
+            <div onclick="selectSpell('Longstrider')">Longstrider</div>
+            <div onclick="selectSpell('Mage Armor')">Mage Armor</div>
+            <div onclick="selectSpell('Mage Hand')">Mage Hand</div>
+            <div onclick="selectSpell('Magic Circle')">Magic Circle</div>
+            <div onclick="selectSpell('Magic Jar')">Magic Jar</div>
+            <div onclick="selectSpell('Magic Missile')">Magic Missile</div>
+            <div onclick="selectSpell('Magic Mouth')">Magic Mouth</div>
+            <div onclick="selectSpell('Magic Weapon')">Magic Weapon</div>
+            <div onclick="selectSpell('Major Image')">Major Image</div>
+            <div onclick="selectSpell('Mass Cure Wounds')">Mass Cure Wounds</div>
+            <div onclick="selectSpell('Mass Heal')">Mass Heal</div>
+            <div onclick="selectSpell('Mass Healing Word')">Mass Healing Word</div>
+            <div onclick="selectSpell('Mass Suggestion')">Mass Suggestion</div>
+            <div onclick="selectSpell('Maze')">Maze</div>
+            <div onclick="selectSpell('Meld into Stone')">Meld into Stone</div>
+            <div onclick="selectSpell('Melf\'s Acid Arrow')">Melf's Acid Arrow</div>
+            <div onclick="selectSpell('Mending')">Mending</div>
+            <div onclick="selectSpell('Message')">Message</div>
+            <div onclick="selectSpell('Meteor Swarm')">Meteor Swarm</div>
+            <div onclick="selectSpell('Mind Blank')">Mind Blank</div>
+            <div onclick="selectSpell('Minor Illusion')">Minor Illusion</div>
+            <div onclick="selectSpell('Mirage Arcane')">Mirage Arcane</div>
+            <div onclick="selectSpell('Mirror Image')">Mirror Image</div>
+            <div onclick="selectSpell('Mislead')">Mislead</div>
+            <div onclick="selectSpell('Misty Step')">Misty Step</div>
+            <div onclick="selectSpell('Modify Memory')">Modify Memory</div>
+            <div onclick="selectSpell('Moonbeam')">Moonbeam</div>
+            <div onclick="selectSpell('Move Earth')">Move Earth</div>
+            <div onclick="selectSpell('Negative Energy Flood')">Negative Energy Flood</div>
+            <div onclick="selectSpell('Nondetection')">Nondetection</div>
+            <div onclick="selectSpell('Nystul\'s Magic Aura')">Nystul's Magic Aura</div>
+            <div onclick="selectSpell('Otiluke\'s Freezing Sphere')">Otiluke's Freezing Sphere</div>
+            <div onclick="selectSpell('Otiluke\'s Resilient Sphere')">Otiluke's Resilient Sphere</div>
+            <div onclick="selectSpell('Otto\'s Irresistible Dance')">Otto's Irresistible Dance</div>
+            <div onclick="selectSpell('Pass without Trace')">Pass without Trace</div>
+            <div onclick="selectSpell('Passwall')">Passwall</div>
+            <div onclick="selectSpell('Phantasmal Force')">Phantasmal Force</div>
+            <div onclick="selectSpell('Phantasmal Killer')">Phantasmal Killer</div>
+            <div onclick="selectSpell('Phantom Steed')">Phantom Steed</div>
+            <div onclick="selectSpell('Planar Ally')">Planar Ally</div>
+            <div onclick="selectSpell('Planar Binding')">Planar Binding</div>
+            <div onclick="selectSpell('Plane Shift')">Plane Shift</div>
+            <div onclick="selectSpell('Plant Growth')">Plant Growth</div>
+            <div onclick="selectSpell('Poison Spray')">Poison Spray</div>
+            <div onclick="selectSpell('Polymorph')">Polymorph</div>
+            <div onclick="selectSpell('Power Word Heal')">Power Word Heal</div>
+            <div onclick="selectSpell('Power Word Kill')">Power Word Kill</div>
+            <div onclick="selectSpell('Power Word Pain')">Power Word Pain</div>
+            <div onclick="selectSpell('Power Word Stun')">Power Word Stun</div>
+            <div onclick="selectSpell('Prayer of Healing')">Prayer of Healing</div>
+            <div onclick="selectSpell('Prestidigitation')">Prestidigitation</div>
+            <div onclick="selectSpell('Primal Savagery')">Primal Savagery</div>
+            <div onclick="selectSpell('Primeval Awareness')">Primeval Awareness</div>
+            <div onclick="selectSpell('Prismatic Spray')">Prismatic Spray</div>
+            <div onclick="selectSpell('Prismatic Wall')">Prismatic Wall</div>
+            <div onclick="selectSpell('Produce Flame')">Produce Flame</div>
+            <div onclick="selectSpell('Programmed Illusion')">Programmed Illusion</div>
+            <div onclick="selectSpell('Project Image')">Project Image</div>
+            <div onclick="selectSpell('Protection from Energy')">Protection from Energy</div>
+            <div onclick="selectSpell('Protection from Evil and Good')">Protection from Evil and Good</div>
+            <div onclick="selectSpell('Protection from Poison')">Protection from Poison</div>
+            <div onclick="selectSpell('Purify Food and Drink')">Purify Food and Drink</div>
+
+
+            
+            <div onclick="selectSpell('Raise Dead')">Raise Dead</div>
+            <div onclick="selectSpell('Rary\'s Telepathic Bond')">Rary's Telepathic Bond</div>
+            <div onclick="selectSpell('Ray of Enfeeblement')">Ray of Enfeeblement</div>
+            <div onclick="selectSpell('Ray of Frost')">Ray of Frost</div>
+            <div onclick="selectSpell('Regenerate')">Regenerate</div>
+            <div onclick="selectSpell('Reincarnate')">Reincarnate</div>
+            <div onclick="selectSpell('Remove Curse')">Remove Curse</div>
+            <div onclick="selectSpell('Resilient Sphere')">Resilient Sphere</div>
+            <div onclick="selectSpell('Resistance')">Resistance</div>
+            <div onclick="selectSpell('Restore')">Restore</div>
+            <div onclick="selectSpell('Resurrection')">Resurrection</div>
+            <div onclick="selectSpell('Reverse Gravity')">Reverse Gravity</div>
+            <div onclick="selectSpell('Revivify')">Revivify</div>
+            <div onclick="selectSpell('Rope Trick')">Rope Trick</div>
+            <div onclick="selectSpell('Sacred Flame')">Sacred Flame</div>
+            <div onclick="selectSpell('Sanctuary')">Sanctuary</div>
+            <div onclick="selectSpell('Scorching Ray')">Scorching Ray</div>
+            <div onclick="selectSpell('Scrying')">Scrying</div>
+            <div onclick="selectSpell('Secret Chest')">Secret Chest</div>
+            <div onclick="selectSpell('See Invisibility')">See Invisibility</div>
+            <div onclick="selectSpell('Seeming')">Seeming</div>
+            <div onclick="selectSpell('Sending')">Sending</div>
+            <div onclick="selectSpell('Sequester')">Sequester</div>
+            <div onclick="selectSpell('Shape Water')">Shape Water</div>
+            <div onclick="selectSpell('Shapechange')">Shapechange</div>
+            <div onclick="selectSpell('Shatter')">Shatter</div>
+            <div onclick="selectSpell('Shield')">Shield</div>
+            <div onclick="selectSpell('Shield of Faith')">Shield of Faith</div>
+            <div onclick="selectSpell('Shillelagh')">Shillelagh</div>
+            <div onclick="selectSpell('Shocking Grasp')">Shocking Grasp</div>
+            <div onclick="selectSpell('Sickening Radiance')">Sickening Radiance</div>
+            <div onclick="selectSpell('Silence')">Silence</div>
+            <div onclick="selectSpell('Silent Image')">Silent Image</div>
+            <div onclick="selectSpell('Simulacrum')">Simulacrum</div>
+            <div onclick="selectSpell('Skill Empowerment')">Skill Empowerment</div>
+            <div onclick="selectSpell('Skywrite')">Skywrite</div>
+            <div onclick="selectSpell('Sleet Storm')">Sleet Storm</div>
+            <div onclick="selectSpell('Slow')">Slow</div>
+            <div onclick="selectSpell('Snare')">Snare</div>
+            <div onclick="selectSpell('Speak with Animals')">Speak with Animals</div>
+            <div onclick="selectSpell('Speak with Dead')">Speak with Dead</div>
+            <div onclick="selectSpell('Speak with Plants')">Speak with Plants</div>
+            <div onclick="selectSpell('Spider Climb')">Spider Climb</div>
+            <div onclick="selectSpell('Spike Growth')">Spike Growth</div>
+            <div onclick="selectSpell('Spirit Guardians')">Spirit Guardians</div>
+            <div onclick="selectSpell('Spiritual Weapon')">Spiritual Weapon</div>
+            <div onclick="selectSpell('Staggering Smite')">Staggering Smite</div>
+            <div onclick="selectSpell('Stinking Cloud')">Stinking Cloud</div>
+            <div onclick="selectSpell('Stone Shape')">Stone Shape</div>
+            <div onclick="selectSpell('Stoneskin')">Stoneskin</div>
+            <div onclick="selectSpell('Storm of Vengeance')">Storm of Vengeance</div>
+            <div onclick="selectSpell('Suggestion')">Suggestion</div>
+            <div onclick="selectSpell('Sunbeam')">Sunbeam</div>
+            <div onclick="selectSpell('Sunburst')">Sunburst</div>
+            <div onclick="selectSpell('Symbol')">Symbol</div>
+            <div onclick="selectSpell('Tasha\'s Caustic Brew')">Tasha's Caustic Brew</div>
+            <div onclick="selectSpell('Telekinesis')">Telekinesis</div>
+            <div onclick="selectSpell('Telepathy')">Telepathy</div>
+            <div onclick="selectSpell('Teleport')">Teleport</div>
+            <div onclick="selectSpell('Temple of the Gods')">Temple of the Gods</div>
+            <div onclick="selectSpell('Tenser\'s Floating Disk')">Tenser's Floating Disk</div>
+            <div onclick="selectSpell('Thunderwave')">Thunderwave</div>
+            <div onclick="selectSpell('Time Stop')">Time Stop</div>
+            <div onclick="selectSpell('Tiny Hut')">Tiny Hut</div>
+            <div onclick="selectSpell('Tongues')">Tongues</div>
+            <div onclick="selectSpell('Transport via Plants')">Transport via Plants</div>
+            <div onclick="selectSpell('Trap the Soul')">Trap the Soul</div>
+            <div onclick="selectSpell('Tree Stride')">Tree Stride</div>
+            <div onclick="selectSpell('True Polymorph')">True Polymorph</div>
+            <div onclick="selectSpell('True Resurrection')">True Resurrection</div>
+            <div onclick="selectSpell('True Seeing')">True Seeing</div>
+            <div onclick="selectSpell('True Strike')">True Strike</div>
+            <div onclick="selectSpell('Unseen Servant')">Unseen Servant</div>
+            <div onclick="selectSpell('Vampiric Touch')">Vampiric Touch</div>
+            <div onclick="selectSpell('Vicious Mockery')">Vicious Mockery</div>
+            <div onclick="selectSpell('Wall of Fire')">Wall of Fire</div>
+            <div onclick="selectSpell('Wall of Force')">Wall of Force</div>
+            <div onclick="selectSpell('Wall of Ice')">Wall of Ice</div>
+            <div onclick="selectSpell('Wall of Stone')">Wall of Stone</div>
+            <div onclick="selectSpell('Wall of Thorns')">Wall of Thorns</div>
+            <div onclick="selectSpell('Warding Bond')">Warding Bond</div>
+            <div onclick="selectSpell('Water Breathing')">Water Breathing</div>
+            <div onclick="selectSpell('Water Walk')">Water Walk</div>
+            <div onclick="selectSpell('Watery Sphere')">Watery Sphere</div>
+            <div onclick="selectSpell('Web')">Web</div>
+            <div onclick="selectSpell('Weird')">Weird</div>
+            <div onclick="selectSpell('Wind Walk')">Wind Walk</div>
+            <div onclick="selectSpell('Wind Wall')">Wind Wall</div>
+            <div onclick="selectSpell('Wish')">Wish</div>
+            <div onclick="selectSpell('Word of Recall')">Word of Recall</div>
+            <div onclick="selectSpell('Wrathful Smite')">Wrathful Smite</div>
+            <div onclick="selectSpell('Zone of Truth')">Zone of Truth</div>
+            <!-- Xanathar's Guide to Everything Spells -->
+        <div onclick="selectSpell('Aganazzar\'s Scorcher')">Aganazzar's Scorcher</div>
+        <div onclick="selectSpell('Beast Bond')">Beast Bond</div>
+        <div onclick="selectSpell('Bones of the Earth')">Bones of the Earth</div>
+        <div onclick="selectSpell('Catnap')">Catnap</div>
+        <div onclick="selectSpell('Ceremony')">Ceremony</div>
+        <div onclick="selectSpell('Chaos Bolt')">Chaos Bolt</div>
+        <div onclick="selectSpell('Charm Monster')">Charm Monster</div>
+        <div onclick="selectSpell('Danse Macabre')">Danse Macabre</div>
+        <div onclick="selectSpell('Dust Devil')">Dust Devil</div>
+        <div onclick="selectSpell('Earth Tremor')">Earth Tremor</div>
+        <div onclick="selectSpell('Earthbind')">Earthbind</div>
+        <div onclick="selectSpell('Elemental Bane')">Elemental Bane</div>
+        <div onclick="selectSpell('Enemies Abound')">Enemies Abound</div>
+        <div onclick="selectSpell('Erupting Earth')">Erupting Earth</div>
+        <div onclick="selectSpell('Far Step')">Far Step</div>
+        <div onclick="selectSpell('Find Greater Steed')">Find Greater Steed</div>
+        <div onclick="selectSpell('Healing Spirit')">Healing Spirit</div>
+        <div onclick="selectSpell('Holy Weapon')">Holy Weapon</div>
+        <div onclick="selectSpell('Ice Knife')">Ice Knife</div>
+        <div onclick="selectSpell('Illusory Dragon')">Illusory Dragon</div>
+        <div onclick="selectSpell('Immolation')">Immolation</div>
+        <div onclick="selectSpell('Infernal Calling')">Infernal Calling</div>
+        <div onclick="selectSpell('Infestation')">Infestation</div>
+        <div onclick="selectSpell('Invulnerability')">Invulnerability</div>
+        <div onclick="selectSpell('Life Transference')">Life Transference</div>
+        <div onclick="selectSpell('Maddening Darkness')">Maddening Darkness</div>
+        <div onclick="selectSpell('Mass Polymorph')">Mass Polymorph</div>
+        <div onclick="selectSpell('Maximilian\'s Earthen Grasp')">Maximilian's Earthen Grasp</div>
+        <div onclick="selectSpell('Melf\'s Minute Meteors')">Melf's Minute Meteors</div>
+        <div onclick="selectSpell('Mental Prison')">Mental Prison</div>
+        <div onclick="selectSpell('Mighty Fortress')">Mighty Fortress</div>
+        <div onclick="selectSpell('Mind Spike')">Mind Spike</div>
+        <div onclick="selectSpell('Mordenkainen\'s Faithful Hound')">Mordenkainen's Faithful Hound</div>
+        <div onclick="selectSpell('Mordenkainen\'s Private Sanctum')">Mordenkainen's Private Sanctum</div>
+        <div onclick="selectSpell('Negative Energy Flood')">Negative Energy Flood</div>
+        <div onclick="selectSpell('Pyrotechnics')">Pyrotechnics</div>
+        <div onclick="selectSpell('Scatter')">Scatter</div>
+        <div onclick="selectSpell('Shadow Blade')">Shadow Blade</div>
+        <div onclick="selectSpell('Shadow of Moil')">Shadow of Moil</div>
+        <div onclick="selectSpell('Sickening Radiance')">Sickening Radiance</div>
+        <div onclick="selectSpell('Skill Empowerment')">Skill Empowerment</div>
+        <div onclick="selectSpell('Skywrite')">Skywrite</div>
+        <div onclick="selectSpell('Snare')">Snare</div>
+        <div onclick="selectSpell('Soul Cage')">Soul Cage</div>
+        <div onclick="selectSpell('Steel Wind Strike')">Steel Wind Strike</div>
+        <div onclick="selectSpell('Storm Sphere')">Storm Sphere</div>
+        <div onclick="selectSpell('Summon Greater Demon')">Summon Greater Demon</div>
+        <div onclick="selectSpell('Summon Lesser Demons')">Summon Lesser Demons</div>
+        <div onclick="selectSpell('Swift Quiver')">Swift Quiver</div>
+        <div onclick="selectSpell('Synaptic Static')">Synaptic Static</div>
+        <div onclick="selectSpell('Temple of the Gods')">Temple of the Gods</div>
+        <div onclick="selectSpell('Tenser\'s Transformation')">Tenser's Transformation</div>
+        <div onclick="selectSpell('Thunder Step')">Thunder Step</div>
+        <div onclick="selectSpell('Tidal Wave')">Tidal Wave</div>
+        <div onclick="selectSpell('Tiny Servant')">Tiny Servant</div>
+        <div onclick="selectSpell('Toll the Dead')">Toll the Dead</div>
+        <div onclick="selectSpell('Transmute Rock')">Transmute Rock</div>
+        <div onclick="selectSpell('Vitriolic Sphere')">Vitriolic Sphere</div>
+        <div onclick="selectSpell('Wall of Light')">Wall of Light</div>
+        <div onclick="selectSpell('Watery Sphere')">Watery Sphere</div>
+        <div onclick="selectSpell('Whirlwind')">Whirlwind</div>
+        <div onclick="selectSpell('Wrath of Nature')">Wrath of Nature</div>
+        <div onclick="selectSpell('Zephyr Strike')">Zephyr Strike</div>
+                <!-- Fizban's Treasury of Dragons Spells -->
+                <div onclick="selectSpell('Ashardalon\'s Stride')">Ashardalon's Stride</div>
+                <div onclick="selectSpell('Draconic Transformation')">Draconic Transformation</div>
+                <div onclick="selectSpell('Fizban\'s Platinum Shield')">Fizban's Platinum Shield</div>
+                <div onclick="selectSpell('Nathair\'s Mischief')">Nathair's Mischief</div>
+                <div onclick="selectSpell('Raulothim\'s Psychic Lance')">Raulothim's Psychic Lance</div>
+                <div onclick="selectSpell('Summon Draconic Spirit')">Summon Draconic Spirit</div>
+        
+                <!-- Bigby's Glory of the Giants Spells -->
+                <div onclick="selectSpell('Animate Objects')">Animate Objects</div>
+                <div onclick="selectSpell('Enlarge/Reduce')">Enlarge/Reduce</div>
+                <div onclick="selectSpell('Giant\'s Might')">Giant's Might</div>
+                <div onclick="selectSpell('Rime\'s Binding Ice')">Rime's Binding Ice</div>
+                <div onclick="selectSpell('Runic Shield')">Runic Shield</div>
+                <div onclick="selectSpell('Titanic Shield')">Titanic Shield</div>
+        
+                <!-- Spelljammer: Adventures in Space Spells -->
+                <div onclick="selectSpell('Air Bubble')">Air Bubble</div>
+                <div onclick="selectSpell('Create Spelljamming Helm')">Create Spelljamming Helm</div>
+                <div onclick="selectSpell('Cosmic Aura')">Cosmic Aura</div>
+                <div onclick="selectSpell('Planar Shift')">Planar Shift</div>
+                <div onclick="selectSpell('Stellar Body')">Stellar Body</div>
+                <div onclick="selectSpell('Void Navigation')">Void Navigation</div>
+        </div>
+    </div>
+</div>
+    <script>
+         const spells = {
+    "Acid Arrow": "A shimmering green arrow streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d4 acid damage, and the spell’s magic continues to affect the target. At the end of each of the target’s turns, it takes an additional 2d4 acid damage, and the spell ends. On a miss, the spell ends.",
+    "Acid Splash": "You hurl a bubble of acid. Choose one or two creatures you can see within range. If you choose two, they must be within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.",
+    "Aid": "You boost the health of your allies. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.",
+    "Alarm": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area.",
+    "Alter Self": "You assume a different form. You can choose one of the following effects: change your appearance, grow claws, or gain a swim speed. The changes last for the duration.",
+    "Animal Friendship": "You attempt to convince a beast that you mean it no harm. Choose a beast that you can see within range. The beast must make a Wisdom saving throw. On a failed save, the beast becomes friendly to you for the duration.",
+    "Animal Messenger": "You use a tiny beast to deliver a message. Choose a Tiny beast within range. The beast travels to a destination you specify and delivers your message to a creature of your choice.",
+    "Animal Shapes": "You transform willing creatures you can see within range into beasts. You choose the beasts that the creatures transform into. The spell doesn’t allow you to transform the creatures into beasts with a challenge rating higher than 8.",
+    "Animate Dead": "You raise the dead. Choose up to two skeletons or zombies within range. They become your servants, and you can use your action to command them each turn.",
+    "Animate Objects": "You bring objects to life. Choose up to ten nonmagical objects within range that are not being worn or carried. Each object animates and can be directed by you to move and attack.",
+    "Antilife Shell": "An immobile, faintly shimmering barrier springs into existence around you. The barrier protects you from creatures, making it difficult for them to approach you.",
+    "Antimagic Field": "A barrier of anti-magic radiates from you. While in the sphere, magic cannot be cast or used, and the barrier suppresses the effects of magic within its area.",
+    "Antipathy/Sympathy": "You imbue a location with an aura of antipathy or sympathy. Choose a point within range and an effect: creatures of a type (aberration, celestial, etc.) are either repelled or attracted to the area.",
+    "Arcane Eye": "You create an invisible magical eye that hovers in the air. You can see through the eye as if you were there. The eye has darkvision, and you can use it to make Perception checks.",
+    "Arcane Lock": "You protect a door, gate, or similar object with a magical lock. The object becomes locked, and it requires a successful Dexterity check to open or bypass.",
+    "Arcane Sword": "You create a sword of magical force that you can wield. It counts as a magic weapon and deals 1d6 force damage on a hit.",
+    "Arcanist's Magic Aura": "You alter the magical aura around a target. You can change its appearance or alter its magical properties, such as making it appear as though it is a different type of magic.",
+    "Astral Projection": "You and up to eight willing creatures project your astral bodies to the Astral Plane. While on the Astral Plane, your physical bodies remain in place, and you can travel in the Astral Plane.",
+    "Augury": "You receive a divine omen about the results of a specific course of action you plan to take within the next 30 minutes. The spell’s response can be ‘weal,’ ‘woe,’ or ‘weal and woe.’",
+    "Awaken": "You imbue a creature with intelligence and the ability to speak. The creature also gains a personality and can communicate telepathically with you.",
+    "Bane": "You create a black energy aura around up to three creatures of your choice within range. Whenever a target fails its saving throw, it must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
+    "Banishing Smite": "You imbue your weapon strikes with the power to banish. The next time you hit a creature with a melee weapon attack, it takes an additional 5d10 radiant damage, and if it is from another plane of existence, it must make a Charisma saving throw or be banished.",
+    "Banishment": "You attempt to send a creature to another plane of existence. The target must make a Charisma saving throw. On a failed save, the target is banished. If the target is native to the plane you are on, it is banished to a harmless demiplane.",
+    "Barkskin": "You touch a willing creature. The target’s skin becomes as tough as bark. Until the spell ends, the target’s AC can’t be less than 16, regardless of what kind of armor it is wearing.",
+    "Beacon of Hope": "You create an aura of hope around you. For the duration, you and your allies within 30 feet have advantage on Wisdom saving throws and death saving throws, and regain the maximum number of hit points possible from any healing.",
+    "Beast Bond": "You create a telepathic link between yourself and a beast you touch. While the link lasts, you can communicate with the beast telepathically as long as the two of you are on the same plane of existence.",
+    "Beast Sense": "You can sense through the eyes and ears of a willing beast you touch. For the duration, you can use your action to see and hear through the beast's senses as if you were in its space.",
+    "Bestow Curse": "You reach out a glowing hand to touch a creature you can see within range. The target must make a Wisdom saving throw. On a failed save, you bestow a debilitating curse upon it. Choose one of the following effects: disadvantage on attack rolls or ability checks, or disadvantage on saving throws, or a reduction in its speed.",
+    "Bigby's Hand": "You create a magical hand that appears at a point you choose within range. The hand has the following options: Grapple, Interpose, or Crush. The hand can also be used to deliver a spell.",
+    "Blade Barrier": "You create a wall of whirling blades that surrounds you or an area. Each creature within the area must make a Dexterity saving throw. On a failed save, the creature takes 10d10 slashing damage. On a successful save, it takes half as much damage.",
+    "Bless": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, it can roll a d4 and add the number rolled to the attack roll or saving throw.",
+    "Blight": "Necromantic energy washes over a creature of your choice within range. The target must make a Constitution saving throw. On a failed save, it takes 8d8 necrotic damage. On a successful save, it takes half as much damage.",
+    "Blindness/Deafness": "You can blind or deafen a foe you can see within range. Choose one of the following effects: blindness or deafness. The target must make a Constitution saving throw. On a failed save, it is blinded or deafened, as you chose.",
+    "Blink": "You vanish from your current plane of existence and reappear a short distance away. At the end of each of your turns, you have a 50% chance of disappearing from your current plane and appearing in the Ethereal Plane.",
+    "Blur": "Your form becomes blurred, shifting, and wavering. Until the spell ends, any creature you attack has disadvantage on attack rolls against you.",
+    "Branding Smite": "You brandish your weapon, causing it to flare with radiant energy. The next time you hit a creature with a melee weapon attack, it takes an extra 2d6 radiant damage and is illuminated, shedding bright light in a 5-foot radius and dim light for an additional 5 feet.",
+    "Burning Hands": "A thin sheet of flames shoots forth from your outstretched fingers. Each creature in a 15-foot cone must make a Dexterity saving throw. A target takes 3d6 fire damage on a failed save, or half as much damage on a successful one.",
+    "Call Lightning": "You call down a bolt of lightning to strike a point you choose within range. Each creature within a 5-foot radius of that point must make a Dexterity saving throw. A target takes 3d10 lightning damage on a failed save, or half as much damage on a successful one.",
+    "Calm Emotions": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot radius sphere centered on a point you choose within range must make a Charisma saving throw. On a failed save, you can suppress any effect causing a target to be charmed or frightened.",
+    "Chain Lightning": "You create a bolt of lightning that arcs toward a target of your choice within range. The target must make a Dexterity saving throw. On a failed save, it takes 10d8 lightning damage, and then the lightning arcs to other targets, up to a total of three additional targets.",
+    "Charm Person": "You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it.",
+    "Chromatic Orb": "You hurl a 4-inch-diameter sphere of energy at a creature that you can see within range. You choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create. On a hit, the creature takes 3d8 damage of the type you chose.",
+    "Circle of Death": "A sphere of negative energy ripples out from a point you choose within range. Each creature in a 60-foot-radius sphere centered on that point must make a Constitution saving throw. A target takes 8d6 necrotic damage on a failed save, or half as much damage on a successful one.",
+    "Circle of Power": "You and your allies within a 30-foot radius of you have advantage on saving throws against spells and other magical effects. The area of effect moves with you, and creatures that start their turn in the area regain 1d4 hit points.",
+    "Clairvoyance": "You create an invisible sensor within range that lets you see or hear a location you choose. The sensor remains in place for the duration and can be used to make Perception checks.",
+    "Clone": "You create a duplicate of a living creature. If the original creature is killed, the clone becomes its new body. The clone has the same physical appearance and abilities as the original creature.",
+    "Cloudkill": "You create a cloud of poison gas that moves away from you. Each creature within the cloud must make a Constitution saving throw. On a failed save, it takes 6d8 poison damage and is blinded. On a successful save, it takes half as much damage and isn’t blinded.",
+    "Color Spray": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can affect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points.",
+    "Command": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn.",
+    "Commune": "You contact your deity or a divine proxy to ask questions. You receive a divine response to your questions, which might be cryptic or vague. You can ask up to three yes-or-no questions.",
+    "Commune with Nature": "You gain knowledge of the surrounding territory. For the duration, you can sense the presence of certain types of creatures and learn about terrain, plants, and bodies of water within 3 miles.",
+    "Comprehend Languages": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written.",
+    "Compulsion": "You compel creatures within range to move in a direction you choose. Each creature must make a Wisdom saving throw. On a failed save, a creature is compelled to move in a direction you choose, following the shortest route.",
+    "Cone of Cold": "A blast of cold air erupts from your hands in a cone. Each creature in a 60-foot cone must make a Constitution saving throw. A target takes 8d8 cold damage on a failed save, or half as much damage on a successful one.",
+    "Confusion": "You cause confusion in the minds of creatures within a 10-foot-radius sphere centered on a point you choose. Each creature in the area must make a Wisdom saving throw. On a failed save, the creature is confused for the duration.",
+    "Conjure Animals": "You summon fey spirits that take the form of animals to aid you. Choose one of the following options: one beast of challenge rating 2 or lower, or two beasts of challenge rating 1 or lower, or four beasts of challenge rating 1/2 or lower, or eight beasts of challenge rating 1/4 or lower.",
+    "Conjure Barrage": "You create a barrage of projectiles that bursts from you. Each creature in a 60-foot cone must make a Dexterity saving throw. On a failed save, it takes 8d8 piercing damage, or half as much damage on a successful save.",
+    "Conjure Celestial": "You summon a celestial to aid you. Choose one celestial with a challenge rating of 4 or lower. The celestial appears in an unoccupied space you choose within range and acts as your ally.",
+    "Conjure Elemental": "You summon an elemental of a type you choose. Choose one of the following elementals: air, earth, fire, or water. The elemental appears in an unoccupied space you choose within range and acts as your ally.",
+    "Conjure Fey": "You summon a fey creature to aid you. Choose one fey creature with a challenge rating of 6 or lower. The fey appears in an unoccupied space you choose within range and acts as your ally.",
+    "Conjure Minor Elementals": "You summon minor elementals to aid you. Choose one of the following options: four elementals with a challenge rating of 1/4 or lower, or two elementals with a challenge rating of 1/2 or lower, or one elemental with a challenge rating of 1 or lower.",
+    "Conjure Volley": "You create a volley of magical ammunition that rains down in a 40-foot radius. Each creature in the area must make a Dexterity saving throw. On a failed save, a creature takes 8d8 piercing damage, or half as much damage on a successful save.",
+    "Conjure Woodland Beings": "You summon fey creatures to aid you. Choose one of the following options: one fey creature with a challenge rating of 2 or lower, or two fey creatures with a challenge rating of 1 or lower, or four fey creatures with a challenge rating of 1/2 or lower, or eight fey creatures with a challenge rating of 1/4 or lower.",
+    "Contact Other Plane": "You mentally contact a distant plane of existence. You can ask up to five yes-or-no questions, and you receive cryptic answers from a powerful entity or force.",
+    "Contagion": "You sicken a creature you touch. The target must make a Constitution saving throw. On a failed save, it is afflicted with one of the following diseases: blinding sickness, deafness, diseased, or flesh rot. The disease continues to affect the target for the duration.",
+    "Contingency": "You put a contingency in place that triggers a spell under specified conditions. You choose a trigger and a spell to cast when the trigger occurs. The spell is held in reserve until the trigger happens.",
+    "Continual Flame": "You create a small flame that remains burning indefinitely. The flame can be colored or shaped as you choose and sheds light as a torch. It doesn’t use up oxygen and is not extinguished by water.",
+    "Control Flames": "You can control flames within range. You can extinguish flames, increase their size, or change their color. The spell has various effects depending on the size of the flames and their source.",
+    "Control Water": "You manipulate water within range. You can cause it to rise, lower, or form into shapes. The spell also allows you to control the flow of water or create a whirlpool.",
+    "Control Weather": "You change the weather in a 5-mile radius centered on a point within range. You can alter precipitation, temperature, and wind conditions.",
+    "Counterspell": "You attempt to interrupt a creature in the process of casting a spell. Choose a creature within range. The creature must make a successful spellcasting ability check or its spell is interrupted.",
+    "Create Food and Water": "You create enough food and water to sustain up to fifteen humanoids for 24 hours. The food and water are nutritious and fillable, but they don’t include any exotic ingredients.",
+    "Create or Destroy Water": "You create up to 10 gallons of clean water within a 30-foot cube or destroy up to 10 gallons of water within the same area.",
+    "Create Undead": "You raise undead creatures from the dead. You can create up to three zombies or skeletons, or one mummy lord. The undead serve you and follow your commands.",
+    "Creation": "You create a nonliving object of your choice. The object can be up to 5 feet in any dimension. The object remains for the duration or until you dismiss it.",
+    "Crown of Madness": "You attempt to drive a humanoid insane. Choose a creature within range. The target must make a Wisdom saving throw. On a failed save, the target is affected by the spell and must use its action each turn to attack a creature of your choice.",
+    "Crusader's Mantle": "You emanate an aura of divine power. Each creature within a 30-foot radius of you (other than you) gains radiant damage on their weapon attacks. The aura lasts for the duration of the spell.",
+    "Cure Wounds": "You channel positive energy to heal a wounded creature you touch. The target regains hit points equal to 1d8 plus your spellcasting ability modifier."
+};
+
+        function selectSpell(spellName) {
+            const spellInput = document.getElementById('spellInput');
+            if (spells[spellName]) {
+                spellInput.value = `${spellName}: ${spells[spellName]}`;
+            } else {
+                spellInput.value = spellName;
+            }
+        }
+        function filterFunction() {
+            var input, filter, div, dropdown, i;
+            input = document.getElementById("spellInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("spellDropdown");
+            div = dropdown.getElementsByTagName("div");
+
+            // Close the dropdown if the input is empty
+            if (input.value === "") {
+                dropdown.classList.remove("show");
+                return;
+            }
+
+            dropdown.classList.add("show");
+
+            // Loop through all div elements, and hide those who don't match the search query
+            for (i = 0; i < div.length; i++) {
+                txtValue = div[i].textContent || div[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#spellInput')) {
+                var dropdown = document.getElementById("spellDropdown");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
