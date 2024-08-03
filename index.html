@@ -65,7 +65,472 @@
             <div>
                 <h2>Spells</h2>
                 <div id="spells" class="info-section"></div>
-                <input type="text" id="spellInput" placeholder="Spell: Description">
+                <div class="dropdown">
+                    <input type="text" id="spellInput" placeholder="Type to search spells..." onkeyup="filterFunction()">
+                    <div id="spellDropdown" class="dropdown-content">
+                        <!-- List of all D&D spells -->
+                        <div onclick="selectSpell('Acid Arrow')">Acid Arrow</div>
+                        <div onclick="selectSpell('Acid Splash')">Acid Splash</div>
+                        <div onclick="selectSpell('Aid')">Aid</div>
+                        <div onclick="selectSpell('Alarm')">Alarm</div>
+                        <div onclick="selectSpell('Alter Self')">Alter Self</div>
+                        <div onclick="selectSpell('Animal Friendship')">Animal Friendship</div>
+                        <div onclick="selectSpell('Animal Messenger')">Animal Messenger</div>
+                        <div onclick="selectSpell('Animal Shapes')">Animal Shapes</div>
+                        <div onclick="selectSpell('Animate Dead')">Animate Dead</div>
+                        <div onclick="selectSpell('Animate Objects')">Animate Objects</div>
+                        <div onclick="selectSpell('Antilife Shell')">Antilife Shell</div>
+                        <div onclick="selectSpell('Antimagic Field')">Antimagic Field</div>
+                        <div onclick="selectSpell('Antipathy/Sympathy')">Antipathy/Sympathy</div>
+                        <div onclick="selectSpell('Arcane Eye')">Arcane Eye</div>
+                        <div onclick="selectSpell('Arcane Lock')">Arcane Lock</div>
+                        <div onclick="selectSpell('Arcane Sword')">Arcane Sword</div>
+                        <div onclick="selectSpell('Arcanist\'s Magic Aura')">Arcanist's Magic Aura</div>
+                        <div onclick="selectSpell('Astral Projection')">Astral Projection</div>
+                        <div onclick="selectSpell('Augury')">Augury</div>
+                        <div onclick="selectSpell('Awaken')">Awaken</div>
+                        <div onclick="selectSpell('Bane')">Bane</div>
+                        <div onclick="selectSpell('Banishing Smite')">Banishing Smite</div>
+                        <div onclick="selectSpell('Banishment')">Banishment</div>
+                        <div onclick="selectSpell('Barkskin')">Barkskin</div>
+                        <div onclick="selectSpell('Beacon of Hope')">Beacon of Hope</div>
+                        <div onclick="selectSpell('Beast Bond')">Beast Bond</div>
+                        <div onclick="selectSpell('Beast Sense')">Beast Sense</div>
+                        <div onclick="selectSpell('Bestow Curse')">Bestow Curse</div>
+                        <div onclick="selectSpell('Bigby\'s Hand')">Bigby's Hand</div>
+                        <div onclick="selectSpell('Blade Barrier')">Blade Barrier</div>
+                        <div onclick="selectSpell('Bless')">Bless</div>
+                        <div onclick="selectSpell('Blight')">Blight</div>
+                        <div onclick="selectSpell('Blindness/Deafness')">Blindness/Deafness</div>
+                        <div onclick="selectSpell('Blink')">Blink</div>
+                        <div onclick="selectSpell('Blur')">Blur</div>
+                        <div onclick="selectSpell('Branding Smite')">Branding Smite</div>
+                        <div onclick="selectSpell('Burning Hands')">Burning Hands</div>
+                        <div onclick="selectSpell('Call Lightning')">Call Lightning</div>
+                        <div onclick="selectSpell('Calm Emotions')">Calm Emotions</div>
+                        <div onclick="selectSpell('Chain Lightning')">Chain Lightning</div>
+                        <div onclick="selectSpell('Charm Person')">Charm Person</div>
+                        <div onclick="selectSpell('Chromatic Orb')">Chromatic Orb</div>
+                        <div onclick="selectSpell('Circle of Death')">Circle of Death</div>
+                        <div onclick="selectSpell('Circle of Power')">Circle of Power</div>
+                        <div onclick="selectSpell('Clairvoyance')">Clairvoyance</div>
+                        <div onclick="selectSpell('Clone')">Clone</div>
+                        <div onclick="selectSpell('Cloudkill')">Cloudkill</div>
+                        <div onclick="selectSpell('Color Spray')">Color Spray</div>
+                        <div onclick="selectSpell('Command')">Command</div>
+                        <div onclick="selectSpell('Commune')">Commune</div>
+                        <div onclick="selectSpell('Commune with Nature')">Commune with Nature</div>
+                        <div onclick="selectSpell('Comprehend Languages')">Comprehend Languages</div>
+                        <div onclick="selectSpell('Compulsion')">Compulsion</div>
+                        <div onclick="selectSpell('Cone of Cold')">Cone of Cold</div>
+                        <div onclick="selectSpell('Confusion')">Confusion</div>
+                        <div onclick="selectSpell('Conjure Animals')">Conjure Animals</div>
+                        <div onclick="selectSpell('Conjure Barrage')">Conjure Barrage</div>
+                        <div onclick="selectSpell('Conjure Celestial')">Conjure Celestial</div>
+                        <div onclick="selectSpell('Conjure Elemental')">Conjure Elemental</div>
+                        <div onclick="selectSpell('Conjure Fey')">Conjure Fey</div>
+                        <div onclick="selectSpell('Conjure Minor Elementals')">Conjure Minor Elementals</div>
+                        <div onclick="selectSpell('Conjure Volley')">Conjure Volley</div>
+                        <div onclick="selectSpell('Conjure Woodland Beings')">Conjure Woodland Beings</div>
+                        <div onclick="selectSpell('Contact Other Plane')">Contact Other Plane</div>
+                        <div onclick="selectSpell('Contagion')">Contagion</div>
+                        <div onclick="selectSpell('Contingency')">Contingency</div>
+                        <div onclick="selectSpell('Continual Flame')">Continual Flame</div>
+                        <div onclick="selectSpell('Control Flames')">Control Flames</div>
+                        <div onclick="selectSpell('Control Water')">Control Water</div>
+                        <div onclick="selectSpell('Control Weather')">Control Weather</div>
+                        <div onclick="selectSpell('Counterspell')">Counterspell</div>
+                        <div onclick="selectSpell('Create Food and Water')">Create Food and Water</div>
+                        <div onclick="selectSpell('Create or Destroy Water')">Create or Destroy Water</div>
+                        <div onclick="selectSpell('Create Undead')">Create Undead</div>
+                        <div onclick="selectSpell('Creation')">Creation</div>
+                        <div onclick="selectSpell('Crown of Madness')">Crown of Madness</div>
+                        <div onclick="selectSpell('Crusader\'s Mantle')">Crusader's Mantle</div>
+                        <div onclick="selectSpell('Cure Wounds')">Cure Wounds</div>
+            
+            
+            
+            
+                        <div onclick="selectSpell('Dancing Lights')">Dancing Lights</div>
+                        <div onclick="selectSpell('Darkness')">Darkness</div>
+                        <div onclick="selectSpell('Darkvision')">Darkvision</div>
+                        <div onclick="selectSpell('Daylight')">Daylight</div>
+                        <div onclick="selectSpell('Death Ward')">Death Ward</div>
+                        <div onclick="selectSpell('Delayed Blast Fireball')">Delayed Blast Fireball</div>
+                        <div onclick="selectSpell('Demiplane')">Demiplane</div>
+                        <div onclick="selectSpell('Detect Evil and Good')">Detect Evil and Good</div>
+                        <div onclick="selectSpell('Detect Magic')">Detect Magic</div>
+                        <div onclick="selectSpell('Detect Poison and Disease')">Detect Poison and Disease</div>
+                        <div onclick="selectSpell('Detect Thoughts')">Detect Thoughts</div>
+                        <div onclick="selectSpell('Dimension Door')">Dimension Door</div>
+                        <div onclick="selectSpell('Disguise Self')">Disguise Self</div>
+                        <div onclick="selectSpell('Disintegrate')">Disintegrate</div>
+                        <div onclick="selectSpell('Dispel Evil and Good')">Dispel Evil and Good</div>
+                        <div onclick="selectSpell('Dispel Magic')">Dispel Magic</div>
+                        <div onclick="selectSpell('Divination')">Divination</div>
+                        <div onclick="selectSpell('Divine Favor')">Divine Favor</div>
+                        <div onclick="selectSpell('Divine Word')">Divine Word</div>
+                        <div onclick="selectSpell('Dominate Beast')">Dominate Beast</div>
+                        <div onclick="selectSpell('Dominate Monster')">Dominate Monster</div>
+                        <div onclick="selectSpell('Dominate Person')">Dominate Person</div>
+                        <div onclick="selectSpell('Dream')">Dream</div>
+                        <div onclick="selectSpell('Druidcraft')">Druidcraft</div>
+                        <div onclick="selectSpell('Earthquake')">Earthquake</div>
+                        <div onclick="selectSpell('Eldritch Blast')">Eldritch Blast</div>
+                        <div onclick="selectSpell('Elemental Weapon')">Elemental Weapon</div>
+                        <div onclick="selectSpell('Enhance Ability')">Enhance Ability</div>
+                        <div onclick="selectSpell('Enlarge/Reduce')">Enlarge/Reduce</div>
+                        <div onclick="selectSpell('Ensnaring Strike')">Ensnaring Strike</div>
+                        <div onclick="selectSpell('Enthrall')">Enthrall</div>
+                        <div onclick="selectSpell('Etherealness')">Etherealness</div>
+                        <div onclick="selectSpell('Expeditious Retreat')">Expeditious Retreat</div>
+                        <div onclick="selectSpell('Eyebite')">Eyebite</div>
+                        <div onclick="selectSpell('Fabricate')">Fabricate</div>
+                        <div onclick="selectSpell('Faerie Fire')">Faerie Fire</div>
+                        <div onclick="selectSpell('False Life')">False Life</div>
+                        <div onclick="selectSpell('Fear')">Fear</div>
+                        <div onclick="selectSpell('Feather Fall')">Feather Fall</div>
+                        <div onclick="selectSpell('Feeblemind')">Feeblemind</div>
+                        <div onclick="selectSpell('Find Familiar')">Find Familiar</div>
+                        <div onclick="selectSpell('Find Steed')">Find Steed</div>
+                        <div onclick="selectSpell('Find the Path')">Find the Path</div>
+                        <div onclick="selectSpell('Find Traps')">Find Traps</div>
+                        <div onclick="selectSpell('Finger of Death')">Finger of Death</div>
+                        <div onclick="selectSpell('Fire Bolt')">Fire Bolt</div>
+                        <div onclick="selectSpell('Fire Shield')">Fire Shield</div>
+                        <div onclick="selectSpell('Fire Storm')">Fire Storm</div>
+                        <div onclick="selectSpell('Fireball')">Fireball</div>
+                        <div onclick="selectSpell('Flame Blade')">Flame Blade</div>
+                        <div onclick="selectSpell('Flame Strike')">Flame Strike</div>
+                        <div onclick="selectSpell('Flaming Sphere')">Flaming Sphere</div>
+                        <div onclick="selectSpell('Flesh to Stone')">Flesh to Stone</div>
+                        <div onclick="selectSpell('Fly')">Fly</div>
+                        <div onclick="selectSpell('Fog Cloud')">Fog Cloud</div>
+                        <div onclick="selectSpell('Forbiddance')">Forbiddance</div>
+                        <div onclick="selectSpell('Forcecage')">Forcecage</div>
+                        <div onclick="selectSpell('Foresight')">Foresight</div>
+                        <div onclick="selectSpell('Freedom of Movement')">Freedom of Movement</div>
+                        <div onclick="selectSpell('Freezing Sphere')">Freezing Sphere</div>
+                        <div onclick="selectSpell('Gaseous Form')">Gaseous Form</div>
+                        <div onclick="selectSpell('Gate')">Gate</div>
+                        <div onclick="selectSpell('Geas')">Geas</div>
+                        <div onclick="selectSpell('Gentle Repose')">Gentle Repose</div>
+                        <div onclick="selectSpell('Giant Insect')">Giant Insect</div>
+                        <div onclick="selectSpell('Glibness')">Glibness</div>
+                        <div onclick="selectSpell('Globe of Invulnerability')">Globe of Invulnerability</div>
+                        <div onclick="selectSpell('Glyph of Warding')">Glyph of Warding</div>
+                        <div onclick="selectSpell('Goodberry')">Goodberry</div>
+                        <div onclick="selectSpell('Grasping Vine')">Grasping Vine</div>
+                        <div onclick="selectSpell('Grease')">Grease</div>
+                        <div onclick="selectSpell('Greater Invisibility')">Greater Invisibility</div>
+                        <div onclick="selectSpell('Greater Restoration')">Greater Restoration</div>
+                        <div onclick="selectSpell('Guardian of Faith')">Guardian of Faith</div>
+                        <div onclick="selectSpell('Guards and Wards')">Guards and Wards</div>
+                        <div onclick="selectSpell('Guidance')">Guidance</div>
+                        <div onclick="selectSpell('Guiding Bolt')">Guiding Bolt</div>
+                        <div onclick="selectSpell('Gust')">Gust</div>
+                        <div onclick="selectSpell('Gust of Wind')">Gust of Wind</div>
+                        <div onclick="selectSpell('Hail of Thorns')">Hail of Thorns</div>
+                        <div onclick="selectSpell('Hallow')">Hallow</div>
+                        <div onclick="selectSpell('Hallucinatory Terrain')">Hallucinatory Terrain</div>
+                        <div onclick="selectSpell('Harm')">Harm</div>
+                        <div onclick="selectSpell('Haste')">Haste</div>
+                        <div onclick="selectSpell('Heal')">Heal</div>
+                        <div onclick="selectSpell('Healing Word')">Healing Word</div>
+                        <div onclick="selectSpell('Heat Metal')">Heat Metal</div>
+                        <div onclick="selectSpell('Hellish Rebuke')">Hellish Rebuke</div>
+                        <div onclick="selectSpell('Heroes\' Feast')">Heroes' Feast</div>
+                        <div onclick="selectSpell('Heroism')">Heroism</div>
+                        <div onclick="selectSpell('Hex')">Hex</div>
+                        <div onclick="selectSpell('Hold Monster')">Hold Monster</div>
+                        <div onclick="selectSpell('Hold Person')">Hold Person</div>
+                        <div onclick="selectSpell('Holy Aura')">Holy Aura</div>
+                        <div onclick="selectSpell('Hunter\'s Mark')">Hunter's Mark</div>
+                        <div onclick="selectSpell('Hypnotic Pattern')">Hypnotic Pattern</div>
+
+
+
+
+
+                        <div onclick="selectSpell('Ice Knife')">Ice Knife</div>
+                        <div onclick="selectSpell('Ice Storm')">Ice Storm</div>
+                        <div onclick="selectSpell('Identify')">Identify</div>
+                        <div onclick="selectSpell('Illusory Script')">Illusory Script</div>
+                        <div onclick="selectSpell('Imprisonment')">Imprisonment</div>
+                        <div onclick="selectSpell('Incendiary Cloud')">Incendiary Cloud</div>
+                        <div onclick="selectSpell('Inflict Wounds')">Inflict Wounds</div>
+                        <div onclick="selectSpell('Insect Plague')">Insect Plague</div>
+                        <div onclick="selectSpell('Instant Summons')">Instant Summons</div>
+                        <div onclick="selectSpell('Intellect Fortress')">Intellect Fortress</div>
+                        <div onclick="selectSpell('Invisibility')">Invisibility</div>
+                        <div onclick="selectSpell('Invulnerability')">Invulnerability</div>
+                        <div onclick="selectSpell('Irresistible Dance')">Irresistible Dance</div>
+                        <div onclick="selectSpell('Jump')">Jump</div>
+                        <div onclick="selectSpell('Knock')">Knock</div>
+                        <div onclick="selectSpell('Legend Lore')">Legend Lore</div>
+                        <div onclick="selectSpell('Leomund\'s Secret Chest')">Leomund's Secret Chest</div>
+                        <div onclick="selectSpell('Leomund\'s Tiny Hut')">Leomund's Tiny Hut</div>
+                        <div onclick="selectSpell('Lesser Restoration')">Lesser Restoration</div>
+                        <div onclick="selectSpell('Levitate')">Levitate</div>
+                        <div onclick="selectSpell('Life Transference')">Life Transference</div>
+                        <div onclick="selectSpell('Light')">Light</div>
+                        <div onclick="selectSpell('Lightning Bolt')">Lightning Bolt</div>
+                        <div onclick="selectSpell('Locate Animals or Plants')">Locate Animals or Plants</div>
+                        <div onclick="selectSpell('Locate Creature')">Locate Creature</div>
+                        <div onclick="selectSpell('Locate Object')">Locate Object</div>
+                        <div onclick="selectSpell('Longstrider')">Longstrider</div>
+                        <div onclick="selectSpell('Mage Armor')">Mage Armor</div>
+                        <div onclick="selectSpell('Mage Hand')">Mage Hand</div>
+                        <div onclick="selectSpell('Magic Circle')">Magic Circle</div>
+                        <div onclick="selectSpell('Magic Jar')">Magic Jar</div>
+                        <div onclick="selectSpell('Magic Missile')">Magic Missile</div>
+                        <div onclick="selectSpell('Magic Mouth')">Magic Mouth</div>
+                        <div onclick="selectSpell('Magic Weapon')">Magic Weapon</div>
+                        <div onclick="selectSpell('Major Image')">Major Image</div>
+                        <div onclick="selectSpell('Mass Cure Wounds')">Mass Cure Wounds</div>
+                        <div onclick="selectSpell('Mass Heal')">Mass Heal</div>
+                        <div onclick="selectSpell('Mass Healing Word')">Mass Healing Word</div>
+                        <div onclick="selectSpell('Mass Suggestion')">Mass Suggestion</div>
+                        <div onclick="selectSpell('Maze')">Maze</div>
+                        <div onclick="selectSpell('Meld into Stone')">Meld into Stone</div>
+                        <div onclick="selectSpell('Melf\'s Acid Arrow')">Melf's Acid Arrow</div>
+                        <div onclick="selectSpell('Mending')">Mending</div>
+                        <div onclick="selectSpell('Message')">Message</div>
+                        <div onclick="selectSpell('Meteor Swarm')">Meteor Swarm</div>
+                        <div onclick="selectSpell('Mind Blank')">Mind Blank</div>
+                        <div onclick="selectSpell('Minor Illusion')">Minor Illusion</div>
+                        <div onclick="selectSpell('Mirage Arcane')">Mirage Arcane</div>
+                        <div onclick="selectSpell('Mirror Image')">Mirror Image</div>
+                        <div onclick="selectSpell('Mislead')">Mislead</div>
+                        <div onclick="selectSpell('Misty Step')">Misty Step</div>
+                        <div onclick="selectSpell('Modify Memory')">Modify Memory</div>
+                        <div onclick="selectSpell('Moonbeam')">Moonbeam</div>
+                        <div onclick="selectSpell('Move Earth')">Move Earth</div>
+                        <div onclick="selectSpell('Negative Energy Flood')">Negative Energy Flood</div>
+                        <div onclick="selectSpell('Nondetection')">Nondetection</div>
+                        <div onclick="selectSpell('Nystul\'s Magic Aura')">Nystul's Magic Aura</div>
+                        <div onclick="selectSpell('Otiluke\'s Freezing Sphere')">Otiluke's Freezing Sphere</div>
+                        <div onclick="selectSpell('Otiluke\'s Resilient Sphere')">Otiluke's Resilient Sphere</div>
+                        <div onclick="selectSpell('Otto\'s Irresistible Dance')">Otto's Irresistible Dance</div>
+                        <div onclick="selectSpell('Pass without Trace')">Pass without Trace</div>
+                        <div onclick="selectSpell('Passwall')">Passwall</div>
+                        <div onclick="selectSpell('Phantasmal Force')">Phantasmal Force</div>
+                        <div onclick="selectSpell('Phantasmal Killer')">Phantasmal Killer</div>
+                        <div onclick="selectSpell('Phantom Steed')">Phantom Steed</div>
+                        <div onclick="selectSpell('Planar Ally')">Planar Ally</div>
+                        <div onclick="selectSpell('Planar Binding')">Planar Binding</div>
+                        <div onclick="selectSpell('Plane Shift')">Plane Shift</div>
+                        <div onclick="selectSpell('Plant Growth')">Plant Growth</div>
+                        <div onclick="selectSpell('Poison Spray')">Poison Spray</div>
+                        <div onclick="selectSpell('Polymorph')">Polymorph</div>
+                        <div onclick="selectSpell('Power Word Heal')">Power Word Heal</div>
+                        <div onclick="selectSpell('Power Word Kill')">Power Word Kill</div>
+                        <div onclick="selectSpell('Power Word Pain')">Power Word Pain</div>
+                        <div onclick="selectSpell('Power Word Stun')">Power Word Stun</div>
+                        <div onclick="selectSpell('Prayer of Healing')">Prayer of Healing</div>
+                        <div onclick="selectSpell('Prestidigitation')">Prestidigitation</div>
+                        <div onclick="selectSpell('Primal Savagery')">Primal Savagery</div>
+                        <div onclick="selectSpell('Primeval Awareness')">Primeval Awareness</div>
+                        <div onclick="selectSpell('Prismatic Spray')">Prismatic Spray</div>
+                        <div onclick="selectSpell('Prismatic Wall')">Prismatic Wall</div>
+                        <div onclick="selectSpell('Produce Flame')">Produce Flame</div>
+                        <div onclick="selectSpell('Programmed Illusion')">Programmed Illusion</div>
+                        <div onclick="selectSpell('Project Image')">Project Image</div>
+                        <div onclick="selectSpell('Protection from Energy')">Protection from Energy</div>
+                        <div onclick="selectSpell('Protection from Evil and Good')">Protection from Evil and Good</div>
+                        <div onclick="selectSpell('Protection from Poison')">Protection from Poison</div>
+                        <div onclick="selectSpell('Purify Food and Drink')">Purify Food and Drink</div>
+            
+            
+                        
+                        <div onclick="selectSpell('Raise Dead')">Raise Dead</div>
+                        <div onclick="selectSpell('Rary\'s Telepathic Bond')">Rary's Telepathic Bond</div>
+                        <div onclick="selectSpell('Ray of Enfeeblement')">Ray of Enfeeblement</div>
+                        <div onclick="selectSpell('Ray of Frost')">Ray of Frost</div>
+                        <div onclick="selectSpell('Regenerate')">Regenerate</div>
+                        <div onclick="selectSpell('Reincarnate')">Reincarnate</div>
+                        <div onclick="selectSpell('Remove Curse')">Remove Curse</div>
+                        <div onclick="selectSpell('Resilient Sphere')">Resilient Sphere</div>
+                        <div onclick="selectSpell('Resistance')">Resistance</div>
+                        <div onclick="selectSpell('Restore')">Restore</div>
+                        <div onclick="selectSpell('Resurrection')">Resurrection</div>
+                        <div onclick="selectSpell('Reverse Gravity')">Reverse Gravity</div>
+                        <div onclick="selectSpell('Revivify')">Revivify</div>
+                        <div onclick="selectSpell('Rope Trick')">Rope Trick</div>
+                        <div onclick="selectSpell('Sacred Flame')">Sacred Flame</div>
+                        <div onclick="selectSpell('Sanctuary')">Sanctuary</div>
+                        <div onclick="selectSpell('Scorching Ray')">Scorching Ray</div>
+                        <div onclick="selectSpell('Scrying')">Scrying</div>
+                        <div onclick="selectSpell('Secret Chest')">Secret Chest</div>
+                        <div onclick="selectSpell('See Invisibility')">See Invisibility</div>
+                        <div onclick="selectSpell('Seeming')">Seeming</div>
+                        <div onclick="selectSpell('Sending')">Sending</div>
+                        <div onclick="selectSpell('Sequester')">Sequester</div>
+                        <div onclick="selectSpell('Shape Water')">Shape Water</div>
+                        <div onclick="selectSpell('Shapechange')">Shapechange</div>
+                        <div onclick="selectSpell('Shatter')">Shatter</div>
+                        <div onclick="selectSpell('Shield')">Shield</div>
+                        <div onclick="selectSpell('Shield of Faith')">Shield of Faith</div>
+                        <div onclick="selectSpell('Shillelagh')">Shillelagh</div>
+                        <div onclick="selectSpell('Shocking Grasp')">Shocking Grasp</div>
+                        <div onclick="selectSpell('Sickening Radiance')">Sickening Radiance</div>
+                        <div onclick="selectSpell('Silence')">Silence</div>
+                        <div onclick="selectSpell('Silent Image')">Silent Image</div>
+                        <div onclick="selectSpell('Simulacrum')">Simulacrum</div>
+                        <div onclick="selectSpell('Skill Empowerment')">Skill Empowerment</div>
+                        <div onclick="selectSpell('Skywrite')">Skywrite</div>
+                        <div onclick="selectSpell('Sleet Storm')">Sleet Storm</div>
+                        <div onclick="selectSpell('Slow')">Slow</div>
+                        <div onclick="selectSpell('Snare')">Snare</div>
+                        <div onclick="selectSpell('Speak with Animals')">Speak with Animals</div>
+                        <div onclick="selectSpell('Speak with Dead')">Speak with Dead</div>
+                        <div onclick="selectSpell('Speak with Plants')">Speak with Plants</div>
+                        <div onclick="selectSpell('Spider Climb')">Spider Climb</div>
+                        <div onclick="selectSpell('Spike Growth')">Spike Growth</div>
+                        <div onclick="selectSpell('Spirit Guardians')">Spirit Guardians</div>
+                        <div onclick="selectSpell('Spiritual Weapon')">Spiritual Weapon</div>
+                        <div onclick="selectSpell('Staggering Smite')">Staggering Smite</div>
+                        <div onclick="selectSpell('Stinking Cloud')">Stinking Cloud</div>
+                        <div onclick="selectSpell('Stone Shape')">Stone Shape</div>
+                        <div onclick="selectSpell('Stoneskin')">Stoneskin</div>
+                        <div onclick="selectSpell('Storm of Vengeance')">Storm of Vengeance</div>
+                        <div onclick="selectSpell('Suggestion')">Suggestion</div>
+                        <div onclick="selectSpell('Sunbeam')">Sunbeam</div>
+                        <div onclick="selectSpell('Sunburst')">Sunburst</div>
+                        <div onclick="selectSpell('Symbol')">Symbol</div>
+                        <div onclick="selectSpell('Tasha\'s Caustic Brew')">Tasha's Caustic Brew</div>
+                        <div onclick="selectSpell('Telekinesis')">Telekinesis</div>
+                        <div onclick="selectSpell('Telepathy')">Telepathy</div>
+                        <div onclick="selectSpell('Teleport')">Teleport</div>
+                        <div onclick="selectSpell('Temple of the Gods')">Temple of the Gods</div>
+                        <div onclick="selectSpell('Tenser\'s Floating Disk')">Tenser's Floating Disk</div>
+                        <div onclick="selectSpell('Thunderwave')">Thunderwave</div>
+                        <div onclick="selectSpell('Time Stop')">Time Stop</div>
+                        <div onclick="selectSpell('Tiny Hut')">Tiny Hut</div>
+                        <div onclick="selectSpell('Tongues')">Tongues</div>
+                        <div onclick="selectSpell('Transport via Plants')">Transport via Plants</div>
+                        <div onclick="selectSpell('Trap the Soul')">Trap the Soul</div>
+                        <div onclick="selectSpell('Tree Stride')">Tree Stride</div>
+                        <div onclick="selectSpell('True Polymorph')">True Polymorph</div>
+                        <div onclick="selectSpell('True Resurrection')">True Resurrection</div>
+                        <div onclick="selectSpell('True Seeing')">True Seeing</div>
+                        <div onclick="selectSpell('True Strike')">True Strike</div>
+                        <div onclick="selectSpell('Unseen Servant')">Unseen Servant</div>
+                        <div onclick="selectSpell('Vampiric Touch')">Vampiric Touch</div>
+                        <div onclick="selectSpell('Vicious Mockery')">Vicious Mockery</div>
+                        <div onclick="selectSpell('Wall of Fire')">Wall of Fire</div>
+                        <div onclick="selectSpell('Wall of Force')">Wall of Force</div>
+                        <div onclick="selectSpell('Wall of Ice')">Wall of Ice</div>
+                        <div onclick="selectSpell('Wall of Stone')">Wall of Stone</div>
+                        <div onclick="selectSpell('Wall of Thorns')">Wall of Thorns</div>
+                        <div onclick="selectSpell('Warding Bond')">Warding Bond</div>
+                        <div onclick="selectSpell('Water Breathing')">Water Breathing</div>
+                        <div onclick="selectSpell('Water Walk')">Water Walk</div>
+                        <div onclick="selectSpell('Watery Sphere')">Watery Sphere</div>
+                        <div onclick="selectSpell('Web')">Web</div>
+                        <div onclick="selectSpell('Weird')">Weird</div>
+                        <div onclick="selectSpell('Wind Walk')">Wind Walk</div>
+                        <div onclick="selectSpell('Wind Wall')">Wind Wall</div>
+                        <div onclick="selectSpell('Wish')">Wish</div>
+                        <div onclick="selectSpell('Word of Recall')">Word of Recall</div>
+                        <div onclick="selectSpell('Wrathful Smite')">Wrathful Smite</div>
+                        <div onclick="selectSpell('Zone of Truth')">Zone of Truth</div>
+                        <!-- Xanathar's Guide to Everything Spells -->
+                    <div onclick="selectSpell('Aganazzar\'s Scorcher')">Aganazzar's Scorcher</div>
+                    <div onclick="selectSpell('Beast Bond')">Beast Bond</div>
+                    <div onclick="selectSpell('Bones of the Earth')">Bones of the Earth</div>
+                    <div onclick="selectSpell('Catnap')">Catnap</div>
+                    <div onclick="selectSpell('Ceremony')">Ceremony</div>
+                    <div onclick="selectSpell('Chaos Bolt')">Chaos Bolt</div>
+                    <div onclick="selectSpell('Charm Monster')">Charm Monster</div>
+                    <div onclick="selectSpell('Danse Macabre')">Danse Macabre</div>
+                    <div onclick="selectSpell('Dust Devil')">Dust Devil</div>
+                    <div onclick="selectSpell('Earth Tremor')">Earth Tremor</div>
+                    <div onclick="selectSpell('Earthbind')">Earthbind</div>
+                    <div onclick="selectSpell('Elemental Bane')">Elemental Bane</div>
+                    <div onclick="selectSpell('Enemies Abound')">Enemies Abound</div>
+                    <div onclick="selectSpell('Erupting Earth')">Erupting Earth</div>
+                    <div onclick="selectSpell('Far Step')">Far Step</div>
+                    <div onclick="selectSpell('Find Greater Steed')">Find Greater Steed</div>
+                    <div onclick="selectSpell('Healing Spirit')">Healing Spirit</div>
+                    <div onclick="selectSpell('Holy Weapon')">Holy Weapon</div>
+                    <div onclick="selectSpell('Ice Knife')">Ice Knife</div>
+                    <div onclick="selectSpell('Illusory Dragon')">Illusory Dragon</div>
+                    <div onclick="selectSpell('Immolation')">Immolation</div>
+                    <div onclick="selectSpell('Infernal Calling')">Infernal Calling</div>
+                    <div onclick="selectSpell('Infestation')">Infestation</div>
+                    <div onclick="selectSpell('Invulnerability')">Invulnerability</div>
+                    <div onclick="selectSpell('Life Transference')">Life Transference</div>
+                    <div onclick="selectSpell('Maddening Darkness')">Maddening Darkness</div>
+                    <div onclick="selectSpell('Mass Polymorph')">Mass Polymorph</div>
+                    <div onclick="selectSpell('Maximilian\'s Earthen Grasp')">Maximilian's Earthen Grasp</div>
+                    <div onclick="selectSpell('Melf\'s Minute Meteors')">Melf's Minute Meteors</div>
+                    <div onclick="selectSpell('Mental Prison')">Mental Prison</div>
+                    <div onclick="selectSpell('Mighty Fortress')">Mighty Fortress</div>
+                    <div onclick="selectSpell('Mind Spike')">Mind Spike</div>
+                    <div onclick="selectSpell('Mordenkainen\'s Faithful Hound')">Mordenkainen's Faithful Hound</div>
+                    <div onclick="selectSpell('Mordenkainen\'s Private Sanctum')">Mordenkainen's Private Sanctum</div>
+                    <div onclick="selectSpell('Negative Energy Flood')">Negative Energy Flood</div>
+                    <div onclick="selectSpell('Pyrotechnics')">Pyrotechnics</div>
+                    <div onclick="selectSpell('Scatter')">Scatter</div>
+                    <div onclick="selectSpell('Shadow Blade')">Shadow Blade</div>
+                    <div onclick="selectSpell('Shadow of Moil')">Shadow of Moil</div>
+                    <div onclick="selectSpell('Sickening Radiance')">Sickening Radiance</div>
+                    <div onclick="selectSpell('Skill Empowerment')">Skill Empowerment</div>
+                    <div onclick="selectSpell('Skywrite')">Skywrite</div>
+                    <div onclick="selectSpell('Snare')">Snare</div>
+                    <div onclick="selectSpell('Soul Cage')">Soul Cage</div>
+                    <div onclick="selectSpell('Steel Wind Strike')">Steel Wind Strike</div>
+
+
+
+
+
+
+                    <div onclick="selectSpell('Storm Sphere')">Storm Sphere</div>
+                    <div onclick="selectSpell('Summon Greater Demon')">Summon Greater Demon</div>
+                    <div onclick="selectSpell('Summon Lesser Demons')">Summon Lesser Demons</div>
+                    <div onclick="selectSpell('Swift Quiver')">Swift Quiver</div>
+                    <div onclick="selectSpell('Synaptic Static')">Synaptic Static</div>
+                    <div onclick="selectSpell('Temple of the Gods')">Temple of the Gods</div>
+                    <div onclick="selectSpell('Tenser\'s Transformation')">Tenser's Transformation</div>
+                    <div onclick="selectSpell('Thunder Step')">Thunder Step</div>
+                    <div onclick="selectSpell('Tidal Wave')">Tidal Wave</div>
+                    <div onclick="selectSpell('Tiny Servant')">Tiny Servant</div>
+                    <div onclick="selectSpell('Toll the Dead')">Toll the Dead</div>
+                    <div onclick="selectSpell('Transmute Rock')">Transmute Rock</div>
+                    <div onclick="selectSpell('Vitriolic Sphere')">Vitriolic Sphere</div>
+                    <div onclick="selectSpell('Wall of Light')">Wall of Light</div>
+                    <div onclick="selectSpell('Watery Sphere')">Watery Sphere</div>
+                    <div onclick="selectSpell('Whirlwind')">Whirlwind</div>
+                    <div onclick="selectSpell('Wrath of Nature')">Wrath of Nature</div>
+                    <div onclick="selectSpell('Zephyr Strike')">Zephyr Strike</div>
+                            <!-- Fizban's Treasury of Dragons Spells -->
+                            <div onclick="selectSpell('Ashardalon\'s Stride')">Ashardalon's Stride</div>
+                            <div onclick="selectSpell('Draconic Transformation')">Draconic Transformation</div>
+                            <div onclick="selectSpell('Fizban\'s Platinum Shield')">Fizban's Platinum Shield</div>
+                            <div onclick="selectSpell('Nathair\'s Mischief')">Nathair's Mischief</div>
+                            <div onclick="selectSpell('Raulothim\'s Psychic Lance')">Raulothim's Psychic Lance</div>
+                            <div onclick="selectSpell('Summon Draconic Spirit')">Summon Draconic Spirit</div>
+                    
+                            <!-- Bigby's Glory of the Giants Spells -->
+                            <div onclick="selectSpell('Animate Objects')">Animate Objects</div>
+                            <div onclick="selectSpell('Enlarge/Reduce')">Enlarge/Reduce</div>
+                            <div onclick="selectSpell('Giant\'s Might')">Giant's Might</div>
+                            <div onclick="selectSpell('Rime\'s Binding Ice')">Rime's Binding Ice</div>
+                            <div onclick="selectSpell('Runic Shield')">Runic Shield</div>
+                            <div onclick="selectSpell('Titanic Shield')">Titanic Shield</div>
+                    
+                            <!-- Spelljammer: Adventures in Space Spells -->
+                            <div onclick="selectSpell('Air Bubble')">Air Bubble</div>
+                            <div onclick="selectSpell('Create Spelljamming Helm')">Create Spelljamming Helm</div>
+                            <div onclick="selectSpell('Cosmic Aura')">Cosmic Aura</div>
+                            <div onclick="selectSpell('Planar Shift')">Planar Shift</div>
+                            <div onclick="selectSpell('Stellar Body')">Stellar Body</div>
+                            <div onclick="selectSpell('Void Navigation')">Void Navigation</div>
+                    </div>
+                </div>
+            </div>
                     <button onclick="addSpell()">Add Spell</button>
                     <button onclick="removeSpell()">Remove Spell</button>
             </div>
@@ -112,7 +577,323 @@
                     <label>Inventory:</label>
                     <div id="gold" class="info-section"></div>
                     <div id="inventoryList"></div>
-                    <input type="text" id="itemInput" placeholder="Item name">
+                    <div class="dropdown">
+                        <input type="text" id="itemInput" placeholder="Type to search items..." onkeyup="filterItemFunction()">
+<div id="itemDropdown" class="dropdown-content">
+    <!-- List of D&D items -->
+    <div onclick="selectItem('Adventurer\'s Kit')">Adventurer's Kit</div>
+    <div onclick="selectItem('Alchemist\'s Fire')">Alchemist's Fire</div>
+    <div onclick="selectItem('Bag of Holding')">Bag of Holding</div>
+    <div onclick="selectItem('Bedroll')">Bedroll</div>
+    <div onclick="selectItem('Blanket')">Blanket</div>
+    <div onclick="selectItem('Book')">Book</div>
+    <div onclick="selectItem('Bottle')">Bottle</div>
+    <div onclick="selectItem('Caltrops')">Caltrops</div>
+    <div onclick="selectItem('Candles')">Candles</div>
+    <div onclick="selectItem('Chain Mail')">Chain Mail</div>
+    <div onclick="selectItem('Climber\'s Kit')">Climber's Kit</div>
+    <div onclick="selectItem('Common Clothes')">Common Clothes</div>
+    <div onclick="selectItem('Component Pouch')">Component Pouch</div>
+    <div onclick="selectItem('Crowbar')">Crowbar</div>
+    <div onclick="selectItem('Disguise Kit')">Disguise Kit</div>
+    <div onclick="selectItem('Dungeoneer\'s Pack')">Dungeoneer's Pack</div>
+    <div onclick="selectItem('Explorers\' Pack')">Explorer's Pack</div>
+    <div onclick="selectItem('Fishing Tackle')">Fishing Tackle</div>
+    <div onclick="selectItem('Flask')">Flask</div>
+    <div onclick="selectItem('Grappling Hook')">Grappling Hook</div>
+    <div onclick="selectItem('Healing Potion')">Healing Potion</div>
+    <div onclick="selectItem('Holy Water')">Holy Water</div>
+    <div onclick="selectItem('Ink')">Ink</div>
+    <div onclick="selectItem('Ink Pen')">Ink Pen</div>
+    <div onclick="selectItem('Jewelry')">Jewelry</div>
+    <div onclick="selectItem('Lantern')">Lantern</div>
+    <div onclick="selectItem('Lock')">Lock</div>
+    <div onclick="selectItem('Manacles')">Manacles</div>
+    <div onclick="selectItem('Mistletoe')">Mistletoe</div>
+    <div onclick="selectItem('Potion of Climbing')">Potion of Climbing</div>
+    <div onclick="selectItem('Potion of Invisibility')">Potion of Invisibility</div>
+    <div onclick="selectItem('Potion of Strength')">Potion of Strength</div>
+    <div onclick="selectItem('Rations')">Rations</div>
+    <div onclick="selectItem('Rope')">Rope</div>
+    <div onclick="selectItem('Sack')">Sack</div>
+    <div onclick="selectItem('Signal Whistle')">Signal Whistle</div>
+    <div onclick="selectItem('Spell Component Pouch')">Spell Component Pouch</div>
+    <div onclick="selectItem('Tinderbox')">Tinderbox</div>
+    <div onclick="selectItem('Torch')">Torch</div>
+    <div onclick="selectItem('Waterskin')">Waterskin</div>
+    <div onclick="selectItem('Whetstone')">Whetstone</div>
+    <div onclick="selectItem('Wizards\' Spellbook')">Wizard's Spellbook</div>
+    <div onclick="selectItem('Potion of Climbing')">Potion of Climbing</div>
+
+<div onclick="selectItem('Potion of Healing')">Potion of Healing</div>
+<div onclick="selectItem('Spell Scroll')">Spell Scroll</div>
+<div onclick="selectItem('Adamantine Armor')">Adamantine Armor</div>
+<div onclick="selectItem('Ammunition')">Ammunition</div>
+<div onclick="selectItem('Amulet of Proof against Detection and Location')">Amulet of Proof against Detection and Location</div>
+<div onclick="selectItem('Bag of Holding')">Bag of Holding</div>
+<div onclick="selectItem('Bag of Tricks')">Bag of Tricks</div>
+<div onclick="selectItem('Boots of Elvenkind')">Boots of Elvenkind</div>
+<div onclick="selectItem('Boots of Striding and Springing')">Boots of Striding and Springing</div>
+<div onclick="selectItem('Boots of the Winterlands')">Boots of the Winterlands</div>
+<div onclick="selectItem('Bracers of Archery')">Bracers of Archery</div>
+<div onclick="selectItem('Brooch of Shielding')">Brooch of Shielding</div>
+<div onclick="selectItem('Broom of Flying')">Broom of Flying</div>
+<div onclick="selectItem('Circlet of Blasting')">Circlet of Blasting</div>
+<div onclick="selectItem('Cloak of Elvenkind')">Cloak of Elvenkind</div>
+<div onclick="selectItem('Cloak of Protection')">Cloak of Protection</div>
+<div onclick="selectItem('Cloak of the Manta Ray')">Cloak of the Manta Ray</div>
+<div onclick="selectItem('Decanter of Endless Water')">Decanter of Endless Water</div>
+<div onclick="selectItem('Deck of Illusions')">Deck of Illusions</div>
+<div onclick="selectItem('Dust of Disappearance')">Dust of Disappearance</div>
+<div onclick="selectItem('Dust of Dryness')">Dust of Dryness</div>
+<div onclick="selectItem('Dust of Sneezing and Choking')">Dust of Sneezing and Choking</div>
+<div onclick="selectItem('Efficient Quiver')">Efficient Quiver</div>
+<div onclick="selectItem('Elemental Gem')">Elemental Gem</div>
+<div onclick="selectItem('Eversmoking Bottle')">Eversmoking Bottle</div>
+<div onclick="selectItem('Eyes of Charming')">Eyes of Charming</div>
+<div onclick="selectItem('Eyes of Minute Seeing')">Eyes of Minute Seeing</div>
+<div onclick="selectItem('Eyes of the Eagle')">Eyes of the Eagle</div>
+<div onclick="selectItem('Figurine of Wondrous Power')">Figurine of Wondrous Power</div>
+<div onclick="selectItem('Gauntlets of Ogre Power')">Gauntlets of Ogre Power</div>
+<div onclick="selectItem('Gem of Brightness')">Gem of Brightness</div>
+<div onclick="selectItem('Gloves of Missile Snaring')">Gloves of Missile Snaring</div>
+<div onclick="selectItem('Gloves of Swimming and Climbing')">Gloves of Swimming and Climbing</div>
+<div onclick="selectItem('Goggles of Night')">Goggles of Night</div>
+<div onclick="selectItem('Hat of Disguise')">Hat of Disguise</div>
+<div onclick="selectItem('Headband of Intellect')">Headband of Intellect</div>
+<div onclick="selectItem('Helm of Comprehending Languages')">Helm of Comprehending Languages</div>
+<div onclick="selectItem('Helm of Telepathy')">Helm of Telepathy</div>
+<div onclick="selectItem('Immovable Rod')">Immovable Rod</div>
+<div onclick="selectItem('Javelin of Lightning')">Javelin of Lightning</div>
+<div onclick="selectItem('Lantern of Revealing')">Lantern of Revealing</div>
+<div onclick="selectItem('Medallion of Thoughts')">Medallion of Thoughts</div>
+<div onclick="selectItem('Mithral Armor')">Mithral Armor</div>
+<div onclick="selectItem('Necklace of Adaptation')">Necklace of Adaptation</div>
+<div onclick="selectItem('Oil of Slipperiness')">Oil of Slipperiness</div>
+<div onclick="selectItem('Pearl of Power')">Pearl of Power</div>
+<div onclick="selectItem('Periapt of Health')">Periapt of Health</div>
+<div onclick="selectItem('Periapt of Wound Closure')">Periapt of Wound Closure</div>
+<div onclick="selectItem('Philter of Love')">Philter of Love</div>
+<div onclick="selectItem('Pipes of Haunting')">Pipes of Haunting</div>
+<div onclick="selectItem('Pipes of the Sewers')">Pipes of the Sewers</div>
+<div onclick="selectItem('Potion of Animal Friendship')">Potion of Animal Friendship</div>
+<div onclick="selectItem('Potion of Giant Strength')">Potion of Giant Strength</div>
+<div onclick="selectItem('Potion of Growth')">Potion of Growth</div>
+<div onclick="selectItem('Potion of Healing')">Potion of Healing</div>
+<div onclick="selectItem('Potion of Poison')">Potion of Poison</div>
+<div onclick="selectItem('Potion of Resistance')">Potion of Resistance</div>
+<div onclick="selectItem('Potion of Water Breathing')">Potion of Water Breathing</div>
+<div onclick="selectItem('Restorative Ointment')">Restorative Ointment</div>
+<div onclick="selectItem('Ring of Jumping')">Ring of Jumping</div>
+<div onclick="selectItem('Ring of Mind Shielding')">Ring of Mind Shielding</div>
+<div onclick="selectItem('Ring of Swimming')">Ring of Swimming</div>
+<div onclick="selectItem('Ring of Warmth')">Ring of Warmth</div>
+<div onclick="selectItem('Ring of Water Walking')">Ring of Water Walking</div>
+<div onclick="selectItem('Robe of Useful Items')">Robe of Useful Items</div>
+<div onclick="selectItem('Rope of Climbing')">Rope of Climbing</div>
+<div onclick="selectItem('Shield')">Shield</div>
+<div onclick="selectItem('Slippers of Spider Climbing')">Slippers of Spider Climbing</div>
+<div onclick="selectItem('Staff of the Python')">Staff of the Python</div>
+<div onclick="selectItem('Stone of Good Luck (Luckstone)')">Stone of Good Luck (Luckstone)</div>
+<div onclick="selectItem('Trident of Fish Command')">Trident of Fish Command</div>
+<div onclick="selectItem('Wand of Magic Detection')">Wand of Magic Detection</div>
+<div onclick="selectItem('Wand of Magic Missiles')">Wand of Magic Missiles</div>
+<div onclick="selectItem('Wand of Secrets')">Wand of Secrets</div>
+<div onclick="selectItem('Wand of the War Mage')">Wand of the War Mage</div>
+<div onclick="selectItem('Wand of Web')">Wand of Web</div>
+<div onclick="selectItem('Wind Fan')">Wind Fan</div>
+<div onclick="selectItem('Winged Boots')">Winged Boots</div>
+
+<!-- Rare items -->
+<div onclick="selectItem('Ammunition')">Ammunition</div>
+<div onclick="selectItem('Amulet of Health')">Amulet of Health</div>
+<div onclick="selectItem('Armor')">Armor</div>
+<div onclick="selectItem('Armor of Resistance')">Armor of Resistance</div>
+<div onclick="selectItem('Armor of Vulnerability')">Armor of Vulnerability</div>
+<div onclick="selectItem('Arrow-Catching Shield')">Arrow-Catching Shield</div>
+<div onclick="selectItem('Bag of Beans')">Bag of Beans</div>
+<div onclick="selectItem('Bead of Force')">Bead of Force</div>
+<div onclick="selectItem('Belt of Dwarvenkind')">Belt of Dwarvenkind</div>
+<div onclick="selectItem('Belt of Giant Strength')">Belt of Giant Strength</div>
+<div onclick="selectItem('Berserker Axe')">Berserker Axe</div>
+<div onclick="selectItem('Boots of Levitation')">Boots of Levitation</div>
+<div onclick="selectItem('Bowl of Commanding Water Elementals')">Bowl of Commanding Water Elementals</div>
+<div onclick="selectItem('Bracers of Defense')">Bracers of Defense</div>
+<div onclick="selectItem('Brazier of Commanding Fire Elementals')">Brazier of Commanding Fire Elementals</div>
+<div onclick="selectItem('Cape of the Mountebank')">Cape of the Mountebank</div>
+<div onclick="selectItem('Censer of Controlling Air Elementals')">Censer of Controlling Air Elementals</div>
+<div onclick="selectItem('Chime of Opening')">Chime of Opening</div>
+<div onclick="selectItem('Cloak of Displacement')">Cloak of Displacement</div>
+<div onclick="selectItem('Cloak of the Bat')">Cloak of the Bat</div>
+<div onclick="selectItem('Cube of Force')">Cube of Force</div>
+<div onclick="selectItem('Dagger of Venom')">Dagger of Venom</div>
+<div onclick="selectItem('Dimensional Shackles')">Dimensional Shackles</div>
+<div onclick="selectItem('Dragon Slayer')">Dragon Slayer</div>
+<div onclick="selectItem('Elven Chain')">Elven Chain</div>
+<div onclick="selectItem('Feather Token')">Feather Token</div>
+<div onclick="selectItem('Figurine of Wondrous Power')">Figurine of Wondrous Power</div>
+<div onclick="selectItem('Flame Tongue')">Flame Tongue</div>
+<div onclick="selectItem('Folding Boat')">Folding Boat</div>
+<div onclick="selectItem('Gem of Seeing')">Gem of Seeing</div>
+<div onclick="selectItem('Giant Slayer')">Giant Slayer</div>
+<div onclick="selectItem('Glamoured Studded Leather')">Glamoured Studded Leather</div>
+<div onclick="selectItem('Handy Haversack')">Handy Haversack</div>
+<div onclick="selectItem('Helm of Teleportation')">Helm of Teleportation</div>
+<div onclick="selectItem('Horn of Blasting')">Horn of Blasting</div>
+<div onclick="selectItem('Horn of Valhalla')">Horn of Valhalla</div>
+<div onclick="selectItem('Horseshoes of Speed')">Horseshoes of Speed</div>
+<div onclick="selectItem('Instant Fortress')">Instant Fortress</div>
+<div onclick="selectItem('Ioun Stone')">Ioun Stone</div>
+<div onclick="selectItem('Iron Bands of Binding')">Iron Bands of Binding</div>
+<div onclick="selectItem('Mace of Disruption')">Mace of Disruption</div>
+<div onclick="selectItem('Mace of Smiting')">Mace of Smiting</div>
+<div onclick="selectItem('Mace of Terror')">Mace of Terror</div>
+<div onclick="selectItem('Mantle of Spell Resistance')">Mantle of Spell Resistance</div>
+<div onclick="selectItem('Necklace of Fireballs')">Necklace of Fireballs</div>
+<div onclick="selectItem('Necklace of Prayer Beads')">Necklace of Prayer Beads</div>
+<div onclick="selectItem('Oil of Etherealness')">Oil of Etherealness</div>
+<div onclick="selectItem('Periapt of Proof against Poison')">Periapt of Proof against Poison</div>
+<div onclick="selectItem('Portable Hole')">Portable Hole</div>
+<div onclick="selectItem('Potion of Clairvoyance')">Potion of Clairvoyance</div>
+<div onclick="selectItem('Potion of Diminution')">Potion of Diminution</div>
+<div onclick="selectItem('Potion of Gaseous Form')">Potion of Gaseous Form</div>
+<div onclick="selectItem('Potion of Giant Strength')">Potion of Giant Strength</div>
+<div onclick="selectItem('Potion of Healing')">Potion of Healing</div>
+<div onclick="selectItem('Potion of Heroism')">Potion of Heroism</div>
+<div onclick="selectItem('Potion of Mind Reading')">Potion of Mind Reading</div>
+<div onclick="selectItem('Ring of Animal Influence')">Ring of Animal Influence</div>
+<div onclick="selectItem('Ring of Evasion')">Ring of Evasion</div>
+<div onclick="selectItem('Ring of Feather Falling')">Ring of Feather Falling</div>
+<div onclick="selectItem('Ring of Free Action')">Ring of Free Action</div>
+<div onclick="selectItem('Ring of Protection')">Ring of Protection</div>
+<div onclick="selectItem('Ring of Resistance')">Ring of Resistance</div>
+<div onclick="selectItem('Ring of Spell Storing')">Ring of Spell Storing</div>
+<div onclick="selectItem('Ring of the Ram')">Ring of the Ram</div>
+<div onclick="selectItem('Ring of X-ray Vision')">Ring of X-ray Vision</div>
+<div onclick="selectItem('Robe of Eyes')">Robe of Eyes</div>
+<div onclick="selectItem('Rod of Rulership')">Rod of Rulership</div>
+<div onclick="selectItem('Rope of Entanglement')">Rope of Entanglement</div>
+<div onclick="selectItem('Shield')">Shield</div>
+<div onclick="selectItem('Shield of Missile Attraction')">Shield of Missile Attraction</div>
+<div onclick="selectItem('Staff of Charming')">Staff of Charming</div>
+<div onclick="selectItem('Staff of Healing')">Staff of Healing</div>
+<div onclick="selectItem('Staff of Swarming Insects')">Staff of Swarming Insects</div>
+<div onclick="selectItem('Staff of the Woodlands')">Staff of the Woodlands</div>
+<div onclick="selectItem('Staff of Withering')">Staff of Withering</div>
+<div onclick="selectItem('Stone of Controlling Earth Elementals')">Stone of Controlling Earth Elementals</div>
+<div onclick="selectItem('Sun Blade')">Sun Blade</div>
+<div onclick="selectItem('Sword of Life Stealing')">Sword of Life Stealing</div>
+<div onclick="selectItem('Sword of Wounding')">Sword of Wounding</div>
+<div onclick="selectItem('Vicious Weapon')">Vicious Weapon</div>
+<div onclick="selectItem('Wand of Binding')">Wand of Binding</div>
+<div onclick="selectItem('Wand of Enemy Detection')">Wand of Enemy Detection</div>
+<div onclick="selectItem('Wand of Fear')">Wand of Fear</div>
+<div onclick="selectItem('Wand of Fireballs')">Wand of Fireballs</div>
+<div onclick="selectItem('Wand of Lightning Bolts')">Wand of Lightning Bolts</div>
+<div onclick="selectItem('Wand of Paralysis')">Wand of Paralysis</div>
+<div onclick="selectItem('Wand of the War Mage')">Wand of the War Mage</div>
+<div onclick="selectItem('Wand of Wonder')">Wand of Wonder</div>
+<div onclick="selectItem('Wings of Flying')">Wings of Flying</div>
+
+<!-- Very Rare items -->
+<div onclick="selectItem('Ammunition')">Ammunition</div>
+<div onclick="selectItem('Amulet of the Planes')">Amulet of the Planes</div>
+<div onclick="selectItem('Animated Shield')">Animated Shield</div>
+<div onclick="selectItem('Arrow of Slaying')">Arrow of Slaying</div>
+<div onclick="selectItem('Bag of Devouring')">Bag of Devouring</div>
+<div onclick="selectItem('Belt of Giant Strength')">Belt of Giant Strength</div>
+<div onclick="selectItem('Boots of Speed')">Boots of Speed</div>
+<div onclick="selectItem('Candle of Invocation')">Candle of Invocation</div>
+<div onclick="selectItem('Carpet of Flying')">Carpet of Flying</div>
+<div onclick="selectItem('Cloak of Arachnida')">Cloak of Arachnida</div>
+<div onclick="selectItem('Crystal Ball')">Crystal Ball</div>
+<div onclick="selectItem('Dancing Sword')">Dancing Sword</div>
+<div onclick="selectItem('Demon Armor')">Demon Armor</div>
+<div onclick="selectItem('Dragon Scale Mail')">Dragon Scale Mail</div>
+<div onclick="selectItem('Dwarven Plate')">Dwarven Plate</div>
+<div onclick="selectItem('Dwarven Thrower')">Dwarven Thrower</div>
+<div onclick="selectItem('Efreeti Bottle')">Efreeti Bottle</div>
+<div onclick="selectItem('Figurine of Wondrous Power')">Figurine of Wondrous Power</div>
+<div onclick="selectItem('Frost Brand')">Frost Brand</div>
+<div onclick="selectItem('Helm of Brilliance')">Helm of Brilliance</div>
+<div onclick="selectItem('Horn of Valhalla')">Horn of Valhalla</div>
+<div onclick="selectItem('Horseshoes of a Zephyr')">Horseshoes of a Zephyr</div>
+<div onclick="selectItem('Ioun Stone')">Ioun Stone</div>
+<div onclick="selectItem('Manual of Bodily Health')">Manual of Bodily Health</div>
+<div onclick="selectItem('Manual of Gainful Exercise')">Manual of Gainful Exercise</div>
+<div onclick="selectItem('Manual of Golems')">Manual of Golems</div>
+<div onclick="selectItem('Manual of Quickness of Action')">Manual of Quickness of Action</div>
+<div onclick="selectItem('Marvelous Pigments')">Marvelous Pigments</div>
+<div onclick="selectItem('Mirror of Life Trapping')">Mirror of Life Trapping</div>
+<div onclick="selectItem('Nine Lives Stealer')">Nine Lives Stealer</div>
+<div onclick="selectItem('Oathbow')">Oathbow</div>
+<div onclick="selectItem('Oil of Sharpness')">Oil of Sharpness</div>
+<div onclick="selectItem('Potion of Flying')">Potion of Flying</div>
+<div onclick="selectItem('Potion of Giant Strength')">Potion of Giant Strength</div>
+<div onclick="selectItem('Potion of Healing')">Potion of Healing</div>
+<div onclick="selectItem('Potion of Invisibility')">Potion of Invisibility</div>
+<div onclick="selectItem('Potion of Speed')">Potion of Speed</div>
+<div onclick="selectItem('Ring of Regeneration')">Ring of Regeneration</div>
+<div onclick="selectItem('Ring of Shooting Stars')">Ring of Shooting Stars</div>
+<div onclick="selectItem('Ring of Telekinesis')">Ring of Telekinesis</div>
+<div onclick="selectItem('Robe of Scintillating Colors')">Robe of Scintillating Colors</div>
+<div onclick="selectItem('Robe of Stars')">Robe of Stars</div>
+<div onclick="selectItem('Rod of Absorption')">Rod of Absorption</div>
+<div onclick="selectItem('Rod of Alertness')">Rod of Alertness</div>
+<div onclick="selectItem('Rod of Security')">Rod of Security</div>
+<div onclick="selectItem('Scimitar of Speed')">Scimitar of Speed</div>
+<div onclick="selectItem('Shield')">Shield</div>
+<div onclick="selectItem('Spellguard Shield')">Spellguard Shield</div>
+<div onclick="selectItem('Staff of Fire')">Staff of Fire</div>
+<div onclick="selectItem('Staff of Frost')">Staff of Frost</div>
+<div onclick="selectItem('Staff of Power')">Staff of Power</div>
+<div onclick="selectItem('Staff of Striking')">Staff of Striking</div>
+<div onclick="selectItem('Staff of Thunder and Lightning')">Staff of Thunder and Lightning</div>
+<div onclick="selectItem('Sword of Sharpness')">Sword of Sharpness</div>
+<div onclick="selectItem('Tome of Clear Thought')">Tome of Clear Thought</div>
+<div onclick="selectItem('Tome of Leadership and Influence')">Tome of Leadership and Influence</div>
+<div onclick="selectItem('Tome of Understanding')">Tome of Understanding</div>
+<div onclick="selectItem('Wand of Polymorph')">Wand of Polymorph</div>
+<div onclick="selectItem('Wand of the War Mage')">Wand of the War Mage</div>
+<div onclick="selectItem('Wings of Flying')">Wings of Flying</div>
+
+<!-- Legendary items -->
+<div onclick="selectItem('Apparatus of the Crab')">Apparatus of the Crab</div>
+<div onclick="selectItem('Armor of Invulnerability')">Armor of Invulnerability</div>
+<div onclick="selectItem('Belt of Giant Strength')">Belt of Giant Strength</div>
+<div onclick="selectItem('Crystal Ball')">Crystal Ball</div>
+<div onclick="selectItem('Cubic Gate')">Cubic Gate</div>
+<div onclick="selectItem('Deck of Many Things')">Deck of Many Things</div>
+<div onclick="selectItem('Defender')">Defender</div>
+<div onclick="selectItem('Hammer of Thunderbolts')">Hammer of Thunderbolts</div>
+<div onclick="selectItem('Holy Avenger')">Holy Avenger</div>
+<div onclick="selectItem('Horn of Valhalla')">Horn of Valhalla</div>
+<div onclick="selectItem('Ioun Stone')">Ioun Stone</div>
+<div onclick="selectItem('Iron Flask')">Iron Flask</div>
+<div onclick="selectItem('Luck Blade')">Luck Blade</div>
+<div onclick="selectItem('Plate Armor of Etherealness')">Plate Armor of Etherealness</div>
+<div onclick="selectItem('Potion of Giant Strength')">Potion of Giant Strength</div>
+<div onclick="selectItem('Ring of Djinni Summoning')">Ring of Djinni Summoning</div>
+<div onclick="selectItem('Ring of Elemental Command')">Ring of Elemental Command</div>
+<div onclick="selectItem('Ring of Invisibility')">Ring of Invisibility</div>
+<div onclick="selectItem('Ring of Spell Turning')">Ring of Spell Turning</div>
+<div onclick="selectItem('Ring of Three Wishes')">Ring of Three Wishes</div>
+<div onclick="selectItem('Robe of the Archmagi')">Robe of the Archmagi</div>
+<div onclick="selectItem('Rod of Lordly Might')">Rod of Lordly Might</div>
+<div onclick="selectItem('Scarab of Protection')">Scarab of Protection</div>
+<div onclick="selectItem('Sovereign Glue')">Sovereign Glue</div>
+<div onclick="selectItem('Sphere of Annihilation')">Sphere of Annihilation</div>
+<div onclick="selectItem('Staff of the Magi')">Staff of the Magi</div>
+<div onclick="selectItem('Talisman of Pure Good')">Talisman of Pure Good</div>
+<div onclick="selectItem('Talisman of the Sphere')">Talisman of the Sphere</div>
+<div onclick="selectItem('Talisman of Ultimate Evil')">Talisman of Ultimate Evil</div>
+<div onclick="selectItem('Universal Solvent')">Universal Solvent</div>
+<div onclick="selectItem('Vorpal Sword')">Vorpal Sword</div>
+<div onclick="selectItem('Well of Many Worlds')">Well of Many Worlds</div>
+<div onclick="selectItem('Orb of Dragonkind')">Orb of Dragonkind</div>
+
+</div>
+                    </div>
                     <button onclick="addItem()">Add Item</button>
                     <button onclick="removeItem()">Remove Item</button>
                     <input type="text" id="goldInput" placeholder="Amount">
@@ -928,6 +1709,896 @@
             // Display a default character on page load
             displayCharacterInfo();
         };
+
+        const spells = {
+    "Acid Arrow": "A shimmering green arrow streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d4 acid damage, and the spell’s magic continues to affect the target. At the end of each of the target’s turns, it takes an additional 2d4 acid damage, and the spell ends. On a miss, the spell ends.",
+    "Acid Splash": "You hurl a bubble of acid. Choose one or two creatures you can see within range. If you choose two, they must be within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.",
+    "Aid": "You boost the health of your allies. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.",
+    "Alarm": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area.",
+    "Alter Self": "You assume a different form. You can choose one of the following effects: change your appearance, grow claws, or gain a swim speed. The changes last for the duration.",
+    "Animal Friendship": "You attempt to convince a beast that you mean it no harm. Choose a beast that you can see within range. The beast must make a Wisdom saving throw. On a failed save, the beast becomes friendly to you for the duration.",
+    "Animal Messenger": "You use a tiny beast to deliver a message. Choose a Tiny beast within range. The beast travels to a destination you specify and delivers your message to a creature of your choice.",
+    "Animal Shapes": "You transform willing creatures you can see within range into beasts. You choose the beasts that the creatures transform into. The spell doesn’t allow you to transform the creatures into beasts with a challenge rating higher than 8.",
+    "Animate Dead": "You raise the dead. Choose up to two skeletons or zombies within range. They become your servants, and you can use your action to command them each turn.",
+    "Animate Objects": "You bring objects to life. Choose up to ten nonmagical objects within range that are not being worn or carried. Each object animates and can be directed by you to move and attack.",
+    "Antilife Shell": "An immobile, faintly shimmering barrier springs into existence around you. The barrier protects you from creatures, making it difficult for them to approach you.",
+    "Antimagic Field": "A barrier of anti-magic radiates from you. While in the sphere, magic cannot be cast or used, and the barrier suppresses the effects of magic within its area.",
+    "Antipathy/Sympathy": "You imbue a location with an aura of antipathy or sympathy. Choose a point within range and an effect: creatures of a type (aberration, celestial, etc.) are either repelled or attracted to the area.",
+    "Arcane Eye": "You create an invisible magical eye that hovers in the air. You can see through the eye as if you were there. The eye has darkvision, and you can use it to make Perception checks.",
+    "Arcane Lock": "You protect a door, gate, or similar object with a magical lock. The object becomes locked, and it requires a successful Dexterity check to open or bypass.",
+    "Arcane Sword": "You create a sword of magical force that you can wield. It counts as a magic weapon and deals 1d6 force damage on a hit.",
+    "Arcanist's Magic Aura": "You alter the magical aura around a target. You can change its appearance or alter its magical properties, such as making it appear as though it is a different type of magic.",
+    "Astral Projection": "You and up to eight willing creatures project your astral bodies to the Astral Plane. While on the Astral Plane, your physical bodies remain in place, and you can travel in the Astral Plane.",
+    "Augury": "You receive a divine omen about the results of a specific course of action you plan to take within the next 30 minutes. The spell’s response can be ‘weal,’ ‘woe,’ or ‘weal and woe.’",
+    "Awaken": "You imbue a creature with intelligence and the ability to speak. The creature also gains a personality and can communicate telepathically with you.",
+    "Bane": "You create a black energy aura around up to three creatures of your choice within range. Whenever a target fails its saving throw, it must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
+    "Banishing Smite": "You imbue your weapon strikes with the power to banish. The next time you hit a creature with a melee weapon attack, it takes an additional 5d10 radiant damage, and if it is from another plane of existence, it must make a Charisma saving throw or be banished.",
+    "Banishment": "You attempt to send a creature to another plane of existence. The target must make a Charisma saving throw. On a failed save, the target is banished. If the target is native to the plane you are on, it is banished to a harmless demiplane.",
+    "Barkskin": "You touch a willing creature. The target’s skin becomes as tough as bark. Until the spell ends, the target’s AC can’t be less than 16, regardless of what kind of armor it is wearing.",
+    "Beacon of Hope": "You create an aura of hope around you. For the duration, you and your allies within 30 feet have advantage on Wisdom saving throws and death saving throws, and regain the maximum number of hit points possible from any healing.",
+    "Beast Bond": "You create a telepathic link between yourself and a beast you touch. While the link lasts, you can communicate with the beast telepathically as long as the two of you are on the same plane of existence.",
+    "Beast Sense": "You can sense through the eyes and ears of a willing beast you touch. For the duration, you can use your action to see and hear through the beast's senses as if you were in its space.",
+    "Bestow Curse": "You reach out a glowing hand to touch a creature you can see within range. The target must make a Wisdom saving throw. On a failed save, you bestow a debilitating curse upon it. Choose one of the following effects: disadvantage on attack rolls or ability checks, or disadvantage on saving throws, or a reduction in its speed.",
+    "Bigby's Hand": "You create a magical hand that appears at a point you choose within range. The hand has the following options: Grapple, Interpose, or Crush. The hand can also be used to deliver a spell.",
+    "Blade Barrier": "You create a wall of whirling blades that surrounds you or an area. Each creature within the area must make a Dexterity saving throw. On a failed save, the creature takes 10d10 slashing damage. On a successful save, it takes half as much damage.",
+    "Bless": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, it can roll a d4 and add the number rolled to the attack roll or saving throw.",
+    "Blight": "Necromantic energy washes over a creature of your choice within range. The target must make a Constitution saving throw. On a failed save, it takes 8d8 necrotic damage. On a successful save, it takes half as much damage.",
+    "Blindness/Deafness": "You can blind or deafen a foe you can see within range. Choose one of the following effects: blindness or deafness. The target must make a Constitution saving throw. On a failed save, it is blinded or deafened, as you chose.",
+    "Blink": "You vanish from your current plane of existence and reappear a short distance away. At the end of each of your turns, you have a 50% chance of disappearing from your current plane and appearing in the Ethereal Plane.",
+    "Blur": "Your form becomes blurred, shifting, and wavering. Until the spell ends, any creature you attack has disadvantage on attack rolls against you.",
+    "Branding Smite": "You brandish your weapon, causing it to flare with radiant energy. The next time you hit a creature with a melee weapon attack, it takes an extra 2d6 radiant damage and is illuminated, shedding bright light in a 5-foot radius and dim light for an additional 5 feet.",
+    "Burning Hands": "A thin sheet of flames shoots forth from your outstretched fingers. Each creature in a 15-foot cone must make a Dexterity saving throw. A target takes 3d6 fire damage on a failed save, or half as much damage on a successful one.",
+    "Call Lightning": "You call down a bolt of lightning to strike a point you choose within range. Each creature within a 5-foot radius of that point must make a Dexterity saving throw. A target takes 3d10 lightning damage on a failed save, or half as much damage on a successful one.",
+    "Calm Emotions": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot radius sphere centered on a point you choose within range must make a Charisma saving throw. On a failed save, you can suppress any effect causing a target to be charmed or frightened.",
+    "Chain Lightning": "You create a bolt of lightning that arcs toward a target of your choice within range. The target must make a Dexterity saving throw. On a failed save, it takes 10d8 lightning damage, and then the lightning arcs to other targets, up to a total of three additional targets.",
+    "Charm Person": "You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it.",
+    "Chromatic Orb": "You hurl a 4-inch-diameter sphere of energy at a creature that you can see within range. You choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create. On a hit, the creature takes 3d8 damage of the type you chose.",
+    "Circle of Death": "A sphere of negative energy ripples out from a point you choose within range. Each creature in a 60-foot-radius sphere centered on that point must make a Constitution saving throw. A target takes 8d6 necrotic damage on a failed save, or half as much damage on a successful one.",
+    "Circle of Power": "You and your allies within a 30-foot radius of you have advantage on saving throws against spells and other magical effects. The area of effect moves with you, and creatures that start their turn in the area regain 1d4 hit points.",
+    "Clairvoyance": "You create an invisible sensor within range that lets you see or hear a location you choose. The sensor remains in place for the duration and can be used to make Perception checks.",
+    "Clone": "You create a duplicate of a living creature. If the original creature is killed, the clone becomes its new body. The clone has the same physical appearance and abilities as the original creature.",
+    "Cloudkill": "You create a cloud of poison gas that moves away from you. Each creature within the cloud must make a Constitution saving throw. On a failed save, it takes 6d8 poison damage and is blinded. On a successful save, it takes half as much damage and isn’t blinded.",
+    "Color Spray": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can affect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points.",
+    "Command": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn.",
+    "Commune": "You contact your deity or a divine proxy to ask questions. You receive a divine response to your questions, which might be cryptic or vague. You can ask up to three yes-or-no questions.",
+    "Commune with Nature": "You gain knowledge of the surrounding territory. For the duration, you can sense the presence of certain types of creatures and learn about terrain, plants, and bodies of water within 3 miles.",
+    "Comprehend Languages": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written.",
+    "Compulsion": "You compel creatures within range to move in a direction you choose. Each creature must make a Wisdom saving throw. On a failed save, a creature is compelled to move in a direction you choose, following the shortest route.",
+    "Cone of Cold": "A blast of cold air erupts from your hands in a cone. Each creature in a 60-foot cone must make a Constitution saving throw. A target takes 8d8 cold damage on a failed save, or half as much damage on a successful one.",
+    "Confusion": "You cause confusion in the minds of creatures within a 10-foot-radius sphere centered on a point you choose. Each creature in the area must make a Wisdom saving throw. On a failed save, the creature is confused for the duration.",
+    "Conjure Animals": "You summon fey spirits that take the form of animals to aid you. Choose one of the following options: one beast of challenge rating 2 or lower, or two beasts of challenge rating 1 or lower, or four beasts of challenge rating 1/2 or lower, or eight beasts of challenge rating 1/4 or lower.",
+    "Conjure Barrage": "You create a barrage of projectiles that bursts from you. Each creature in a 60-foot cone must make a Dexterity saving throw. On a failed save, it takes 8d8 piercing damage, or half as much damage on a successful save.",
+    "Conjure Celestial": "You summon a celestial to aid you. Choose one celestial with a challenge rating of 4 or lower. The celestial appears in an unoccupied space you choose within range and acts as your ally.",
+    "Conjure Elemental": "You summon an elemental of a type you choose. Choose one of the following elementals: air, earth, fire, or water. The elemental appears in an unoccupied space you choose within range and acts as your ally.",
+    "Conjure Fey": "You summon a fey creature to aid you. Choose one fey creature with a challenge rating of 6 or lower. The fey appears in an unoccupied space you choose within range and acts as your ally.",
+    "Conjure Minor Elementals": "You summon minor elementals to aid you. Choose one of the following options: four elementals with a challenge rating of 1/4 or lower, or two elementals with a challenge rating of 1/2 or lower, or one elemental with a challenge rating of 1 or lower.",
+    "Conjure Volley": "You create a volley of magical ammunition that rains down in a 40-foot radius. Each creature in the area must make a Dexterity saving throw. On a failed save, a creature takes 8d8 piercing damage, or half as much damage on a successful save.",
+    "Conjure Woodland Beings": "You summon fey creatures to aid you. Choose one of the following options: one fey creature with a challenge rating of 2 or lower, or two fey creatures with a challenge rating of 1 or lower, or four fey creatures with a challenge rating of 1/2 or lower, or eight fey creatures with a challenge rating of 1/4 or lower.",
+    "Contact Other Plane": "You mentally contact a distant plane of existence. You can ask up to five yes-or-no questions, and you receive cryptic answers from a powerful entity or force.",
+    "Contagion": "You sicken a creature you touch. The target must make a Constitution saving throw. On a failed save, it is afflicted with one of the following diseases: blinding sickness, deafness, diseased, or flesh rot. The disease continues to affect the target for the duration.",
+    "Contingency": "You put a contingency in place that triggers a spell under specified conditions. You choose a trigger and a spell to cast when the trigger occurs. The spell is held in reserve until the trigger happens.",
+    "Continual Flame": "You create a small flame that remains burning indefinitely. The flame can be colored or shaped as you choose and sheds light as a torch. It doesn’t use up oxygen and is not extinguished by water.",
+    "Control Flames": "You can control flames within range. You can extinguish flames, increase their size, or change their color. The spell has various effects depending on the size of the flames and their source.",
+    "Control Water": "You manipulate water within range. You can cause it to rise, lower, or form into shapes. The spell also allows you to control the flow of water or create a whirlpool.",
+    "Control Weather": "You change the weather in a 5-mile radius centered on a point within range. You can alter precipitation, temperature, and wind conditions.",
+    "Counterspell": "You attempt to interrupt a creature in the process of casting a spell. Choose a creature within range. The creature must make a successful spellcasting ability check or its spell is interrupted.",
+    "Create Food and Water": "You create enough food and water to sustain up to fifteen humanoids for 24 hours. The food and water are nutritious and fillable, but they don’t include any exotic ingredients.",
+    "Create or Destroy Water": "You create up to 10 gallons of clean water within a 30-foot cube or destroy up to 10 gallons of water within the same area.",
+    "Create Undead": "You raise undead creatures from the dead. You can create up to three zombies or skeletons, or one mummy lord. The undead serve you and follow your commands.",
+    "Creation": "You create a nonliving object of your choice. The object can be up to 5 feet in any dimension. The object remains for the duration or until you dismiss it.",
+    "Crown of Madness": "You attempt to drive a humanoid insane. Choose a creature within range. The target must make a Wisdom saving throw. On a failed save, the target is affected by the spell and must use its action each turn to attack a creature of your choice.",
+    "Crusader's Mantle": "You emanate an aura of divine power. Each creature within a 30-foot radius of you (other than you) gains radiant damage on their weapon attacks. The aura lasts for the duration of the spell.",
+    "Cure Wounds": "You channel positive energy to heal a wounded creature you touch. The target regains hit points equal to 1d8 plus your spellcasting ability modifier.",
+    "Dancing Lights": "You create up to four glowing orbs of light. Each orb can be moved independently. The effect lasts for up to 1 minute.",
+    "Darkness": "You create an area of magical darkness. The darkness spreads out from a point you choose within range, creating a 15-foot radius of darkness. The effect lasts for up to 10 minutes.",
+    "Darkvision": "You grant yourself or a creature you touch the ability to see in dim light as if it were bright light and in darkness as if it were dim light. The effect lasts for up to 8 hours.",
+    "Daylight": "You create a sphere of bright light with a 60-foot radius. The light spreads out from a point you choose within range. The effect lasts for up to 1 hour.",
+    "Death Ward": "You touch a creature, protecting it from death. If the target is reduced to 0 hit points, it is instead reduced to 1 hit point. The effect lasts for up to 8 hours.",
+    "Delayed Blast Fireball": "You create a delayed explosion of fire. The spell’s damage is 12d6 fire damage. The effect lasts until the spell is triggered or dispelled.",
+    "Demiplane": "You create a shadowy doorway to an extradimensional space. The space is a 30-foot cube. The effect lasts until the spell is dismissed or dispelled.",
+    "Detect Evil and Good": "You sense the presence of aberrations, celestials, dragons, elementals, fey, fiends, and undead within 30 feet of you. The effect lasts for up to 10 minutes.",
+    "Detect Magic": "You sense the presence of magic within 30 feet of you. The effect lasts for up to 10 minutes.",
+    "Detect Poison and Disease": "You sense the presence of poison, poisonous creatures, and diseases within 30 feet of you. The effect lasts for up to 10 minutes.",
+    "Detect Thoughts": "You read the thoughts of creatures within 30 feet of you. The effect lasts for up to 1 minute.",
+    "Dimension Door": "You teleport yourself and up to one willing creature to a destination you specify within 500 feet. The effect lasts instantaneously.",
+    "Disguise Self": "You make yourself—including your clothing, armor, weapons, and other belongings—look different. The effect lasts for up to 1 hour.",
+    "Disintegrate": "A thin green ray springs from your pointing finger to a target within range. The target must make a Dexterity saving throw. On a failed save, it takes 10d6 + 40 force damage. The effect lasts instantaneously.",
+    "Dispel Evil and Good": "You end the effect of a spell or magical effect on a creature or object. The effect lasts instantaneously.",
+    "Dispel Magic": "You end the effect of a spell on a creature or object. The effect lasts instantaneously.",
+    "Divination": "You receive a useful piece of advice related to a specific goal or event. The effect lasts for up to 1 minute.",
+    "Divine Favor": "You imbue yourself with divine energy. You gain a +1d4 bonus to attack rolls for the duration. The effect lasts for up to 1 minute.",
+    "Divine Word": "You utter a divine word that brings a range of effects. Affected creatures must make a Charisma saving throw. On a failed save, they are either stunned, deafened, or frightened based on the level of the spell. The effect lasts until the end of the spell’s duration.",
+    "Dominate Beast": "You attempt to control a beast. The target must make a Wisdom saving throw. On a failed save, the beast is charmed and controlled by you. The effect lasts for up to 1 minute.",
+    "Dominate Monster": "You attempt to control a creature. The target must make a Wisdom saving throw. On a failed save, the creature is charmed and controlled by you. The effect lasts for up to 1 minute.",
+    "Dominate Person": "You attempt to control a humanoid. The target must make a Wisdom saving throw. On a failed save, the humanoid is charmed and controlled by you. The effect lasts for up to 1 minute.",
+    "Dream": "You send a message or image to a creature while it sleeps. The effect lasts until the end of the creature’s next long rest.",
+    "Druidcraft": "You create a minor magical effect related to nature. The effect lasts for up to 1 hour.",
+    "Earthquake": "You create a tremor in the ground. Creatures in a 100-foot-radius sphere must make a Dexterity saving throw. On a failed save, they take 1d6 bludgeoning damage and are knocked prone. The effect lasts for up to 1 minute.",
+    "Eldritch Blast": "You create a beam of crackling energy that deals 1d10 force damage on a hit. The effect lasts instantaneously.",
+    "Elemental Weapon": "You imbue a weapon with elemental energy. The weapon deals an extra 1d4 damage of a chosen type. The effect lasts for up to 1 hour.",
+    "Enhance Ability": "You grant a creature advantage on ability checks of a chosen type. The effect lasts for up to 1 hour.",
+    "Enlarge/Reduce": "You cause a creature or object to grow or shrink. The effect lasts for up to 1 minute.",
+    "Ensnaring Strike": "You ensnare a creature in magical vines. The target must make a Strength saving throw. On a failed save, the target is restrained. The effect lasts for up to 1 minute.",
+    "Enthrall": "You captivate the attention of creatures within 60 feet. The creatures must make a Wisdom saving throw. On a failed save, they are charmed and have disadvantage on Wisdom saving throws. The effect lasts for up to 1 minute.",
+    "Etherealness": "You step into the Ethereal Plane. You can move through objects and creatures. The effect lasts for up to 8 hours.",
+    "Expeditious Retreat": "You gain increased speed. Your speed is doubled for the duration. The effect lasts for up to 10 minutes.",
+    "Eyebite": "You send out a wave of psychic energy. Choose one creature within range. The creature must make a Wisdom saving throw. On a failed save, it is affected by one of the following: panicked, incapacitated, or frightened. The effect lasts for up to 1 minute.",
+    "Fabricate": "You convert raw materials into products of the same material. The effect lasts instantaneously.",
+    "Faerie Fire": "You create a field of glowing light. Creatures within a 20-foot cube must make a Dexterity saving throw. On a failed save, they are outlined in light, giving advantage on attack rolls against them. The effect lasts for up to 1 minute.",
+    "False Life": "You gain temporary hit points. Roll 1d4 + 4 to determine the number of temporary hit points you gain. The effect lasts for up to 1 hour.",
+    "Fear": "You create a cone of terror. Creatures within a 30-foot cone must make a Wisdom saving throw. On a failed save, they are frightened. The effect lasts for up to 1 minute.",
+    "Feather Fall": "You slow the fall of up to five falling creatures within range. The creatures take no damage from the fall and land safely. The effect lasts until the fall is ended.",
+    "Feeblemind": "You strike a creature’s intellect and charisma. The target must make an Intelligence saving throw. On a failed save, its Intelligence and Charisma scores drop to 1. The effect lasts until the spell is dispelled or the target is healed.",
+    "Find Familiar": "You summon a familiar, a spirit that takes the form of a small animal. The familiar can help you in various ways. The effect lasts until the familiar is dismissed or killed.",
+    "Find Steed": "You summon a spirit that takes the form of a loyal steed. The steed can be a variety of creatures and provides combat and travel assistance. The effect lasts until the steed is dismissed or killed.",
+    "Find the Path": "You find the shortest path to a destination you specify. You and your companions are guided along the path. The effect lasts until the destination is reached.",
+    "Find Traps": "You sense the presence of traps within a 10-foot radius. The effect lasts for up to 1 hour.",
+    "Finger of Death": "You send a black beam of energy toward a target. The target must make a Constitution saving throw. On a failed save, it takes 7d8 + 30 necrotic damage. If this damage reduces the target to 0 hit points, it dies. The effect lasts instantaneously.",
+    "Fire Bolt": "You hurl a mote of fire at a target. The target must make a Dexterity saving throw. On a failed save, it takes 1d10 fire damage. The effect lasts instantaneously.",
+    "Fire Shield": "You create a protective shield of fire. The shield provides resistance to cold damage and deals 2d8 fire damage to creatures that hit you with a melee attack. The effect lasts for up to 10 minutes.",
+    "Fire Storm": "You create a storm of fire. Creatures in a 10-foot-radius, 40-foot-high cylinder must make a Dexterity saving throw. On a failed save, they take 7d10 fire damage. The effect lasts for up to 1 minute.",
+    "Fireball": "You create an explosion of fire. Creatures within a 20-foot-radius sphere must make a Dexterity saving throw. On a failed save, they take 8d6 fire damage. The effect lasts instantaneously.",
+    "Flame Blade": "You create a sword of fire. The sword deals 3d6 fire damage on a hit. The effect lasts for up to 10 minutes.",
+    "Flame Strike": "You call down a vertical column of fire. Creatures within a 10-foot-radius, 40-foot-high cylinder must make a Dexterity saving throw. On a failed save, they take 4d6 fire damage and 4d6 radiant damage. The effect lasts instantaneously.",
+    "Flaming Sphere": "You create a 5-foot-diameter sphere of fire. The sphere deals 2d6 fire damage to creatures within 5 feet of it. The effect lasts for up to 1 minute.",
+    "Flesh to Stone": "You attempt to petrify a creature. The target must make a Constitution saving throw. On a failed save, the target is restrained and must make a saving throw each turn to avoid becoming petrified. The effect lasts until the target succeeds on the saving throw or is cured.",
+    "Fly": "You grant a creature the ability to fly. The target's flying speed is 60 feet. The effect lasts for up to 10 minutes.",
+    "Fog Cloud": "You create a 20-foot-radius sphere of fog. The sphere spreads around corners and creates heavily obscured areas. The effect lasts for up to 1 hour.",
+    "Forbiddance": "You create an area where certain types of creatures are prevented from entering. The effect lasts for up to 24 hours.",
+    "Forcecage": "You create a cage of force around a creature or object. The cage has a 10-foot cube area and is impervious to physical damage. The effect lasts for up to 1 hour.",
+    "Foresight": "You grant yourself or a creature you touch superior vision and awareness. The target gains advantage on attack rolls, ability checks, and saving throws. The effect lasts for up to 8 hours.",
+    "Freedom of Movement": "You grant a creature the ability to move freely despite magical restraints. The effect lasts for up to 1 hour.",
+    "Freezing Sphere": "You create a sphere of cold energy. Creatures in a 60-foot-radius sphere must make a Constitution saving throw. On a failed save, they take 6d6 cold damage and are slowed. The effect lasts for up to 1 minute.",
+    "Gaseous Form": "You transform yourself or a creature into a cloud of gas. The effect lasts for up to 1 hour.",
+    "Gate": "You create a portal to another plane of existence. The portal lasts for up to 1 minute and allows travel between planes.",
+    "Geas": "You place a magical command on a creature. The target must make a Wisdom saving throw. On a failed save, it is charmed by you and must follow your command. The effect lasts for up to 30 days.",
+    "Gentle Repose": "You preserve a corpse. The corpse doesn’t decompose, and its remains are protected from becoming undead. The effect lasts for up to 10 days.",
+    "Giant Insect": "You transform up to three insects into giant versions of themselves. The effect lasts for up to 1 hour.",
+    "Glibness": "You become exceptionally persuasive. For the duration, you have advantage on Charisma (Deception) checks, and any creature that hears you must make a Wisdom saving throw to recognize the truth. The effect lasts for up to 1 hour.",
+    "Globe of Invulnerability": "You create an immobile globe of magical energy. The globe prevents spells of 5th level or lower from affecting creatures or objects inside it. The effect lasts for up to 1 minute.",
+    "Glyph of Warding": "You inscribe a glyph that stores a spell or magical effect. The effect triggers when the glyph is activated. The glyph lasts until it is triggered or dispelled.",
+    "Goodberry": "You create up to 10 magical berries. Each berry restores 1 hit point when eaten. The effect lasts for up to 24 hours.",
+    "Grasping Vine": "You conjure a vine that attempts to grapple a creature. The target must make a Strength saving throw. On a failed save, it is restrained. The effect lasts for up to 1 minute.",
+    "Grease": "You create a slick, greasy area. Creatures within the area must make a Dexterity saving throw. On a failed save, they fall prone. The effect lasts for up to 1 minute.",
+    "Greater Invisibility": "You turn yourself or a creature you touch invisible. The target can attack and cast spells while invisible. The effect lasts for up to 1 minute.",
+    "Greater Restoration": "You imbue a creature with positive energy, ending one effect causing it to be charmed, frightened, or paralyzed. The effect lasts until the condition is removed.",
+    "Guardian of Faith": "You summon a guardian that protects a 10-foot-radius sphere. The guardian deals 20 radiant damage to hostile creatures that enter the area. The effect lasts for up to 8 hours.",
+    "Guards and Wards": "You create magical effects to protect a place. The effects include fog, magical alarms, and animated objects. The effect lasts for up to 24 hours.",
+    "Guidance": "You touch a creature and grant it a +1d4 bonus to ability checks of its choice. The effect lasts for up to 1 minute.",
+    "Guiding Bolt": "You hurl a beam of light at a target. The target must make a Dexterity saving throw. On a failed save, it takes 4d6 radiant damage and is outlined in light, granting advantage on attack rolls against it. The effect lasts instantaneously.",
+    "Gust": "You create a small blast of air that can push objects and creatures. The effect lasts instantaneously.",
+    "Gust of Wind": "You create a line of strong wind. Creatures in a 60-foot line must make a Strength saving throw. On a failed save, they are pushed 15 feet away from you and are restrained. The effect lasts for up to 1 minute.",
+    "Hail of Thorns": "You create a rain of thorns. The thorns deal 1d10 piercing damage to creatures in a 5-foot radius around the target of your attack. The effect lasts until the spell is cast.",
+    "Hallow": "You consecrate an area. You can choose one or more effects, such as making the area ward against undead or protecting it from divination. The effect lasts for up to 24 hours.",
+    "Hallucinatory Terrain": "You create an illusory terrain that appears real. The terrain can cover a 30-foot cube. The effect lasts for up to 1 hour.",
+    "Harm": "You inflict debilitating pain on a creature. The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage and its hit point maximum is reduced. The effect lasts for up to 1 minute.",
+    "Haste": "You grant a creature extra speed and actions. The creature’s speed is doubled, and it can take an additional action on each of its turns. The effect lasts for up to 1 minute.",
+    "Heal": "You restore hit points to a creature. The target regains 70 hit points. The effect lasts instantaneously.",
+    "Healing Word": "You heal a creature within range. The target regains 1d4 + your spellcasting ability modifier hit points. The effect lasts instantaneously.",
+    "Heat Metal": "You cause a metal object to glow red-hot. The target must make a Constitution saving throw. On a failed save, it takes 2d8 fire damage. The effect lasts for up to 1 minute.",
+    "Hellish Rebuke": "You surround yourself with hellish flames. The target that damaged you must make a Dexterity saving throw. On a failed save, it takes 2d10 fire damage. The effect lasts instantaneously.",
+    "Heroes' Feast": "You create a great feast that restores hit points and removes fear and charmed conditions. Each creature that partakes gains 2d10 temporary hit points. The effect lasts for up to 24 hours.",
+    "Heroism": "You imbue a creature with bravery. The target gains temporary hit points and is immune to being frightened. The effect lasts for up to 1 minute.",
+    "Hex": "You place a curse on a creature. The target takes 1d6 necrotic damage whenever it makes an ability check. The effect lasts for up to 1 hour.",
+    "Hold Monster": "You attempt to paralyze a creature. The target must make a Wisdom saving throw. On a failed save, it is paralyzed. The effect lasts for up to 1 minute.",
+    "Hold Person": "You attempt to paralyze a humanoid. The target must make a Wisdom saving throw. On a failed save, it is paralyzed. The effect lasts for up to 1 minute.",
+    "Holy Aura": "You create an aura that provides protection to you and your allies. Creatures within the aura gain advantage on saving throws and are protected from attacks. The effect lasts for up to 1 minute.",
+    "Hunter's Mark": "You mark a creature, giving you a +1d6 bonus to damage rolls against it. The effect lasts for up to 1 hour.",
+    "Hypnotic Pattern": "You create a pattern that dazzles and hypnotizes creatures. Each creature within a 30-foot cube must make a Wisdom saving throw. On a failed save, it is charmed and incapacitated. The effect lasts for up to 1 minute.",
+    "Ice Knife": "You create a shard of ice and fling it at a creature. Make a ranged spell attack against the target. On a hit, the target takes 1d10 cold damage. The shard then explodes, causing creatures within a 5-foot radius to make a Dexterity saving throw. On a failed save, they take 2d6 cold damage. The effect lasts instantaneously.",
+    "Ice Storm": "You call down a storm of ice and rock. Creatures in a 20-foot-radius, 40-foot-high cylinder must make a Dexterity saving throw. On a failed save, they take 2d8 bludgeoning damage and 4d6 cold damage. The effect lasts instantaneously.",
+    "Identify": "You gain insight into a magical item or spell. You learn its properties and how to use it. The effect lasts for the duration of the spell.",
+    "Illusory Script": "You write a magical script that is readable only by creatures you designate. The effect lasts until the script is read or dispelled.",
+    "Imprisonment": "You attempt to imprison a creature. The target must make a Charisma saving throw. On a failed save, it is imprisoned in a magical prison. The effect lasts until the creature is freed or the spell ends.",
+    "Incendiary Cloud": "You create a cloud of fire and ash. Creatures within a 20-foot-radius sphere must make a Constitution saving throw. On a failed save, they take 8d8 fire damage. The effect lasts for up to 1 minute.",
+    "Inflict Wounds": "You touch a creature and cause it to take necrotic damage. Make a melee spell attack against the target. On a hit, the target takes 3d10 necrotic damage. The effect lasts instantaneously.",
+    "Insect Plague": "You create a swarm of insects that covers a 20-foot-radius sphere. Creatures within the area must make a Constitution saving throw. On a failed save, they take 4d10 piercing damage. The effect lasts for up to 10 minutes.",
+    "Instant Summons": "You create a magical summons for an object. The object appears in your hand or a space you specify. The effect lasts until the object is summoned or the spell is dispelled.",
+    "Intellect Fortress": "You bolster your mind and the minds of creatures you touch. They gain advantage on Intelligence, Wisdom, and Charisma saving throws. The effect lasts for up to 1 hour.",
+    "Invisibility": "You turn yourself or a creature you touch invisible. The effect lasts for up to 1 hour or until the target attacks or casts a spell.",
+    "Invulnerability": "You gain temporary invulnerability to damage. The effect lasts for up to 10 minutes.",
+    "Irresistible Dance": "You compel a creature to dance. The target must make a Wisdom saving throw. On a failed save, it is affected by the spell and must use its action to dance. The effect lasts for up to 1 minute.",
+    "Jump": "You grant a creature increased jumping ability. The target's jump distance is tripled. The effect lasts for up to 1 minute.",
+    "Knock": "You unlock a door or container. The effect lasts instantaneously.",
+    "Legend Lore": "You gain information about a person, place, or object. The effect lasts until you receive the information or the spell is dispelled.",
+    "Leomund's Secret Chest": "You create a magical chest that can be used to store items. The effect lasts until the chest is opened or the spell is dispelled.",
+    "Leomund's Tiny Hut": "You create a magical dome that provides shelter. The dome is immobile and lasts for up to 8 hours.",
+    "Lesser Restoration": "You touch a creature and end one effect causing it to be blinded, deafened, paralyzed, or poisoned. The effect lasts instantaneously.",
+    "Levitate": "You cause a creature or object to levitate. The effect lasts for up to 10 minutes.",
+    "Life Transference": "You sacrifice your own health to heal another. You take 4d10 necrotic damage, and the target regains hit points equal to twice the damage you took. The effect lasts instantaneously.",
+    "Light": "You touch an object and cause it to shed bright light. The effect lasts for up to 1 hour or until dismissed.",
+    "Lightning Bolt": "You create a bolt of lightning that strikes a target. Creatures in a 100-foot-long, 5-foot-wide line must make a Dexterity saving throw. On a failed save, they take 8d6 lightning damage. The effect lasts instantaneously.",
+    "Locate Animals or Plants": "You sense the direction of a specific type of animal or plant within 5 miles. The effect lasts until you find the creature or plant or the spell ends.",
+    "Locate Creature": "You sense the direction of a specific creature within 1,000 feet. The effect lasts for up to 1 hour or until you find the creature.",
+    "Locate Object": "You sense the direction of a specific object within 1,000 feet. The effect lasts for up to 10 minutes.",
+    "Longstrider": "You increase a creature's speed by 10 feet. The effect lasts for up to 1 hour.",
+    "Mage Armor": "You create a magical force field around yourself or a creature. The target's AC becomes 13 + its Dexterity modifier. The effect lasts for up to 8 hours.",
+    "Mage Hand": "You create a spectral hand that can manipulate objects. The effect lasts for up to 1 minute.",
+    "Magic Circle": "You create a magical circle that protects an area. The circle lasts for up to 1 hour and can ward against certain types of creatures.",
+    "Magic Jar": "You transfer your soul into a magic jar and possess another creature. The effect lasts until you end the spell or the jar is destroyed.",
+    "Magic Missile": "You create darts of magical force that hit automatically. Each dart deals 1d4 + 1 force damage. The effect lasts instantaneously.",
+    "Magic Mouth": "You create a magical mouth that can speak a message when triggered. The effect lasts until triggered or dispelled.",
+    "Magic Weapon": "You imbue a weapon with magical energy. The weapon gains a +1 bonus to attack and damage rolls. The effect lasts for up to 1 hour.",
+    "Major Image": "You create a large, illusory image. The illusion includes sound, smell, and temperature. The effect lasts for up to 10 minutes.",
+    "Mass Cure Wounds": "You restore hit points to up to six creatures. Each target regains 3d8 + your spellcasting ability modifier hit points. The effect lasts instantaneously.",
+    "Mass Heal": "You restore hit points to up to six creatures. Each target regains 70 hit points. The effect lasts instantaneously.",
+    "Mass Healing Word": "You heal up to six creatures within range. Each target regains 1d4 + your spellcasting ability modifier hit points. The effect lasts instantaneously.",
+    "Mass Suggestion": "You suggest a course of activity to up to twelve creatures. Each target must make a Wisdom saving throw. On a failed save, it follows your suggestion. The effect lasts for up to 24 hours.",
+    "Maze": "You banish a creature to a labyrinthine demiplane. The target must make an Intelligence saving throw. On a failed save, it is trapped in the maze until it escapes or the spell ends.",
+    "Meld into Stone": "You merge with a stone object or surface. The effect lasts for up to 8 hours or until you leave the stone.",
+    "Melf's Acid Arrow": "You conjure an arrow of acid that strikes a target. The target must make a Dexterity saving throw. On a failed save, it takes 2d4 acid damage initially and 2d4 acid damage at the end of its next turn. The effect lasts up to 1 minute.",
+    "Mending": "You repair a single break or tear in an object. The effect lasts instantaneously.",
+    "Message": "You send a short message to a creature within range. The creature hears the message and can respond. The effect lasts instantaneously.",
+    "Meteor Swarm": "You call down meteors that explode on impact. Creatures in a 40-foot-radius sphere must make a Dexterity saving throw. On a failed save, they take 20d6 fire damage and 20d6 bludgeoning damage. The effect lasts instantaneously.",
+    "Mind Blank": "You shield a creature from psychic intrusion. The target is immune to psychic damage and any effect that would sense its emotions or read its thoughts. The effect lasts for up to 24 hours.",
+    "Minor Illusion": "You create a sound or an image of an object. The effect lasts for up to 1 minute.",
+    "Mirage Arcane": "You create a large illusory terrain. The illusion covers a 1-mile square area. The effect lasts for up to 10 hours.",
+    "Mirror Image": "You create illusory duplicates of yourself. The effect lasts for up to 1 minute, and attackers must make a roll to determine if they hit one of the duplicates or you.",
+    "Mislead": "You become invisible and create an illusory duplicate of yourself. The effect lasts for up to 1 hour.",
+    "Misty Step": "You teleport up to 30 feet to an unoccupied space you can see. The effect lasts instantaneously.",
+    "Modify Memory": "You alter a creature's memories. The target must make a Wisdom saving throw. On a failed save, you can modify its memory of an event that occurred within the last 24 hours. The effect lasts instantaneously.",
+    "Moonbeam": "You create a beam of light that shines down in a 5-foot-radius, 40-foot-high cylinder. Creatures within the beam must make a Constitution saving throw. On a failed save, they take 2d10 radiant damage. The effect lasts for up to 1 minute.",
+    "Move Earth": "You reshape the earth in a 40-foot-cube area. The effect lasts for up to 2 hours.",
+    "Negative Energy Flood": "You flood an area with negative energy. Creatures within a 30-foot-radius sphere must make a Constitution saving throw. On a failed save, they take 6d10 necrotic damage. The effect lasts instantaneously.",
+    "Nondetection": "You hide a target from divination magic. The effect lasts for up to 8 hours.",
+    "Nystul's Magic Aura": "You create a magical aura around an object or creature. The aura can make the target appear magical or not magical. The effect lasts for up to 24 hours.",
+    "Otiluke's Freezing Sphere": "You create a sphere of cold energy that explodes. Creatures within a 60-foot-radius sphere must make a Constitution saving throw. On a failed save, they take 10d6 cold damage. The effect lasts instantaneously.",
+    "Otiluke's Resilient Sphere": "You create an immobile, transparent sphere around a creature or object. The sphere is impervious to all damage. The effect lasts for up to 1 minute.",
+    "Otto's Irresistible Dance": "You compel a creature to dance uncontrollably. The target must make a Wisdom saving throw. On a failed save, it is affected by the spell and must use its action to dance. The effect lasts for up to 1 minute.",
+    "Pass without Trace": "You and your companions leave no traces of your passage. The effect lasts for up to 1 hour.",
+    "Passwall": "You create a passage through a wall, barrier, or similar obstruction. The effect lasts for up to 1 hour or until the passage is dispelled.",
+    "Phantasmal Force": "You create a phantasmal image of an object or creature. The effect lasts for up to 1 minute, and the target can make an Intelligence saving throw to disbelieve the illusion.",
+    "Phantasmal Killer": "You create a phantasmal image of the most fearsome creature imaginable. The target must make a Wisdom saving throw. On a failed save, it takes 4d10 psychic damage and is frightened. The effect lasts for up to 1 minute.",
+    "Phantom Steed": "You summon a magical horse-like creature. The steed can travel at a speed of 100 feet. The effect lasts for up to 1 hour.",
+    "Planar Ally": "You summon a celestial, elemental, or fiendish ally to help you. The effect lasts until the ally completes its task or the spell ends.",
+    "Planar Binding": "You bind a celestial, elemental, or fiendish creature to your service. The target must make a Charisma saving throw. On a failed save, it is bound to service for up to 24 hours.",
+    "Plane Shift": "You and up to eight willing creatures travel to another plane of existence. The effect lasts until you arrive at the destination.",
+    "Plant Growth": "You enrich the land around you. The effect lasts for up to 1 hour and can cause plants to grow rapidly.",
+    "Poison Spray": "You extend your hand and project a puff of noxious gas. The target must make a Constitution saving throw. On a failed save, it takes 1d12 poison damage. The effect lasts instantaneously.",
+    "Polymorph": "You transform a creature into a new form. The target must make a Wisdom saving throw. On a failed save, it is transformed into a beast with a CR equal to or less than the target's level. The effect lasts for up to 1 hour.",
+    "Power Word Heal": "You restore hit points to a creature. The target regains all lost hit points. The effect lasts instantaneously.",
+    "Power Word Kill": "You utter a word of power that can instantly kill a creature. The target must have fewer hit points than your spell's level. The effect lasts instantaneously.",
+    "Power Word Pain": "You cause intense pain to a creature. The target must make a Constitution saving throw. On a failed save, it takes 10d10 psychic damage. The effect lasts for up to 1 minute.",
+    "Power Word Stun": "You utter a word of power that can stun a creature. The target must make a Constitution saving throw. On a failed save, it is stunned for up to 1 minute.",
+    "Prayer of Healing": "You restore hit points to up to six creatures of your choice within range. Each target regains 2d8 + your spellcasting ability modifier hit points. The effect lasts instantaneously.",
+    "Prestidigitation": "You perform minor magical tricks. The effect lasts until you dismiss it or cast another spell.",
+    "Primal Savagery": "You claw at a creature with magical energy. Make a melee spell attack against the target. On a hit, the target takes 2d10 acid damage. The effect lasts instantaneously.",
+    "Primeval Awareness": "You sense the presence of aberrations, celestials, dragons, elementals, fey, fiends, and undead. The effect lasts for up to 1 hour.",
+    "Prismatic Spray": "You unleash a dazzling array of prismatic colors. Each creature in a 60-foot cone must make a Dexterity saving throw. On a failed save, the creature is affected by one of several effects based on the color of the ray. The effect lasts instantaneously.",
+    "Prismatic Wall": "You create a wall of shimmering, multicolored light. Each creature within the wall must make a Dexterity saving throw. On a failed save, it is affected by one of several effects based on the color of the ray. The effect lasts for up to 10 minutes.",
+    "Produce Flame": "You create a flame that you can hold and throw. Make a ranged spell attack against a target. On a hit, the target takes 1d8 fire damage. The effect lasts for up to 10 minutes.",
+    "Programmed Illusion": "You create a sound or an image of an object or creature that activates when a specified condition is met. The effect lasts until triggered or dispelled.",
+    "Project Image": "You create an illusory duplicate of yourself. The effect lasts for up to 1 hour.",
+    "Protection from Energy": "You protect a creature from energy damage. The target has resistance to a type of energy damage (acid, cold, fire, lightning, or thunder). The effect lasts for up to 1 hour.",
+    "Protection from Evil and Good": "You protect a creature from aberrations, celestials, elementals, fey, fiends, and undead. The target has advantage on saving throws against these creatures. The effect lasts for up to 10 minutes.",
+    "Protection from Poison": "You protect a creature from poison. The target has advantage on saving throws against poison and is resistant to poison damage. The effect lasts for up to 1 hour.",
+    "Purify Food and Drink": "You purify food and drink, rendering it free of poison and disease. The effect lasts instantaneously.",
+    "Raise Dead": "You return a dead creature to life, provided it has been dead for no longer than 10 days. The creature returns with 1 hit point. The effect lasts instantaneously.",
+    "Rary's Telepathic Bond": "You create a telepathic connection among up to eight willing creatures. The effect lasts for up to 1 hour.",
+    "Ray of Enfeeblement": "A black beam saps a creature's strength. The target must make a Constitution saving throw. On a failed save, it takes 1d6 necrotic damage, and its Strength score is halved. The effect lasts for up to 1 minute.",
+    "Ray of Frost": "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 cold damage and its speed is reduced by 10 feet until the start of your next turn. The effect lasts instantaneously.",
+    "Regenerate": "You restore lost hit points to a creature. The target regains 4d8 hit points. Additionally, if the target has lost any body part, it regrows it over the course of the spell's duration. The effect lasts for up to 1 hour.",
+    "Reincarnate": "You return a dead creature to life with a new body. The creature must have been dead for no longer than 10 days. The target is reincarnated into a new body, which can be any of a number of different races. The effect lasts instantaneously.",
+    "Remove Curse": "You end a curse affecting a creature or object. If the curse is affecting a creature, the target can make a Wisdom saving throw. On a successful save, the curse ends. The effect lasts instantaneously.",
+    "Resilient Sphere": "You create an immobile, transparent sphere around a creature or object. The sphere is impervious to all damage. The effect lasts for up to 1 minute.",
+    "Resistance": "You touch a willing creature and grant it a +1d4 bonus to saving throws. The effect lasts for up to 1 minute.",
+    "Restore": "You restore a creature's hit points. The target regains 4d8 hit points. The effect lasts instantaneously.",
+    "Resurrection": "You return a dead creature to life, provided it has been dead for no longer than 100 years. The creature returns with all its hit points. The effect lasts instantaneously.",
+    "Reverse Gravity": "You reverse the direction of gravity in a 50-foot-radius, 100-foot-high cylinder. Creatures and objects within the area are affected by the reversed gravity. The effect lasts for up to 1 minute.",
+    "Revivify": "You return a creature that has died within the last minute to life with 1 hit point. The creature must not have been dead for longer than 1 minute. The effect lasts instantaneously.",
+    "Rope Trick": "You create an extradimensional space that lasts for up to 1 hour. The space is accessible through a rope that you cast the spell upon.",
+    "Sacred Flame": "A flame-like radiance descends on a creature within range. The target must make a Dexterity saving throw. On a failed save, it takes 1d8 radiant damage. The effect lasts instantaneously.",
+    "Sanctuary": "You protect a creature from attack. The target has advantage on saving throws against attacks made by creatures of your choice. The effect lasts for up to 1 minute.",
+    "Scorching Ray": "You create three rays of fire. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage. The effect lasts instantaneously.",
+    "Scrying": "You can see and hear a creature you choose within range. The target must make a Wisdom saving throw. On a failed save, you can observe the target. The effect lasts for up to 10 minutes.",
+    "Secret Chest": "You create an extradimensional space within a chest that can be used to store items. The chest is created and remains for up to 1 hour.",
+    "See Invisibility": "You can see invisible creatures and objects as if they were visible. The effect lasts for up to 1 hour.",
+    "Seeming": "You change the appearance of up to 12 creatures within range. The effect lasts for up to 8 hours.",
+    "Sending": "You send a short message of up to 25 words to a creature with which you are familiar. The target can respond with a message of its own. The effect lasts instantaneously.",
+    "Sequester": "You hide a creature or object from detection. The target is invisible, and creatures can't detect it. The effect lasts for up to 10 days.",
+    "Shape Water": "You manipulate water in various ways. The effect lasts for up to 1 hour.",
+    "Shapechange": "You assume the form of a creature with a CR equal to or less than your level. The effect lasts for up to 1 hour.",
+    "Shatter": "You create a loud ringing noise. Each creature within a 10-foot-radius sphere must make a Constitution saving throw. On a failed save, the creature takes 3d8 thunder damage. The effect lasts instantaneously.",
+    "Shield": "An invisible barrier of magical force appears and protects you. You gain a +5 bonus to AC until the start of your next turn. The effect lasts for up to 1 round.",
+    "Shield of Faith": "You create a shimmering field around a creature, granting it a +2 bonus to AC. The effect lasts for up to 10 minutes.",
+    "Shillelagh": "You imbue a wooden weapon with magical energy, causing it to deal 1d8 damage and use your spellcasting ability modifier for attack and damage rolls. The effect lasts for up to 1 minute.",
+    "Shocking Grasp": "You touch a creature and deliver a shock of electricity. Make a melee spell attack against the target. On a hit, the target takes 1d8 lightning damage and can't take reactions until the start of its next turn. The effect lasts instantaneously.",
+    "Sickening Radiance": "You create a beam of sickening radiance. Each creature within a 30-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 4d10 radiant damage and is blinded. The effect lasts for up to 10 minutes.",
+    "Silence": "You create a 20-foot-radius sphere of silence. No sound can emanate from or be heard within the sphere. The effect lasts for up to 10 minutes.",
+    "Silent Image": "You create an illusory image of an object or creature. The effect lasts for up to 10 minutes.",
+    "Simulacrum": "You create a duplicate of a creature. The duplicate has half of the original creature's hit points and is considered a construct. The effect lasts until dispelled or destroyed.",
+    "Skill Empowerment": "You enhance a skill check. The target adds a 1d4 bonus to their skill check. The effect lasts for up to 1 hour.",
+    "Skywrite": "You create a skywriting message. The effect lasts for up to 1 hour.",
+    "Sleet Storm": "You create a storm of sleet and ice. Each creature within a 20-foot-radius sphere must make a Dexterity saving throw. On a failed save, it is restrained. The effect lasts for up to 1 minute.",
+    "Slow": "You alter time around up to six creatures of your choice within a 40-foot cube. Each creature must make a Wisdom saving throw. On a failed save, the creature's speed is halved, and it can take either an action or a bonus action on its turn. The effect lasts for up to 1 minute.",
+    "Snare": "You create a magical trap. The target must make a Dexterity saving throw. On a failed save, it is restrained by magical vines. The effect lasts until the trap is triggered or dispelled.",
+    "Speak with Animals": "You gain the ability to communicate with animals. The effect lasts for up to 10 minutes.",
+    "Speak with Dead": "You grant the ability to communicate with a dead creature. The target must make a Wisdom saving throw. On a failed save, you can ask up to five questions of the corpse. The effect lasts for up to 10 minutes.",
+    "Speak with Plants": "You gain the ability to communicate with plants. The effect lasts for up to 10 minutes.",
+    "Spider Climb": "You can climb surfaces as though under the effect of a spider climb spell. The effect lasts for up to 1 hour.",
+    "Spike Growth": "You cause an area to become filled with spiked growths. Each creature moving through the area must make a Dexterity saving throw. On a failed save, the creature takes 2d4 piercing damage for every 5 feet it moves. The effect lasts for up to 10 minutes.",
+    "Spirit Guardians": "You summon spirits to protect you. The spirits appear as a 15-foot-radius sphere centered on you. Each creature within the area must make a Wisdom saving throw. On a failed save, it takes 3d8 radiant or necrotic damage (your choice) and is slowed. The effect lasts for up to 10 minutes.",
+    "Spiritual Weapon": "You create a floating weapon that lasts for the duration. Make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes 1d8 force damage. The effect lasts for up to 1 minute.",
+    "Staggering Smite": "You imbue your weapon with disruptive energy. On a hit, the target must make a Wisdom saving throw. On a failed save, it takes 4d6 psychic damage and is stunned until the end of its next turn. The effect lasts for up to 1 minute.",
+    "Stinking Cloud": "You create a cloud of nauseating gas. Each creature within a 20-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 3d10 poison damage and is incapacitated. The effect lasts for up to 1 minute.",
+    "Stone Shape": "You mold stone into any shape you choose. The effect lasts instantaneously.",
+    "Stoneskin": "You turn your skin to stone, giving you resistance to nonmagical bludgeoning, piercing, and slashing damage. The effect lasts for up to 1 hour.",
+    "Storm of Vengeance": "You summon a storm that causes a variety of effects. Each creature within a 60-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 2d6 thunder damage, 2d6 lightning damage, and 2d6 acid damage. The effect lasts for up to 1 minute.",
+    "Suggestion": "You suggest a course of activity to a creature within range. The target must make a Wisdom saving throw. On a failed save, it pursues the suggested course of action. The effect lasts for up to 8 hours.",
+    "Sunbeam": "A beam of sunlight flashes out from your hand. Each creature in a 60-foot line must make a Constitution saving throw. On a failed save, it takes 6d8 radiant damage. The effect lasts for up to 1 minute.",
+    "Sunburst": "You create a burst of sunlight. Each creature in a 60-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 12d6 radiant damage and is blinded. The effect lasts instantaneously.",
+    "Symbol": "You inscribe a magical glyph that can have various effects. The effects are based on the symbol you choose. The effect lasts until the glyph is triggered or dispelled.",
+    "Tasha's Caustic Brew": "You create a stream of acid that pours out in a 30-foot line. Each creature in the line must make a Dexterity saving throw. On a failed save, it takes 4d4 acid damage and is coated in acid. The effect lasts for up to 1 minute.",
+    "Telekinesis": "You gain the ability to move or manipulate objects with your mind. You can lift or move objects weighing up to 1,000 pounds. The effect lasts for up to 10 minutes.",
+    "Telepathy": "You can communicate telepathically with a creature you can see within range. The effect lasts for up to 1 minute.",
+    "Teleport": "You transport yourself and up to eight willing creatures to a destination you specify. The effect lasts instantaneously.",
+    "Temple of the Gods": "You create a magical temple that lasts for up to 1 hour. The temple provides various benefits based on the deity you invoke.",
+    "Tenser's Floating Disk": "You create a floating disk that can support up to 500 pounds. The disk lasts for up to 1 hour.",
+    "Thunderwave": "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube must make a Constitution saving throw. On a failed save, it takes 2d8 thunder damage and is pushed 10 feet away. The effect lasts instantaneously.",
+    "Time Stop": "You briefly stop time for everyone but yourself. You take 1d4 + 1 turns in a row. The effect lasts until you end it or the duration expires.",
+    "Tiny Hut": "You create a 10-foot-radius immobile dome of force that lasts for up to 8 hours. The dome is opaque from the outside and transparent from the inside.",
+    "Tongues": "You grant the ability to understand and speak any language. The effect lasts for up to 1 hour.",
+    "Transport via Plants": "You transport yourself and up to eight willing creatures through plants. The effect lasts instantaneously.",
+    "Trap the Soul": "You trap a creature's soul in a gem. The target must make a Wisdom saving throw. On a failed save, the creature's soul is trapped in a gem. The effect lasts until dispelled or the gem is destroyed.",
+    "Tree Stride": "You gain the ability to step into and travel through trees. The effect lasts for up to 1 minute.",
+    "True Polymorph": "You transform a creature or object into a different creature or object. The effect lasts for up to 1 hour.",
+    "True Resurrection": "You return a dead creature to life, provided it has been dead for no longer than 200 years. The creature returns with all its hit points. The effect lasts instantaneously.",
+    "True Seeing": "You gain the ability to see things as they actually are. The effect lasts for up to 1 hour.",
+    "True Strike": "You gain advantage on your next attack roll against a target. The effect lasts until the end of your next turn.",
+    "Unseen Servant": "You create an invisible, mindless servant that performs simple tasks. The effect lasts for up to 1 hour.",
+    "Vampiric Touch": "You touch a creature and siphon its life force. The target must make a Constitution saving throw. On a failed save, it takes 3d6 necrotic damage and you regain hit points equal to half the necrotic damage dealt. The effect lasts for up to 1 minute.",
+    "Vicious Mockery": "You unleash a string of insults. The target must make a Wisdom saving throw. On a failed save, it takes 1d4 psychic damage and has disadvantage on the next attack roll. The effect lasts instantaneously.",
+    "Wall of Fire": "You create a wall of fire. Each creature within 10 feet of the wall must make a Dexterity saving throw. On a failed save, it takes 5d8 fire damage. The effect lasts for up to 1 minute.",
+    "Wall of Force": "You create an invisible wall of force. The wall is 1/10-inch thick and can be shaped into various forms. The effect lasts for up to 10 minutes.",
+    "Wall of Ice": "You create a wall of ice. Each creature within 10 feet of the wall must make a Dexterity saving throw. On a failed save, it takes 5d6 cold damage. The effect lasts for up to 1 hour.",
+    "Wall of Stone": "You create a wall of stone. Each creature within 10 feet of the wall must make a Dexterity saving throw. On a failed save, it takes 4d6 bludgeoning damage. The effect lasts for up to 1 hour.",
+    "Wall of Thorns": "You create a wall of thorns. Each creature within 5 feet of the wall must make a Dexterity saving throw. On a failed save, it takes 2d6 piercing damage. The effect lasts for up to 10 minutes.",
+    "Warding Bond": "You create a magical connection between yourself and a willing creature. Both of you have disadvantage on saving throws and take half damage from attacks. The effect lasts for up to 1 hour.",
+    "Water Breathing": "You grant the ability to breathe underwater to up to 10 willing creatures. The effect lasts for up to 1 hour.",
+    "Water Walk": "You grant the ability to walk on water to up to 10 willing creatures. The effect lasts for up to 1 hour.",
+    "Watery Sphere": "You create a sphere of water that can move and crush objects. Each creature within the sphere must make a Strength saving throw. On a failed save, it takes 2d6 bludgeoning damage. The effect lasts for up to 1 minute.",
+    "Web": "You create a mass of thick, sticky webs. Each creature in a 20-foot cube must make a Dexterity saving throw. On a failed save, it is restrained by the webs. The effect lasts for up to 1 hour.",
+    "Weird": "You create illusory phantoms. Each creature in a 30-foot-radius sphere must make a Wisdom saving throw. On a failed save, it takes 9d10 psychic damage and is frightened. The effect lasts for up to 1 minute.",
+    "Wind Walk": "You transform yourself and up to ten willing creatures into a cloud of mist. The effect lasts for up to 1 hour.",
+    "Wind Wall": "You create a wall of strong wind. Each creature within 10 feet of the wall must make a Strength saving throw. On a failed save, it takes 2d8 bludgeoning damage. The effect lasts for up to 1 minute.",
+    "Wish": "You make a wish for any effect. The DM determines the effect based on the wish's nature. The effect lasts instantaneously.",
+    "Word of Recall": "You teleport yourself and up to five willing creatures to a designated sanctuary. The effect lasts instantaneously.",
+    "Wrathful Smite": "You imbue your weapon with wrathful energy. On a hit, the target must make a Wisdom saving throw. On a failed save, it takes 1d6 psychic damage and is frightened. The effect lasts for up to 1 minute.",
+    "Zone of Truth": "You create an area in which creatures cannot lie. Each creature in a 15-foot-radius sphere must make a Charisma saving throw. On a failed save, it cannot speak a deliberate lie. The effect lasts for up to 10 minutes.",
+    "Aganazzar's Scorcher": "You create a line of roaring flame. Each creature in a 30-foot line must make a Dexterity saving throw. On a failed save, it takes 3d8 fire damage. The effect lasts instantaneously.",
+    "Beast Bond": "You create a telepathic link with a beast. The effect lasts for up to 1 hour.",
+    "Bones of the Earth": "You cause the ground to erupt and create difficult terrain. Each creature in a 40-foot-radius area must make a Dexterity saving throw. On a failed save, it takes 3d10 bludgeoning damage. The effect lasts for up to 1 minute.",
+    "Catnap": "You allow up to three willing creatures to take a short rest. The effect lasts for up to 10 minutes.",
+    "Ceremony": "You perform a ceremony that can have various effects. The effects are based on the type of ceremony you perform. The effect lasts until the ceremony is complete.",
+    "Chaos Bolt": "You hurl an erratic bolt of chaotic energy. On a hit, the target takes 2d8 + 1d6 damage. The damage type is determined by rolling a d8. The effect lasts instantaneously.",
+    "Charm Monster": "You charm a creature. The target must make a Wisdom saving throw. On a failed save, it is charmed by you for up to 1 hour.",
+    "Danse Macabre": "You create dancing skeletal undead. Each creature within a 30-foot-radius sphere must make a Wisdom saving throw. On a failed save, it is frightened and takes 4d6 necrotic damage. The effect lasts for up to 1 minute.",
+    "Dust Devil": "You create a swirling vortex of dust. Each creature in a 5-foot-radius must make a Strength saving throw. On a failed save, it is pushed 10 feet away and takes 1d8 bludgeoning damage. The effect lasts for up to 1 minute.",
+    "Earth Tremor": "You create a tremor in the ground. Each creature within a 10-foot-radius sphere must make a Dexterity saving throw. On a failed save, it takes 1d6 bludgeoning damage and is knocked prone. The effect lasts instantaneously.",
+    "Earthbind": "You bind a creature to the ground. The target must make a Strength saving throw. On a failed save, its movement is reduced to 0 and it falls prone. The effect lasts for up to 1 minute.",
+    "Elemental Bane": "You curse a creature. The target must make a Charisma saving throw. On a failed save, it takes an additional 1d4 damage from certain damage types. The effect lasts for up to 1 minute.",
+    "Enemies Abound": "You create a sense of paranoia in a creature. The target must make a Wisdom saving throw. On a failed save, it is frightened and attacks creatures other than you. The effect lasts for up to 1 minute.",
+    "Erupting Earth": "You cause the earth to erupt in a burst of stone. Each creature in a 20-foot-radius sphere must make a Dexterity saving throw. On a failed save, it takes 3d12 bludgeoning damage. The effect lasts instantaneously.",
+    "Far Step": "You teleport up to 60 feet to an unoccupied space you can see. The effect lasts instantaneously.",
+    "Find Greater Steed": "You summon a more powerful steed. The effect lasts until the steed is dismissed or killed.",
+    "Healing Spirit": "You summon a spirit that heals. Each creature within a 5-foot-radius sphere regains hit points equal to 1d6. The effect lasts for up to 1 minute.",
+    "Holy Weapon": "You imbue a weapon with holy energy. On a hit, the target takes an additional 2d8 radiant damage. The effect lasts for up to 1 hour.",
+    "Ice Knife": "You create a shard of ice that you hurl at a creature. On a hit, the target takes 1d10 cold damage. Each creature within 5 feet of the target must make a Dexterity saving throw. On a failed save, it takes 2d6 cold damage. The effect lasts instantaneously.",
+    "Illusory Dragon": "You create an illusory dragon that causes fear. Each creature in a 60-foot cone must make a Wisdom saving throw. On a failed save, it takes 5d6 psychic damage and is frightened. The effect lasts for up to 1 minute.",
+    "Immolation": "You surround a creature with flames. The target must make a Constitution saving throw. On a failed save, it takes 6d6 fire damage and is on fire. The effect lasts for up to 1 minute.",
+    "Infernal Calling": "You summon a devil to assist you. The devil appears and follows your commands. The effect lasts until the devil is dismissed or killed.",
+    "Infestation": "You cause a creature to be infested with bugs. The target must make a Constitution saving throw. On a failed save, it takes 1d6 poison damage and is moved 5 feet. The effect lasts for up to 1 minute.",
+    "Invulnerability": "You grant yourself temporary invulnerability to a damage type. The effect lasts for up to 1 minute.",
+    "Life Transference": "You transfer life force from yourself to another creature. You take 4d10 necrotic damage, and the target regains hit points equal to twice the necrotic damage dealt. The effect lasts instantaneously.",
+    "Maddening Darkness": "You create a field of magical darkness. Each creature in a 60-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 6d8 psychic damage and is blinded. The effect lasts for up to 1 minute.",
+    "Mass Polymorph": "You transform up to ten creatures into other creatures. The effect lasts for up to 1 minute.",
+    "Maximilian's Earthen Grasp": "You cause a hand of earth to rise up and grasp a creature. The target must make a Strength saving throw. On a failed save, it takes 2d6 bludgeoning damage and is restrained. The effect lasts for up to 1 minute.",
+    "Melf's Minute Meteors": "You create small meteors that you can hurl. On a hit, the target takes 2d6 fire damage. The effect lasts for up to 1 minute.",
+    "Mental Prison": "You create an illusory prison. The target must make an Intelligence saving throw. On a failed save, it takes 5d10 psychic damage and is restrained. The effect lasts for up to 1 minute.",
+    "Mighty Fortress": "You create a magical fortress. The effect lasts for up to 8 hours.",
+    "Mind Spike": "You send a spike of psychic energy into a creature's mind. The target must make a Wisdom saving throw. On a failed save, it takes 2d8 psychic damage and you know its location. The effect lasts for up to 1 minute.",
+    "Mordenkainen's Faithful Hound": "You summon a magical hound that guards an area. The effect lasts for up to 8 hours.",
+    "Mordenkainen's Private Sanctum": "You create an invisible, impenetrable area. The effect lasts for up to 24 hours.",
+    "Negative Energy Flood": "You release a wave of negative energy. Each creature in a 30-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 5d10 necrotic damage. The effect lasts instantaneously.",
+    "Pyrotechnics": "You create a burst of light or smoke. The effect lasts instantaneously.",
+    "Scatter": "You teleport up to 30 feet to an unoccupied space you can see. The effect lasts instantaneously.",
+    "Shadow Blade": "You create a blade of shadowy magic. On a hit, the target takes 2d6 psychic damage. The effect lasts for up to 1 minute.",
+    "Shadow of Moil": "You cloak yourself in shadowy flames. Each creature within 10 feet of you must make a Constitution saving throw. On a failed save, it takes 2d8 necrotic damage. The effect lasts for up to 1 minute.",
+    "Sickening Radiance": "You emit an aura of sickening light. Each creature in a 30-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 4d10 radiant damage and is blinded. The effect lasts for up to 10 minutes.",
+    "Skill Empowerment": "You enhance a skill. The target gains advantage on checks using the chosen skill. The effect lasts for up to 1 hour.",
+    "Skywrite": "You create floating letters of smoke. The effect lasts for up to 1 hour.",
+    "Snare": "You create a magical trap. The target must make a Dexterity saving throw. On a failed save, it is restrained. The effect lasts until the trap is triggered or dispelled.",
+    "Soul Cage": "You trap a creature's soul in a cage. The target must make a Wisdom saving throw. On a failed save, its soul is trapped in the cage. The effect lasts until dispelled or the cage is destroyed.",
+    "Steel Wind Strike": "You strike with a whirling blade of wind. Each creature in a 30-foot line must make a Dexterity saving throw. On a failed save, it takes 5d10 slashing damage. The effect lasts instantaneously.",
+    "Storm Sphere": "You create a sphere of stormy wind. Each creature within a 20-foot-radius sphere must make a Dexterity saving throw. On a failed save, it takes 2d6 bludgeoning damage and is pushed 10 feet away from the center. The effect lasts for up to 1 minute.",
+    "Summon Greater Demon": "You summon a greater demon to fight for you. The demon appears in an unoccupied space within range and follows your commands. The effect lasts for up to 1 hour or until the demon is dismissed or killed.",
+    "Summon Lesser Demons": "You summon lesser demons to fight for you. The demons appear in unoccupied spaces within range and follow your commands. The effect lasts for up to 1 hour or until the demons are dismissed or killed.",
+    "Swift Quiver": "You create a magical quiver that allows you to make an additional attack with a ranged weapon. The effect lasts for up to 1 minute.",
+    "Synaptic Static": "You create a burst of psychic energy. Each creature in a 20-foot-radius sphere must make an Intelligence saving throw. On a failed save, it takes 8d6 psychic damage and has disadvantage on attack rolls and ability checks. The effect lasts for up to 1 minute.",
+    "Temple of the Gods": "You create a divine sanctuary. The effect lasts for up to 1 hour.",
+    "Tenser's Transformation": "You transform into a powerful warrior. You gain advantage on Strength checks and saving throws, and you deal extra damage with melee weapon attacks. The effect lasts for up to 1 minute.",
+    "Thunder Step": "You teleport up to 90 feet to an unoccupied space you can see. Each creature within 10 feet of you must make a Constitution saving throw. On a failed save, it takes 3d10 thunder damage. The effect lasts instantaneously.",
+    "Tidal Wave": "You create a wave of water. Each creature in a 30-foot line must make a Dexterity saving throw. On a failed save, it takes 4d8 bludgeoning damage and is knocked prone. The effect lasts instantaneously.",
+    "Tiny Servant": "You create a tiny, magical servant. The servant performs simple tasks and follows your commands. The effect lasts for up to 8 hours.",
+    "Toll the Dead": "You target a creature within range. The target must make a Wisdom saving throw. On a failed save, it takes 1d8 necrotic damage if it is not at its maximum hit points. The damage increases to 2d8 if the target is missing any hit points. The effect lasts instantaneously.",
+    "Transmute Rock": "You transform rock into another substance. The effect lasts instantaneously.",
+    "Vitriolic Sphere": "You create a sphere of acid. Each creature within a 20-foot-radius sphere must make a Dexterity saving throw. On a failed save, it takes 4d10 acid damage. The effect lasts instantaneously.",
+    "Wall of Light": "You create a wall of radiant light. Each creature within 10 feet of the wall must make a Constitution saving throw. On a failed save, it takes 2d8 radiant damage. The effect lasts for up to 1 minute.",
+    "Watery Sphere": "You create a sphere of water. Each creature within a 10-foot-radius sphere must make a Strength saving throw. On a failed save, it is restrained. The effect lasts for up to 1 minute.",
+    "Whirlwind": "You create a whirlwind. Each creature in a 10-foot-radius cylinder must make a Strength saving throw. On a failed save, it is thrown 1d6 x 10 feet away and takes 6d10 bludgeoning damage. The effect lasts for up to 1 minute.",
+    "Wrath of Nature": "You summon natural forces to protect you. Each creature within a 60-foot-radius sphere must make a Dexterity saving throw. On a failed save, it takes 3d10 bludgeoning damage and is restrained. The effect lasts for up to 1 minute.",
+    "Zephyr Strike": "You imbue yourself with the speed of the wind. You gain advantage on attack rolls and your movement doesn’t provoke opportunity attacks. The effect lasts for up to 1 minute.",
+    
+    "Ashardalon's Stride": "You stride through the flames of Ashardalon. You gain resistance to fire damage, and when you hit a creature with a melee attack, it takes 2d6 fire damage. The effect lasts for up to 1 minute.",
+    "Draconic Transformation": "You transform into a dragon-like form. You gain temporary hit points, your melee attacks deal extra damage, and you can use a breath weapon attack. The effect lasts for up to 1 hour.",
+    "Fizban's Platinum Shield": "You create a shimmering shield of platinum. You gain a +2 bonus to AC, and creatures that hit you with melee attacks take 2d6 radiant damage. The effect lasts for up to 1 hour.",
+    "Nathair's Mischief": "You create a magical effect that causes random, chaotic effects. Each creature within a 30-foot-radius sphere must make a Wisdom saving throw. On a failed save, it suffers from a random effect such as being frightened or confused. The effect lasts for up to 1 minute.",
+    "Raulothim's Psychic Lance": "You send a lance of psychic energy toward a creature. The target must make an Intelligence saving throw. On a failed save, it takes 7d6 psychic damage and is incapacitated. The effect lasts for up to 1 minute.",
+    "Summon Draconic Spirit": "You summon a draconic spirit to fight for you. The spirit appears in an unoccupied space within range and follows your commands. The effect lasts for up to 1 hour or until the spirit is dismissed or killed.",
+    
+    "Animate Objects": "You bring up to 10 nonmagical objects to life. Each object animates and can perform simple tasks or attack. The effect lasts for up to 1 minute.",
+    "Enlarge/Reduce": "You cause a creature or object to grow or shrink. The target’s size changes, and it gains or loses bonuses to its abilities. The effect lasts for up to 1 minute.",
+    "Giant's Might": "You magically grow in size. You gain temporary hit points and increase the damage of your attacks. The effect lasts for up to 1 minute.",
+    "Rime's Binding Ice": "You create a burst of icy magic. Each creature within a 20-foot-radius sphere must make a Constitution saving throw. On a failed save, it takes 4d6 cold damage and is restrained. The effect lasts for up to 1 minute.",
+    "Runic Shield": "You create a shield of runes that grants you a +2 bonus to AC. The effect lasts for up to 1 hour.",
+    "Titanic Shield": "You create a massive shield that grants you advantage on Strength checks and saving throws, and you gain temporary hit points. The effect lasts for up to 1 minute.",
+    
+    "Air Bubble": "You create a bubble of air around a creature or object. The effect lasts for up to 1 hour.",
+    "Create Spelljamming Helm": "You create a spelljamming helm that allows a ship to travel through space. The effect lasts until the helm is destroyed or removed.",
+    "Cosmic Aura": "You create an aura that protects you from cosmic forces. You gain resistance to psychic damage and advantage on saving throws against being charmed or frightened. The effect lasts for up to 1 hour.",
+    "Planar Shift": "You shift yourself and up to eight willing creatures to another plane of existence. The effect lasts instantaneously.",
+    "Stellar Body": "You transform into a starry form. You gain resistance to radiant damage and can emit blinding light. The effect lasts for up to 1 hour.",
+    "Void Navigation": "You navigate through the void of space. You gain advantage on survival checks to navigate and avoid hazards in space. The effect lasts for up to 1 hour."
+
+};
+
+
+
+const items = {
+            "Adventurer's Kit": "Contains basic equipment needed for adventuring, including a backpack, bedroll, mess kit, rations, rope, and a tinderbox.",
+            "Alchemist's Fire": "A sticky, flammable substance that ignites when exposed to air. Deals 1d4 fire damage on a hit and additional fire damage for subsequent rounds.",
+            "Bag of Holding": "A bag with an interior space that is larger than its outer dimensions. It can hold up to 500 pounds of items without increasing its weight or volume.",
+            "Bedroll": "A basic sleeping mat for use in the outdoors, providing comfort for sleeping but no significant protection or insulation.",
+            "Blanket": "A basic item for warmth and comfort. Provides no mechanical benefits in D&D.",
+            "Book": "A book that may contain information, lore, or spells. The contents depend on the specific book.",
+            "Bottle": "A container that can hold liquids. Its use is generally for storing potions or other liquid items.",
+            "Caltrops": "Small, spiked objects that, when spread on the ground, slow down movement. A creature moving through the area must succeed on a DC 15 Dexterity saving throw or take 1 damage and have their speed reduced by 10 feet.",
+            "Candles": "Basic candles used for illumination. Each candle burns for 1 hour and provides bright light in a 5-foot radius and dim light for an additional 5 feet.",
+            "Chain Mail": "Armor that provides an AC of 16. It is heavy armor, imposing disadvantage on Dexterity (Stealth) checks.",
+            "Climber's Kit": "Includes a harness, pitons, rope, and other equipment needed for climbing. Provides advantage on Strength (Athletics) checks related to climbing.",
+            "Common Clothes": "Simple clothing suitable for daily wear. Provides no armor class benefits.",
+            "Component Pouch": "A small leather pouch used to hold material components needed for spellcasting. Essential for spellcasters who use material components.",
+            "Crowbar": "A metal bar used for prying things open or levering objects. Provides advantage on Strength (Athletics) checks to break open doors or chests.",
+            "Disguise Kit": "A set of tools for creating disguises. Provides advantage on Charisma (Deception) checks to disguise oneself.",
+            "Dungeoneer's Pack": "Includes a variety of adventuring supplies, such as a backpack, a crowbar, a hammer, ten pitons, ten torches, a tinderbox, rations, and a waterskin.",
+            "Explorer's Pack": "Contains gear for wilderness exploration: a backpack, bedroll, mess kit, rations, rope, and a tinderbox.",
+            "Fishing Tackle": "A set of tools used for fishing. Provides advantage on Wisdom (Survival) checks related to fishing.",
+            "Flask": "A container that can hold liquids. Useful for carrying potions, water, or other fluids.",
+            "Grappling Hook": "A hook with a rope attached, used to climb or secure items. Provides advantage on Strength (Athletics) checks to climb or secure a rope.",
+            "Healing Potion": "Restores 2d4 + 2 hit points when consumed.",
+            "Holy Water": "Water blessed by a cleric or paladin. Deals 2d6 radiant damage to undead or fiends when thrown.",
+            "Ink": "Used for writing or drawing. No mechanical effects in D&D.",
+            "Ink Pen": "A writing implement for use with ink. No mechanical effects in D&D.",
+            "Jewelry": "Valuable items, often used for trade or as treasure. No mechanical effects in D&D.",
+            "Lantern": "Provides bright light in a 30-foot radius and dim light for an additional 30 feet. Can be carried or hung.",
+            "Lock": "A mechanism used to secure doors or chests. Requires a Dexterity check with thieves' tools to pick.",
+            "Manacles": "Metal restraints used to bind a creature. The creature must succeed on a DC 20 Strength check to break free.",
+            "Mistletoe": "A spell component used for druidic magic. Essential for certain druid spells.",
+            "Potion of Climbing": "Grants advantage on Strength (Athletics) checks made to climb for 1 hour.",
+            "Potion of Invisibility": "Grants invisibility for up to 1 hour or until the drinker attacks or casts a spell.",
+            "Potion of Strength": "Increases Strength to 23 for 1 hour.",
+            "Rations": "Food provisions for adventurers. Each day's worth of rations provides enough food for one person.",
+            "Rope": "A 50-foot length of rope. Useful for climbing, tying up items, or other purposes.",
+            "Sack": "A basic container for carrying items. Can hold up to 2 cubic feet of material.",
+            "Signal Whistle": "A whistle used to make a loud noise to signal or attract attention.",
+            "Spell Component Pouch": "A small bag used to hold material components needed for spellcasting. Essential for spellcasters.",
+            "Tinderbox": "A small container with flint, steel, and tinder for starting a fire.",
+            "Torch": "A stick wrapped in cloth and soaked in a flammable substance. Provides bright light in a 20-foot radius and dim light for an additional 20 feet.",
+            "Waterskin": "A container for carrying water. Can hold up to 5 gallons of liquid.",
+            "Whetstone": "A stone used for sharpening blades and maintaining weapons. Provides no mechanical benefits in D&D.",
+            "Wizard's Spellbook": "A book containing spells known by a wizard. Essential for spell preparation and casting.",
+    "Potion of Climbing": "Grants advantage on Strength (Athletics) checks made to climb for 1 hour.",
+    "Potion of Healing": "Restores 2d4 + 2 hit points when consumed.",
+    "Spell Scroll": "A single-use scroll containing a spell. The spell can be cast from the scroll without expending a spell slot.",
+    "Adamantine Armor": "Heavy armor made of adamantine, providing an AC of 18. It is immune to critical hits.",
+    "Ammunition": "A single piece of ammunition for ranged weapons. Can be enchanted or have special properties.",
+    "Amulet of Proof against Detection and Location": "Makes the wearer immune to magical scrying and location-tracking.",
+    "Bag of Holding": "A bag with an interior space much larger than its outer dimensions. Can hold up to 500 pounds without increasing its weight.",
+    "Bag of Tricks": "A bag that produces a random creature when an item is pulled from it. The creature is friendly to the user.",
+    "Boots of Elvenkind": "Grants advantage on Dexterity (Stealth) checks to avoid making noise while moving.",
+    "Boots of Striding and Springing": "Doubles the wearer's jumping distance and height. The wearer’s Strength score is 19 while wearing these boots.",
+    "Boots of the Winterlands": "Grants resistance to cold damage and allows the wearer to move across icy surfaces without penalty.",
+    "Bracers of Archery": "Grants a +2 bonus to damage rolls with ranged weapons and proficiency with longbows and shortbows.",
+    "Brooch of Shielding": "Grants resistance to force damage and immunity to the Magic Missile spell.",
+    "Broom of Flying": "Allows the user to fly at a speed of 50 feet while riding it.",
+    "Circlet of Blasting": "Allows the wearer to cast the Scorching Ray spell (2 rays) once per day.",
+    "Cloak of Elvenkind": "Grants advantage on Dexterity (Stealth) checks made to hide and makes the wearer harder to detect.",
+    "Cloak of Protection": "Grants a +1 bonus to AC and saving throws while worn.",
+    "Cloak of the Manta Ray": "Allows the wearer to breathe underwater and swim at a speed of 60 feet.",
+    "Decanter of Endless Water": "Produces a stream of water when poured out. Can produce 1 gallon, 5 gallons, or 10 gallons per turn.",
+    "Deck of Illusions": "Creates illusory figures when a card is drawn and thrown. The illusions are static and have no physical effect.",
+    "Dust of Disappearance": "Turns the user and all creatures within 10 feet invisible for 2d4 minutes.",
+    "Dust of Dryness": "Absorbs up to 15 gallons of liquid into a small bead when thrown. The bead can be used to release the liquid.",
+    "Dust of Sneezing and Choking": "Causes creatures within a 10-foot radius of where it is thrown to sneeze and choke, imposing disadvantage on attacks and ability checks.",
+    "Efficient Quiver": "A quiver that can hold up to 60 arrows or bolts, or 18 javelins, spears, or similar weapons, without increasing its weight.",
+    "Elemental Gem": "When crushed, summons an elemental of the type associated with the gem (air, earth, fire, or water) to fight for you.",
+    "Eversmoking Bottle": "When opened, releases a thick cloud of smoke that obscures vision in a 60-foot radius for 1 hour.",
+    "Eyes of Charming": "Grants the ability to cast Charm Person spell at 2nd level, with a DC 13 Wisdom saving throw, once per day.",
+    "Eyes of Minute Seeing": "Allows the wearer to see details as if under the effects of a *detect magic* spell, within a 1-foot radius.",
+    "Eyes of the Eagle": "Grants advantage on Wisdom (Perception) checks that rely on sight and allows the wearer to see up to 1 mile away.",
+    "Figurine of Wondrous Power": "Summons a specific creature when the figurine is carved or thrown. The creature remains for 1 hour or until dismissed.",
+    "Gauntlets of Ogre Power": "Increases the wearer’s Strength score to 19 while worn.",
+    "Gem of Brightness": "Allows the wearer to cast the *daylight* spell and also use a blinding flash of light once per day.",
+    "Gloves of Missile Snaring": "Allows the wearer to reduce damage from ranged weapon attacks by 1d10 + Dexterity modifier.",
+    "Gloves of Swimming and Climbing": "Grants a +5 bonus to Strength (Athletics) checks related to climbing and swimming.",
+    "Goggles of Night": "Grants darkvision with a range of 60 feet while worn.",
+    "Hat of Disguise": "Allows the wearer to cast *disguise self* spell at will, with no components needed.",
+    "Headband of Intellect": "Sets the wearer’s Intelligence score to 19 while worn.",
+    "Helm of Comprehending Languages": "Allows the wearer to understand any spoken language and read any written language.",
+    "Helm of Telepathy": "Allows the wearer to communicate telepathically with any creature within 30 feet and detect thoughts.",
+    "Immovable Rod": "A rod that can be fixed in space and remains stationary, even if the surroundings move.",
+    "Javelin of Lightning": "When thrown, transforms into a bolt of lightning, dealing 4d6 lightning damage in a line 5 feet wide and 30 feet long.",
+    "Lantern of Revealing": "Reveals invisible creatures and objects within a 30-foot radius of the lantern’s light.",
+    "Medallion of Thoughts": "Allows the wearer to read the surface thoughts of creatures within 30 feet.",
+    "Mithral Armor": "Lightweight armor made of mithral, providing the same AC as its normal counterpart but not imposing disadvantage on Dexterity (Stealth) checks.",
+    "Necklace of Adaptation": "Grants advantage on saving throws against harmful gases and vapors, and the wearer can breathe normally in such environments.",
+    "Oil of Slipperiness": "Allows the user to move through difficult terrain without impediment and provides advantage on Dexterity saving throws against being grappled.",
+    "Pearl of Power": "Allows the user to regain one expended spell slot of up to 3rd level once per day.",
+    "Periapt of Health": "Grants immunity to disease while worn.",
+    "Periapt of Wound Closure": "Stabilizes the wearer whenever they are dying and restores 1 hit point when they roll a natural 20 on a death saving throw.",
+    "Philter of Love": "Causes the drinker to become enamored with the person they find most attractive in sight for 1 hour.",
+    "Pipes of Haunting": "Allows the user to cast *fear* spell once per day. Creatures within 30 feet of the pipes must succeed on a DC 15 Wisdom saving throw or be frightened.",
+    "Pipes of the Sewers": "Summons a swarm of rats when played. The swarm obeys the user’s commands.",
+    "Potion of Animal Friendship": "Grants the ability to communicate with and charm animals for 1 hour.",
+    "Potion of Giant Strength": "Increases Strength to 21 for 1 hour.",
+    "Potion of Growth": "Causes the drinker to grow to a height of 10 feet and gain advantage on Strength checks and saving throws for 1 hour.",
+    "Potion of Poison": "Causes the drinker to take 2d4 poison damage and become poisoned for 1 hour.",
+    "Potion of Resistance": "Grants resistance to one type of damage (chosen at the time of drinking) for 1 hour.",
+    "Potion of Water Breathing": "Allows the drinker to breathe underwater for 1 hour.",
+    "Restorative Ointment": "Cures one disease or condition affecting the user when applied.",
+    "Ring of Jumping": "Allows the wearer to cast *jump* spell at will.",
+    "Ring of Mind Shielding": "Protects the wearer from telepathic intrusion and mental attacks. The wearer is immune to being detected by divination magic.",
+    "Ring of Swimming": "Grants a swimming speed of 60 feet to the wearer.",
+    "Ring of Warmth": "Grants resistance to cold damage and provides advantage on saving throws against extreme cold.",
+    "Ring of Water Walking": "Allows the wearer to walk on water as if it were solid ground.",
+    "Robe of Useful Items": "Contains patches that can be used to produce useful items or tools when removed and placed on the ground.",
+    "Rope of Climbing": "Allows the user to command a rope to move, knot itself, or un-knot itself. The rope can extend up to 50 feet.",
+    "Shield": "Grants a +2 bonus to AC while wielded.",
+    "Slippers of Spider Climbing": "Allows the wearer to move up and down vertical surfaces and across ceilings as if they were climbing normally.",
+    "Staff of the Python": "Allows the user to transform the staff into a giant constrictor snake once per day.",
+    "Stone of Good Luck (Luckstone)": "Grants a +1 bonus to ability checks and saving throws while carried.",
+    "Trident of Fish Command": "Allows the user to cast *command* spell on fish and aquatic creatures as an action.",
+    "Wand of Magic Detection": "Allows the user to cast *detect magic* at will.",
+    "Wand of Magic Missiles": "Allows the user to cast *magic missile* spell as an action, producing 1d4+1 darts.",
+    "Wand of Secrets": "Reveals secret doors and traps within 30 feet of the user when pointed at the area.",
+    "Wand of the War Mage": "Grants a +1 bonus to spell attack rolls and improves the effectiveness of spells.",
+    "Wand of Web": "Allows the user to cast *web* spell once per day.",
+    "Weapon": "Any weapon can be enchanted or have special properties based on its type.",
+    "Wind Fan": "Allows the user to create a strong gust of wind in a 60-foot line, which can extinguish flames and blow away small creatures.",
+    "Winged Boots": "Grants a flying speed of 30 feet while worn.",
+    "Amulet of Health": "Sets the wearer’s Constitution score to 19 while worn.",
+    "Armor of Resistance": "Grants resistance to a specific type of damage (chosen at the time of attunement).",
+    "Armor of Vulnerability": "Grants vulnerability to a specific type of damage (chosen at the time of attunement).",
+    "Arrow-Catching Shield": "Grants a +2 bonus to AC and allows the user to catch or deflect arrows shot at them.",
+    "Bag of Beans": "Allows the user to plant beans that grow into a variety of magical effects depending on the type of bean used.",
+    "Bead of Force": "Creates a sphere of force with a 10-foot radius when thrown, causing damage and trapping creatures inside.",
+    "Belt of Dwarvenkind": "Grants the wearer advantage on Charisma (Persuasion) checks with dwarves and increases Constitution to 19 while worn.",
+    "Belt of Giant Strength": "Sets the wearer’s Strength score to 21 while worn.",
+    "Berserker Axe": "Grants advantage on attack rolls and additional damage, but the user must attack the nearest creature each turn.",
+    "Boots of Levitation": "Allows the wearer to levitate up to 20 feet off the ground and move in any direction.",
+    "Bowl of Commanding Water Elementals": "Summons a water elemental to serve the user’s command when used.",
+    "Bracers of Defense": "Grants a +2 bonus to AC if the wearer is not wearing armor or using a shield.",
+    "Brazier of Commanding Fire Elementals": "Summons a fire elemental to serve the user’s command when used.",
+    "Cape of the Mountebank": "Allows the wearer to cast *dimension door* spell once per day.",
+    "Censer of Controlling Air Elementals": "Summons an air elemental to serve the user’s command when used.",
+    "Chime of Opening": "Allows the user to open any locked or sealed door or container with a chime.",
+    "Cloak of Displacement": "Grants disadvantage on attack rolls against the wearer and causes them to appear to be in a slightly different location.",
+    "Cloak of the Bat": "Allows the wearer to fly and grants advantage on Dexterity (Stealth) checks made in dim light or darkness.",
+    "Cube of Force": "Allows the user to activate one of several effects, including creating a protective shield or dispelling magic.",
+    "Dagger of Venom": "Allows the user to coat the dagger with poison, causing an additional 2d10 poison damage on a hit.",
+    "Dimensional Shackles": "Prevents a creature from using teleportation or interplanar travel while restrained by the shackles.",
+    "Dragon Slayer": "Grants additional damage against dragons and advantage on attack rolls against them.",
+    "Elven Chain": "Grants an AC of 14 + Dexterity modifier and does not impose disadvantage on Dexterity (Stealth) checks.",
+    "Feather Token": "Allows the user to create a variety of magical effects, such as summoning a large bird or creating a feather fall effect.",
+    "Flame Tongue": "Deals an additional 2d6 fire damage on a hit and can be activated to produce a continuous flame.",
+    "Folding Boat": "Transforms into a boat or a small ship when unfolded, capable of carrying passengers and cargo.",
+    "Gem of Seeing": "Grants the ability to see things as they actually are, including hidden or invisible objects and creatures.",
+    "Giant Slayer": "Grants additional damage against giants and advantage on attack rolls against them.",
+    "Glamoured Studded Leather": "Grants an AC of 12 + Dexterity modifier and can change its appearance as a bonus action.",
+    "Handy Haversack": "A magical backpack that provides extra-dimensional storage and can be retrieved from with ease.",
+    "Helm of Teleportation": "Allows the wearer to cast *teleport* spell once per day.",
+    "Horn of Blasting": "Creates a loud blast of sound, causing damage and deafness to creatures within a 30-foot radius.",
+    "Horn of Valhalla": "Summons a group of berserkers to fight for the user when blown.",
+    "Horseshoes of Speed": "Increases the speed of a horse or similar creature by 60 feet while worn.",
+    "Instant Fortress": "Summons a fortress with thick walls and a strong defense when activated.",
+    "Ioun Stone": "Provides a variety of benefits depending on the type of stone, such as enhancing ability scores or providing protective effects.",
+    "Iron Bands of Binding": "Summons bands of iron that can restrain and immobilize creatures when thrown.",
+    "Mace of Disruption": "Deals additional radiant damage to undead and fiends and can cause them to flee in fear.",
+    "Mace of Smiting": "Deals additional damage to constructs and can destroy them if they are reduced to 0 hit points.",
+    "Mace of Terror": "Causes creatures within a 30-foot radius to become frightened unless they succeed on a Wisdom saving throw.",
+    "Mantle of Spell Resistance": "Grants advantage on saving throws against spells and other magical effects.",
+    "Necklace of Fireballs": "Allows the wearer to cast *fireball* spell once per day.",
+    "Necklace of Prayer Beads": "Grants various benefits such as healing or protection when the beads are used.",
+    "Oil of Etherealness": "Allows the user to enter the Ethereal Plane for 1 hour.",
+    "Periapt of Proof against Poison": "Grants immunity to poison while worn.",
+    "Portable Hole": "Creates a portable extra-dimensional space that can be used for storage or hiding.",
+    "Potion of Clairvoyance": "Allows the drinker to see or hear a location they are familiar with as if they were there.",
+    "Potion of Diminution": "Reduces the drinker’s size to Tiny and provides a corresponding increase in Dexterity for 1 hour.",
+    "Potion of Gaseous Form": "Transforms the drinker into a cloud of mist, allowing them to pass through small openings and be immune to nonmagical attacks.",
+    "Potion of Heroism": "Grants 10 temporary hit points and the effects of the *bless* spell for 1 hour.",
+    "Potion of Mind Reading": "Allows the drinker to read thoughts of creatures within 30 feet for 1 hour.",
+    "Ring of Animal Influence": "Allows the wearer to cast *animal friendship*, *speak with animals*, and *animal messenger* spells.",
+    "Ring of Evasion": "Grants the wearer the ability to avoid damage from area effects if they succeed on a Dexterity saving throw.",
+    "Ring of Feather Falling": "Slows the wearer’s descent, allowing them to fall safely from great heights.",
+    "Ring of Free Action": "Allows the wearer to move and act freely without being impeded by difficult terrain or magical effects.",
+    "Ring of Protection": "Grants a +1 bonus to AC and saving throws while worn.",
+    "Ring of Resistance": "Grants resistance to one type of damage chosen at the time of attunement.",
+    "Ring of Spell Storing": "Stores up to 5 levels worth of spells that can be cast by the wearer.",
+    "Ring of the Ram": "Allows the wearer to create a forceful ram effect that can push or knock back creatures and objects.",
+    "Ring of X-ray Vision": "Grants the ability to see through solid objects as if they were transparent.",
+    "Robe of Eyes": "Grants darkvision up to 120 feet and allows the wearer to see invisible creatures and objects.",
+    "Rod of Rulership": "Allows the user to command creatures within 30 feet to follow their commands if they fail a Wisdom saving throw.",
+    "Rope of Entanglement": "Allows the user to command a rope to entangle and restrain creatures when thrown.",
+    "Shield of Missile Attraction": "Grants a +2 bonus to AC but attracts ranged weapon attacks to the wielder.",
+    "Staff of Charming": "Allows the user to cast *charm person* or *charm monster* spells.",
+    "Staff of Healing": "Allows the user to cast *cure wounds*, *lesser restoration*, and other healing spells.",
+    "Staff of Swarming Insects": "Allows the user to summon a swarm of insects to attack creatures.",
+    "Staff of the Woodlands": "Grants various nature-related abilities such as casting *goodberry*, *barkskin*, and *plant growth*.",
+    "Staff of Withering": "Deals necrotic damage and can weaken creatures when used.",
+    "Stone of Controlling Earth Elementals": "Summons an earth elemental to serve the user’s command when used.",
+    "Sun Blade": "Deals radiant damage and can emit bright sunlight, harming undead and fiends.",
+    "Sword of Life Stealing": "Deals additional necrotic damage and allows the user to regain hit points when reducing a creature to 0 hit points.",
+    "Sword of Wounding": "Deals additional wounding damage that continues to cause damage over time.",
+    "Vicious Weapon": "Deals extra damage on a critical hit but also causes the wielder to take psychic damage.",
+    "Wand of Binding": "Allows the user to cast *hold person* or *hold monster* spells.",
+    "Wand of Enemy Detection": "Allows the user to detect the presence of enemies within 30 feet.",
+    "Wand of Fear": "Allows the user to cast *fear* spell, causing creatures to become frightened.",
+    "Wand of Fireballs": "Allows the user to cast *fireball* spell, dealing 8d6 fire damage in a 20-foot radius.",
+    "Wand of Lightning Bolts": "Allows the user to cast *lightning bolt* spell, dealing 8d6 lightning damage in a line.",
+    "Wand of Paralysis": "Allows the user to cast *paralyze* spell, immobilizing creatures within 60 feet.",
+    "Wand of Wonder": "Allows the user to cast a random spell from a set of spells when activated.",
+    "Wings of Flying": "Grants a flying speed of 60 feet while worn.",
+    "Amulet of the Planes": "Allows the user to cast *plane shift* spell once per day.",
+    "Animated Shield": "Allows the shield to float and provide a +2 bonus to AC while wielded, freeing up the user’s hands.",
+    "Arrow of Slaying": "Deals additional damage and can kill the target outright if it is a specific type (e.g., dragon, giant).",
+    "Bag of Devouring": "A bag that devours anything placed inside it, potentially causing harm to the user.",
+    "Boots of Speed": "Doubles the wearer’s speed and grants advantage on Dexterity saving throws.",
+    "Candle of Invocation": "Creates a magical aura that enhances spells and provides protection against evil creatures.",
+    "Carpet of Flying": "Allows the user to fly on the carpet with a speed of 60 feet.",
+    "Cloak of Arachnida": "Grants the ability to climb walls and ceilings like a spider, and resistance to poison damage.",
+    "Crystal Ball": "Allows the user to scry on a location or creature as if using the *scrying* spell.",
+    "Dancing Sword": "A sword that can be animated to fight on its own and return to the wielder.",
+    "Demon Armor": "Grants resistance to fire and the ability to cast *darkness* spell once per day.",
+    "Dragon Scale Mail": "Provides an AC of 14 + Dexterity modifier (max 2) and grants resistance to a specific type of dragon’s breath weapon.",
+    "Dwarven Plate": "Provides an AC of 18 and grants advantage on saving throws against poison and resistance to poison damage.",
+    "Dwarven Thrower": "A magical warhammer that returns to the wielder’s hand when thrown and deals extra damage to giants.",
+    "Efreeti Bottle": "Allows the user to summon and command an efreeti once per day.",
+    "Frost Brand": "Deals extra cold damage and can extinguish flames when activated.",
+    "Helm of Brilliance": "Allows the wearer to cast various light-based spells and produces a radiant aura.",
+    "Horseshoes of a Zephyr": "Grants a horse or similar creature the ability to move across difficult terrain with ease and increases its speed.",
+    "Manual of Bodily Health": "Increases the reader’s Constitution score by 2, to a maximum of 24, after reading for 48 hours.",
+    "Manual of Gainful Exercise": "Increases the reader’s Strength score by 2, to a maximum of 24, after reading for 48 hours.",
+    "Manual of Golems": "Allows the reader to create a specific type of golem after studying for 48 hours.",
+    "Manual of Quickness of Action": "Increases the reader’s Dexterity score by 2, to a maximum of 24, after reading for 48 hours.",
+    "Marvelous Pigments": "Allows the user to create elaborate drawings that come to life and perform specific tasks.",
+    "Mirror of Life Trapping": "Traps creatures that look into the mirror, potentially imprisoning them in the mirror.",
+    "Nine Lives Stealer": "A sword that can steal the life force of its victims, granting the wielder additional abilities.",
+    "Oathbow": "Grants the user special abilities against sworn enemies and provides additional damage.",
+    "Oil of Sharpness": "Enhances a weapon to deal additional slashing damage and increases its effectiveness.",
+    "Potion of Flying": "Grants the ability to fly with a speed of 60 feet for 1 hour.",
+    "Potion of Invisibility": "Turns the drinker invisible for 1 hour, making them undetectable.",
+    "Potion of Speed": "Doubles the drinker’s speed and provides advantage on Dexterity saving throws and attack rolls for 1 minute.",
+    "Ring of Regeneration": "Allows the wearer to regain 1 hit point every 10 minutes and can regrow lost body parts.",
+    "Ring of Shooting Stars": "Allows the user to cast *shooting star* spell, dealing radiant damage and potentially causing blindness.",
+    "Ring of Telekinesis": "Allows the wearer to cast *telekinesis* spell at will, moving and manipulating objects at a distance.",
+    "Robe of Scintillating Colors": "Emits bright, shifting colors that can dazzle and confuse creatures around the wearer.",
+    "Robe of Stars": "Grants the ability to cast various spells and provides protection against magical attacks.",
+    "Rod of Absorption": "Absorbs incoming spells and converts them into spell slots that can be used by the wielder.",
+    "Rod of Alertness": "Grants advantage on initiative rolls and provides various sensory enhancements.",
+    "Rod of Security": "Creates a secure extradimensional space that provides safety and comfort for its user.",
+    "Scimitar of Speed": "Allows the user to make an additional attack each round and grants a +2 bonus to attack and damage rolls.",
+    "Spellguard Shield": "Provides additional protection against spells and enhances the user’s ability to resist magic.",
+    "Staff of Fire": "Allows the user to cast various fire-based spells and provides additional fire resistance.",
+    "Staff of Frost": "Allows the user to cast various frost-based spells and provides additional cold resistance.",
+    "Staff of Power": "Grants various powerful abilities including casting spells and providing a +2 bonus to attack and damage rolls.",
+    "Staff of Striking": "Deals additional bludgeoning damage and provides enhanced combat abilities.",
+    "Staff of Thunder and Lightning": "Allows the user to cast various thunder and lightning-based spells and provides resistance to those damage types.",
+    "Sword of Sharpness": "Deals additional slashing damage and has a chance to sever limbs of creatures.",
+    "Tome of Clear Thought": "Increases the reader’s Intelligence score by 2, to a maximum of 24, after reading for 48 hours.",
+    "Tome of Leadership and Influence": "Increases the reader’s Charisma score by 2, to a maximum of 24, after reading for 48 hours.",
+    "Tome of Understanding": "Increases the reader’s Wisdom score by 2, to a maximum of 24, after reading for 48 hours.",
+    "Wand of Polymorph": "Allows the user to cast *polymorph* spell once per day, transforming creatures into other forms.",
+    "Apparatus of the Crab": "A magical vehicle that can be used to travel underwater and transform into various forms.",
+    "Armor of Invulnerability": "Grants resistance to all damage types while worn and can be activated to become immune to damage for a short time.",
+    "Crystal Ball": "Allows the user to cast *scrying* spell and view distant locations or creatures.",
+    "Cubic Gate": "Allows the user to travel to different planes of existence through a series of magical gates.",
+    "Deck of Many Things": "A deck of magical cards that can have various powerful effects, both beneficial and detrimental.",
+    "Defender": "A sword that grants a +1 bonus to AC and can be used to absorb damage or deal extra damage in combat.",
+    "Hammer of Thunderbolts": "Deals additional thunder damage and can stun creatures when used in combat.",
+    "Holy Avenger": "Deals additional radiant damage and provides various protective effects against fiends and undead.",
+    "Iron Flask": "Allows the user to trap and summon powerful creatures from the flask when activated.",
+    "Luck Blade": "Grants a +1 bonus to attack and damage rolls and provides the user with additional luck-related abilities.",
+    "Plate Armor of Etherealness": "Grants an AC of 18 and allows the wearer to become ethereal for short periods.",
+    "Ring of Djinni Summoning": "Allows the user to summon a djinni to assist them with various tasks.",
+    "Ring of Elemental Command": "Grants the wearer control over a specific element (earth, air, fire, or water) and provides related abilities.",
+    "Ring of Invisibility": "Grants the wearer the ability to become invisible for a limited time each day.",
+    "Robe of Eyes": "Grants the wearer the ability to see invisible creatures and objects, and provides darkvision up to 120 feet.",
+    "Rope of Climbing": "Allows the user to command a rope to climb and anchor itself to surfaces.",
+    "Scarab of Protection": "Grants resistance to one type of damage and provides protection against curses.",
+    "Sphere of Annihilation": "A powerful artifact that can destroy anything it touches, including creatures and objects.",
+    "Tome of the Stilled Tongue": "Grants the reader the ability to cast spells silently, without verbal components.",
+    "Vorpal Sword": "Deals additional damage and has a chance to decapitate enemies on a critical hit.",
+    "Wand of Lightning Bolts": "Allows the user to cast *lightning bolt* spell once per day, dealing 8d6 lightning damage.",
+    "Wand of Web": "Allows the user to cast *web* spell at will, creating webs that can restrain creatures.",
+    "Wand of the War Mage": "Grants a +1 bonus to spell attack rolls and improves the effectiveness of spells.",
+    "Wand of Magic Detection": "Allows the user to cast *detect magic* at will, detecting magical auras.",
+    "Wand of Magic Missiles": "Allows the user to cast *magic missile* spell, creating multiple darts of magical energy.",
+    "Wand of Secrets": "Reveals secret doors and traps when pointed at an area.",
+    "Wand of Fear": "Allows the user to cast *fear* spell once per day, causing creatures to become frightened.",
+    "Wand of Binding": "Allows the user to cast *hold person* or *hold monster* spells once per day.",
+    "Wand of Polymorph": "Allows the user to cast *polymorph* spell once per day, transforming creatures into other forms.",
+    "Wand of Wonder": "Allows the user to cast a random spell from a set of possible spells when activated.",
+    "Wings of Flying": "Grants the ability to fly with a speed of 60 feet for 1 hour.",
+    "Winged Boots": "Grants a flying speed of 30 feet while worn.",
+    "Wand of Fireballs": "Allows the user to cast *fireball* spell once per day, dealing 8d6 fire damage.",
+    "Wand of Lightning Bolts": "Allows the user to cast *lightning bolt* spell once per day, dealing 8d6 lightning damage.",
+    "Wand of Paralysis": "Allows the user to cast *paralyze* spell once per day, immobilizing creatures.",
+    "Wand of Wonder": "Allows the user to cast a random spell from a set of spells when activated.",
+    "Winged Boots": "Grants a flying speed of 30 feet while worn.",
+    "Wings of Flying": "Grants a flying speed of 60 feet while worn.",
+    "Wand of Fireballs": "Allows the user to cast *fireball* spell once per day, dealing 8d6 fire damage.",
+    "Wand of Lightning Bolts": "Allows the user to cast *lightning bolt* spell once per day, dealing 8d6 lightning damage.",
+    "Wand of Paralysis": "Allows the user to cast *paralyze* spell once per day, immobilizing creatures.",
+    "Wand of Wonder": "Allows the user to cast a random spell from a set of spells when activated.",
+    "Wings of Flying": "Grants a flying speed of 60 feet while worn.",
+    "Amulet of the Planes": "Allows the user to cast *plane shift* spell once per day.",
+    "Apparatus of the Crab": "A magical vehicle that can be used to travel underwater and transform into various forms.",
+    "Armor of Invulnerability": "Grants resistance to all damage types while worn and can be activated to become immune to damage for a short time.",
+    "Deck of Many Things": "A deck of magical cards that can have various powerful effects, both beneficial and detrimental.",
+    "Defender": "A sword that grants a +1 bonus to AC and can be used to absorb damage or deal extra damage in combat.",
+    "Hammer of Thunderbolts": "Deals additional thunder damage and can stun creatures when used in combat.",
+    "Holy Avenger": "Deals additional radiant damage and provides various protective effects against fiends and undead.",
+    "Iron Flask": "Allows the user to trap and summon powerful creatures from the flask when activated.",
+    "Luck Blade": "Grants a +1 bonus to attack and damage rolls and provides the user with additional luck-related abilities.",
+    "Plate Armor of Etherealness": "Grants an AC of 18 and allows the wearer to become ethereal for short periods.",
+    "Ring of Djinni Summoning": "Allows the user to summon a djinni to assist them with various tasks.",
+    "Ring of Elemental Command": "Grants the wearer control over a specific element (earth, air, fire, or water) and provides related abilities.",
+    "Ring of Invisibility": "Grants the wearer the ability to become invisible for a limited time each day.",
+    "Robe of Eyes": "Grants the wearer the ability to see invisible creatures and objects, and provides darkvision up to 120 feet.",
+    "Rope of Climbing": "Allows the user to command a rope to climb and anchor itself to surfaces.",
+    "Scarab of Protection": "Grants resistance to one type of damage and provides protection against curses.",
+    "Sphere of Annihilation": "A powerful artifact that can destroy anything it touches, including creatures and objects.",
+    "Tome of the Stilled Tongue": "Grants the reader the ability to cast spells silently, without verbal components.",
+    "Vorpal Sword": "Deals additional damage and has a chance to decapitate enemies on a critical hit.",
+    "Wand of Lightning Bolts": "Allows the user to cast *lightning bolt* spell once per day, dealing 8d6 lightning damage.",
+    "Wand of Web": "Allows the user to cast *web* spell at will, creating webs that can restrain creatures.",
+    "Wand of the War Mage": "Grants a +1 bonus to spell attack rolls and improves the effectiveness of spells.",
+    "Wand of Magic Detection": "Allows the user to cast *detect magic* at will, detecting magical auras.",
+    "Wand of Magic Missiles": "Allows the user to cast *magic missile* spell, creating multiple darts of magical energy.",
+    "Wand of Secrets": "Reveals secret doors and traps when pointed at an area.",
+    "Wand of Fear": "Allows the user to cast *fear* spell once per day, causing creatures to become frightened.",
+    "Wand of Binding": "Allows the user to cast *hold person* or *hold monster* spells once per day.",
+    "Wand of Polymorph": "Allows the user to cast *polymorph* spell once per day, transforming creatures into other forms.",
+    "Wand of Wonder": "Allows the user to cast a random spell from a set of possible spells when activated.",
+    "Wings of Flying": "Grants the ability to fly with a speed of 60 feet for 1 hour.",
+    "Winged Boots": "Grants a flying speed of 30 feet while worn.",
+    "Wand of Fireballs": "Allows the user to cast *fireball* spell once per day, dealing 8d6 fire damage.",
+    "Wand of Lightning Bolts": "Allows the user to cast *lightning bolt* spell once per day, dealing 8d6 lightning damage.",
+    "Wand of Paralysis": "Allows the user to cast *paralyze* spell once per day, immobilizing creatures.",
+    "Wand of Wonder": "Allows the user to cast a random spell from a set of spells when activated.",
+    "Wings of Flying": "Grants a flying speed of 60 feet while worn.",
+    "Amulet of the Planes": "Allows the user to cast *plane shift* spell once per day.",
+    "Apparatus of the Crab": "A magical vehicle that can be used to travel underwater and transform into various forms.",
+    "Armor of Invulnerability": "Grants resistance to all damage types while worn and can be activated to become immune to damage for a short time.",
+    "Deck of Many Things": "A deck of magical cards that can have various powerful effects, both beneficial and detrimental.",
+    "Defender": "A sword that grants a +1 bonus to AC and can be used to absorb damage or deal extra damage in combat.",
+    "Hammer of Thunderbolts": "Deals additional thunder damage and can stun creatures when used in combat.",
+    "Holy Avenger": "Deals additional radiant damage and provides various protective effects against fiends and undead.",
+    "Iron Flask": "Allows the user to trap and summon powerful creatures from the flask when activated.",
+    "Luck Blade": "Grants a +1 bonus to attack and damage rolls and provides the user with additional luck-related abilities.",
+    "Plate Armor of Etherealness": "Grants an AC of 18 and allows the wearer to become ethereal for short periods.",
+    "Ring of Djinni Summoning": "Allows the user to summon a djinni to assist them with various tasks.",
+    "Ring of Elemental Command": "Grants the wearer control over a specific element (earth, air, fire, or water) and provides related abilities.",
+    "Ring of Invisibility": "Grants the wearer the ability to become invisible for a limited time each day.",
+    "Robe of Eyes": "Grants the wearer the ability to see invisible creatures and objects, and provides darkvision up to 120 feet.",
+    "Rope of Climbing": "Allows the user to command a rope to climb and anchor itself to surfaces.",
+    "Scarab of Protection": "Grants resistance to one type of damage and provides protection against curses.",
+    "Sphere of Annihilation": "A powerful artifact that can destroy anything it touches, including creatures and objects.",
+    "Tome of the Stilled Tongue": "Grants the reader the ability to cast spells silently, without verbal components.",
+    "Vorpal Sword": "Deals additional damage and has a chance to decapitate enemies on a critical hit.",
+};
+        function selectSpell(spellName) {
+            const spellInput = document.getElementById('spellInput');
+            if (spells[spellName]) {
+                spellInput.value = `${spellName}: ${spells[spellName]}`;
+            } else {
+                spellInput.value = spellName;
+            }
+        }
+        function filterFunction() {
+            var input, filter, div, dropdown, i;
+            input = document.getElementById("spellInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("spellDropdown");
+            div = dropdown.getElementsByTagName("div");
+
+            // Close the dropdown if the input is empty
+            if (input.value === "") {
+                dropdown.classList.remove("show");
+                return;
+            }
+
+            dropdown.classList.add("show");
+
+            // Loop through all div elements, and hide those who don't match the search query
+            for (i = 0; i < div.length; i++) {
+                txtValue = div[i].textContent || div[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#spellInput')) {
+                var dropdown = document.getElementById("spellDropdown");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+
+
+
+
+        function selectItem(itemName) {
+            const spellInput = document.getElementById('itemInput');
+            if (items[itemName]) {
+                spellInput.value = `${itemName}: ${items[itemName]}`;
+            } else {
+                spellInput.value = itemName;
+            }
+        }
+        function filterItemFunction() {
+            var input, filter, div, dropdown, i;
+            input = document.getElementById("itemInput");
+            filter = input.value.toUpperCase();
+            dropdown = document.getElementById("itemDropdown");
+            div = dropdown.getElementsByTagName("div");
+
+            // Close the dropdown if the input is empty
+            if (input.value === "") {
+                dropdown.classList.remove("show");
+                return;
+            }
+
+            dropdown.classList.add("show");
+
+            // Loop through all div elements, and hide those who don't match the search query
+            for (i = 0; i < div.length; i++) {
+                txtValue = div[i].textContent || div[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                } else {
+                    div[i].style.display = "none";
+                }
+            }
+        }
+
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('#itemInput')) {
+                var dropdown = document.getElementById("itemDropdown");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
     </script>
 </body>
 </html>
