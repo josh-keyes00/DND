@@ -1,6 +1,122 @@
+// Step 1: Define the Barbarian class
+class Barbarian {
+    constructor(level) {
+      this.name = "Barbarian"
+      this.level = level;
+      this.rages = this.calculateRages(level);
+      this.proficiencyBonus = this.calculateProficiencyBonus(level);
+      this.rageBonusDamage = this.calculateRageBonusDamage(level);
+    }
+  
+    // Method to calculate the number of rages based on level
+    calculateRages(level) {
+      if (level <= 2) return 2;
+      else if (level <= 5) return 3;
+      else if (level <= 11) return 4;
+      else if (level <= 16) return 5;
+      else return 6; // Level 17 and above
+    }
+  
+    // Method to calculate the proficiency bonus based on level
+    calculateProficiencyBonus(level) {
+      if (level <= 4) return 2;
+      else if (level <= 8) return 3;
+      else if (level <= 12) return 4;
+      else if (level <= 16) return 5;
+      else return 6; // Level 17 and above
+    }
+  
+    // Method to calculate the rage bonus damage based on level
+    calculateRageBonusDamage(level) {
+      if (level <= 8) return 2;
+      else if (level <= 15) return 3;
+      else return 4; // Level 16 and above
+    }
+  }
+
+  class Bard {
+    constructor(level) {
+      this.level = level;
+      this.cantripsKnown = this.calculateCantripsKnown();
+      this.spellsKnown = this.calculateSpellsKnown();
+      this.spellSlots = this.calculateSpellSlots();
+    }
+  
+    // Method to calculate the number of cantrips known by a Bard at the current level
+    calculateCantripsKnown() {
+      if (this.level <= 3) return 2;
+      else if (this.level <= 9) return 3;
+      else return 4; // Level 10 and above
+    }
+  
+    // Method to calculate the number of spells known by a Bard at the current level
+    calculateSpellsKnown() {
+      if (this.level === 1) return 4;
+      else if (this.level === 2) return 5;
+      else if (this.level === 3) return 6;
+      else if (this.level === 4) return 7;
+      else if (this.level === 5) return 8;
+      else if (this.level === 6) return 9;
+      else if (this.level === 7) return 10;
+      else if (this.level === 8) return 11;
+      else if (this.level === 9) return 12;
+      else if (this.level === 10) return 14;
+      else if (this.level === 11) return 15;
+      else if (this.level === 12) return 15;
+      else if (this.level === 13) return 16;
+      else if (this.level === 14) return 18;
+      else if (this.level === 15) return 19;
+      else if (this.level === 16) return 19;
+      else if (this.level === 17) return 20;
+      else if (this.level === 18) return 22;
+      else if (this.level === 19) return 22;
+      else return 22; // Level 20
+    }
+  
+    // Method to calculate the spell slots available to a Bard at the current level
+    calculateSpellSlots() {
+      const spellSlots = {
+        1: [2, 0, 0, 0, 0],
+        2: [3, 0, 0, 0, 0],
+        3: [4, 2, 0, 0, 0],
+        4: [4, 3, 0, 0, 0],
+        5: [4, 3, 2, 0, 0],
+        6: [4, 3, 3, 0, 0],
+        7: [4, 3, 3, 1, 0],
+        8: [4, 3, 3, 2, 0],
+        9: [4, 3, 3, 3, 1],
+        10: [4, 3, 3, 3, 2],
+        11: [4, 3, 3, 3, 2],
+        12: [4, 3, 3, 3, 2],
+        13: [4, 3, 3, 3, 3, 1],
+        14: [4, 3, 3, 3, 3, 1],
+        15: [4, 3, 3, 3, 3, 1],
+        16: [4, 3, 3, 3, 3, 1],
+        17: [4, 3, 3, 3, 3, 2],
+        18: [4, 3, 3, 3, 3, 2],
+        19: [4, 3, 3, 3, 3, 2],
+        20: [4, 3, 3, 3, 3, 2]
+      };
+  
+      return spellSlots[this.level] || [0, 0, 0, 0, 0, 0]; // Default to 0 slots if level is not found
+    }
+  
+    // Method to display Bard's spellcasting information
+    displaySpellcastingInfo() {
+      console.log(`Level: ${this.level}`);
+      console.log(`Cantrips Known: ${this.cantripsKnown}`);
+      console.log(`Spells Known: ${this.spellsKnown}`);
+      console.log(`Spell Slots: ${this.spellSlots.join(", ")}`);
+    }
+  }
+  
+
+  
+
+
 let character = {
     name: "John Doe",
-    class: "Barbarian",
+    class: Barbarian(10),
     ability_scores: {
         Strength: 16,
         Dexterity: 14,
@@ -48,7 +164,7 @@ function displayCharacterInfo() {
 
         if (nameElem && classElem) {
             nameElem.innerText = `Name: ${character.name}`;
-            classElem.innerText = `Class: ${character.class}`;
+            classElem.innerText = `Classhole: ${character.class.name, character.class.level}`;
         }
 
         displayAbilityScores();

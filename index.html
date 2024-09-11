@@ -31,6 +31,15 @@
             <div id="saving-throws" class="info-section"></div>
             </div>
         </div>
+        <div>
+            <h2>Class info</h2>
+            <div id="class-information">
+               <div id="class-info1"></div> 
+               <div id="class-info2"></div> 
+               <div id="class-info3"></div> 
+               <div id="spellSlotsContainer"></div>
+            </div>
+        </div>
         
         <div class="skill-prof">
         <div>
@@ -1918,9 +1927,139 @@
     </div>
 
     <script>
+
+// Step 1: Define the Barbarian class
+class Barbarian {
+    constructor(level) {
+      this.name = 'Barbarian'
+      this.level = level;
+      this.rages = this.calculateRages(level);
+      this.proficiencyBonus = this.calculateProficiencyBonus(level);
+      this.rageBonusDamage = this.calculateRageBonusDamage(level);
+    }
+  
+    // Method to calculate the number of rages based on level
+    calculateRages(level) {
+      if (level <= 2) return 2;
+      else if (level <= 5) return 3;
+      else if (level <= 11) return 4;
+      else if (level <= 16) return 5;
+      else return 6; // Level 17 and above
+    }
+  
+    // Method to calculate the proficiency bonus based on level
+    calculateProficiencyBonus(level) {
+      if (level <= 4) return 2;
+      else if (level <= 8) return 3;
+      else if (level <= 12) return 4;
+      else if (level <= 16) return 5;
+      else return 6; // Level 17 and above
+    }
+  
+    // Method to calculate the rage bonus damage based on level
+    calculateRageBonusDamage(level) {
+      if (level <= 8) return 2;
+      else if (level <= 15) return 3;
+      else return 4; // Level 16 and above
+    }
+  }
+
+  class Bard {
+    constructor(level) {
+      this.name = 'Bard'
+      this.level = level;
+      this.cantripsKnown = this.calculateCantripsKnown();
+      this.spellsKnown = this.calculateSpellsKnown();
+      this.spellSlots = this.calculateSpellSlots();
+    }
+
+// Method to calculate the proficiency bonus based on level
+    calculateProficiencyBonus(level) {
+      if (level <= 4) return 2;
+      else if (level <= 8) return 3;
+      else if (level <= 12) return 4;
+      else if (level <= 16) return 5;
+      else return 6; // Level 17 and above
+    }
+
+    // Method to calculate the number of cantrips known by a Bard at the current level
+    calculateCantripsKnown() {
+      if (this.level <= 3) return 2;
+      else if (this.level <= 9) return 3;
+      else return 4; // Level 10 and above
+    }
+  
+    // Method to calculate the number of spells known by a Bard at the current level
+    calculateSpellsKnown() {
+      if (this.level === 1) return 4;
+      else if (this.level === 2) return 5;
+      else if (this.level === 3) return 6;
+      else if (this.level === 4) return 7;
+      else if (this.level === 5) return 8;
+      else if (this.level === 6) return 9;
+      else if (this.level === 7) return 10;
+      else if (this.level === 8) return 11;
+      else if (this.level === 9) return 12;
+      else if (this.level === 10) return 14;
+      else if (this.level === 11) return 15;
+      else if (this.level === 12) return 15;
+      else if (this.level === 13) return 16;
+      else if (this.level === 14) return 18;
+      else if (this.level === 15) return 19;
+      else if (this.level === 16) return 19;
+      else if (this.level === 17) return 20;
+      else if (this.level === 18) return 22;
+      else if (this.level === 19) return 22;
+      else return 22; // Level 20
+    }
+  
+    // Method to calculate the spell slots available to a Bard at the current level
+    calculateSpellSlots() {
+      const spellSlots = {
+        1: [2, 0, 0, 0, 0],
+        2: [3, 0, 0, 0, 0],
+        3: [4, 2, 0, 0, 0],
+        4: [4, 3, 0, 0, 0],
+        5: [4, 3, 2, 0, 0],
+        6: [4, 3, 3, 0, 0],
+        7: [4, 3, 3, 1, 0],
+        8: [4, 3, 3, 2, 0],
+        9: [4, 3, 3, 3, 1],
+        10: [4, 3, 3, 3, 2],
+        11: [4, 3, 3, 3, 2],
+        12: [4, 3, 3, 3, 2],
+        13: [4, 3, 3, 3, 3, 1],
+        14: [4, 3, 3, 3, 3, 1],
+        15: [4, 3, 3, 3, 3, 1],
+        16: [4, 3, 3, 3, 3, 1],
+        17: [4, 3, 3, 3, 3, 2],
+        18: [4, 3, 3, 3, 3, 2],
+        19: [4, 3, 3, 3, 3, 2],
+        20: [4, 3, 3, 3, 3, 2]
+      };
+  
+      return spellSlots[this.level] || [0, 0, 0, 0, 0, 0]; // Default to 0 slots if level is not found
+    }
+  
+
+
+
+
+
+
+    
+    // Method to display Bard's spellcasting information
+    displaySpellcastingInfo() {
+       return  `Level: ${this.level}
+        Cantrips Known: ${this.cantripsKnown} 
+        Spells Known: ${this.spellsKnown}`;
+    }
+  }
+
+
         let character = {
             name: "John Doe",
-            class: "Barbarian",
+            class: new Bard(9),
             ability_scores: {
                 Strength: 16,
                 Dexterity: 14,
@@ -1961,6 +2100,63 @@
             
         };
 
+
+        function generateSpellSlots() {
+    const level = character.class.level
+    const bard = new Bard(parseInt(level));
+    const spellSlotsContainer = document.getElementById('spellSlotsContainer');
+
+    // Clear previous radio buttons
+    spellSlotsContainer.innerHTML = '';
+
+    // Loop through each spell slot level
+    character.class.spellSlots.forEach((slots, index) => {
+        if (slots > 0) {
+            const slotLevel = index + 1; // Slot levels are 1-based
+            const fieldset = document.createElement('fieldset');
+            const legend = document.createElement('legend');
+            legend.textContent = `Level ${slotLevel} Slots (${slots})`;
+            fieldset.appendChild(legend);
+
+            // Create radio buttons for each available slot
+            for (let i = 0; i < slots; i++) {
+                const radio = document.createElement('input');
+                radio.type = 'checkbox';
+                radio.name = `slotLevel${slotLevel}`;
+                radio.id = `slotLevel${slotLevel}_${i}`;
+                radio.value = `Slot ${i + 1}`;
+
+                const label = document.createElement('label');
+                label.htmlFor = radio.id;
+                label.textContent = `Slot ${i + 1}`;
+
+                fieldset.appendChild(radio);
+                fieldset.appendChild(label);
+            }
+
+            spellSlotsContainer.appendChild(fieldset);
+        }
+    });
+}
+
+
+
+        function displayclassinfo() {
+            const class_info1 = document.getElementById('class-info1');
+            const class_info2 = document.getElementById('class-info2');
+            const class_info3 = document.getElementById('class-info3');
+            class_info1.innerText = `Profiecenty Bonus: ${character.class.calculateProficiencyBonus(character.class.level)}`
+            if (character.class.name == 'Barbarian') {
+                class_info2.innerText = `Rages: ${character.class.calculateRages(character.class.level)}`
+                class_info3.innerText = `Rage Bonus: ${character.class.calculateRageBonusDamage(character.class.level)}`
+            }
+            if (character.class.name = 'Bard') {
+                console.log(character.class.displaySpellcastingInfo())
+                class_info2.innerText = `${character.class.displaySpellcastingInfo()}`
+                generateSpellSlots()
+            }
+        }
+
         function displayCharacterInfo() {
             try {
                 const nameElem = document.getElementById('name');
@@ -1968,9 +2164,9 @@
 
                 if (nameElem && classElem) {
                     nameElem.innerText = `Name: ${character.name}`;
-                    classElem.innerText = `Class: ${character.class}`;
+                    classElem.innerText = `Class: ${character.class.name}, ${character.class.level}`;
                 }
-
+                displayclassinfo();
                 displayAbilityScores();
                 displaySavingThrows();
                 displaySkills();
